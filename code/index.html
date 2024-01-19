@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José María García Márquez</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Estilos para las pestañas */
+        .tabs {
+            display: flex;
+            flex-direction: column;
+            background: url('images/_dc841d19-db39-434c-ac2a-595d1b3d7a7b.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            padding: 10px 0;
+            width: 33.33%; /* Ajuste del ancho a 1/3 de la pantalla */
+            height: 100vh;
+            position: fixed;
+            opacity: 0.768; /* Transparencia del 70% */
+            text-align: center; /* Centrar el contenido en la barra */
+        }
+
+        .tab-button {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        .tab-button:hover, .tab-button.active {
+            background-color: #555;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+
+        /* Estilo para el logo */
+        .logo {
+            max-width: 150px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        /* Otros estilos (reemplaza con tus propios estilos) */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            width: 66.67%;
+            margin-left: 33.33%;
+            padding: 2rem;
+            margin-bottom: 60px;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+        .about-me-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .section-heading {
+            font-size: 48px; /* Tamaño más grande para los encabezados de sección */
+            font-weight: bold; /* Texto en negrita */
+        }
+
+        .about-me-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .about-me-image {
+            max-width: 300px; /* Tamaño máximo de la imagen de "Sobre Mí" */
+            border-radius: 10px; /* Bordes redondeados */
+            margin-left: 20px; /* Espaciado a la izquierda de la imagen */
+        }
+
+
+        .download-cv {
+            margin-top: 20px; /* Espaciado superior para la sección de descarga del CV */
+        }
+        .welcome-heading {
+            font-size: 48px; /* Tamaño más grande */
+            font-weight: bold; /* Texto en negrita */
+        }
+        h2, h3 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Cambios en el texto expandido en la barra de menú */
+        .logo-title-container p {
+            font-size: 25px; /* Aumenté el tamaño del texto */
+            font-weight: bold; /* Hice el texto más grueso */
+            color: rgba(255, 255, 255, 0.8); /* Color blanco con transparencia del 80% */
+        }
+        .logo-title-container h1 {
+            font-size: 40px; /* Aumenté el tamaño del nombre */
+            font-weight: bold; /* Hice el texto más grueso */
+            color: #232323; /* Color blanco */
+        }
+
+        /* Estilo para los íconos */
+        .icon {
+            margin-right: 5px;
+            color: #fff; /* Color blanco para los íconos */
+            font-size: 20px; /* Tamaño de fuente para los íconos */
+        }
+
+        .copyright {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 24px;
+        }
+
+
+        /* Estilo para la imagen dentro de los posts en la sección de inicio */
+        .blog-post img.post-image {
+            max-width: 100%; /* Establece el ancho máximo al 100% del contenedor */
+            height: auto; /* Permite que la altura se ajuste automáticamente */
+            max-height: 300px; /* Establece la altura máxima deseada */
+            display: block; /* Evita espacio adicional debajo de la imagen */
+            margin: 10px auto; /* Añade un poco de espacio alrededor de la imagen y la centra horizontalmente */
+        }
+
+        /* Estilo para la sección de resumen del post */
+        .post-summary {
+            max-width: 600px; /* Establece el ancho máximo para el resumen del post */
+            margin: 0 auto; /* Centra el resumen horizontalmente */
+        }
+
+        .larger-text {
+            font-size: 30px; /* Puedes ajustar el tamaño según tus preferencias */
+        }
+
+        .welcome-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .welcome-image {
+            max-width: 300px; /* Tamaño máximo de la imagen */
+            height: auto;
+            border-radius: 30px;
+            margin-right: 30px; /* Espaciado a la derecha de la imagen */
+        }
+
+        .welcome-content {
+            flex: 1; /* El contenido ocupará todo el espacio disponible */
+        }
+
+        .additional-images {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 20px; /* Espaciado superior para las imágenes adicionales */
+        }
+
+        .additional-image {
+            max-width: 100px; /* Tamaño máximo de las imágenes adicionales */
+            border-radius: 10px; /* Bordes redondeados */
+            margin-right: 10px; /* Espaciado a la derecha de cada imagen */
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="tabs">
+        <div class="logo-title-container">
+            <img class="logo" src="images/joma.png" alt="Logo de José María García Márquez">
+            <h1>José María García Márquez</h1>
+            <!-- Texto expandido en la barra de menú con nuevos estilos -->
+            <p>Geophysical engineer | Python developer | Geoscientist data</p>
+        </div>
+        <button class="tab-button active" data-tab="inicio">Inicio</button>
+        <button class="tab-button" data-tab="aboutMe">Sobre Mí</button>
+        <button class="tab-button" data-tab="projects">Proyectos</button>
+        <button class="tab-button" data-tab="blog">Blog</button>
+
+        <!-- Enlaces a LinkedIn y GitHub con íconos -->
+        <a href="https://www.linkedin.com/in/josé-maría-garcía-márquez-556a75199/" target="_blank" class="tab-button"><i class="fab fa-linkedin icon"></i></a>
+        <a href="https://github.com/JoseMariaGarciaMarquez" target="_blank" class="tab-button"><i class="fab fa-github icon"></i></a>
+        <a href="https://paypal.me/Chemitas96?country.x=MX&locale.x=es_XC" target="_blank" class="tab-button"><i class="fab fa-paypal icon"></i></a>
+        <!-- Información de derechos de autor -->
+        <div class="copyright">
+            <p>© 2023-2024 José María | Design: HTML5 UP | Updated: 11 June 2023</p>
+        </div>
+    </nav>
+    <main>
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <!-- Descripción con letra más grande, imagen lateral y encabezado para la sección de inicio -->
+        <div id="inicio" class="tab-content">
+            <div class="welcome-container">
+                <img src="images/_d6a65024-045d-449e-9d51-798dc5bfb217.jpeg" alt="Imagen Principal" class="welcome-image">
+                <div class="welcome-content">
+                    <h2><span class="welcome-heading">Bienvenido</span></h2>
+                    <p class="larger-text">
+                        ¡Bienvenido a mi rincón digital! Explora mi identidad en la sección "Sobre mí", descubre los entresijos de los proyectos que han dejado huella en mi trayectoria en la sección "Proyectos", y sumérgete en las reflexiones de mi recorrido profesional a través de mi "Blog". En la barra de menú, encontrarás enlaces directos a mis perfiles de LinkedIn y Github. Siguiéndome en LinkedIn, podrás mantenerte al tanto de mis proyectos futuros, mientras que en Github, tendrás la oportunidad de contribuir a los proyectos que estoy desarrollando. Además, hallarás un enlace a mi cuenta de PayPal, una pieza clave ya que actualmente soy autónomo y cada apoyo cuenta. ¡Acompáñame en este emocionante viaje!
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <div id="aboutMe" class="tab-content about-me-container">
+            <div class="about-me-content">
+                <h2><span class="section-heading">Sobre mí</span></h2>
+                <div class="about-me-flex">
+                    <p class="larger-text">
+                        Soy José María García Márquez, ingeniero geofísico recién egresado de la Facultad de Ingeniería de la UNAM. Poseo habilidades en procesamiento de datos geofísicos y programación (Python, R, MATLAB). Mi enfoque se dirige hacia la aplicación de Redes Neuronales y herramientas como Git, LaTeX y JupyterLab para analizar conjuntos de datos extensos. Estoy especializado en modelamiento de variables espaciales, análisis de datos espaciales y técnicas geofísicas, incluyendo el procesamiento de datos sísmicos y la interpretación de registros de pozo.
+                    </p>
+                    <img src="images/foto.jpeg"  alt="José María García Márquez" class="about-me-image">
+                </div>
+                <div class="download-cv">
+                    <h3><span class="section-heading">Descargar CV</span></h3>
+                    <p>Puedes descargar mi CV en los siguientes idiomas:</p>
+                    <ul>
+                        <!-- Botones de descarga del CV -->
+                        <li><a href="docs/JoMa_Resume_ES.pdf" download class="cv-button"><i class="fas fa-download"></i>CV en Español</a></li>
+                        <li><a href="docs/JoMa_Resume_EN.pdf" download class="cv-button"><i class="fas fa-download"></i>CV in English</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <div id="projects" class="tab-content">
+            <!-- Proyecto 1 -->
+            <div class="project">
+                 <h2><span class="section-heading">Proyectos</span></h2>
+                <div class="project-summary">
+                    
+                    <h2><span class="section-heading">FQLEARN</span></h2>
+                    <img src="images/header.png" alt="Imagen del Proyecto 1" style="max-width: 300px; max-height: 300px; width: auto; height: auto;">
+                    <p>This Project aims to facilitate the teaching of unit operations and thermodynamics. Designed in python, it intends to be a library that uses graphical methods and that applies modern equations solve problems related.</p>
+                    <a href="#" class="read-more-link" onclick="openTab('project1')">Leer más</a>
+                </div>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div class="project">
+                <div class="project-summary">
+                    
+                     <h2><span class="section-heading">HVSRLEARN</span></h2>
+                     <img src="images/icono.png" alt="Imagen del Proyecto 2" style="max-width: 300px; max-height: 300px; width: auto; height: auto;">
+                    <p>"hvsrlearn" is a Python application designed for the calculation and analysis of the Horizontal-to-Vertical Spectral Ratio (HVSR) from seismic data in three components (Z, N, E). The application features a graphical user interface built using Tkinter, providing an intuitive and interactive platform for users to analyze and visualize seismic data.</p>
+                    <a href="#" class="read-more-link" onclick="openTab('project2')">Leer más</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Contenido completo del Proyecto 1 -->
+        <div id="project1" class="tab-content">
+            <h2><span class="section-heading">FQLEARN</span></h2>
+            <img src="images/header.png" alt="Imagen del Proyecto 1" style="max-width: 300px; max-height: 300px; width: auto; height: auto;">
+            <p>Descripción completa del Proyecto 1. Puedes agregar cualquier tipo de formato de texto que admita Markdown.</p>
+            <!-- Agrega el contenido completo de tu proyecto aquí -->
+        </div>
+
+        <!-- Contenido completo del Proyecto 2 -->
+        <div id="project2" class="tab-content">
+            <h2>Título del Proyecto 2</h2>
+            <p>Descripción completa del Proyecto 2. Puedes agregar cualquier tipo de formato de texto que admita Markdown.</p>
+            <!-- Agrega el contenido completo de tu proyecto aquí -->
+        </div>
+
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <div id="blog" class="tab-content active">
+            
+            <!-- Blog Post 1 -->
+            <div class="blog-post">
+                <div class="post-summary">
+                    <h2><span class="section-heading">Zacatecas: Una práctica real</span></h2>
+                    <p>Fecha: 2024-01-08</p>
+                    <img src="images/zacatecas1.png" alt="Imagen del Post de Ejemplo" style="max-width: 300px; max-height: 300px; width: auto; height: auto;">
+                    <p>Recuerdo Zacatecas como si hubiese sido ayer. El sol nos golpeaba diréctamente en el rostro, el trabajo era simple, pero específico, y para nosotros todo un reto</p>
+                    <a href="#" class="read-more-link" onclick="openTab('post1')">Leer más</a>
+                </div>
+
+                <div class="post-summary">
+
+                    <h2><span class="section-heading">Open Science Labs y un planeta llamado Open Source</span></h2>
+                    <p>Fecha: 2024-01-08</p>
+                    <img src="images/zacatecas.png" alt="Imagen del Post de Ejemplo" style="max-width: 300px; max-height: 300px; width: auto; height: auto;">
+                    <p>Recuerdo Zacatecas como si hubiese sido ayer. El sol nos golpeaba diréctamente en el rostro, el trabajo era simple, pero específico, y para nosotros todo un reto</p>
+                    <a href="#" class="read-more-link" onclick="openTab('post1')">Leer más</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="post1" class="tab-content">
+            <h2>Artículo en redacción</h2>
+            <p>Fecha: 2024-01-08</p>
+            <p>Este es un ejemplo de contenido para un post en formato Markdown. Puedes agregar cualquier tipo de formato de texto que admita Markdown, como **negrita**, *cursiva*, enlaces [a otras páginas](#), listas, imágenes, y mucho más.</p>
+            <h3>Sección 1</h3>
+            <p>Aquí puedes agregar información detallada sobre la primera sección de tu post.</p>
+            <h3>Sección 2</h3>
+            <p>Y aquí está la información para la segunda sección.</p>
+            <!-- Agrega el contenido completo de tu post aquí -->
+        </div>
+
+
+    </main>
+    <!-- Scripts para el funcionamiento de las pestañas y comentarios -->
+    <script>
+        // Función para abrir una pestaña y ocultar las demás
+        function openTab(tabName) {
+            var tabs = document.querySelectorAll('.tab-content');
+            var buttons = document.querySelectorAll('.tab-button');
+
+            tabs.forEach(function(tab) {
+                tab.style.display = 'none';
+            });
+
+            buttons.forEach(function(button) {
+                button.classList.remove('active');
+            });
+
+            document.getElementById(tabName).style.display = 'block';
+            document.querySelector('.tab-button[data-tab="' + tabName + '"]').classList.add('active');
+        }
+
+        // Asignar el evento click a los botones de la barra de pestañas
+        document.querySelectorAll('.tab-button').forEach(function(button) {
+            button.addEventListener('click', function() {
+                openTab(this.getAttribute('data-tab'));
+            });
+        });
+
+        // Abrir la pestaña "Inicio" por defecto
+        openTab('inicio');
+    </script>
+    <!-- Script adicional para comentarios -->
+     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var copyrightElement = document.querySelector('.copyright p');
+            var currentYear = new Date().getFullYear();
+            copyrightElement.textContent = '© 2023-' + currentYear + ' José María | Design: HTML5 UP | Updated: 18 January ' + currentYear;
+        });
+    </script>
+</body>
+</html>
