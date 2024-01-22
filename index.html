@@ -6,20 +6,43 @@
     <title>José María García Márquez</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+/* Estilo para pantallas pequeñas */
         @media screen and (max-width: 768px) {
-        .tabs {
-            width: 100%;
-            opacity: 1;
-            text-align: center;
-        }
         .tab-button {
+            display: none; /* Oculta los botones de pestañas en pantallas pequeñas */
+        }
+
+        .toggle-button {
+            display: block; /* Muestra el botón de menú en pantallas pequeñas */
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: left;
+            padding: 10px 20px;
+        }
+
+        .tabs {
+            display: none; /* Oculta el menú de pestañas en pantallas pequeñas */
+            position: absolute;
+            top: 60px; /* Ajusta la posición según tu diseño */
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            z-index: 1;
+        }
+
+        .tabs.active {
+            display: block; /* Muestra el menú de pestañas cuando se hace clic en el botón */
+        }
+
+        .tabs button {
             width: 100%;
             box-sizing: border-box;
         }
-        main {
-            width: 100%;
-            margin-left: 0;
         }
+
         }
         /* Estilos para las pestañas */
         .tabs {
@@ -391,5 +414,17 @@
             copyrightElement.textContent = '© 2023-' + currentYear + ' José María | Design: HTML5 UP | Updated: 18 January ' + currentYear;
         });
     </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var toggleButton = document.querySelector('.toggle-button');
+        var tabs = document.querySelector('.tabs');
+
+        toggleButton.addEventListener('click', function () {
+        tabs.classList.toggle('active');
+        });
+    });
+    </script>
+
 </body>
 </html>
