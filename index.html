@@ -6,6 +6,58 @@
     <title>José María García Márquez</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+        @media screen and (max-width: 480px) {
+            .tabs {
+                width: 100%;
+                height: auto;
+                position: relative;
+                opacity: 1;
+            }
+
+            .tab-button {
+                width: 100%;
+                padding: 10px;
+            }
+
+            main {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .about-me-content,
+            .project,
+            .blog-post {
+                margin: 1rem 0;
+            }
+
+            .welcome-container,
+            .about-me-content,
+            .project,
+            .blog-post {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .welcome-image,
+            .about-me-image,
+            .project-summary img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 1rem;
+            }
+
+            .section-heading {
+                font-size: 32px;
+            }
+
+            .larger-text {
+                font-size: 20px;
+            }
+
+            .copyright {
+                font-size: 18px;
+            }
+        }
         @media screen and (max-width: 768px) {
         .tabs {
             width: 100%;
