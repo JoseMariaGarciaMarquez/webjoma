@@ -7,6 +7,22 @@
           /* ... */
         </style>
         <style>
+          #scroll-progress {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 5px;
+            height: 5px; /* You can adjust the height of the progress bar here */
+            background-color: #007bff;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 999;
+          }
+
+          #scroll-progress.scrolled {
+            background-color: rgba(255, 130, 68, 0.7);
+          }
+          
           /* Estilos CSS para personalizar tu página */
           body {
             font-family: Arial, sans-serif;
@@ -183,8 +199,31 @@
     <h1>Academia</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a convallis faucibus, ipsum nisi bibendum nunc, vel laoreet nunc nisi et sapien.</p>
   </div>
+  <div id="scroll-progress"></div>
   <footer>
     <p>&copy; 2023 Mi Página Web. Todos los derechos reservados.</p>
   </footer>
+  <script>
+    window.addEventListener("scroll", function() {
+        var scrollProgress = document.getElementById("scroll-progress");
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        var docHeight = document.documentElement.scrollHeight;
+
+        var scrollPercent = (scrollTop / (docHeight - windowHeight)) * 100;
+
+        if (scrollPercent > 100) {
+          scrollPercent = 100;
+        }
+
+        scrollProgress.style.height = scrollPercent + "%";
+
+        if (scrollTop > 0) {
+          scrollProgress.classList.add("scrolled");
+        } else {
+          scrollProgress.classList.remove("scrolled");
+        }
+      });
+</script>
 </body>
 </html>
