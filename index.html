@@ -2,14 +2,14 @@
 <html lang="es">
     <head>
         <!-- ... -->
-        <style>
-          /* Eric Meyer's CSS Reset */
-          /* ... */
-        </style>
-        <style>
+      <style>
+        /* Eric Meyer's CSS Reset */
+        /* ... */
+      </style>
+      <style>
 
-        </style>
-        <style>
+      </style>
+      <style>
           #scroll-progress {
             position: fixed;
             top: 0;
@@ -160,7 +160,8 @@
         <style>
           .logo img {
             width: 80%; 
-            height: auto; 
+            height: auto;
+          }
         </style>
 
       </head>
@@ -174,10 +175,10 @@
           <div class="container">
             <ul id="top-menu" class="et_mobile_menu clearfix">
               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15" id="menu-item-15">
-                <a href="#inicio">Inicio</a>
+                <a href="#sobre-mi">About me</a>
               </li>
               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16" id="menu-item-16">
-                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#trabajo">Trabajo</a>
               </li>
               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17" id="menu-item-17">
                 <a href="#portafolio">Portafolio</a>
@@ -188,15 +189,23 @@
               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19" id="menu-item-19">
                 <a href="#academia">Academia</a>
               </li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19" id="menu-item-20"></li>>
+                <a href="#sponsors">Iniciar
             </ul>
           </div>
         </div>
       </div>
     </header>
 
-    <div id="inicio" class="full-screen-section">
+    <div id="sobre-mi" class="full-screen-section">
       
-      <h1>La Geofísica</h1>
+      <h1>¿Quién soy yo?</h1>
+      <p>
+        La geofísica es una disciplina científica que estudia los fenómenos físicos que ocurren en la Tierra y otros cuerpos celestes, utilizando principios y métodos de la física. En términos simples, la geofísica nos ayuda a comprender cómo funciona nuestro planeta mediante la aplicación de conceptos y técnicas físicas para investigar su estructura, composición y procesos internos, como los terremotos, la gravedad, el magnetismo y la propagación de ondas sísmicas. Es una herramienta fundamental para la exploración de recursos naturales, la gestión de riesgos geológicos y la comprensión de fenómenos naturales.
+      </p>
+      <img src="images/_04b8e4d6-bba1-4546-bfc3-4599c3f7e8a9.jpeg" alt="Image description" style="float: left; margin-right: 10px; width: 50%; height: auto;">
+    </div>
+    <div id="trabajo" class="full-screen-section">
       <p>
         La geofísica es una disciplina científica que estudia los fenómenos físicos que ocurren en la Tierra y otros cuerpos celestes, utilizando principios y métodos de la física. En términos simples, la geofísica nos ayuda a comprender cómo funciona nuestro planeta mediante la aplicación de conceptos y técnicas físicas para investigar su estructura, composición y procesos internos, como los terremotos, la gravedad, el magnetismo y la propagación de ondas sísmicas. Es una herramienta fundamental para la exploración de recursos naturales, la gestión de riesgos geológicos y la comprensión de fenómenos naturales.
       </p>
@@ -208,37 +217,19 @@
     </div>
     <div id="blog" class="full-screen-section">
       <h1>Blog</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a convallis faucibus, ipsum nisi bibendum nunc, vel laoreet nunc nisi et sapien.</p>
-    </div>
+      <p>Lorem
     <div id="academia" class="full-screen-section">
+
       <h1>Academia</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a convallis faucibus, ipsum nisi bibendum nunc, vel laoreet nunc nisi et sapien.</p>
     </div>
-    <div id="scroll-progress"></div>
+
+    <div id="sponsors" class="full-screen-section">
+      <h1>Patrocinadores</h1> 
+    </div>
     <footer>
       <p>&copy; 2023 Mi Página Web. Todos los derechos reservados.</p>
     </footer>
-    <script>
-      window.addEventListener("scroll", function() {
-          var scrollProgress = document.getElementById("scroll-progress");
-          var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-          var windowHeight = window.innerHeight || document.documentElement.clientHeight;
-          var docHeight = document.documentElement.scrollHeight;
 
-          var scrollPercent = (scrollTop / (docHeight - windowHeight)) * 100;
-
-          if (scrollPercent > 100) {
-            scrollPercent = 100;
-          }
-
-          scrollProgress.style.height = scrollPercent + "%";
-
-          if (scrollTop > 0) {
-            scrollProgress.classList.add("scrolled");
-          } else {
-            scrollProgress.classList.remove("scrolled");
-          }
-        });
-    </script>
   </body>
 </html>
