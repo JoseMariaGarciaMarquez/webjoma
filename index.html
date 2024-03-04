@@ -127,13 +127,29 @@
             position: relative;
             height: 100vh;
             display: flex;
-            flex-direction: column;
-            justify-content: justify;
-            align-items: right;
+            flex-direction: row; /* change this */
+            justify-content: space-between; /* adjust as needed */
+            align-items: center; /* change this to center the columns vertically */
             color: rgb(0, 0, 0);
             text-align: justify;
             background-image: none;
             background-color: white;
+          }
+
+          .text-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* center the text vertically */
+            align-items: flex-start;
+            width: 50%; /* adjust as needed */
+          }
+
+          .image-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* center the images vertically */
+            align-items: center;
+            width: 50%; /* adjust as needed */
           }
       
           .full-screen-section::before {
@@ -211,23 +227,38 @@
 
     <div id="sobre-mi" class="full-screen-section">
       
-      <h1>¿Quién soy yo?</h1>
-      <p>
-        Soy José María García Márquez, ingeniero geofísico recién egresado de la Facultad de Ingeniería de la UNAM. Poseo habilidades en procesamiento de datos geofísicos y programación (Python, R, MATLAB). Mi enfoque se dirige hacia la aplicación de Redes Neuronales y herramientas como Git, LaTeX y JupyterLab para analizar conjuntos de datos extensos. Estoy especializado en modelamiento de variables espaciales, análisis de datos espaciales y técnicas geofísicas, incluyendo el procesamiento de datos sísmicos y la interpretación de registros de pozo.
-      </p>
-      <img src="images/foto.jpeg" alt="Image description" style="float: right; margin-left: 10px; width: 20%; height: auto;">
-      <a href="docs/JoseMaria_resumecv.pdf" download>
-        <img class="download-icon" src="images/descvicon.png" alt="Download icon">
-      </a>
+      <h1>¿Quién soy?</h1>
+        <div class="text-column">
+          <p>
+            Soy José María García Márquez, ingeniero geofísico recién egresado de la Facultad de Ingeniería de la UNAM. Poseo habilidades en procesamiento de datos geofísicos y programación (Python, R, MATLAB). Mi enfoque se dirige hacia la aplicación de Redes Neuronales y herramientas como Git, LaTeX y JupyterLab para analizar conjuntos de datos extensos. Estoy especializado en modelamiento de variables espaciales, análisis de datos espaciales y técnicas geofísicas, incluyendo el procesamiento de datos sísmicos y la interpretación de registros de pozo.
+          </p>
+          
+        </div>
+
+        <div class="image-column">
+          <img src="images/foto.jpeg" alt="Image description" style="width: 50%;">
+          <a href="docs/JoseMaria_resumecv.pdf" download>
+            <img src="images/descvicon.png" alt="Download icon" style="margin-left: 10px; width: 60%; height: auto;">
+          </a>
+        </div>
     </div>
     
     <div id="trabajo" class="full-screen-section">
       <h1>¿Qué hago?</h1>
-      
+      <div class="text-column">
       <p>
         La geofísica es una disciplina científica que estudia los fenómenos físicos que ocurren en la Tierra y otros cuerpos celestes, utilizando principios y métodos de la física. En términos simples, la geofísica nos ayuda a comprender cómo funciona nuestro planeta mediante la aplicación de conceptos y técnicas físicas para investigar su estructura, composición y procesos internos, como los terremotos, la gravedad, el magnetismo y la propagación de ondas sísmicas. Es una herramienta fundamental para la exploración de recursos naturales, la gestión de riesgos geológicos y la comprensión de fenómenos naturales.
       </p>
+      <p>
+        La Ingeniería Geofísica es una rama de la ingeniería que se enfoca en el estudio y aplicación de principios físicos para comprender la estructura y comportamiento de la Tierra y otros planetas. Esta disciplina combina conocimientos de física, geología, matemáticas y ciencias de la computación para investigar fenómenos como la gravedad, el magnetismo, la electricidad y las ondas sísmicas con el objetivo de realizar exploraciones geológicas, localizar recursos naturales, monitorear el medio ambiente y evaluar riesgos geológicos, entre otras aplicaciones.
+      </p>
+      </div>
       <img  src="images/geofis.jpeg" alt="Image description">
+    </div>
+    <div class="full-screen-section">
+      <p>
+        La Ingeniería Geofísica es una rama de la ingeniería que se enfoca en el estudio y aplicación de principios físicos para comprender la estructura y comportamiento de la Tierra y otros planetas. Esta disciplina combina conocimientos de física, geología, matemáticas y ciencias de la computación para investigar fenómenos como la gravedad, el magnetismo, la electricidad y las ondas sísmicas con el objetivo de realizar exploraciones geológicas, localizar recursos naturales, monitorear el medio ambiente y evaluar riesgos geológicos, entre otras aplicaciones.
+      </p>
     </div>
     <div id="portafolio" class="full-screen-section">
       <h1>Portafolio</h1>
