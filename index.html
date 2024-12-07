@@ -15,14 +15,14 @@
         }
         a {
             text-decoration: none;
-            color: #007BFF;
+            color: #023d7c;
         }
         a:hover {
             text-decoration: underline;
         }
         /* Header */
         header {
-            background: #333;
+            background: #383944;
             color: #fff;
             padding: 1rem 0;
             text-align: center;
@@ -36,15 +36,29 @@
         }
         /* Navigation */
         nav {
-            background: #007BFF;
+            background: #c9902d;
             color: #fff;
             padding: 0.5rem 0;
             text-align: center;
+            position: relative;
         }
         nav a {
             color: #fff;
             margin: 0 15px;
             font-weight: bold;
+        }
+        .language-selector {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+        .language-selector button {
+            background: #383944;
+            color: #fff;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
         }
         /* Section Styles */
         section {
@@ -68,70 +82,110 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            flex: 1 1 calc(33% - 1rem);
-            max-width: calc(33% - 1rem);
+            flex: 1 1 calc(45% - 1rem);
+            max-width: calc(45% - 1rem);
             padding: 1rem;
             text-align: center;
         }
         .card h3 {
             margin-top: 0;
-            color: #007BFF;
+            color: #c9902d;
         }
-        .card p {
+        .card p, .card a {
             font-size: 0.9rem;
             color: #666;
         }
+        /* Map Styles */
+        .map-container {
+            width: 100%;
+            height: 500px;
+            margin: 2rem 0;
+            border: 1px solid #ddd;
+        }
         /* Footer */
         footer {
-            background: #333;
+            background: #c9902d;
             color: #fff;
             text-align: center;
             padding: 1rem 0;
             margin-top: 2rem;
         }
     </style>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
 
     <header>
         <h1>José María García Márquez</h1>
-        <p>Geophysical Engineer | Data Scientist | Software Developer</p>
+        <p id="subtitle">Geophysical Engineer | Data Scientist | Software Developer</p>
     </header>
 
     <nav>
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" id="nav-about">About Me</a>
+        <a href="#geophysics" id="nav-geophysics">Geophysical Projects</a>
+        <a href="#repositories" id="nav-repositories">Repositories</a>
+        <a href="#map" id="nav-map">Map</a>
+        <a href="#contact" id="nav-contact">Contact</a>
+        <div class="language-selector">
+            <button onclick="setLanguage('en')">EN</button>
+            <button onclick="setLanguage('es')">ES</button>
+        </div>
     </nav>
 
     <section id="about">
-        <h2>About Me</h2>
-        <p>
+        <h2 id="about-title">About Me</h2>
+        <p id="about-content">
             I am a passionate geophysical engineer with expertise in data science and software development. I specialize in applying modern techniques to solve complex geophysical challenges. Explore my portfolio to learn more about my projects and professional journey.
         </p>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
+    <section id="geophysics">
+        <h2 id="geophysics-title">Geophysical Projects</h2>
         <div class="content">
             <div class="card">
-                <h3>Sismolab</h3>
-                <p>An interactive app for analyzing seismological data.</p>
+                <h3 id="project1-title">Water Search</h3>
             </div>
             <div class="card">
-                <h3>PyPozo</h3>
-                <p>A Python tool for well data analysis in the petroleum industry.</p>
+                <h3 id="project2-title">Ground Penetrating Radar Studies</h3>
             </div>
             <div class="card">
-                <h3>HVSRLearn</h3>
-                <p>A GUI for seismic data HVSR analysis.</p>
+                <h3 id="project3-title">Seismic Data Processing</h3>
             </div>
         </div>
     </section>
 
+    <section id="repositories">
+        <h2 id="repositories-title">Repositories</h2>
+        <div class="content">
+            <div class="card">
+                <h3 id="repo1-title">HVSRLearn</h3>
+                <a href="https://github.com/JoseMariaGarciaMarquez/hvsrlearn" target="_blank">View Repository</a>
+            </div>
+            <div class="card">
+                <h3 id="repo2-title">VESPy</h3>
+                <p>Not available on GitHub yet.</p>
+            </div>
+            <div class="card">
+                <h3 id="repo3-title">Gridder</h3>
+                <p>Not available on GitHub yet.</p>
+            </div>
+            <div class="card">
+                <h3 id="repo4-title">PyPozo</h3>
+                <a href="https://github.com/JoseMariaGarciaMarquez/pypozo" target="_blank">View Repository</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="map">
+        <h2 id="map-title">Interactive Map</h2>
+        <p id="map-description">Explore locations related to my geophysical projects and studies:</p>
+        <div id="map" class="map-container"></div>
+    </section>
+
     <section id="contact">
-        <h2>Contact</h2>
-        <p>
+        <h2 id="contact-title">Contact</h2>
+        <p id="contact-description">
             Feel free to reach out for collaborations or inquiries:
         </p>
         <p>
@@ -145,5 +199,119 @@
         &copy; 2024 José María García Márquez. All rights reserved.
     </footer>
 
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const translations = {
+            en: {
+                subtitle: "Geophysical Engineer | Data Scientist | Software Developer",
+                nav: {
+                    about: "About Me",
+                    geophysics: "Geophysical Projects",
+                    repositories: "Repositories",
+                    map: "Map",
+                    contact: "Contact"
+                },
+                about: {
+                    title: "About Me",
+                    content: "I am a passionate geophysical engineer with expertise in data science and software development."
+                },
+                geophysics: {
+                    title: "Geophysical Projects",
+                    projects: ["Water Search", "Ground Penetrating Radar Studies", "Seismic Data Processing"]
+                },
+                repositories: {
+                    title: "Repositories",
+                    repoTitles: ["HVSRLearn", "VESPy", "Gridder", "PyPozo"]
+                },
+                map: {
+                    title: "Interactive Map",
+                    description: "Explore locations related to my geophysical projects and studies:"
+                },
+                contact: {
+                    title: "Contact",
+                    description: "Feel free to reach out for collaborations or inquiries:"
+                }
+            },
+            es: {
+                subtitle: "Ingeniero Geofísico | Científico de Datos | Desarrollador de Software",
+                nav: {
+                    about: "Sobre Mí",
+                    geophysics: "Proyectos Geofísicos",
+                    repositories: "Repositorios",
+                    map: "Mapa",
+                    contact: "Contacto"
+                },
+                about: {
+                    title: "Sobre Mí",
+                    content: "Soy un apasionado ingeniero geofísico con experiencia en ciencia de datos y desarrollo de software."
+                },
+                geophysics: {
+                    title: "Proyectos Geofísicos",
+                    projects: ["Búsqueda de Agua", "Estudios de Radar de Penetración Terrestre", "Procesamiento de Datos Sísmicos"]
+                },
+                repositories: {
+                    title: "Repositorios",
+                    repoTitles: ["HVSRLearn", "VESPy", "Gridder", "PyPozo"]
+                },
+                map: {
+                    title: "Mapa Interactivo",
+                    description: "Explora las ubicaciones relacionadas con mis proyectos y estudios geofísicos:"
+                },
+                contact: {
+                    title: "Contacto",
+                    description: "No dudes en ponerte en contacto para colaboraciones o consultas:"
+                }
+            }
+        };
+
+        function setLanguage(lang) {
+            document.getElementById("subtitle").textContent = translations[lang].subtitle;
+            document.getElementById("nav-about").textContent = translations[lang].nav.about;
+            document.getElementById("nav-geophysics").textContent = translations[lang].nav.geophysics;
+            document.getElementById("nav-repositories").textContent = translations[lang].nav.repositories;
+            document.getElementById("nav-map").textContent = translations[lang].nav.map;
+            document.getElementById("nav-contact").textContent = translations[lang].nav.contact;
+
+            document.getElementById("about-title").textContent = translations[lang].about.title;
+            document.getElementById("about-content").textContent = translations[lang].about.content;
+
+            document.getElementById("geophysics-title").textContent = translations[lang].geophysics.title;
+            translations[lang].geophysics.projects.forEach((title, idx) => {
+                document.getElementById(`project${idx + 1}-title`).textContent = title;
+            });
+
+            document.getElementById("repositories-title").textContent = translations[lang].repositories.title;
+            translations[lang].repositories.repoTitles.forEach((title, idx) => {
+                document.getElementById(`repo${idx + 1}-title`).textContent = title;
+            });
+
+            document.getElementById("map-title").textContent = translations[lang].map.title;
+            document.getElementById("map-description").textContent = translations[lang].map.description;
+
+            document.getElementById("contact-title").textContent = translations[lang].contact.title;
+            document.getElementById("contact-description").textContent = translations[lang].contact.description;
+        }
+
+        // Map Initialization
+        const map = L.map("map").setView([19.434958834368864, -99.13134827448047], 6);
+
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        const locations = [
+            { lat: 19.856527952987165, lng: -100.82120816287592, title: "Zinapécuaro, Michoacán" },
+            { lat: 20.595709826836824, lng: -98.76397674682178, title: "Metztitlán, Hidalgo" },
+            { lat: 19.567561675593343, lng: -99.04789445612218, title: "Ecatepec, México" },
+            { lat: 20.625484862162608, lng: -100.48120680975606, title: "Querétaro, Querétaro" },
+            { lat: 20.399204795642127, lng: -100.07366024407673, title: "El Rosario, Querétaro" },
+            { lat: 19.434958834368864, lng: -99.13134827448047, title: "Centro Histórico, CDMX" }
+        ];
+
+        locations.forEach(loc => {
+            L.marker([loc.lat, loc.lng]).addTo(map).bindPopup(`<b>${loc.title}</b>`);
+        });
+    </script>
 </body>
 </html>
