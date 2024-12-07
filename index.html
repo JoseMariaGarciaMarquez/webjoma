@@ -1,277 +1,149 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <!-- ... -->
-      <style>
-        /* Eric Meyer's CSS Reset */
-        /* ... */
-      </style>
-      <style>
-
-      </style>
-      <style>
-          #scroll-progress {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 5px;
-            height: 5px; /* You can adjust the height of the progress bar here */
-            background-color: #007bff;
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-            z-index: 999;
-          }
-
-          #scroll-progress.scrolled {
-            background-color: rgba(255, 130, 68, 0.7);
-          }
-
-          
-          /* Estilos CSS para personalizar tu página */
-          body {
-            font-family: 'Helvetica', Times, serif, sans-serif;
-            font-size: 1.5em;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José María García Márquez - Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
             margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            text-align: start;
-          }
-          /* Estilos para el encabezado */
-          header.et_header_style_left {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-          }
-      
-          header.et_header_style_left .logo {
-            position: relative;
-            z-index: 1;
-          }
-      
-          header.et_header_style_left::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('fondo3.jpeg');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.5;
-            z-index: 0;
-          }
-          /* Estilos para el menú */
-          .et_header_style_left #et-top-navigation {
-            padding: 10px 0;
-            background-color: rgba(0, 0, 0, 0.3); /* Add a semi-transparent background color to the menu */
-          }
-      
-          .et_header_style_left #et-top-navigation ul#top-menu {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-          }
-      
-          .et_header_style_left #et-top-navigation ul#top-menu li {
-            margin: 0 10px;
-            position: relative;
-          }
-      
-          .et_header_style_left #et-top-navigation ul#top-menu li a {
-            color: #fff;
-            text-decoration: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-          }
-      
-          .et_header_style_left #et-top-navigation ul#top-menu li a:hover {
-            background-color: #fff;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             color: #333;
-          }
-      
-          .et_header_style_left #et-top-navigation ul#top-menu li:hover::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: -1px;
-            height: 2px;
-            background-color: #fff;
-            border-radius: 5px;
-          }
-          /* Estilos para el contenido principal */
-          .content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #ffffff;
-          }
-          /* Estilos para el pie de página */
-          footer {
+            background-color: #f4f4f9;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Header */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
             text-align: center;
-            padding: 10px;
-            background-color: #e9a06c;
-            color: white;
-          }
-          /* Estilos para las secciones completas */
-          .full-screen-section {
-            position: relative;
-            height: 100vh;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+        }
+        /* Navigation */
+        nav {
+            background: #007BFF;
+            color: #fff;
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        /* Section Styles */
+        section {
+            padding: 2rem 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        section h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .content {
             display: flex;
-            flex-direction: column;
-            justify-content: justify; /* adjust as needed */
-            align-items: left;
-            color: rgb(0, 0, 0);
-            text-align: justify;
-            background-image: none;
-            background-color: white;
-          }
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33% - 1rem);
+            max-width: calc(33% - 1rem);
+            padding: 1rem;
+            text-align: center;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #007BFF;
+        }
+        .card p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
 
-          .full-screen-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.5;
-            z-index: 0;
-          }
-      
-        </style>
-        <!-- Add the CSS code here -->
-        <style>
-          p::first-letter {
-              font-size: 3em;
-              font-weight: bold;
-          }
-        </style>
-        
-        
-        <style>
-          .logo img {
-            width: 80%; 
-            height: auto;
-          }
-          .float-left {
-            float: right;
-            width: 50%;
-            height: auto;
-          }
-          .download-icon {
-            float: center;
-            margin-left: 10px;
-            width: 30%;
-            height: auto;
-          }
-        </style>
-
-      </head>
-  <body>
-    <header class="et_header_style_left">
-      <div class="container">
-        <div class="logo">
-          <a href="#inicio"><img src="jomac.png" alt="Logo"></a>
-        </div>
-        <div id="et-top-navigation" class="et-top-navigation clearfix et_header_style_left">
-          <div class="container">
-            <ul id="top-menu" class="et_mobile_menu clearfix">
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15" id="menu-item-15">
-                <a href="#sobre-mi">Sobre mí</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16" id="menu-item-16">
-                <a href="#trabajo">Trabajo</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17" id="menu-item-17">
-                <a href="#portafolio">Portafolio</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18" id="menu-item-18">
-                <a href="#blog">Blog</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19" id="menu-item-19">
-                <a href="#academia">Academia</a>
-              </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19" id="menu-item-20">
-                <a href="#sponsors">Patrocinadores</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <header>
+        <h1>José María García Márquez</h1>
+        <p>Geophysical Engineer | Data Scientist | Software Developer</p>
     </header>
 
-    <div id="sobre-mi" class="full-screen-section">
-      <h1>¿Quién soy?</h1>
-      <p>
-        Soy José María García Márquez, ingeniero geofísico recién egresado de la Facultad de Ingeniería de la UNAM. Poseo habilidades en procesamiento de datos geofísicos y programación (Python, R, MATLAB). Mi enfoque se dirige hacia la aplicación de Redes Neuronales y herramientas como Git, LaTeX y JupyterLab para analizar conjuntos de datos extensos. Estoy especializado en modelamiento de variables espaciales, análisis de datos espaciales y técnicas geofísicas, incluyendo el procesamiento de datos sísmicos y la interpretación de registros de pozo.        
-      </p>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-      <div>
-        <img src="images/foto.jpeg" alt="Image description" style="width: 15%;  height: auto;">
-        <a href="docs/JoseMaria_resumecv.pdf" download>
-          <img src="images/descvicon.png" alt="Download icon" style="width: 20%; height: auto;">
-        </a>
-    </div>
-    </div>
-    
-    <div id="trabajo" class="full-screen-section">
-      <h1>¿Qué hago?</h1>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate geophysical engineer with expertise in data science and software development. I specialize in applying modern techniques to solve complex geophysical challenges. Explore my portfolio to learn more about my projects and professional journey.
+        </p>
+    </section>
 
-      <p>
-        La geofísica es una disciplina científica que estudia los fenómenos físicos que ocurren en la Tierra y otros cuerpos celestes, utilizando principios y métodos de la física. En términos simples, la geofísica nos ayuda a comprender cómo funciona nuestro planeta mediante la aplicación de conceptos y técnicas físicas para investigar su estructura, composición y procesos internos, como los terremotos, la gravedad, el magnetismo y la propagación de ondas sísmicas. Es una herramienta fundamental para la exploración de recursos naturales, la gestión de riesgos geológicos y la comprensión de fenómenos naturales.
-      </p>
-      <img  src="images/geofis.jpeg" alt="Image description">
-    </div>
-    <div class="full-screen-section">
-      <p>
-        La Ingeniería Geofísica es una rama de la ingeniería que se enfoca en el estudio y aplicación de principios físicos para comprender la estructura y comportamiento de la Tierra y otros planetas. Esta disciplina combina conocimientos de física, geología, matemáticas y ciencias de la computación para investigar fenómenos como la gravedad, el magnetismo, la electricidad y las ondas sísmicas con el objetivo de realizar exploraciones geológicas, localizar recursos naturales, monitorear el medio ambiente y evaluar riesgos geológicos, entre otras aplicaciones.
-      </p>
-      <img src="images/sev_modelo1d.jpeg" alt="SEV">
-    </div>
-    <div id="portafolio" class="full-screen-section">
-      <h1>Portafolio</h1>
-      <h2>FQLEARN</h2>
-      <p>
-        Este proyecto tiene como objetivo facilitar la enseñanza de operaciones unitarias y termodinámica. Diseñado en Python, pretende ser una biblioteca que utilice métodos gráficos y aplique ecuaciones modernas para resolver problemas relacionados.
-      </p>
-      <a href="https://github.com/osl-pocs/fqlearn">
-        <img src="images/projects/fqlearn/fqlearn.png" style="width: 99%; height: auto;">
-      </a>
-    </div>
-    <div class="full-screen-section">
-      <h2>HVSRLEARN</h2>
-      <p>
-        "hvsrlearn" es una aplicación de Python diseñada para el cálculo y análisis de la Relación Espectral Horizontal a Vertical (HVSR) a partir de datos sísmicos en tres componentes (Z, N, E). La aplicación cuenta con una interfaz gráfica de usuario construida utilizando Tkinter, ofreciendo una plataforma intuitiva e interactiva para que los usuarios analicen y visualicen datos sísmicos.
-      </p>
-      <a href="https://github.com/JoseMariaGarciaMarquez/hvsrlearn">
-        <img src="images/projects/hvsrlearn/icono.png" style="width: 99%; height: auto;">
-      </a>
-    </div>
-    <div id="blog" class="full-screen-section">
-      <h1>Blog</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a convallis faucibus, ipsum nisi bibendum nunc, vel laoreet nunc nisi et sapien.</p>
-    </div>
-    <div id="academia" class="full-screen-section">
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="content">
+            <div class="card">
+                <h3>Sismolab</h3>
+                <p>An interactive app for analyzing seismological data.</p>
+            </div>
+            <div class="card">
+                <h3>PyPozo</h3>
+                <p>A Python tool for well data analysis in the petroleum industry.</p>
+            </div>
+            <div class="card">
+                <h3>HVSRLearn</h3>
+                <p>A GUI for seismic data HVSR analysis.</p>
+            </div>
+        </div>
+    </section>
 
-      <h1>Academia</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a convallis faucibus, ipsum nisi bibendum nunc, vel laoreet nunc nisi et sapien.</p>
-    </div>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+            Feel free to reach out for collaborations or inquiries:
+        </p>
+        <p>
+            <strong>Email:</strong> <a href="mailto:josemariagarciamarquez2.72@gmail.com">josemariagarciamarquez2.72@gmail.com</a><br>
+            <strong>Phone:</strong> <a href="tel:5543440126">5543440126</a><br>
+            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/josé-maría-garcía-márquez-556a75199/" target="_blank">José María García Márquez</a>
+        </p>
+    </section>
 
-    <div id="sponsors" class="full-screen-section">
-      <h1>Patrocinadores</h1> 
-    </div>
     <footer>
-      <p>&copy; 2023 Mi Página Web. Todos los derechos reservados.</p>
+        &copy; 2024 José María García Márquez. All rights reserved.
     </footer>
 
-  </body>
+</body>
 </html>
