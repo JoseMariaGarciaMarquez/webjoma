@@ -111,7 +111,6 @@
             margin-top: 2rem;
         }
     </style>
-    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
@@ -124,7 +123,7 @@
     <nav>
         <a href="#about" id="nav-about">About Me</a>
         <a href="#geophysics" id="nav-geophysics">Geophysical Projects</a>
-        <a href="#repositories" id="nav-repgositories">Repositories</a>
+        <a href="#repositories" id="nav-repositories">Repositories</a>
         <a href="#map" id="nav-map">Map</a>
         <a href="#contact" id="nav-contact">Contact</a>
         <div class="language-selector">
@@ -178,7 +177,7 @@
     </section>
 
     <section id="map">
-        <h2 id="map-title">Projects Map</h2>
+        <h2 id="map-title">Interactive Map</h2>
         <p id="map-description">Explore locations related to my geophysical projects and studies:</p>
         <div id="map" class="map-container"></div>
     </section>
@@ -189,7 +188,7 @@
             Feel free to reach out for collaborations or inquiries:
         </p>
         <p>
-            <strong>Email:</strong> <a href="mailto:josemariagarciamarquez2.72@gmail.com">gmail</a><br>
+            <strong>Email:</strong> <a href="mailto:josemariagarciamarquez2.72@gmail.com">josemariagarciamarquez2.72@gmail.com</a><br>
             <strong>Phone:</strong> <a href="tel:5543440126">5543440126</a><br>
             <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/josé-maría-garcía-márquez-556a75199/" target="_blank">José María García Márquez</a>
         </p>
@@ -199,7 +198,6 @@
         &copy; 2024 José María García Márquez. All rights reserved.
     </footer>
 
-    <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         const translations = {
@@ -214,7 +212,7 @@
                 },
                 about: {
                     title: "About Me",
-                    content: " I am a passionate geophysical engineer with expertise in data science and software development. I specialize in applying modern techniques to solve complex geophysical challenges. Explore my portfolio to learn more about my projects and professional journey."
+                    content: "I am a passionate geophysical engineer with expertise in data science and software development. I specialize in applying modern techniques to solve complex geophysical challenges. Explore my portfolio to learn more about my projects and professional journey."
                 },
                 geophysics: {
                     title: "Geophysical Projects",
@@ -293,9 +291,7 @@
             document.getElementById("contact-description").textContent = translations[lang].contact.description;
         }
 
-        // Map Initialization
         const map = L.map("map").setView([19.434958834368864, -99.13134827448047], 6);
-
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
@@ -306,8 +302,7 @@
             { lat: 19.567561675593343, lng: -99.04789445612218, title: "Ecatepec, México" },
             { lat: 20.625484862162608, lng: -100.48120680975606, title: "Querétaro, Querétaro" },
             { lat: 20.399204795642127, lng: -100.07366024407673, title: "El Rosario, Querétaro" },
-            { lat: 19.434958834368864, lng: -99.13134827448047, title: "Centro Histórico, CDMX" },
-            { lat: 24.61457242828645, lng:-101.41960802390618, title: "Concepción del Oro, Zacatecas"}
+            { lat: 19.434958834368864, lng: -99.13134827448047, title: "Centro Histórico, CDMX" }
         ];
 
         locations.forEach(loc => {
