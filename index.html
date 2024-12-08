@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>José María García Márquez - Portfolio</title>
+
+    <!-- SEO Metadata -->
+    <meta name="description" content="Portafolio de José María García Márquez: Ingeniero Geofísico, Científico de Datos y Desarrollador de Software.">
+    <meta name="keywords" content="portafolio, geofísica, ciencia de datos, desarrollo de software">
+    <meta name="author" content="José María García Márquez">
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
     <style>
         /* General Styles */
         body {
@@ -20,21 +30,12 @@
         a:hover {
             text-decoration: underline;
         }
-        /* Header */
-        header {
+        header, footer {
             background: #383944;
             color: #fff;
             padding: 1rem 0;
             text-align: center;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-        header p {
-            margin: 0.5rem 0 0;
-        }
-        /* Navigation */
         nav {
             background: #c9902d;
             color: #fff;
@@ -60,16 +61,10 @@
             padding: 0.5rem;
             cursor: pointer;
         }
-        /* Section Styles */
         section {
             padding: 2rem 1rem;
             max-width: 900px;
             margin: 0 auto;
-        }
-        section h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 1rem;
         }
         .content {
             display: flex;
@@ -88,12 +83,7 @@
             text-align: center;
         }
         .card h3 {
-            margin-top: 0;
             color: #c9902d;
-        }
-        .card p, .card a {
-            font-size: 0.9rem;
-            color: #666;
         }
         /* Map Styles */
         .map-container {
@@ -102,16 +92,33 @@
             margin: 2rem 0;
             border: 1px solid #ddd;
         }
-        /* Footer */
-        footer {
+        /* Form Styles */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        form input, form textarea, form button {
+            font-size: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        form button {
             background: #c9902d;
             color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #383944;
+        }
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
         }
     </style>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
 
@@ -176,22 +183,24 @@
         </div>
     </section>
 
+
     <section id="map">
-        <h2 id="map-title">Interactive Map</h2>
-        <p id="map-description">Explore locations related to my geophysical projects and studies:</p>
+        <h2 id="map-title" class="animate__animated animate__fadeIn">Interactive Map</h2>
+        <p id="map-description" class="animate__animated animate__fadeIn">Explore locations related to my geophysical projects and studies:</p>
         <div id="map" class="map-container"></div>
     </section>
 
     <section id="contact">
-        <h2 id="contact-title">Contact</h2>
-        <p id="contact-description">
+        <h2 id="contact-title" class="animate__animated animate__fadeIn">Contact</h2>
+        <p id="contact-description" class="animate__animated animate__fadeIn">
             Feel free to reach out for collaborations or inquiries:
         </p>
-        <p>
-            <strong>Email:</strong> <a href="mailto:josemariagarciamarquez2.72@gmail.com">GMAIL</a><br>
-            <strong>Phone:</strong> <a href="tel:5543440126">5543440126</a><br>
-            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/josé-maría-garcía-márquez-556a75199/" target="_blank">José María García Márquez</a>
-        </p>
+        <form action="https://formspree.io/f/your_form_id" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+        </form>
     </section>
 
     <footer>
@@ -309,6 +318,15 @@
         locations.forEach(loc => {
             L.marker([loc.lat, loc.lng]).addTo(map).bindPopup(`<b>${loc.title}</b>`);
         });
+    </script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'YOUR_GA_ID');
     </script>
 </body>
 </html>
