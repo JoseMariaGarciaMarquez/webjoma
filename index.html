@@ -190,25 +190,44 @@
         <div id="map" class="map-container"></div>
     </section>
 
-    <section id="contact">
-        <h2 id="contact-title" class="animate__animated animate__fadeIn">Contact</h2>
-        <p id="contact-description" class="animate__animated animate__fadeIn">
-            Feel free to reach out for collaborations or inquiries:
-        </p>
-        <form action="https://formspree.io/f/mynqplrl" method="post">
-            <label for="name">Your Name</label>
-            <input type="text" name="Name" id="name" placeholder="Your Name" required>
-            
-            <label for="email">Your Email</label>
-            <input type="email" name="Email" id="email" placeholder="Your Email" required>
-            
-            <label for="message">Your Message</label>
-            <textarea name="Message" id="message" rows="5" placeholder="Your Message" required></textarea>
-            
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+    <!-- Contact Form -->
+    <form
+    action="https://formspree.io/f/xkgnabnd"
+    method="POST"
+    style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;"
+    >
+    <label for="email" style="font-weight: bold;">
+        Your Email:
+        <input 
+        id="email" 
+        type="email" 
+        name="email" 
+        placeholder="Enter your email" 
+        required 
+        style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;"
+        >
+    </label>
     
+    <label for="message" style="font-weight: bold;">
+        Your Message:
+        <textarea 
+        id="message" 
+        name="message" 
+        rows="5" 
+        placeholder="Type your message" 
+        required 
+        style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;"
+        ></textarea>
+    </label>
+    
+    <button 
+        type="submit" 
+        style="background: #c9902d; color: #fff; border: none; padding: 0.75rem; border-radius: 4px; cursor: pointer; font-weight: bold;"
+    >
+        Send
+    </button>
+    </form>
+
 
     
 
