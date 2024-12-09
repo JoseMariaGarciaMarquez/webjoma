@@ -195,13 +195,20 @@
         <p id="contact-description" class="animate__animated animate__fadeIn">
             Feel free to reach out for collaborations or inquiries:
         </p>
-        <form action="https://formspree.io/f/your_form_id" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send</button>
+        <form action="https://formspree.io/f/{form_id}" method="post">
+            <label for="name">Your Name</label>
+            <input type="text" name="Name" id="name" placeholder="Your Name" required>
+            
+            <label for="email">Your Email</label>
+            <input type="email" name="Email" id="email" placeholder="Your Email" required>
+            
+            <label for="message">Your Message</label>
+            <textarea name="Message" id="message" rows="5" placeholder="Your Message" required></textarea>
+            
+            <button type="submit">Submit</button>
         </form>
     </section>
+    
 
     <footer>
         &copy; 2024 José María García Márquez. All rights reserved.
@@ -319,7 +326,7 @@
             L.marker([loc.lat, loc.lng]).addTo(map).bindPopup(`<b>${loc.title}</b>`);
         });
     </script>
-    
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
     <script>
