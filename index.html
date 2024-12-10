@@ -270,42 +270,46 @@
     </section>
 
     <!-- Contact Form -->
-    <form
-    action="https://formspree.io/f/xkgnabnd"
-    method="POST"
-    style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;"
-    >
-    <label for="email" style="font-weight: bold;">
-        Your Email:
-        <input 
-        id="email" 
-        type="email" 
-        name="email" 
-        placeholder="Enter your email" 
-        required 
-        style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;"
+    <section id="contact">
+        <form
+        action="https://formspree.io/f/xkgnabnd"
+        method="POST"
+        style="max-width: 350px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;"
         >
-    </label>
-    
-    <label for="message" style="font-weight: bold;">
-        Your Message:
-        <textarea 
-        id="message" 
-        name="message" 
-        rows="5" 
-        placeholder="Type your message" 
-        required 
-        style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;"
-        ></textarea>
-    </label>
-    
-    <button 
-        type="submit" 
-        style="background: #c9902d; color: #fff; border: none; padding: 0.75rem; border-radius: 4px; cursor: pointer; font-weight: bold;"
-    >
-        Send
-    </button>
-    </form>
+        <label for="email" style="font-weight: bold;">
+            Your Email:
+            <input 
+            id="email" 
+            type="email" 
+            name="email" 
+            placeholder="Enter your email" 
+            required 
+            style="width: 100%; padding: 0.4rem; border:    2px solid #ddd; border-radius: 4px;"
+            >
+        </label>
+        
+        <label for="message" style="font-weight: bold;">
+            Your Message:
+            <textarea 
+            id="message" 
+            name="message" 
+            rows="5" 
+            placeholder="Type your message" 
+            required 
+            style="width: 100%; padding: 0.5rem; border: 2px solid #ddd; border-radius: 4px;"
+            ></textarea>
+        </label>
+        
+        <button 
+            type="submit" 
+            style="background: #c9902d; color: #fff; border: none; padding: 0.75rem; border-radius: 4px; cursor: pointer; font-weight: bold;"
+        >
+            Send
+        </button>
+        </form>
+     
+        
+    </section>
 
 
     
