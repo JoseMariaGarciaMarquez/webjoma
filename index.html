@@ -6,8 +6,8 @@
     <title>José María García Márquez - Portfolio</title>
 
     <!-- SEO Metadata -->
-    <meta name="description" content="Portafolio de José María García Márquez: Ingeniero Geofísico, Científico de Datos y Desarrollador de Software.">
-    <meta name="keywords" content="portafolio, geofísica, ciencia de datos, desarrollo de software">
+    <meta name="description" content="Portafolio de José María García Márquez: Ingeniero Geofísico, Científico de Datos y Desarrollador Python.">
+    <meta name="keywords" content="portafolio, geofísica, python, desarrollo de software">
     <meta name="author" content="José María García Márquez">
 
     <!-- External Stylesheets -->
@@ -92,32 +92,6 @@
             margin: 2rem 0;
             border: 1px solid #ddd;
         }
-        /* Form Styles */
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        form input, form textarea, form button {
-            font-size: 1rem;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        form button {
-            background: #c9902d;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-        form button:hover {
-            background: #383944;
-        }
-        @media (max-width: 768px) {
-            .content {
-                flex-direction: column;
-            }
-        }
     </style>
 </head>
 <body>
@@ -129,8 +103,9 @@
 
     <nav>
         <a href="#about" id="nav-about">About Me</a>
-        <a href="#geophysics" id="nav-geophysics">Geophysical Projects</a>
+        <a href="#work" id="nav-work">Work</a>
         <a href="#repositories" id="nav-repositories">Repositories</a>
+        <a href="#geophysical-projects" id="nav-projects">Geophysical Projects</a>
         <a href="#map" id="nav-map">Map</a>
         <a href="#contact" id="nav-contact">Contact</a>
         <div class="language-selector">
@@ -142,7 +117,7 @@
     <section id="about">
         <h2 id="about-title">About Me</h2>
         <p id="about-content">
-            I am a passionate geophysical engineer with expertise in data science and software development. I specialize in applying modern techniques to solve complex geophysical challenges. Explore my portfolio to learn more about my projects and professional journey.
+            I am a passionate geophysical Python developer with expertise in data science and software development. Explore my portfolio to learn more about my projects and professional journey.
         </p>
     </section>
 
@@ -155,9 +130,9 @@
             border-radius: 4px;
         }
     </style>
-    
-    <section id="geophysics">
-        <h2 id="geophysics-title">Geophysical Projects</h2>
+
+    <section id="work">
+        <h2 id="work-title">Work</h2>
         <div class="content">
             <!-- Interpretación geológica -->
             <div class="card">
@@ -217,7 +192,6 @@
             </div>
         </div>
     </section>
-    
     <section id="repositories">
         <h2 id="repositories-title">Repositories</h2>
         <div class="content">
@@ -231,7 +205,7 @@
             </div>
             <div class="card">
                 <h3 id="repo3-title">Gridder</h3>
-                <p>Not available on GitHub yet.</p>
+                <a href="https://www.patreon.com/posts/acceso-gridder-117699729?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link" target="_blank"> <p>Pre-realize in Patreon</p>
             </div>
             <div class="card">
                 <h3 id="repo4-title">PyPozo</h3>
@@ -239,11 +213,25 @@
             </div>
         </div>
     </section>
-
+    <section id="geophysical-projects">
+        <h2 id="projects-title">Geophysical Projects</h2>
+        <section id="geophysical-projects">
+            <h2 id="projects-title">Geophysical Projects</h2>
+            <ul>
+                <li><strong>Concepción del Oro, Zacatecas:</strong> Mining, IP data processed for mining companies to identify polarization zones.</li>
+                <li><strong>El Rosario, Querétaro:</strong> UNAM internship, archaeological work using magnetometry, seismic refraction, TRE, gravimetry, and H/V.</li>
+                <li><strong>Querétaro, Querétaro:</strong> Archaeological practices in a housing development using magnetometry, seismic refraction, and TRE.</li>
+                <li><strong>Mexico City, República de Perú Street:</strong> Archaeological work using GPR related to Mexica culture.</li>
+                <li><strong>Metztitlán, Hidalgo:</strong> VES for structural analysis and to determine the depth of an anodic bed.</li>
+                <li><strong>Ecatepec, State of Mexico:</strong> VES for structural analysis and to determine the depth of an anodic bed.</li>
+                <li><strong>Zinapécuaro, Michoacán:</strong> VES and ADMT studies to assess the viability of a new aquifer well.</li>
+            </ul>
+        </section>
+        
+    </section>
 
     <section id="map">
-        <h2 id="map-title" class="animate__animated animate__fadeIn">Interactive Map</h2>
-        <p id="map-description" class="animate__animated animate__fadeIn">Explore locations related to my geophysical projects and studies:</p>
+        <h2 id="map-title">Interactive Map</h2>
         <div id="map" class="map-container"></div>
     </section>
 
@@ -296,7 +284,7 @@
             rows="5" 
             placeholder="Type your message" 
             required 
-            style="width: 100%; padding: 0.5rem; border: 2px solid #ddd; border-radius: 4px;"
+            style="width: 90%; padding: 0.5rem; border: 2px solid #ddd; border-radius: 4px;"
             ></textarea>
         </label>
         
@@ -310,10 +298,7 @@
      
         
     </section>
-
-
-    
-
+ 
     <footer>
         &copy; 2024 José María García Márquez. All rights reserved.
     </footer>
@@ -325,60 +310,66 @@
                 subtitle: "Geophysical Engineer | Data Scientist | Software Developer",
                 nav: {
                     about: "About Me",
-                    geophysics: "Geophysical Projects",
+                    work: "Work",
                     repositories: "Repositories",
+                    projects: "Geophysical Projects",
                     map: "Map",
                     contact: "Contact"
                 },
                 about: {
                     title: "About Me",
-                    content: "I am a passionate geophysical engineer with expertise in data science and software development. I specialize in applying modern techniques to solve complex geophysical challenges. Explore my portfolio to learn more about my projects and professional journey."
+                    content: "I am a passionate geophysical Python developer with expertise in data science and software development. Explore my portfolio to learn more about my projects and professional journey."
                 },
-                geophysics: {
+                work: {
+                    title: "Work"
+                },
+                projects: {
                     title: "Geophysical Projects",
-                    projects: ["Water Search", "Ground Penetrating Radar Studies", "Seismic Data Processing"]
-                },
-                repositories: {
-                    title: "Repositories",
-                    repoTitles: ["HVSRLearn", "VESPy", "Gridder", "PyPozo"]
+                    list: [
+                        "Concepción del Oro, Zacatecas: Mining, processed IP data for mining companies to identify polarization zones.",
+                        "El Rosario Querétaro: UNAM internship with archaeological work using magnetometry, seismic refraction, TRE, gravimetry, and H/V.",
+                        "Querétaro, Querétaro: Archaeological work in a housing development with magnetometry, seismic refraction, and TRE.",
+                        "Mexico City, República de Perú: Archaeological work related to Mexica culture using GPR.",
+                        "Metztitlán, Hidalgo: VES for structural analysis and depth determination of an anodic bed.",
+                        "Ecatepec, State of Mexico: VES for structural analysis and depth determination of an anodic bed.",
+                        "Zinapécuaro, Michoacán: VES and ADMT studies to assess the viability of a new aquifer well."
+                    ]
                 },
                 map: {
-                    title: "Interactive Map",
-                    description: "Explore locations related to my geophysical projects and studies:"
-                },
-                contact: {
-                    title: "Contact",
-                    description: "Feel free to reach out for collaborations or inquiries:"
+                    title: "Interactive Map"
                 }
             },
             es: {
                 subtitle: "Ingeniero Geofísico | Científico de Datos | Desarrollador de Software",
                 nav: {
                     about: "Sobre Mí",
-                    geophysics: "Proyectos Geofísicos",
+                    work: "Trabajo",
                     repositories: "Repositorios",
+                    projects: "Proyectos Geofísicos",
                     map: "Mapa",
                     contact: "Contacto"
                 },
                 about: {
                     title: "Sobre Mí",
-                    content: "Soy un ingeniero geofísico apasionado con experiencia en ciencia de datos y desarrollo de software. Me especializo en la aplicación de técnicas modernas para resolver desafíos geofísicos complejos. Explora mi portafolio para aprender más sobre mis proyectos y trayectoria profesional."
+                    content: "Soy un desarrollador Python en geofísica apasionado con experiencia en ciencia de datos y desarrollo de software. Explora mi portafolio para aprender más sobre mis proyectos y trayectoria profesional."
                 },
-                geophysics: {
+                work: {
+                    title: "Trabajo"
+                },
+                projects: {
                     title: "Proyectos Geofísicos",
-                    projects: ["Búsqueda de Agua", "Estudios de Radar de Penetración Terrestre", "Procesamiento de Datos Sísmicos"]
-                },
-                repositories: {
-                    title: "Repositorios",
-                    repoTitles: ["HVSRLearn", "VESPy", "Gridder", "PyPozo"]
+                    list: [
+                        "Concepción del Oro, Zacatecas: Minería, datos e IP procesados para empresas mineras, buscando zonas de polarización.",
+                        "El Rosario Querétaro: Prácticas profesionales de la UNAM, trabajo arqueológico con magnetometría, refracción sísmica, TRE, gravimetría y H/V.",
+                        "Querétaro, Querétaro: Trabajo arqueológico en un fraccionamiento de casas con magnetometría, sísmica y TRE.",
+                        "CDMX, Calle República de Perú: Trabajo arqueológico relacionado con la cultura mexica, usando GPR.",
+                        "Metztitlán, Hidalgo: SEV para análisis estructural y determinar la profundidad de una cama anódica.",
+                        "Ecatepec, Edo. Mex.: SEV para análisis estructural y determinar la profundidad de una cama anódica.",
+                        "Zinapécuaro, Michoacán: Estudios de SEV y ADMT para evaluar la viabilidad de un pozo acuífero."
+                    ]
                 },
                 map: {
-                    title: "Mapa Interactivo",
-                    description: "Explora las ubicaciones relacionadas con mis proyectos y estudios geofísicos:"
-                },
-                contact: {
-                    title: "Contacto",
-                    description: "No dudes en ponerte en contacto para colaboraciones o consultas:"
+                    title: "Mapa Interactivo"
                 }
             }
         };
@@ -386,29 +377,17 @@
         function setLanguage(lang) {
             document.getElementById("subtitle").textContent = translations[lang].subtitle;
             document.getElementById("nav-about").textContent = translations[lang].nav.about;
-            document.getElementById("nav-geophysics").textContent = translations[lang].nav.geophysics;
+            document.getElementById("nav-work").textContent = translations[lang].nav.work;
             document.getElementById("nav-repositories").textContent = translations[lang].nav.repositories;
+            document.getElementById("nav-projects").textContent = translations[lang].nav.projects;
             document.getElementById("nav-map").textContent = translations[lang].nav.map;
             document.getElementById("nav-contact").textContent = translations[lang].nav.contact;
 
             document.getElementById("about-title").textContent = translations[lang].about.title;
             document.getElementById("about-content").textContent = translations[lang].about.content;
 
-            document.getElementById("geophysics-title").textContent = translations[lang].geophysics.title;
-            translations[lang].geophysics.projects.forEach((title, idx) => {
-                document.getElementById(`project${idx + 1}-title`).textContent = title;
-            });
-
-            document.getElementById("repositories-title").textContent = translations[lang].repositories.title;
-            translations[lang].repositories.repoTitles.forEach((title, idx) => {
-                document.getElementById(`repo${idx + 1}-title`).textContent = title;
-            });
-
+            document.getElementById("projects-title").textContent = translations[lang].projects.title;
             document.getElementById("map-title").textContent = translations[lang].map.title;
-            document.getElementById("map-description").textContent = translations[lang].map.description;
-
-            document.getElementById("contact-title").textContent = translations[lang].contact.title;
-            document.getElementById("contact-description").textContent = translations[lang].contact.description;
         }
 
         const map = L.map("map").setView([19.434958834368864, -99.13134827448047], 6);
@@ -417,27 +396,18 @@
         }).addTo(map);
 
         const locations = [
-        { lat: 19.856527952987165, lng: -100.82120816287592, title: "Zinapécuaro, Michoacán" },
-        { lat: 20.595709826836824, lng: -98.76397674682178, title: "Metztitlán, Hidalgo" },
-        { lat: 19.567561675593343, lng: -99.04789445612218, title: "Ecatepec, México" },
-        { lat: 20.625484862162608, lng: -100.48120680975606, title: "Querétaro, Querétaro" },
-        { lat: 20.399204795642127, lng: -100.07366024407673, title: "El Rosario, Querétaro" },
-        { lat: 19.434958834368864, lng: -99.13134827448047, title: "Centro Histórico, CDMX" },
-        { lat: 24.61457242828645, lng: -101.41960802390618, title: "Concepción del Oro, Zacatecas" }
-    ];
+            { lat: 24.61457242828645, lng: -101.41960802390618, title: "Concepción del Oro, Zacatecas" },
+            { lat: 20.399204795642127, lng: -100.07366024407673, title: "El Rosario, Querétaro" },
+            { lat: 20.625484862162608, lng: -100.48120680975606, title: "Querétaro, Querétaro" },
+            { lat: 19.434958834368864, lng: -99.13134827448047, title: "CDMX, República de Perú" },
+            { lat: 20.595709826836824, lng: -98.76397674682178, title: "Metztitlán, Hidalgo" },
+            { lat: 19.567561675593343, lng: -99.04789445612218, title: "Ecatepec, Edo. Mex." },
+            { lat: 19.856527952987165, lng: -100.82120816287592, title: "Zinapécuaro, Michoacán" }
+        ];
 
         locations.forEach(loc => {
             L.marker([loc.lat, loc.lng]).addTo(map).bindPopup(`<b>${loc.title}</b>`);
         });
-    </script>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'YOUR_GA_ID');
     </script>
 </body>
 </html>
