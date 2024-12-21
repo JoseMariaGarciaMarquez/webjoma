@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #c9902d;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .blog-section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .blog-post {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .blog-post h3 {
+            color: #c9902d;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .blog-post img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        .blog-post p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .blog-post strong {
+            color: #c9902d;
+            font-size: 1.2rem;
+        }
+        .blog-post em {
+            color: #555;
+            font-style: italic;
+        }
+        .blog-post ol {
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .blog-post ol li {
+            margin-bottom: 0.5rem;
+        }
+        @media (max-width: 768px) {
+            .blog-section {
+                padding: 1rem;
+            }
+            .blog-post {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog</h1>
+    </header>
+    <section class="blog-section">
+        <div class="blog-post" id="post1">
+            <h3>La filosofía del software libre: un movimiento de tecnología y principios</h3>
+            <img src="blog/opensource.png" alt="Software Libre">
+            <p>
+                En un mundo donde la tecnología desempeña un papel crucial en todos los ámbitos de la vida, el software libre surge como una alternativa no solo técnica, sino también filosófica y ética. Este movimiento, que defiende la libertad de los usuarios para usar, estudiar, modificar y compartir software, se ha convertido en un pilar fundamental en la lucha por los derechos digitales y la colaboración global. En este artículo exploraremos los principios filosóficos del software libre, su impacto en la sociedad y los desafíos que enfrenta en un mundo dominado por el software propietario.
+            </p>
+            <p>
+                <strong>¿Qué es el software libre?</strong><br>
+                El software libre es aquel que respeta las libertades de los usuarios. Según la definición establecida por la Free Software Foundation (FSF), fundada por Richard Stallman en 1985, el software libre otorga a los usuarios cuatro libertades esenciales:
+                <ol>
+                    <li>Libertad de usar el programa para cualquier propósito.</li>
+                    <li>Libertad de estudiar cómo funciona el programa y modificarlo según las necesidades. Esto requiere acceso al código fuente.</li>
+                    <li>Libertad de redistribuir copias para ayudar a otros.</li>
+                    <li>Libertad de mejorar el programa y hacer públicas las mejoras para beneficio de la comunidad.</li>
+                </ol>
+                Estas libertades se contrastan con las restricciones impuestas por el software propietario, que limita el acceso al código fuente y prohíbe compartir o modificar el software. Aunque a menudo se confunde con el software de código abierto (Open Source), el software libre enfatiza las implicaciones éticas y sociales de estas libertades, más allá de las consideraciones técnicas.
+            </p>
+            <p>
+                <strong>Fundamentos filosóficos del software libre</strong><br>
+                <em>Ética y derechos digitales</em><br>
+                La filosofía del software libre parte de la idea de que el software es una herramienta fundamental en la vida moderna y que, como tal, los usuarios deben tener control sobre él. Richard Stallman, una de las figuras más influyentes del movimiento, argumenta que restringir el acceso al software es una forma de privar a las personas de su libertad. En este sentido, el software libre no solo es una cuestión de eficiencia técnica, sino de justicia social.
+            </p>
+            <p>
+                <em>Colaboración y comunidad</em><br>
+                El software libre también representa un modelo de colaboración abierta y descentralizada. Al liberar el código fuente, se permite que personas de todo el mundo contribuyan al desarrollo, mejora y adaptación del software. Este modelo ha dado lugar a proyectos icónicos como GNU/Linux, un sistema operativo desarrollado gracias a miles de contribuciones voluntarias.
+            </p>
+            <p>
+                <em>El copyleft: protegiendo la libertad</em><br>
+                Un aspecto central del software libre es el uso de licencias como la Licencia Pública General (GPL), también conocida como copyleft. Estas licencias garantizan que el software y cualquier derivado de él sigan siendo libres. En otras palabras, mientras que el copyright se utiliza para restringir el uso, el copyleft asegura que las libertades originales del software no puedan ser eliminadas por futuros desarrolladores o distribuidores.
+            </p>
+            <p>
+                <strong>Impacto del software libre en la sociedad</strong><br>
+                <em>En la educación</em><br>
+                El software libre ha revolucionado el acceso a herramientas educativas. Programas como Moodle (una plataforma de aprendizaje en línea) o LibreOffice permiten que instituciones educativas de todo el mundo utilicen tecnología avanzada sin incurrir en altos costos de licencias. Además, el acceso al código fuente fomenta el aprendizaje y la investigación, ya que los estudiantes pueden estudiar y modificar el software para entender cómo funciona.
+            </p>
+            <p>
+                <em>En los gobiernos</em><br>
+                Muchos gobiernos han adoptado software libre para reducir la dependencia de proveedores externos y garantizar la soberanía tecnológica. Por ejemplo, países como Brasil, Alemania y la India han implementado GNU/Linux en sus administraciones públicas. Esto no solo reduce costos, sino que también mejora la seguridad, ya que el acceso al código permite identificar y solucionar vulnerabilidades.
+            </p>
+            <p>
+                <em>En la innovación</em><br>
+                El software libre también impulsa la innovación. Al permitir que cualquiera contribuya y modifique el software, se crea un entorno donde las ideas pueden desarrollarse rápidamente. Proyectos como Android, que se basa en el kernel de Linux, muestran cómo el software libre puede convertirse en la base de tecnologías revolucionarias.
+            </p>
+            <p>
+                <em>Ejemplos de éxito</em><br>
+                Algunos de los ejemplos más conocidos de software libre incluyen:
+                <ul>
+                    <li><strong>GNU/Linux</strong>: Un sistema operativo utilizado en servidores, dispositivos móviles y supercomputadoras.</li>
+                    <li><strong>LibreOffice</strong>: Una suite de oficina gratuita y potente.</li>
+                    <li><strong>Mozilla Firefox</strong>: Un navegador web que prioriza la privacidad y la seguridad.</li>
+                    <li><strong>WordPress</strong>: Una plataforma de gestión de contenidos que impulsa el 43% de los sitios web en el mundo.</li>
+                </ul>
+            </p>
+            <p>
+                <strong>Conclusión</strong><br>
+                El software libre no es solo una alternativa tecnológica, sino una declaración de principios en defensa de la libertad, la colaboración y los derechos digitales. En un mundo cada vez más interconectado y dependiente de la tecnología, su filosofía ofrece una visión de cómo podría ser un futuro más justo y sostenible.
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>
