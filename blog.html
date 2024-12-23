@@ -76,16 +76,61 @@
     <header>
         <h1>Blog</h1>
     </header>
-
     <section class="blog-section">
-        <div class="blog-post" id="post1"></div>
-        <h3>VESPy: Aplicación para el modelamiento de datos de SEV</h3>
-        <img src="blog/vespy.png" alt="VESPy">
-        
-
-    </section>
-
-    <section class="blog-section">
+        <div class="blog-post" id="post1">
+            <h3>Mi experiencia usando GPRPy: una herramienta poderosa para el procesamiento de datos GPR</h3>
+            <img src="blog/gprpy.png" alt="GPRPy">
+            <p>
+                Recientemente, enfrenté un reto significativo: procesar más de 6 kilómetros de datos de GPR sin contar con licencias de software especializado, como Geolitix. Aprovecho para mencionar que Geolitix es una herramienta de trabajo excelente, pero en esta ocasión, no estaba disponible para mí.
+            </p>
+            <p>
+                <strong>Explorando alternativas: del caos a la solución</strong><br>
+                Al principio, me sentía perdido. No porque no hubiera opciones, sino porque no sabía cuál elegir. En la universidad, solía trabajar con MatGPR, una aplicación basada en MATLAB, pero esta vez quería explorar algo diferente. Entonces recordé <strong>GPRPy</strong>, un software basado en Python para el procesamiento de datos GPR. Decidí probarlo.
+            </p>
+            <p>
+                La instalación fue sencilla: seguí las instrucciones del repositorio oficial, y en poco tiempo, ya estaba explorando sus funcionalidades.
+            </p>
+            <p>
+                <strong>La interfaz gráfica: simple pero funcional</strong><br>
+                La interfaz gráfica de GPRPy es bastante simple, diría que apenas suficiente. Sin embargo, tiene un diseño que considero sobresaliente: la disposición de los botones sigue una lógica clara y bien estructurada, lo que facilita el flujo de trabajo. Aunque no cuenta con un procesamiento automatizado como Geolitix, esta simplicidad obliga al usuario a comprender mejor los datos que está manejando. 
+            </p>
+            <p>
+                En mi opinión, esto es una ventaja, especialmente en un campo como la geofísica, que últimamente se ha llenado de personas que prefieren "presionar botones a ver qué pasa" en lugar de entender los fundamentos del procesamiento. Si no tienes conocimientos sólidos en procesamiento de señales, usar GPRPy puede ser un desafío. Además, para los hispanohablantes, el idioma puede ser otra barrera. Aunque no afecta a todos, el limitado dominio del inglés en algunos casos obliga a recurrir constantemente al traductor de Google.
+            </p>
+            <p>
+                <strong>Lo mejor de GPRPy: su funcionalidad</strong><br>
+                A pesar de sus limitaciones gráficas, lo que realmente destaca en GPRPy son sus funciones. Procesar datos con este software fue una experiencia muy satisfactoria. La intuitividad de sus herramientas es evidente y refleja las horas de dedicación y esfuerzo detrás de su desarrollo. 
+            </p>
+            <p>
+                Por ejemplo, comenzar con un perfil es tan simple como escribir:
+            </p>
+            <pre><code>
+    import gprpy.gprpy as gp
+    perfil = gp.gprpyProfile('ruta')
+            </code></pre>
+            <p>
+                Aplicar la corrección de tiempo cero es igual de directo:
+            </p>
+            <pre><code>
+    perfil.setZeroTime(20)
+            </code></pre>
+            <p>
+                Y para alinear las trazas:
+            </p>
+            <pre><code>
+    perfil.alignTraces()
+            </code></pre>
+            <p>
+                Incluso pude integrar GPRPy en un ciclo <code>for</code> para procesar múltiples archivos de forma eficiente, aplicando la misma rutina a varias rutas. Esto me ahorró mucho tiempo y demostró la versatilidad del software.
+            </p>
+            <p>
+                <strong>Recomendaciones finales</strong><br>
+                En definitiva, recomiendo ampliamente <strong>GPRPy</strong> para el procesamiento de datos GPR, especialmente si estás dispuesto a profundizar en los fundamentos del procesamiento de señales y la física de ondas. Además, sugiero repasar temas clave como introducción a filtros digitales, física de ondas y procesamiento de señales. En mi caso, tuve la suerte de contar con excelentes profesores como el Dr. Josué Tago y Manuel, quienes me dieron una base sólida para enfrentar estos retos.
+            </p>
+            <p>
+                GPRPy no solo es una herramienta técnica, sino una oportunidad para aprender y fortalecer conocimientos esenciales en geofísica. ¡Anímate a probarlo!
+            </p>
+        </div>
         <div class="blog-post" id="post2">
             <h3>La filosofía del software libre: un movimiento de tecnología y principios</h3>
             <img src="blog/opensource.png" alt="Software Libre">
