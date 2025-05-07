@@ -3,510 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>José María García Márquez - Portfolio</title>
-
-    <!-- SEO Metadata -->
-    <meta name="description" content="Portafolio de José María García Márquez: Ingeniero Geofísico, Científico de Datos y Desarrollador Python.">
-    <meta name="keywords" content="portafolio, geofísica, python, desarrollo de software">
-    <meta name="author" content="José María García Márquez">
-
-    <!-- External Stylesheets -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
-    <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f9;
-        }
-        a {
-            text-decoration: none;
-            color: #023d7c;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        header, footer {
-            background: #383944;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
-            background: #c9902d;
-            color: #fff;
-            padding: 0.5rem 0;
-            text-align: center;
-            position: relative;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        .language-selector {
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-        }
-        .language-selector button {
-            background: #383944;
-            color: #fff;
-            border: none;
-            padding: 0.5rem;
-            cursor: pointer;
-        }
-        section {
-            padding: 2rem 1rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: space-between;
-        }
-        .card {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            flex: 1 1 calc(45% - 1rem);
-            max-width: calc(45% - 1rem);
-            padding: 1rem;
-            text-align: center;
-        }
-        .card h3 {
-            color: #c9902d;
-        }
-
-        /* General Styles for Cards */
-        .card img {
-            width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
-            max-height: 200px; /* Limita la altura máxima de las imágenes */
-            object-fit: cover; /* Recorta la imagen si es necesario para ajustarse al contenedor */
-            border-radius: 4px;
-        }
-
-        /* Map Styles */
-        .map-container {
-            width: 100%;
-            height: 500px;
-            margin: 2rem 0;
-            border: 1px solid #ddd;
-        }
-        /* Carrusel Styles */
-        .carousel {
-            position: relative;
-            display: flex;
-            overflow: hidden;
-            width: 100%;
-            margin: 2rem 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .carousel-item {
-            min-width: 100%;
-            transition: transform 0.5s ease;
-            position: relative;
-        }
-        .carousel img {
-            width: 100%;
-            height: 400px; /* Controla la altura de las imágenes */
-            object-fit: cover; /* Asegura que las imágenes cubran el contenedor */
-            border-radius: 10px;
-        }
-        .carousel-caption {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .carousel-buttons {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-        }
-        .carousel-buttons button {
-            margin: 0 0.5rem;
-            padding: 0.5rem 1rem;
-            background-color: #c9902d;
-            border: none;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .carousel-buttons button:hover {
-            background-color: #a6781d;
-        }
-    </style>
+    <title>JOMA - Ingeniero Geofísico</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
-        <h1>José María García Márquez</h1>
-        <p id="subtitle">Geophysical Engineer | Data Scientist | Software Developer</p>
+        <h1>JOMA - Ingeniero Geofísico</h1>
+        <p>José María García Márquez</p>
     </header>
+    <main>
+        <section id="about">
+            <h2>¿Quién soy?</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Soy José María García Márquez, un apasionado ingeniero geofísico con experiencia en exploración de recursos naturales, análisis de datos y desarrollo de software. Mi objetivo es combinar la ciencia y la tecnología para resolver problemas complejos relacionados con el subsuelo.
+                    </p>
+                    <p>
+                        La ingeniería geofísica es una disciplina que utiliza métodos físicos para estudiar las propiedades del subsuelo. Desde la exploración minera hasta la evaluación de recursos hídricos, esta rama de la ingeniería es clave para entender nuestro planeta y aprovechar sus recursos de manera sostenible.
+                    </p>
+                </div>
+                <img src="images_web/yo.png" alt="José María García Márquez" class="about-image">
+            </div>
+        </section>
 
-    <nav>
-        <a href="#about" id="nav-about">About Me</a>
-        <a href="#work" id="nav-work">Work</a>
-        <a href="#repositories" id="nav-repositories">Repositories</a>
-        <a href="#geophysical-projects" id="nav-projects">Geophysical Projects</a>
-        <a href="#map" id="nav-map">Map</a>
-        <a href="#contact" id="nav-contact">Contact</a>
-        <div class="language-selector">
-            <button onclick="setLanguage('en')">EN</button>
-            <button onclick="setLanguage('es')">ES</button>
-        </div>
-    </nav>
-
-    <section id="about">
-        <h2 id="about-title">About Me</h2>
-        <p id="about-content">
-            I am a passionate geophysical Python developer with expertise in data science and software development. Explore my portfolio to learn more about my projects and professional journey.
-        </p>
-    </section>
-
-    <!-- Carrusel -->
-    <div class="carousel">
-        <div class="carousel-item">
-            <a href="blog.html#post1"><img src="blog/copiloto.png" alt="GitHub Copilot"></a>
-            <div class="carousel-caption">
-                <h3>Mi experiencia con GitHub Copilot: ¿revolución o simple ayuda?</h3>
-                <p>Descubre cómo GitHub Copilot ha transformado mi flujo de trabajo y los retos que presenta.</p>
+        <section id="menu">
+            <h2>Explora mi Portafolio</h2>
+            <div class="menu-cards">
+                <div class="card">
+                    <a href="map.html">
+                        <img src="images_web/mapa.png" alt="Mapa">
+                        <h3>Mapa</h3>
+                        <p>Visualiza las zonas de estudio y proyectos realizados.</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="store.html">
+                        <img src="images_web/store.png" alt="Tienda">
+                        <h3>Tienda</h3>
+                        <p>Accede a productos y material académico.</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="social.html">
+                        <img src="images/social.jpg" alt="Redes Sociales">
+                        <h3>Redes Sociales & Twitch</h3>
+                        <p>Conéctate conmigo en vivo y explora clips destacados.</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="publications.html">
+                        <img src="images/publications.jpg" alt="Publicaciones">
+                        <h3>Publicaciones</h3>
+                        <p>Descarga artículos técnicos y suscríbete a mi newsletter.</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="blog.html">
+                        <img src="images_web/blog.png" alt="Blog">
+                        <h3>Blog</h3>
+                        <p>Lee mis experiencias y reflexiones sobre la geofísica.</p>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="carousel-item">
-            <a href="blog.html#post2"><img src="blog/geolitix.png" alt="Geolitix"></a>
-            <div class="carousel-caption">
-                <h3>Explorando Geolitix: Mi Experiencia con una Herramienta de Procesamiento Geofísico</h3>
-                <p>Descubre cómo Geolitix simplifica el procesamiento e interpretación de datos geofísicos.</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <a href="blog.html#post3"><img src="blog/gprpy.png" alt="GPRPy"></a>
-            <div class="carousel-caption">
-                <h3>Mi experiencia usando GPRPy: una herramienta poderosa para el procesamiento de datos GPR</h3>
-                <p>Procesar datos GPR nunca fue tan eficiente e intuitivo.</p>
-            </div>
-        </div>
-    </div>
-    
-    <div class="carousel-buttons">
-        <button onclick="prevSlide()">Previous</button>
-        <button onclick="nextSlide()">Next</button>
-    </div>
-
-
-    <section id="work">
-        <h2 id="work-title">Work</h2>
-        <div class="content">
-            <!-- Interpretación geológica -->
-            <div class="card">
-                <h3>Geological Interpretation</h3>
-                <p>Profile interpreted in LibreCAD showing geological layers and structures.</p>
-                <img src="images_web/modelo_capas.jpg" alt="Geological Interpretation in LibreCAD">
-            </div>
-    
-            <!-- Recomendaciones técnicas -->
-            <div class="card">
-                <h3>Technical Recommendations</h3>
-                <p>Details on perforation techniques and subsurface evaluation.</p>
-                <img src="images_web/sev_perfo.png" alt="Technical Recommendations">
-            </div>
-    
-            <!-- Procesamiento de datos -->
-            <div class="card">
-                <h3>Vertical Electrical Sounding (VES)</h3>
-                <p>Inversion using Occam's razor model to interpret subsurface resistivity.</p>
-                <img src="images_web/vespy.png" alt="VES Data Processing">
-            </div>
-    
-            <div class="card">
-                <h3>HVSR Analysis</h3>
-                <p>HVSR calculation using Nakamura’s method to estimate resonance frequencies.</p>
-                <img src="images_web/staA_metNaka.png" alt="HVSR Analysis">
-            </div>
-    
-            <div class="card">
-                <h3>Seismic Data Filtering</h3>
-                <p>Python-designed filter to enhance frequencies near the corner frequency.</p>
-                <img src="images_web/sismica.png" alt="Seismic Filtering">
-            </div>
-    
-            <div class="card">
-                <h3>GIS Mapping</h3>
-                <p>Maps designed in QGIS for spatial analysis and geophysical study visualization.</p>
-                <img src="images_web/insta_arqui.png" alt="QGIS Mapping">
-            </div>
-    
-            <div class="card">
-                <h3>Signal Processing</h3>
-                <p>Advanced signal processing techniques applied to geophysical data.</p>
-                <img src="images_web/estacioA.png" alt="Signal Processing">
-            </div>
-    
-            <div class="card">
-                <h3>Well Logging</h3>
-                <p>Analysis of geophysical well logs, showcasing density and gamma-ray data.</p>
-                <img src="images_web/grvsden.png" alt="Well Logging">
-            </div>
-    
-            <div class="card">
-                <h3>Ground Penetrating Radar (GPR)</h3>
-                <p>Interpretation of subsurface structures using GPR profiles.</p>
-                <img src="images_web/perfil_gpr.png" alt="GPR Data">
-            </div>
-        </div>
-    </section>
-    <section id="repositories">
-        <h2 id="repositories-title">Repositories</h2>
-        <div class="content">
-            <div class="card">
-                <h3 id="repo1-title">HVSRLearn</h3>
-                <a href="https://github.com/JoseMariaGarciaMarquez/hvsrlearn" target="_blank">View Repository</a>
-            </div>
-            <div class="card">
-                <h3 id="repo4-title">PyPozo</h3>
-                <a href="https://github.com/JoseMariaGarciaMarquez/pypozo" target="_blank">View Repository</a>
-            </div>
-            <div class="card">
-                <h3 id="repo2-title">VESPy</h3>
-                <a href="https://www.patreon.com/posts/vespy-app-118386130?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link" target="_blank">Pre-release in Patreon</a>
-            </div>
-            <div class="card">
-                <h3 id="repo3-title">Gridder</h3>
-                <a href="https://www.patreon.com/posts/acceso-gridder-117699729?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link" target="_blank"> Pre-release in Patreon</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="geophysical-projects">
-        <h2 id="projects-title">Geophysical Projects</h2>
-        <ul>
-            <li><strong>Concepción del Oro, Zacatecas:</strong> Conducted geophysical surveys using Induced Polarization (IP) methods to analyze subsurface properties and identify potential mineral deposits for mining operations.</li>
-            <li><strong>El Rosario, Querétaro:</strong> Participated in an archaeological research internship with UNAM, employing magnetometry, seismic refraction, Electrical Resistivity Tomography (ERT), gravimetry, and H/V methods to study subsurface structures.</li>
-            <li><strong>Querétaro, Querétaro:</strong> Executed geophysical investigations for archaeological purposes in a residential area, applying magnetometry, seismic refraction, and ERT to identify buried structures.</li>
-            <li><strong>Mexico City, República de Perú Street:</strong> Conducted Ground Penetrating Radar (GPR) surveys as part of archaeological research focusing on Mexica culture, identifying subsurface artifacts and features.</li>
-            <li><strong>Metztitlán, Hidalgo:</strong> Performed Vertical Electrical Sounding (VES) to evaluate structural conditions and determine the depth of an anodic bed for engineering applications.</li>
-            <li><strong>Ecatepec, State of Mexico:</strong> Applied VES techniques to perform structural analyses and estimate the depth of anodic beds, contributing to construction planning and geotechnical studies.</li>
-            <li><strong>Zinapécuaro, Michoacán:</strong> Conducted combined VES and Audio-Magnetotelluric (AMT) surveys to assess groundwater potential and evaluate the feasibility of drilling a new aquifer well.</li>
-        </ul>
-    </section>    
-        
-
-    <section id="map">
-        <h2 id="map-title">Interactive Map</h2>
-        <div id="map" class="map-container"></div>
-    </section>
-
-    <section id="support">
-        <h2>Support and Socials</h2>
-        <div class="content">
-            <div class="card">
-                <h3>Support My Work</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="https://paypal.me/Chemitas96?country.x=MX&locale.x=es_XC" target="_blank">PayPal: Support via PayPal</a></li>
-                    <li><a href="https://www.patreon.com/c/chemitas" target="_blank">Patreon: Become a Patron</a></li>
-                    <li><strong>BBVA Account:</strong> 4152 3140 1427 4990 (José María García Márquez)</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Follow Me</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="https://www.twitch.tv/chemitas96" target="_blank">Twitch: chemitas96</a></li>
-                    <li><a href="https://www.youtube.com/@jomaing" target="_blank">YouTube: JOMaIng</a></li>
-                    <li><a href="https://www.youtube.com/@JOMAlive-x3e" target="_blank">YouTube: JOMAlive</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section id="contact">
-        <form
-        action="https://formspree.io/f/xkgnabnd"
-        method="POST"
-        style="max-width: 350px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;"
-        >
-        <label for="email" style="font-weight: bold;">
-            Your Email:
-            <input 
-            id="email" 
-            type="email" 
-            name="email" 
-            placeholder="Enter your email" 
-            required 
-            style="width: 100%; padding: 0.4rem; border:    2px solid #ddd; border-radius: 4px;"
-            >
-        </label>
-        
-        <label for="message" style="font-weight: bold;">
-            Your Message:
-            <textarea 
-            id="message" 
-            name="message" 
-            rows="5" 
-            placeholder="Type your message" 
-            required 
-            style="width: 95%; padding: 0.5rem; border: 2px solid #ddd; border-radius: 4px;"
-            ></textarea>
-        </label>
-        
-        <button 
-            type="submit" 
-            style="background: #c9902d; color: #fff; border: none; padding: 0.75rem; border-radius: 4px; cursor: pointer; font-weight: bold;"
-        >
-            Send
-        </button>
-        </form>
-     
-        
-    </section>
- 
+        </section>
+    </main>
     <footer>
-        &copy; 2024 José María García Márquez. All rights reserved. Developed on <HTMl:5></HTMl:5>
+        <p>&copy; 2025 JOMA - Ingeniero Geofísico. Todos los derechos reservados.</p>
     </footer>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>
-        const translations = {
-            en: {
-                subtitle: "Geophysical Engineer | Data Scientist | Software Developer",
-                nav: {
-                    about: "About Me",
-                    work: "Work",
-                    repositories: "Repositories",
-                    projects: "Geophysical Projects",
-                    map: "Map",
-                    contact: "Contact"
-                },
-                about: {
-                    title: "About Me",
-                    content: "I am a passionate geophysical Python developer with expertise in data science and software development. Explore my portfolio to learn more about my projects and professional journey."
-                },
-                work: {
-                    title: "Work"
-                },
-                projects: {
-                    title: "Geophysical Projects",
-                    list: [
-                        "Concepción del Oro, Zacatecas: Mining, processed IP data for mining companies to identify polarization zones.",
-                        "El Rosario Querétaro: UNAM internship with archaeological work using magnetometry, seismic refraction, TRE, gravimetry, and H/V.",
-                        "Querétaro, Querétaro: Archaeological work in a housing development with magnetometry, seismic refraction, and TRE.",
-                        "Mexico City, República de Perú: Archaeological work related to Mexica culture using GPR.",
-                        "Metztitlán, Hidalgo: VES for structural analysis and depth determination of an anodic bed.",
-                        "Ecatepec, State of Mexico: VES for structural analysis and depth determination of an anodic bed.",
-                        "Zinapécuaro, Michoacán: VES and ADMT studies to assess the viability of a new aquifer well."
-                    ]
-                },
-                map: {
-                    title: "Interactive Map"
-                }
-            },
-            es: {
-                subtitle: "Ingeniero Geofísico | Científico de Datos | Desarrollador de Software",
-                nav: {
-                    about: "Sobre Mí",
-                    work: "Trabajo",
-                    repositories: "Repositorios",
-                    projects: "Proyectos Geofísicos",
-                    map: "Mapa",
-                    contact: "Contacto"
-                },
-                about: {
-                    title: "Sobre Mí",
-                    content: "Soy un desarrollador Python en geofísica apasionado con experiencia en ciencia de datos y desarrollo de software. Explora mi portafolio para aprender más sobre mis proyectos y trayectoria profesional."
-                },
-                work: {
-                    title: "Trabajo"
-                },
-                projects: {
-                    title: "Proyectos Geofísicos",
-                    list: [
-                        "Concepción del Oro, Zacatecas: Realización de estudios geofísicos con métodos de Polarización Inducida (IP) para analizar propiedades del subsuelo y localizar depósitos minerales potenciales para operaciones mineras.",
-                        "El Rosario, Querétaro: Participación en prácticas profesionales con la UNAM en proyectos de investigación arqueológica, utilizando magnetometría, refracción sísmica, Tomografía de Resistividad Eléctrica (TRE), gravimetría y métodos H/V para investigar estructuras del subsuelo.",
-                        "Querétaro, Querétaro: Ejecución de investigaciones geofísicas con fines arqueológicos en un área residencial, aplicando magnetometría, refracción sísmica y TRE para identificar estructuras enterradas.",
-                        "CDMX, Calle República de Perú: Uso de Radar de Penetración Terrestre (GPR) en un proyecto arqueológico enfocado en la cultura mexica, identificando artefactos y características subterráneas.",
-                        "Metztitlán, Hidalgo: Realización de Sondeos Eléctricos Verticales (SEV) para evaluar condiciones estructurales y determinar la profundidad de una cama anódica para aplicaciones de ingeniería.",
-                        "Ecatepec, Edo. Mex.: Aplicación de técnicas SEV para análisis estructurales y estimación de la profundidad de camas anódicas, contribuyendo a estudios geotécnicos y de planificación de construcción.",
-                        "Zinapécuaro, Michoacán: Estudios combinados de SEV y Audio-Magnetotelúricos (AMT) para evaluar el potencial de agua subterránea y determinar la viabilidad de perforar un nuevo pozo acuífero."
-                    ]
-                },
-
-                map: {
-                    title: "Mapa Interactivo"
-                }
-            }
-        };
-
-        function setLanguage(lang) {
-            document.getElementById("subtitle").textContent = translations[lang].subtitle;
-            document.getElementById("nav-about").textContent = translations[lang].nav.about;
-            document.getElementById("nav-work").textContent = translations[lang].nav.work;
-            document.getElementById("nav-repositories").textContent = translations[lang].nav.repositories;
-            document.getElementById("nav-projects").textContent = translations[lang].nav.projects;
-            document.getElementById("nav-map").textContent = translations[lang].nav.map;
-            document.getElementById("nav-contact").textContent = translations[lang].nav.contact;
-
-            document.getElementById("about-title").textContent = translations[lang].about.title;
-            document.getElementById("about-content").textContent = translations[lang].about.content;
-
-            document.getElementById("projects-title").textContent = translations[lang].projects.title;
-            document.getElementById("map-title").textContent = translations[lang].map.title;
-        }
-
-        const map = L.map("map").setView([19.434958834368864, -99.13134827448047], 6);
-        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-
-        const locations = [
-            { lat: 24.61457242828645, lng: -101.41960802390618, title: "Concepción del Oro, Zacatecas" },
-            { lat: 20.399204795642127, lng: -100.07366024407673, title: "El Rosario, Querétaro" },
-            { lat: 20.625484862162608, lng: -100.48120680975606, title: "Querétaro, Querétaro" },
-            { lat: 19.434958834368864, lng: -99.13134827448047, title: "CDMX, República de Perú" },
-            { lat: 20.595709826836824, lng: -98.76397674682178, title: "Metztitlán, Hidalgo" },
-            { lat: 19.567561675593343, lng: -99.04789445612218, title: "Ecatepec, Edo. Mex." },
-            { lat: 19.856527952987165, lng: -100.82120816287592, title: "Zinapécuaro, Michoacán" }
-        ];
-
-        locations.forEach(loc => {
-            L.marker([loc.lat, loc.lng]).addTo(map).bindPopup(`<b>${loc.title}</b>`);
-        });
-    </script>
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-item');
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.style.transform = `translateX(${100 * (i - index)}%)`;
-            });
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
-            showSlide(currentSlide);
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
-            showSlide(currentSlide);
-        }
-
-        showSlide(currentSlide);
-    </script>
 </body>
 </html>

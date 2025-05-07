@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploración Geofísica</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 1200px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#map-container {
+    height: 400px;
+    background: #ddd;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+    </style>
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Exploración Geofísica</h1>
+        <nav>
+            <ul>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#map">Mapa Interactivo</a></li>
+                <li><a href="#store">Tienda</a></li>
+                <li><a href="#social">Redes Sociales</a></li>
+                <li><a href="#publications">Publicaciones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="projects">
+            <h2>Proyectos</h2>
+            <div id="model-viewer">
+                <!-- Aquí se integrará el visor 3D -->
+            </div>
+            <div id="methodologies">
+                <h3>Metodologías</h3>
+                <p><strong>SEV:</strong> Sondeos eléctricos verticales para interpretar resistividad.</p>
+                <p><strong>TRE:</strong> Tomografía de resistividad eléctrica para estructuras subsuperficiales.</p>
+                <p><strong>Resistividad:</strong> Análisis de propiedades eléctricas del subsuelo.</p>
+            </div>
+        </section>
+
+        <section id="map">
+            <h2>Mapa Interactivo</h2>
+            <div id="map-container">
+                <!-- Aquí se integrará el mapa interactivo -->
+            </div>
+            <div id="map-filters">
+                <h3>Filtros</h3>
+                <label>
+                    <input type="checkbox" id="hydrogeological" />
+                    Hidrogeología
+                </label>
+                <label>
+                    <input type="checkbox" id="prospection" />
+                    Prospección
+                </label>
+            </div>
+        </section>
+
+        <section id="store">
+            <h2>Tienda</h2>
+            <div id="products">
+                <div class="product">
+                    <h3>Paquete de Datos Geofísicos</h3>
+                    <p>Archivos CSV con información procesada.</p>
+                    <button>Comprar</button>
+                </div>
+                <div class="product">
+                    <h3>Material Académico</h3>
+                    <p>Plantillas para interpretar pseudosecciones.</p>
+                    <button>Comprar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="social">
+            <h2>Redes Sociales & Twitch</h2>
+            <div id="calendar">
+                <!-- Calendario interactivo -->
+            </div>
+            <div id="clips">
+                <h3>Clips Destacados</h3>
+                <!-- Clips de transmisiones -->
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publicaciones & Newsletter</h2>
+            <div id="articles">
+                <article>
+                    <h3>Historia de la Prospección Minera</h3>
+                    <p>Explora cómo ha evolucionado la prospección minera a lo largo de los años.</p>
+                </article>
+                <article>
+                    <h3>Metodologías Modernas vs. Tradicionales</h3>
+                    <p>Comparación de técnicas modernas y tradicionales en exploración de recursos.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Exploración Geofísica. Todos los derechos reservados.</p>
+    </footer>
+
+
+</body>
+</html>
