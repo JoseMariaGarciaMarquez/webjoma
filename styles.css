@@ -7,11 +7,37 @@ body {
     color: #333;
 }
 
+/* Header */
 header {
     background-color: #f39c12;
     color: white;
     text-align: center;
     padding: 1.5rem 1rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 100px; /* Ajusta el ancho del logo */
+    height: auto; /* Mantiene la proporción original */
+    border-radius: 50%; /* Mantiene la forma circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.header-text p {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+    color: #f1c40f;
 }
 
 header h1 {
