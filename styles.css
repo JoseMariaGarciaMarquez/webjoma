@@ -23,7 +23,7 @@ header {
 }
 
 .logo {
-    width: 500px; /* Ajusta el ancho del logo a un tamaño más visible */
+    width: 300px; /* Ajusta el ancho del logo a un tamaño más visible */
     height: auto; /* Mantiene la proporción original */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
 }
