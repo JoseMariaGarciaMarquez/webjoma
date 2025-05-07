@@ -4,392 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #c9902d;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        .blog-section {
-            padding: 2rem;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .blog-post {
-            background: white;
-            border: 1px solid #ddd;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .blog-post h3 {
-            color: #c9902d;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        .blog-post img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-        }
-        .blog-post p {
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-        .blog-post strong {
-            color: #c9902d;
-            font-size: 1.2rem;
-        }
-        .blog-post em {
-            color: #555;
-            font-style: italic;
-        }
-        .blog-post ol {
-            list-style-type: decimal;
-            padding-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        .blog-post ol li {
-            margin-bottom: 0.5rem;
-        }
-        @media (max-width: 768px) {
-            .blog-section {
-                padding: 1rem;
-            }
-            .blog-post {
-                padding: 1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Blog</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+        </nav>
     </header>
-    <section class="blog-section">
+    <main class="blog-section">
         <div class="blog-post" id="post1">
-            <h3>Mi experiencia con GitHub Copilot: ¿Revolución en la programación o solo un asistente más?</h3>
             <img src="blog/copiloto.png" alt="GitHub Copilot">
-            <p>
-                Desde que GitHub Copilot se volvió gratuito para estudiantes y algunos desarrolladores, no dudé en probarlo con más frecuencia. Después de unos meses de uso intensivo, decidí pagar la suscripción para sacarle aún más provecho y ver hasta dónde podía llegar con esta herramienta.
-            </p>
-            <p>
-                No hay duda de que ha cambiado mi flujo de trabajo: me ayuda a escribir código más rápido, me sugiere fragmentos útiles y hasta me ofrece documentación en tiempo real. Pero, como toda tecnología disruptiva, también tiene sus limitaciones y peligros.
-            </p>
-            <p>
-                En este post, compartiré mi experiencia en detalle: cómo lo uso, sus mejores funciones, sus puntos débiles y el problema de los malos usos. Además, haré una comparación interesante para entender mejor su rol en el mundo de la programación.
-            </p>
-            <p>
-                <strong>¿Qué es GitHub Copilot y qué no es?</strong><br>
-                Antes de hablar de mi experiencia, aclaremos qué es Copilot y qué no es.
-            </p>
-            <ul>
-                <li>🔹 Es un asistente de programación basado en IA. Utiliza un modelo de machine learning (Codex, de OpenAI) entrenado con millones de líneas de código de repositorios públicos.</li>
-                <li>🔹 Es un autocompletado inteligente, pero mucho más avanzado que los típicos snippets de código. Puede sugerir desde una línea hasta una función completa o incluso estructuras enteras de proyectos.</li>
-                <li>🔹 Es un aliado para programadores, pero no un sustituto del conocimiento. Aquí es donde muchos se confunden: creen que Copilot les permitirá programar sin saber programar.</li>
-                <li>🔹 No es infalible. A veces genera código incorrecto, ineficiente o incluso inseguro. Es una herramienta que debe ser supervisada.</li>
-            </ul>
-            <p>
-                Dicho esto, veamos cómo lo uso y qué tan útil ha sido en mi flujo de trabajo.
-            </p>
-            <p>
-                <strong>¿Cómo uso GitHub Copilot?</strong><br>
-                He integrado Copilot en mi día a día de distintas formas. Algunas me han sorprendido por su utilidad, mientras que otras han sido más problemáticas de lo esperado.
-            </p>
-            <ol>
-                <li>
-                    <strong>Autocompletado de código con IA avanzada</strong><br>
-                    Esta es su función más básica y a la vez más poderosa. No solo completa líneas de código, sino que puede anticiparse a lo que quiero hacer.
-                    <p>
-                        <em>Ejemplo práctico:</em><br>
-                        Si escribo un comentario en Python explicando lo que quiero hacer:
-                    </p>
-                    <pre><code>
-        # Función que ordena una lista de números en orden descendente
-        def ordenar_descendente(lista):
-            return sorted(lista, reverse=True)
-                    </code></pre>
-                    <p>
-                        Pequeñas tareas como esta pueden parecer simples, pero cuando trabajo en proyectos más grandes, me ahorran tiempo valioso.
-                    </p>
-                    <p>
-                        💡 Consejo: Aunque Copilot suele acertar, no siempre lo hace. Siempre reviso sus sugerencias para evitar errores.
-                    </p>
-                </li>
-                <li>
-                    <strong>Documentación y explicación de código</strong><br>
-                    Una de las funciones que más me ha sorprendido es la capacidad de Copilot para generar comentarios explicativos sobre funciones y fragmentos de código.
-                    <p>
-                        <em>Ejemplo:</em><br>
-                        Código sin documentación:
-                    </p>
-                    <pre><code>
-        def calcular_total(precios, impuesto):
-            return sum(precios) * (1 + impuesto)
-                    </code></pre>
-                    <p>
-                        Copilot sugiere:
-                    </p>
-                    <pre><code>
-        # Calcula el total de una lista de precios, aplicando un porcentaje de impuesto
-                    </code></pre>
-                    <p>
-                        Esta función es simple, pero en funciones más complejas puede ahorrarme mucho tiempo tratando de entender código antiguo.
-                    </p>
-                </li>
-                <li>
-                    <strong>Generación de estructuras de proyectos</strong><br>
-                    Aquí es donde el chat de Copilot se vuelve clave.
-                    <p>
-                        Si abro el chat en VS Code y describo un proyecto, Copilot puede sugerirme una estructura completa.
-                    </p>
-                    <p>
-                        <em>Ejemplo:</em><br>
-                        💬 "Necesito una estructura de archivos para un backend en Django con autenticación y conexión a PostgreSQL."
-                    </p>
-                    <pre><code>
-        /mi_proyecto
-        │── manage.py
-        │── requirements.txt
-        │── .env
-        │── /config
-        │   │── settings.py
-        │   │── urls.py
-        │── /app
-        │   │── models.py
-        │   │── views.py
-        │   │── serializers.py
-        │   │── urls.py
-        │── /auth
-        │   │── authentication.py
-        │   │── permissions.py
-        │── /tests
-        │   │── test_models.py
-        │   │── test_views.py
-                    </code></pre>
-                    <p>
-                        Esto es increíblemente útil. Si bien no siempre la estructura es perfecta, me ahorra mucho tiempo en la configuración inicial del proyecto.
-                    </p>
-                </li>
-            </ol>
-            <p>
-                <strong>El problema de los malos usos</strong><br>
-                Aquí es donde surge la comparación con el taladro Milwaukee M18.
-            </p>
-            <p>
-                🔧 Si le das este taladro a un carpintero profesional, creará piezas de alta calidad con precisión y eficiencia.
-            </p>
-            <p>
-                🔧 Si se lo das a alguien sin experiencia, probablemente termine dañando el material y haciendo un desastre.
-            </p>
-            <p>
-                Copilot es igual.
-            </p>
-            <p>
-                <em>Ejemplo de mal uso:</em><br>
-                🚨 Un estudiante de programación sin conocimientos sólidos en Python usa Copilot para hacer una API.
-            </p>
-            <ul>
-                <li>Pide que le genere una API en FastAPI.</li>
-                <li>Copia y pega sin entender qué hace el código.</li>
-                <li>Entrega el proyecto sin probarlo ni optimizarlo.</li>
-            </ul>
-            <p>
-                El resultado: una API que probablemente tenga errores, vulnerabilidades o mal rendimiento.
-            </p>
-            <p>
-                Por eso, insisto en que Copilot es una herramienta, no un reemplazo del conocimiento.
-            </p>
-            <p>
-                <strong>¿Es GitHub Copilot una revolución o solo una ayuda extra?</strong><br>
-                Mi opinión es clara: Copilot es una revolución, pero solo para quienes saben usarlo correctamente.
-            </p>
-            <ul>
-                <li>🔹 Si eres un programador con experiencia: Copilot puede multiplicar tu productividad.</li>
-                <li>🔹 Si eres un principiante: Te puede ayudar, pero si dependes de él sin aprender lo básico, te hará daño a largo plazo.</li>
-            </ul>
-            <p>
-                <strong>Conclusión: ¿Vale la pena usarlo?</strong><br>
-                Sí, pero con responsabilidad.
-            </p>
-            <ul>
-                <li>✅ Lo mejor de Copilot:</li>
-                <ul>
-                    <li>✔ Ahorra tiempo escribiendo código repetitivo.</li>
-                    <li>✔ Ayuda a entender código antiguo o ajeno.</li>
-                    <li>✔ Genera estructuras de proyectos útiles.</li>
-                </ul>
-                <li>❌ Lo peor de Copilot:</li>
-                <ul>
-                    <li>✖ A veces sugiere código incorrecto o inseguro.</li>
-                    <li>✖ Puede hacer que los principiantes dependan demasiado de él.</li>
-                    <li>✖ No entiende el contexto del negocio ni optimiza código de manera avanzada.</li>
-                </ul>
-            </ul>
+            <div class="blog-content">
+                <h3>Mi experiencia con GitHub Copilot: ¿Revolución en la programación o solo un asistente más?</h3>
+                <p>
+                    Desde que GitHub Copilot se volvió gratuito para estudiantes y algunos desarrolladores, no dudé en probarlo con más frecuencia. Después de unos meses de uso intensivo, decidí pagar la suscripción para sacarle aún más provecho y ver hasta dónde podía llegar con esta herramienta.
+                </p>
+                <a href="#post1" class="read-more">Leer más</a>
+            </div>
         </div>
+
         <div class="blog-post" id="post2">
-            <h3>Explorando Geolitix: Mi Experiencia con una Herramienta de Procesamiento Geofísico</h3>
             <img src="blog/geolitix.png" alt="Geolitix">
-            <p>
-                Como profesional en el campo de la geofísica, siempre busco herramientas que hagan mi trabajo más eficiente y preciso. En mi reciente experiencia con Geolitix, un software especializado y de pago, descubrí una solución robusta que simplifica de manera sorprendente el procesamiento e interpretación de datos.
-            </p>
-            <p>
-                <strong>Un Inicio Intuitivo: Configuración y Procesamiento Base</strong><br>
-                Desde el momento en que cargas tus datos, Geolitix te guía de forma clara y directa. Primero, solicita información esencial sobre el terreno y los objetivos de tu estudio. A partir de estas entradas, el software ofrece un procesamiento base que incluye:
-            </p>
-            <ul>
-                <li>Corrección de tiempo cero</li>
-                <li>Configuración de umbrales (set threshold)</li>
-                <li>Filtrado de frecuencias</li>
-                <li>Aplicación del Dewow</li>
-                <li>Eliminación de fondo</li>
-                <li>Ajuste del Gain</li>
-                <li>Migración, útil en caso de cortes</li>
-            </ul>
-            <p>
-                Con solo estas etapas iniciales, Geolitix deja tus datos listos para ser interpretados. El proceso es eficiente, intuitivo y, lo más importante, altamente confiable.
-            </p>
-            <p>
-                <strong>Más Allá del Procesamiento: Funcionalidades Adicionales</strong><br>
-                El verdadero valor del software Geolitix radica en su capacidad de ir más allá del procesamiento base. Cuenta con herramientas avanzadas para aplicar filtros personalizados y manipular trazas según las necesidades del proyecto. Además, en términos de interpretación, su flexibilidad es impresionante: permite integrar imágenes de fondo, importar archivos DXF, realizar anotaciones y mucho más.
-            </p>
-            <p>
-                Esta combinación de herramientas no solo mejora la calidad del análisis, sino que también agiliza significativamente el flujo de trabajo.
-            </p>
-            <p>
-                <strong>Reflexión Final</strong><br>
-                En mi experiencia, Geolitix ha demostrado ser mucho más que un simple software de procesamiento. Es una herramienta poderosa y versátil que combina precisión, facilidad de uso y un conjunto completo de funcionalidades diseñadas para el profesional en geofísica.
-            </p>
-            <p>
-                Si buscas optimizar tu trabajo y explorar datos con mayor profundidad, recomiendo dar una oportunidad a Geolitix. Es una inversión que vale cada centavo para quienes valoran la calidad en el procesamiento y la interpretación de datos geofísicos.
-            </p>
+            <div class="blog-content">
+                <h3>Explorando Geolitix: Mi Experiencia con una Herramienta de Procesamiento Geofísico</h3>
+                <p>
+                    Como profesional en el campo de la geofísica, siempre busco herramientas que hagan mi trabajo más eficiente y preciso. En mi reciente experiencia con Geolitix, descubrí una solución robusta que simplifica de manera sorprendente el procesamiento e interpretación de datos.
+                </p>
+                <a href="#post2" class="read-more">Leer más</a>
+            </div>
         </div>
 
         <div class="blog-post" id="post3">
-            <h3>Mi experiencia usando GPRPy: una herramienta poderosa para el procesamiento de datos GPR</h3>
             <img src="blog/gprpy.png" alt="GPRPy">
-            <p>
-                Recientemente, enfrenté un reto significativo: procesar más de 6 kilómetros de datos de GPR sin contar con licencias de software especializado, como Geolitix. Aprovecho para mencionar que Geolitix es una herramienta de trabajo excelente, pero en esta ocasión, no estaba disponible para mí.
-            </p>
-            <p>
-                <strong>Explorando alternativas: del caos a la solución</strong><br>
-                Al principio, me sentía perdido. No porque no hubiera opciones, sino porque no sabía cuál elegir. En la universidad, solía trabajar con MatGPR, una aplicación basada en MATLAB, pero esta vez quería explorar algo diferente. Entonces recordé <strong>GPRPy</strong>, un software basado en Python para el procesamiento de datos GPR. Decidí probarlo.
-            </p>
-            <p>
-                La instalación fue sencilla: seguí las instrucciones del repositorio oficial, y en poco tiempo, ya estaba explorando sus funcionalidades.
-            </p>
-            <p>
-                <strong>La interfaz gráfica: simple pero funcional</strong><br>
-                La interfaz gráfica de GPRPy es bastante simple, diría que apenas suficiente. Sin embargo, tiene un diseño que considero sobresaliente: la disposición de los botones sigue una lógica clara y bien estructurada, lo que facilita el flujo de trabajo. Aunque no cuenta con un procesamiento automatizado como Geolitix, esta simplicidad obliga al usuario a comprender mejor los datos que está manejando. 
-            </p>
-            <p>
-                En mi opinión, esto es una ventaja, especialmente en un campo como la geofísica, que últimamente se ha llenado de personas que prefieren "presionar botones a ver qué pasa" en lugar de entender los fundamentos del procesamiento. Si no tienes conocimientos sólidos en procesamiento de señales, usar GPRPy puede ser un desafío. Además, para los hispanohablantes, el idioma puede ser otra barrera. Aunque no afecta a todos, el limitado dominio del inglés en algunos casos obliga a recurrir constantemente al traductor de Google.
-            </p>
-            <p>
-                <strong>Lo mejor de GPRPy: su funcionalidad</strong><br>
-                A pesar de sus limitaciones gráficas, lo que realmente destaca en GPRPy son sus funciones. Procesar datos con este software fue una experiencia muy satisfactoria. La intuitividad de sus herramientas es evidente y refleja las horas de dedicación y esfuerzo detrás de su desarrollo. 
-            </p>
-            <p>
-                Por ejemplo, comenzar con un perfil es tan simple como escribir:
-            </p>
-            <pre><code>
-    import gprpy.gprpy as gp
-    perfil = gp.gprpyProfile('ruta')
-            </code></pre>
-            <p>
-                Aplicar la corrección de tiempo cero es igual de directo:
-            </p>
-            <pre><code>
-    perfil.setZeroTime(20)
-            </code></pre>
-            <p>
-                Y para alinear las trazas:
-            </p>
-            <pre><code>
-    perfil.alignTraces()
-            </code></pre>
-            <p>
-                Incluso pude integrar GPRPy en un ciclo <code>for</code> para procesar múltiples archivos de forma eficiente, aplicando la misma rutina a varias rutas. Esto me ahorró mucho tiempo y demostró la versatilidad del software.
-            </p>
-            <p>
-                <strong>Recomendaciones finales</strong><br>
-                En definitiva, recomiendo ampliamente <strong>GPRPy</strong> para el procesamiento de datos GPR, especialmente si estás dispuesto a profundizar en los fundamentos del procesamiento de señales y la física de ondas. Además, sugiero repasar temas clave como introducción a filtros digitales, física de ondas y procesamiento de señales. En mi caso, tuve la suerte de contar con excelentes profesores como el Dr. Josué Tago y Manuel, quienes me dieron una base sólida para enfrentar estos retos.
-            </p>
-            <p>
-                GPRPy no solo es una herramienta técnica, sino una oportunidad para aprender y fortalecer conocimientos esenciales en geofísica. ¡Anímate a probarlo!
-            </p>
+            <div class="blog-content">
+                <h3>Mi experiencia usando GPRPy: una herramienta poderosa para el procesamiento de datos GPR</h3>
+                <p>
+                    Procesar más de 6 kilómetros de datos de GPR sin licencias de software especializado fue un reto. GPRPy, un software basado en Python, se convirtió en mi solución ideal para este desafío.
+                </p>
+                <a href="#post3" class="read-more">Leer más</a>
+            </div>
         </div>
-        <div class="blog-post" id="post3">
-            <h3>La filosofía del software libre: un movimiento de tecnología y principios</h3>
+
+        <div class="blog-post" id="post4">
             <img src="blog/opensource.png" alt="Software Libre">
-            <p>
-                En un mundo donde la tecnología desempeña un papel crucial en todos los ámbitos de la vida, el software libre surge como una alternativa no solo técnica, sino también filosófica y ética. Este movimiento, que defiende la libertad de los usuarios para usar, estudiar, modificar y compartir software, se ha convertido en un pilar fundamental en la lucha por los derechos digitales y la colaboración global. En este artículo exploraremos los principios filosóficos del software libre, su impacto en la sociedad y los desafíos que enfrenta en un mundo dominado por el software propietario.
-            </p>
-            <p>
-                <strong>¿Qué es el software libre?</strong><br>
-                El software libre es aquel que respeta las libertades de los usuarios. Según la definición establecida por la Free Software Foundation (FSF), fundada por Richard Stallman en 1985, el software libre otorga a los usuarios cuatro libertades esenciales:
-                <ol>
-                    <li>Libertad de usar el programa para cualquier propósito.</li>
-                    <li>Libertad de estudiar cómo funciona el programa y modificarlo según las necesidades. Esto requiere acceso al código fuente.</li>
-                    <li>Libertad de redistribuir copias para ayudar a otros.</li>
-                    <li>Libertad de mejorar el programa y hacer públicas las mejoras para beneficio de la comunidad.</li>
-                </ol>
-                Estas libertades se contrastan con las restricciones impuestas por el software propietario, que limita el acceso al código fuente y prohíbe compartir o modificar el software. Aunque a menudo se confunde con el software de código abierto (Open Source), el software libre enfatiza las implicaciones éticas y sociales de estas libertades, más allá de las consideraciones técnicas.
-            </p>
-            <p>
-                <strong>Fundamentos filosóficos del software libre</strong><br>
-                <em>Ética y derechos digitales</em><br>
-                La filosofía del software libre parte de la idea de que el software es una herramienta fundamental en la vida moderna y que, como tal, los usuarios deben tener control sobre él. Richard Stallman, una de las figuras más influyentes del movimiento, argumenta que restringir el acceso al software es una forma de privar a las personas de su libertad. En este sentido, el software libre no solo es una cuestión de eficiencia técnica, sino de justicia social.
-            </p>
-            <p>
-                <em>Colaboración y comunidad</em><br>
-                El software libre también representa un modelo de colaboración abierta y descentralizada. Al liberar el código fuente, se permite que personas de todo el mundo contribuyan al desarrollo, mejora y adaptación del software. Este modelo ha dado lugar a proyectos icónicos como GNU/Linux, un sistema operativo desarrollado gracias a miles de contribuciones voluntarias.
-            </p>
-            <p>
-                <em>El copyleft: protegiendo la libertad</em><br>
-                Un aspecto central del software libre es el uso de licencias como la Licencia Pública General (GPL), también conocida como copyleft. Estas licencias garantizan que el software y cualquier derivado de él sigan siendo libres. En otras palabras, mientras que el copyright se utiliza para restringir el uso, el copyleft asegura que las libertades originales del software no puedan ser eliminadas por futuros desarrolladores o distribuidores.
-            </p>
-            <p>
-                <strong>Impacto del software libre en la sociedad</strong><br>
-                <em>En la educación</em><br>
-                El software libre ha revolucionado el acceso a herramientas educativas. Programas como Moodle (una plataforma de aprendizaje en línea) o LibreOffice permiten que instituciones educativas de todo el mundo utilicen tecnología avanzada sin incurrir en altos costos de licencias. Además, el acceso al código fuente fomenta el aprendizaje y la investigación, ya que los estudiantes pueden estudiar y modificar el software para entender cómo funciona.
-            </p>
-            <p>
-                <em>En los gobiernos</em><br>
-                Muchos gobiernos han adoptado software libre para reducir la dependencia de proveedores externos y garantizar la soberanía tecnológica. Por ejemplo, países como Brasil, Alemania y la India han implementado GNU/Linux en sus administraciones públicas. Esto no solo reduce costos, sino que también mejora la seguridad, ya que el acceso al código permite identificar y solucionar vulnerabilidades.
-            </p>
-            <p>
-                <em>En la innovación</em><br>
-                El software libre también impulsa la innovación. Al permitir que cualquiera contribuya y modifique el software, se crea un entorno donde las ideas pueden desarrollarse rápidamente. Proyectos como Android, que se basa en el kernel de Linux, muestran cómo el software libre puede convertirse en la base de tecnologías revolucionarias.
-            </p>
-            <p>
-                <em>Ejemplos de éxito</em><br>
-                Algunos de los ejemplos más conocidos de software libre incluyen:
-                <ul>
-                    <li><strong>GNU/Linux</strong>: Un sistema operativo utilizado en servidores, dispositivos móviles y supercomputadoras.</li>
-                    <li><strong>LibreOffice</strong>: Una suite de oficina gratuita y potente.</li>
-                    <li><strong>Mozilla Firefox</strong>: Un navegador web que prioriza la privacidad y la seguridad.</li>
-                    <li><strong>WordPress</strong>: Una plataforma de gestión de contenidos que impulsa el 43% de los sitios web en el mundo.</li>
-                </ul>
-            </p>
-            <p>
-                <strong>Conclusión</strong><br>
-                El software libre no es solo una alternativa tecnológica, sino una declaración de principios en defensa de la libertad, la colaboración y los derechos digitales. En un mundo cada vez más interconectado y dependiente de la tecnología, su filosofía ofrece una visión de cómo podría ser un futuro más justo y sostenible.
-            </p>
+            <div class="blog-content">
+                <h3>La filosofía del software libre: un movimiento de tecnología y principios</h3>
+                <p>
+                    En un mundo donde la tecnología desempeña un papel crucial, el software libre surge como una alternativa ética y colaborativa. Exploramos sus principios y su impacto en la sociedad.
+                </p>
+                <a href="#post4" class="read-more">Leer más</a>
+            </div>
         </div>
-    </section>
-
-
+    </main>
+    <footer>
+        <p>&copy; 2025 JOMA - Ingeniero Geofísico. Todos los derechos reservados.</p>
+    </footer>
 </body>
-
 </html>
