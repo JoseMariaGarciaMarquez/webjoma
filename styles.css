@@ -463,3 +463,42 @@ footer p {
 .project-card .btn:hover {
     background-color: #a94400;
 }
+
+#patreon-wall {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.patreon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.patreon-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.patreon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.patreon-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.patreon-card p {
+    font-size: 1rem;
+    color: #555;
+}

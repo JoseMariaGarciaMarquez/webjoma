@@ -64,6 +64,13 @@
             </div>
         </section>
 
+        <section id="patreon-wall">
+            <h2>Muro de Patrocinadores</h2>
+            <div class="patreon-grid">
+                <!-- Aquí se generarán dinámicamente las tarjetas de los patrocinadores -->
+            </div>
+        </section>
+
         <section id="menu">
             <h2>Explora mi Portafolio</h2>
             <div class="menu-cards">
@@ -123,4 +130,45 @@
         <p>&copy; 2025 JOMA - Ingeniero Geofísico. Todos los derechos reservados.</p>
     </footer>
 </body>
+<script>
+    async function loadPatreonData() {
+        try {
+            // Cargar el archivo CSV
+            const response = await fetch('data/patreon.csv');
+            if (!response.ok) {
+                throw new Error(`Error al cargar el archivo: ${response.status} ${response.statusText}`);
+            }
+
+            // Leer el contenido del archivo
+            const data = await response.text();
+            const rows = data.split('\n').slice(1); // Omitir la cabecera del CSV
+            const patreonGrid = document.querySelector('.patreon-grid');
+
+            // Procesar cada fila del archivo CSV
+            rows.forEach(row => {
+                if (row.trim() === '') return; // Ignorar filas vacías
+
+                const columns = row.split(',');
+                const name = columns[0]?.split(' ')[0] || 'Anónimo'; // Primer nombre
+                const tier = columns[4]?.trim() || 'Free'; // Columna Tier
+
+                // Crear la tarjeta del patrocinador
+                const card = document.createElement('div');
+                card.classList.add('patreon-card');
+                card.innerHTML = `
+                    <h3>${name}</h3>
+                    <p>${tier}</p>
+                `;
+                patreonGrid.appendChild(card);
+            });
+        } catch (error) {
+            console.error('Error al cargar los datos de Patreon:', error);
+        }
+    }
+
+    // Llamar a la función para cargar los datos
+    loadPatreonData();
+</script>
 </html>
+
+
