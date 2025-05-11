@@ -502,3 +502,38 @@ footer p {
     font-size: 1rem;
     color: #555;
 }
+
+#construction-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.construction-container {
+    max-width: 600px;
+    padding: 2rem;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.construction-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+}
