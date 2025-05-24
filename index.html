@@ -44,19 +44,6 @@
                     <img src="images_web/tarjeta.png" alt="Tarjeta de Contacto" style="width: 100%; border-radius: 10px; margin-bottom: 1rem;">
                     <p>Correo: <a href="mailto:josegm@geofisa.com">josegm@geofisa.com</a></p>
                 </div>
-
-                <div class="card">
-                    <iframe 
-                        src="docs/cv_josemaria_garciamarquez_en_.pdf" 
-                        width="100%" 
-                        height="200px" 
-                        style="border: 1px solid #ddd; border-radius: 10px;">
-                    </iframe>
-                    <h3>Currículum Vitae</h3>
-                    <p>Descarga mi CV para más información sobre mi experiencia profesional.</p>
-                    <a href="docs/cv_josemaria_garciamarquez_en_.pdf" download class="btn">Descargar CV</a>
-                </div>
-            </div>
             <div class="card patreon-orange patreon-carousel-card">
                 <h3>Patreon</h3>
                 <div class="patreon-carousel">
@@ -68,6 +55,28 @@
                 </div>
                 <a href="https://www.patreon.com/c/chemitas" target="_blank" class="btn patreon-btn">Visitar Patreon</a>
             </div>
+                <div class="card">
+                    <iframe 
+                        src="docs/cv_josemaria_garciamarquez_en_.pdf" 
+                        width="100%" 
+                        height="200px" 
+                        style="border: 1px solid #ddd; border-radius: 10px;">
+                    </iframe>
+                    <h3>Currículum Vitae</h3>
+                    <p>Descarga mi CV para más información sobre mi experiencia profesional.</p>
+                    <a href="docs/cv_josemaria_garciamarquez_en_.pdf" download class="btn">Descargar CV</a>
+                </div>
+            <div class="card gofundme-card">
+                <h3>GoFundMe</h3>
+                <img src="images_web/gofoundme.png" alt="GoFundMe" class="gofundme-img" style="width:70px; margin:0.5rem auto 1rem; display:block;">
+                <p>
+                    ¿Quieres apoyar proyectos geofísicos independientes con impacto social?<br>
+                    ¡Ayúdame a financiar estudios y exploraciones que beneficien a comunidades!
+                </p>
+                <a href="https://www.gofundme.com/u/jose-maria-garcia-marquez" target="_blank" class="btn gofundme-btn">Apoyar en GoFundMe</a>
+            </div>
+            </div>
+
         </section>
 
 
@@ -132,43 +141,48 @@
     </footer>
 </body>
 <script>
-    async function loadPatreonData() {
-        try {
-            // Cargar el archivo CSV
-            const response = await fetch('data/patreon.csv');
-            if (!response.ok) {
-                throw new Error(`Error al cargar el archivo: ${response.status} ${response.statusText}`);
-            }
+const patreons = [
+    "Abimelet Hernández",
+    "Carlos Alberto Collaguazo Torres",
+    "Christhofer Omar Urquizo Quiroz",
+    "Arturo Ortiz",
+    "José David Sanabria Gómez",
+    "Antonio Suero Moreno",
+    "Pablo Armando Topes Rojas",
+    "Diego Gonzalez",
+    "Francisco Lopez",
+    "Timeslice",
+    "Cursos Olegario",
+    "RODRIGO TELLO",
+    "Abril Fuentes",
+    "Reis dedektor yeralti goruntuleme",
+    "Velnia Chacca Luna",
+    "GUSTAVO MEDINA",
+    "Jorge Victor Obregon Leon",
+    "Leonardo Nicolas Quispe Mendoza",
+    "Ricardo Pizarro",
+    "Homero Loaiza Sanchez",
+    "Jesús Limón",
+    "Erik Robinson Trincado Cabezas"
+];
 
-            // Leer el contenido del archivo
-            const data = await response.text();
-            const rows = data.split('\n').slice(1); // Omitir la cabecera del CSV
-            const patreonGrid = document.querySelector('.patreon-grid');
+let current = 0;
+const nameSpan = document.querySelector('.patreon-name');
+const leftBtn = document.querySelector('.carousel-arrow.left');
+const rightBtn = document.querySelector('.carousel-arrow.right');
 
-            // Procesar cada fila del archivo CSV
-            rows.forEach(row => {
-                if (row.trim() === '') return; // Ignorar filas vacías
+function updatePatreon() {
+    nameSpan.textContent = patreons[current];
+}
 
-                const columns = row.split(',');
-                const name = columns[0]?.split(' ')[0] || 'Anónimo'; // Primer nombre
-                const tier = columns[4]?.trim() || 'Free'; // Columna Tier
-
-                // Crear la tarjeta del patrocinador
-                const card = document.createElement('div');
-                card.classList.add('patreon-card');
-                card.innerHTML = `
-                    <h3>${name}</h3>
-                    <p>${tier}</p>
-                `;
-                patreonGrid.appendChild(card);
-            });
-        } catch (error) {
-            console.error('Error al cargar los datos de Patreon:', error);
-        }
-    }
-
-    // Llamar a la función para cargar los datos
-    loadPatreonData();
+leftBtn.addEventListener('click', () => {
+    current = (current - 1 + patreons.length) % patreons.length;
+    updatePatreon();
+});
+rightBtn.addEventListener('click', () => {
+    current = (current + 1) % patreons.length;
+    updatePatreon();
+});
 </script>
 </html>
 

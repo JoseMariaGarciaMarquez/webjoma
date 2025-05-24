@@ -641,3 +641,41 @@ p {
     background: #ffe5d0;
     color: #ff7f2a;
 }
+.gofundme-card {
+    background: #00b964;
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,185,100,0.12);
+    text-align: center;
+    padding: 1.2rem 1rem;
+    border-radius: 12px;
+    margin-top: 0.5rem;
+}
+.gofundme-card h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+.gofundme-img {
+    border-radius: 50%;
+    background: #fff;
+    padding: 0.3rem;
+}
+.gofundme-btn {
+    background: #fff;
+    color: #00b964;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 0.7rem;
+    display: inline-block;
+    transition: background 0.2s, color 0.2s;
+}
+.gofundme-btn:hover {
+    background: #e6fff3;
+    color: #00994c;
+}
