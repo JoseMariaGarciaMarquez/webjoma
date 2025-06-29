@@ -1,19 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Blog Personal - JOMA</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <a href="index.html">
-            <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+    <a href="#main" class="skip-link">Saltar al contenido principal</a>
+    <header role="banner">
+        <a href="index.html" aria-label="Volver al inicio">
+            <img src="images_web/jomac.png" alt="Logo JOMA - José María García Márquez, Ingeniero Geofísico" class="logo">
         </a>
-        <h1>Blog</h1>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Blog Personal</h1>
+                <p>Reflexiones y Experiencias</p>
+            </div>
+        </div>
     </header>
-    <main class="blog-section">
+    
+    <main id="main" role="main">
+        <!-- Hero Section -->
+        <section class="page-hero blog-hero" aria-labelledby="hero-heading">
+            <div class="hero-content-wrapper">
+                <div class="hero-text-content">
+                    <h2 id="hero-heading">
+                        <span class="hero-subtitle">✍️ Blog Personal</span>
+                        <span class="hero-title">Reflexiones y Experiencias</span>
+                    </h2>
+                    <p class="hero-description">
+                        Comparto mis pensamientos sobre tecnología, geofísica, desarrollo de software y las lecciones aprendidas 
+                        en mi camino como ingeniero geofísico. Desde experiencias técnicas hasta reflexiones profesionales.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-badge">
+                            <span class="stat-icon">📝</span>
+                            <span class="stat-text">Artículos</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="stat-icon">💭</span>
+                            <span class="stat-text">Reflexiones</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="stat-icon">🔬</span>
+                            <span class="stat-text">Ciencia</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="blog-visual">
+                        <div class="writing-desk">
+                            <div class="desk-items">
+                                <div class="notebook">📔</div>
+                                <div class="pen">✏️</div>
+                                <div class="coffee">☕</div>
+                                <div class="laptop">💻</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <div class="blog-post" id="post1">
             <img src="blog/copiloto.png" alt="GitHub Copilot">
             <div class="blog-content">

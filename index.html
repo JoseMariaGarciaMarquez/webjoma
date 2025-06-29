@@ -628,17 +628,27 @@ function copyClabe() {
 function toggleNews(newsId) {
     const toggle = document.querySelector(`[aria-controls="${newsId}"]`);
     const content = document.getElementById(newsId);
+    
+    if (!toggle || !content) {
+        console.error('News toggle elements not found for:', newsId);
+        return;
+    }
+    
     const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
     
     // Toggle ARIA states
     toggle.setAttribute('aria-expanded', !isExpanded);
     content.setAttribute('aria-hidden', isExpanded);
     
-    // Toggle visual states
+    // Toggle visual states with force
     if (isExpanded) {
         content.classList.remove('expanded');
+        content.style.maxHeight = '0';
+        content.style.opacity = '0';
     } else {
         content.classList.add('expanded');
+        content.style.maxHeight = '500px';
+        content.style.opacity = '1';
     }
 }
 
@@ -713,6 +723,16 @@ function initKeyboardNavigation() {
 document.addEventListener('DOMContentLoaded', () => {
     initNewsFilters();
     initKeyboardNavigation();
+    
+    // Initialize news items state
+    const newsContents = document.querySelectorAll('.news-content');
+    newsContents.forEach(content => {
+        content.setAttribute('aria-hidden', 'true');
+        content.style.maxHeight = '0';
+        content.style.opacity = '0';
+    });
+    
+    console.log('News system initialized');
 });
 </script>
 </html>

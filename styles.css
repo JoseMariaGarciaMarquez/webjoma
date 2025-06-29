@@ -10,11 +10,11 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 50%, #93c5fd 100%);
     color: white;
     text-align: center;
     padding: 2rem 1rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
     position: relative;
     overflow: hidden;
 }
@@ -26,7 +26,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.12) 0%, transparent 60%);
     pointer-events: none;
 }
 
@@ -56,8 +56,8 @@ header::before {
     margin: 0;
     font-size: 2.8rem;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(45deg, #fff, #f1c40f);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #fff, #e8f4f8, #fff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -66,9 +66,9 @@ header::before {
 .header-text p {
     margin: 0.5rem 0 0;
     font-size: 1.3rem;
-    color: #f1c40f;
+    color: #dbeafe;
     font-weight: 500;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive header */
@@ -1357,12 +1357,6 @@ header::before {
     margin-left: 1rem;
 }
 
-.news-content {
-    color: #34495e;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
 .news-tag {
     display: inline-block;
     padding: 0.3rem 0.8rem;
@@ -1482,13 +1476,30 @@ header::before {
     max-height: 0;
     overflow: hidden;
     transition: all 0.4s ease;
+    display: block;
 }
 
-.news-content.expanded {
-    opacity: 1;
-    transform: translateY(0);
-    max-height: 500px;
-    padding-top: 1.5rem;
+.news-content[aria-hidden="true"] {
+    max-height: 0 !important;
+    opacity: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    overflow: hidden !important;
+}
+
+.news-content[aria-hidden="false"] {
+    max-height: 500px !important;
+    opacity: 1 !important;
+}
+
+/* Make sure expanded state takes precedence */
+.news-item .news-content.expanded {
+    max-height: 500px !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    padding-top: 1.5rem !important;
+    display: block !important;
 }
 
 .news-link {
@@ -2247,4 +2258,838 @@ section {
         top: 1.5rem;
         right: 1.5rem;
     }
+}
+
+/* ========================================
+   ESTILOS PARA PÁGINAS SECUNDARIAS
+======================================== */
+
+/* Page Hero Sections */
+.page-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    color: white;
+    padding: 4rem 2rem;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.hero-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero-subtitle {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+}
+
+.hero-title {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.stat-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-icon {
+    font-size: 1.2rem;
+}
+
+/* Code Preview Visual */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.code-preview {
+    background: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.code-header {
+    background: #2d2d2d;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid #404040;
+}
+
+.code-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.code-dot.red { background: #ff5f56; }
+.code-dot.yellow { background: #ffbd2e; }
+.code-dot.green { background: #27ca3f; }
+
+.code-title {
+    margin-left: 1rem;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.code-content {
+    padding: 1.5rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+.code-line {
+    margin-bottom: 0.5rem;
+}
+
+.keyword { color: #569cd6; }
+.function { color: #dcdcaa; }
+.comment { color: #6a9955; }
+
+/* Section Containers */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(45deg, #3b82f6, #60a5fa);
+    border-radius: 2px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #718096;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Modern Projects Grid */
+.modern-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.project-card.featured {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.project-card.featured:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+}
+
+.project-image-container {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card.featured:hover .project-image {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.project-status {
+    background: #10b981;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-status.new {
+    background: #f59e0b;
+}
+
+.project-content {
+    padding: 2rem;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.project-header h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin: 0;
+}
+
+.project-icon {
+    font-size: 1.5rem;
+}
+
+.project-badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tech-badge {
+    background: #3b82f6;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.tech-badge.python { background: #3776ab; }
+.tech-badge.gui { background: #4f46e5; }
+.tech-badge.new { background: #f59e0b; }
+
+.project-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4a5568;
+    margin-bottom: 2rem;
+}
+
+.project-features h4 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.feature-icon {
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.project-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+    color: white;
+}
+
+.primary-btn:hover {
+    background: linear-gradient(45deg, #1d4ed8, #1e40af);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: #3b82f6;
+    border: 2px solid #3b82f6;
+}
+
+.secondary-btn:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* GitHub Section */
+.github-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.github-header h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.8rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+.github-icon {
+    font-size: 2rem;
+}
+
+.github-header p {
+    color: #718096;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.github-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 120px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3b82f6;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #718096;
+    font-weight: 500;
+}
+
+.github-links {
+    margin-top: 2rem;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #3b82f6;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.github-link:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+}
+
+.link-icon {
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .modern-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .github-stats {
+        gap: 1rem;
+    }
+    
+    .section-container {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Geophysics-specific styles */
+.geophysics-diagram {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    position: relative;
+}
+
+.diagram-container {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #87ceeb 0%, #4682b4 20%, #8b4513 50%, #654321 100%);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.earth-layers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.layer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.layer:last-child {
+    border-bottom: none;
+}
+
+.layer-label {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.measurement-waves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.wave {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    animation: wave-pulse 3s ease-in-out infinite;
+}
+
+.wave-1 {
+    top: 15%;
+    animation-delay: 0s;
+}
+
+.wave-2 {
+    top: 35%;
+    animation-delay: 1s;
+}
+
+.wave-3 {
+    top: 55%;
+    animation-delay: 2s;
+}
+
+@keyframes wave-pulse {
+    0%, 100% { opacity: 0; transform: scaleX(0); }
+    50% { opacity: 1; transform: scaleX(1); }
+}
+
+/* Additional tech badges for geophysics */
+.tech-badge.sev { background: #8b5cf6; }
+.tech-badge.hydro { background: #06b6d4; }
+.tech-badge.tre { background: #f59e0b; }
+.tech-badge.analysis { background: #10b981; }
+.tech-badge.gpr { background: #ef4444; }
+.tech-badge.archaeology { background: #a855f7; }
+.tech-badge.industrial { background: #6b7280; }
+
+/* Project status colors */
+.project-status.heritage { background: #a855f7; }
+.project-status.industrial { background: #6b7280; }
+
+/* Project details styling */
+.project-details {
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border: 1px solid #e2e8f0;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.9rem;
+}
+
+.detail-value {
+    color: #2d3748;
+    font-size: 0.9rem;
+}
+
+/* Methodology Section */
+.methodology-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    margin-top: 4rem;
+}
+
+.methodology-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.methodology-header h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.8rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+.methodology-icon {
+    font-size: 2rem;
+}
+
+.methodology-header p {
+    color: #718096;
+    font-size: 1.1rem;
+}
+
+.methodology-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.method-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.method-card:hover {
+    transform: translateY(-5px);
+}
+
+.method-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.method-card h4 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.method-card p {
+    color: #718096;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Page-specific visual elements */
+
+/* Blog visual */
+.blog-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+
+.writing-desk {
+    background: linear-gradient(45deg, #8b4513, #a0522d);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.desk-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.desk-items > div {
+    font-size: 3rem;
+    text-align: center;
+    animation: float 6s ease-in-out infinite;
+}
+
+.notebook { animation-delay: 0s; }
+.pen { animation-delay: 1.5s; }
+.coffee { animation-delay: 3s; }
+.laptop { animation-delay: 4.5s; }
+
+/* Publications visual */
+.publications-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+
+.publication-stack {
+    position: relative;
+    width: 200px;
+    height: 250px;
+}
+
+.paper {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.paper-1 {
+    top: 0;
+    left: 0;
+    z-index: 3;
+    transform: rotate(-5deg);
+}
+
+.paper-2 {
+    top: 20px;
+    left: 15px;
+    z-index: 2;
+    transform: rotate(2deg);
+}
+
+.paper-3 {
+    top: 40px;
+    left: 30px;
+    z-index: 1;
+    transform: rotate(-3deg);
+}
+
+.publication-stack:hover .paper-1 { transform: rotate(-5deg) translateY(-10px); }
+.publication-stack:hover .paper-2 { transform: rotate(2deg) translateY(-5px); }
+.publication-stack:hover .paper-3 { transform: rotate(-3deg) translateY(-2px); }
+
+/* Social/Streaming visual */
+.streaming-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+
+.stream-setup {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.stream-setup > div {
+    font-size: 3.5rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.monitor { animation-delay: 0s; }
+.camera { animation-delay: 0.5s; }
+.mic { animation-delay: 1s; }
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Hero backgrounds for different pages */
+.programming-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+}
+
+.geophysics-hero {
+    background: linear-gradient(135deg, #43cea2 0%, #185a9d 50%, #667eea 100%);
+}
+
+.blog-hero {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 50%, #fd79a8 100%);
+}
+
+.publications-hero {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 50%, #d299c2 100%);
+}
+
+.social-hero {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
 }

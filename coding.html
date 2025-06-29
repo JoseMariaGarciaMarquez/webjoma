@@ -1,60 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos de Programación</title>
+    <title>Proyectos de Programación - JOMA</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <a href="index.html">
-            <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+    <a href="#main" class="skip-link">Saltar al contenido principal</a>
+    <header role="banner">
+        <a href="index.html" aria-label="Volver al inicio">
+            <img src="images_web/jomac.png" alt="Logo JOMA - José María García Márquez, Ingeniero Geofísico" class="logo">
         </a>
-        <h1>Proyectos de Programación</h1>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Proyectos de Programación</h1>
+                <p>Desarrollo de Software Geofísico</p>
+            </div>
+        </div>
     </header>
-    <main>
-        <section id="projects">
-            <h2>Mis Proyectos</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="proyectos/vespy.png" alt="VESPY">
-                    <h3>VESPY</h3>
-                    <p>
-                        VESPY es una aplicación desarrollada en Python para la visualización y procesamiento de datos de Sondeo Eléctrico Vertical (VES). Está diseñada para ingenieros y científicos interesados en el análisis de resistividad del subsuelo.
+    
+    <main id="main" role="main">
+        <!-- Hero Section -->
+        <section class="page-hero programming-hero" aria-labelledby="hero-heading">
+            <div class="hero-content-wrapper">
+                <div class="hero-text-content">
+                    <h2 id="hero-heading">
+                        <span class="hero-subtitle">💻 Desarrollo de Software</span>
+                        <span class="hero-title">Herramientas Geofísicas Modernas</span>
+                    </h2>
+                    <p class="hero-description">
+                        Desarrollo herramientas especializadas en Python para análisis geofísico, procesamiento de datos sísmicos y visualización avanzada. Cada proyecto combina rigor científico con tecnología moderna.
                     </p>
-                    <p><strong>Principales funcionalidades:</strong></p>
-                    <ul>
-                        <li>Carga y procesamiento de datos desde archivos Excel, CSV u ODS.</li>
-                        <li>Inversión de resistividad para obtener modelos del subsuelo.</li>
-                        <li>Visualización gráfica de resistividad y análisis estadísticos.</li>
-                        <li>Gestión de modelos invertidos para análisis y visualización.</li>
-                        <li>Interfaz gráfica interactiva construida con PyQt5.</li>
-                    </ul>
-                    <p><strong>Tecnologías:</strong> Python, PyQt5</p>
-                    <a href="https://github.com/JoseMariaGarciaMarquez/vespy" target="_blank" class="btn">Repositorio</a>
-                    <a href="https://demo-vespy.com" target="_blank" class="btn">Ver Demo</a>
+                    <div class="hero-stats">
+                        <div class="stat-badge">
+                            <span class="stat-icon">🐍</span>
+                            <span class="stat-text">Python</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="stat-icon">📊</span>
+                            <span class="stat-text">Análisis de Datos</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="stat-icon">🌐</span>
+                            <span class="stat-text">Open Source</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <img src="proyectos/hvsrlearn.png" alt="HVSRLEARN">
-                    <h3>HVSRLEARN</h3>
-                    <p>
-                        HVSRLEARN es una aplicación en Python diseñada para el cálculo y análisis de la Relación Espectral Horizontal a Vertical (HVSR) a partir de datos sísmicos en tres componentes (Z, N, E). 
-                        La aplicación cuenta con una interfaz gráfica construida con Tkinter, proporcionando una plataforma intuitiva e interactiva para analizar y visualizar datos sísmicos.
-                    </p>
-                    <p><strong>Principales funcionalidades:</strong></p>
-                    <ul>
-                        <li>Interfaz fácil de usar: Controles organizados para facilitar la interacción.</li>
-                        <li>Visualización en tiempo real: Espectro HVSR y parámetros relevantes ajustables en tiempo real.</li>
-                        <li>Proceso de análisis personalizable: Configuración de parámetros como sobremuestreo, ancho de ventana, solapamiento y método HVSR.</li>
-                        <li>Capacidad para guardar resultados: Gráficos y datos relevantes para referencia futura.</li>
-                        <li>Compatibilidad con varios métodos HVSR: Flexibilidad en el enfoque de análisis.</li>
-                        <li>Monitoreo mediante consola: Información detallada sobre procesos y resultados.</li>
-                        <li>Gestión de archivos: Búsqueda y carga de datos sísmicos.</li>
-                    </ul>
-                    <p><strong>Tecnologías:</strong> Python, Tkinter</p>
-                    <a href="https://github.com/JoseMariaGarciaMarquez/hvsrlearn" target="_blank" class="btn">Repositorio</a>
-                    <a href="https://demo-hvsrlearn.com" target="_blank" class="btn">Ver Demo</a>
+                <div class="hero-visual">
+                    <div class="code-preview">
+                        <div class="code-header">
+                            <span class="code-dot red"></span>
+                            <span class="code-dot yellow"></span>
+                            <span class="code-dot green"></span>
+                            <span class="code-title">geophysics_analysis.py</span>
+                        </div>
+                        <div class="code-content">
+                            <div class="code-line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div>
+                            <div class="code-line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div>
+                            <div class="code-line"><span class="keyword">def</span> <span class="function">process_gpr_data</span>(data):</div>
+                            <div class="code-line">    <span class="comment"># Procesamiento avanzado GPR</span></div>
+                            <div class="code-line">    <span class="keyword">return</span> enhanced_data</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Proyectos Section -->
+        <section id="projects" aria-labelledby="projects-heading">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 id="projects-heading">Mis Proyectos</h2>
+                    <p>Herramientas especializadas desarrolladas para la comunidad geofísica</p>
+                </div>
+                
+                <div class="projects-grid modern-grid">
+                    <article class="project-card featured" role="article" aria-labelledby="vespy-title">
+                        <div class="project-image-container">
+                            <img src="proyectos/vespy.png" alt="Interfaz de VESPY - Software de análisis VES" class="project-image">
+                            <div class="project-overlay">
+                                <span class="project-status">Activo</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 id="vespy-title">
+                                    <span class="project-icon">⚡</span>
+                                    VESPY
+                                </h3>
+                                <div class="project-badges">
+                                    <span class="tech-badge python">Python</span>
+                                    <span class="tech-badge gui">PyQt5</span>
+                                </div>
+                            </div>
+                            
+                            <p class="project-description">
+                                Aplicación avanzada para visualización y procesamiento de datos de Sondeo Eléctrico Vertical (VES). 
+                                Diseñada para ingenieros y científicos en análisis de resistividad del subsuelo.
+                            </p>
+                            
+                            <div class="project-features">
+                                <h4>Características Principales:</h4>
+                                <ul class="features-list">
+                                    <li><span class="feature-icon">📊</span> Carga de datos desde Excel, CSV y ODS</li>
+                                    <li><span class="feature-icon">🔄</span> Inversión de resistividad automática</li>
+                                    <li><span class="feature-icon">📈</span> Visualización gráfica avanzada</li>
+                                    <li><span class="feature-icon">🎛️</span> Interfaz intuitiva con PyQt5</li>
+                                    <li><span class="feature-icon">📋</span> Gestión completa de modelos</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-actions">
+                                <a href="https://github.com/JoseMariaGarciaMarquez/vespy" target="_blank" rel="noopener noreferrer" class="btn primary-btn" aria-label="Ver código fuente de VESPY en GitHub">
+                                    <span class="btn-icon">💻</span>
+                                    Ver Código
+                                </a>
+                                <a href="#" class="btn secondary-btn" aria-label="Ver demostración de VESPY">
+                                    <span class="btn-icon">🎯</span>
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card featured" role="article" aria-labelledby="hvsrlearn-title">
+                        <div class="project-image-container">
+                            <img src="proyectos/hvsrlearn.png" alt="Interfaz de HVSRLearn - Software de análisis sísmico" class="project-image">
+                            <div class="project-overlay">
+                                <span class="project-status new">Actualizado</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 id="hvsrlearn-title">
+                                    <span class="project-icon">🌊</span>
+                                    HVSRLearn 2.0
+                                </h3>
+                                <div class="project-badges">
+                                    <span class="tech-badge python">Python</span>
+                                    <span class="tech-badge gui">Tkinter</span>
+                                    <span class="tech-badge new">v2.0</span>
+                                </div>
+                            </div>
+                            
+                            <p class="project-description">
+                                Aplicación revolucionaria para cálculo y análisis de la Relación Espectral Horizontal a Vertical (HVSR). 
+                                Completamente rediseñada con nuevas funcionalidades y arquitectura mejorada.
+                            </p>
+                            
+                            <div class="project-features">
+                                <h4>Novedades v2.0:</h4>
+                                <ul class="features-list">
+                                    <li><span class="feature-icon">🔄</span> Arquitectura completamente rediseñada</li>
+                                    <li><span class="feature-icon">🎛️</span> Ventana dedicada de procesamiento</li>
+                                    <li><span class="feature-icon">📊</span> Carga simultánea Z/N/E</li>
+                                    <li><span class="feature-icon">⚡</span> Filtros pasa-banda mejorados</li>
+                                    <li><span class="feature-icon">🔍</span> Validaciones avanzadas</li>
+                                    <li><span class="feature-icon">💾</span> Exportación de resultados</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-actions">
+                                <a href="https://github.com/JoseMariaGarciaMarquez/hvsrlearn" target="_blank" rel="noopener noreferrer" class="btn primary-btn" aria-label="Ver código fuente de HVSRLearn en GitHub">
+                                    <span class="btn-icon">💻</span>
+                                    Ver Código
+                                </a>
+                                <a href="#" class="btn secondary-btn" aria-label="Ver demostración de HVSRLearn">
+                                    <span class="btn-icon">🎯</span>
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- GitHub Stats Section -->
+                <div class="github-section">
+                    <div class="github-header">
+                        <h3>
+                            <span class="github-icon">🔗</span>
+                            Contribuciones Open Source
+                        </h3>
+                        <p>Comprometido con el desarrollo de herramientas abiertas para la comunidad científica</p>
+                    </div>
+                    <div class="github-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Repositorios</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Commits</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">Python</span>
+                            <span class="stat-label">Lenguaje Principal</span>
+                        </div>
+                    </div>
+                    <div class="github-links">
+                        <a href="https://github.com/JoseMariaGarciaMarquez" target="_blank" rel="noopener noreferrer" class="github-link">
+                            <span class="link-icon">👤</span>
+                            Ver Perfil Completo
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

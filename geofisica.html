@@ -1,107 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos de Geofísica</title>
+    <title>Proyectos de Geofísica - JOMA</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <a href="index.html">
-            <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+    <a href="#main" class="skip-link">Saltar al contenido principal</a>
+    <header role="banner">
+        <a href="index.html" aria-label="Volver al inicio">
+            <img src="images_web/jomac.png" alt="Logo JOMA - José María García Márquez, Ingeniero Geofísico" class="logo">
         </a>
-        <h1>Proyectos de Geofísica</h1>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Proyectos de Geofísica</h1>
+                <p>Análisis del Subsuelo y Exploración</p>
+            </div>
+        </div>
     </header>
-    <main>
-        <section id="projects">
-            <h2>Mis Proyectos de Geofísica</h2>
-            <div class="projects-grid">
+    
+    <main id="main" role="main">
+        <!-- Hero Section -->
+        <section class="page-hero geophysics-hero" aria-labelledby="hero-heading">
+            <div class="hero-content-wrapper">
+                <div class="hero-text-content">
+                    <h2 id="hero-heading">
+                        <span class="hero-subtitle">🌊 Geofísica Aplicada</span>
+                        <span class="hero-title">Explorando el Subsuelo</span>
+                    </h2>
+                    <p class="hero-description">
+                        Especializado en métodos geofísicos para caracterización del subsuelo, prospección de agua subterránea, 
+                        estudios arqueológicos y evaluación de recursos minerales. Cada proyecto combina rigor científico con tecnología avanzada.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-badge">
+                            <span class="stat-icon">⚡</span>
+                            <span class="stat-text">SEV & ERT</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="stat-icon">📡</span>
+                            <span class="stat-text">GPR</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="stat-icon">🔍</span>
+                            <span class="stat-text">+50 Estudios</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="geophysics-diagram">
+                        <div class="diagram-container">
+                            <div class="earth-layers">
+                                <div class="layer surface">
+                                    <span class="layer-label">Superficie</span>
+                                </div>
+                                <div class="layer soil">
+                                    <span class="layer-label">Suelo</span>
+                                </div>
+                                <div class="layer rock">
+                                    <span class="layer-label">Roca</span>
+                                </div>
+                                <div class="layer bedrock">
+                                    <span class="layer-label">Basamento</span>
+                                </div>
+                            </div>
+                            <div class="measurement-waves">
+                                <div class="wave wave-1"></div>
+                                <div class="wave wave-2"></div>
+                                <div class="wave wave-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Proyectos Section -->
+        <section id="projects" aria-labelledby="projects-heading">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 id="projects-heading">Proyectos de Geofísica</h2>
+                    <p>Estudios especializados en caracterización del subsuelo y exploración geofísica</p>
+                </div>
+                
+                <div class="projects-grid modern-grid">
+                    <article class="project-card featured" role="article" aria-labelledby="malinche-title">
+                        <div class="project-image-container">
+                            <img src="proyectos/perfil-sev1-sev2-nuevo.png" alt="Perfil de SEV en La Malinche - Caracterización hidrogeológica" class="project-image">
+                            <div class="project-overlay">
+                                <span class="project-status">Completado</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 id="malinche-title">
+                                    <span class="project-icon">💧</span>
+                                    Prospección de Agua - La Malinche
+                                </h3>
+                                <div class="project-badges">
+                                    <span class="tech-badge sev">SEV</span>
+                                    <span class="tech-badge hydro">Hidrogeología</span>
+                                </div>
+                            </div>
+                            
+                            <p class="project-description">
+                                Caracterización hidrogeológica del subsuelo mediante sondeo eléctrico vertical (SEV) en La Malinche, Tlaxcala, 
+                                para optimizar la ubicación de futuros pozos de agua.
+                            </p>
+                            
+                            <div class="project-features">
+                                <h4>Objetivos Alcanzados:</h4>
+                                <ul class="features-list">
+                                    <li><span class="feature-icon">🔍</span> Caracterización estratigráfica completa</li>
+                                    <li><span class="feature-icon">💧</span> Identificación de zonas acuíferas</li>
+                                    <li><span class="feature-icon">📊</span> Modelado geoeléctrico avanzado</li>
+                                    <li><span class="feature-icon">📋</span> Recomendaciones técnicas para perforación</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Método:</span>
+                                    <span class="detail-value">Sondeo Eléctrico Vertical (SEV)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Ubicación:</span>
+                                    <span class="detail-value">La Malinche, Tlaxcala</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-actions">
+                                <a href="proyectos/tlaxcala-sev.docx.pdf" download class="btn primary-btn" aria-label="Descargar informe técnico del proyecto Malinche">
+                                    <span class="btn-icon">📄</span>
+                                    Descargar Informe
+                                </a>
+                            </div>
+                        </div>
+                    </article>
 
-                <div class="project-card">
-                    <img src="proyectos/perfil-sev1-sev2-nuevo.png" alt="MALINCHE-SEV">
-                    <h3>Asesoramiento para encontrar agua mediante SEV en La Malinche, Tlaxcala</h3>
-                    <p>
-                        <strong>Objetivo general:</strong> Caracterizar hidrogeológicamente el subsuelo mediante sondeo eléctrico vertical (SEV), identificando y evaluando la existencia, profundidad y geometría de sistemas acuíferos potenciales para optimizar la ubicación de futuros pozos.
-                    </p>
-                    <p>
-                        <strong>Objetivos particulares:</strong>
-                        <ul>
-                            <li>Caracterizar la estratigrafía y geometría de los estratos geológicos.</li>
-                            <li>Identificar zonas potenciales de almacenamiento de agua subterránea.</li>
-                            <li>Establecer la continuidad lateral de las unidades hidrogeológicas.</li>
-                            <li>Detectar obstáculos geológicos y estimar la profundidad del acuífero.</li>
-                            <li>Emitir recomendaciones técnicas para la perforación de pozos.</li>
-                        </ul>
-                    </p>
-                    <p>
-                        <strong>Trabajo realizado:</strong> Procesamiento e interpretación de datos SEV, aplicación de filtros de suavizado y modelado geoeléctrico para definir zonas favorables para la captación de agua. Se entregó una recomendación técnica basada en los resultados obtenidos.
-                    </p>
-                    <p><strong>Métodos:</strong> SEV</p>
-                    <a href="proyectos/tlaxcala-sev.docx.pdf" download class="btn">Descargar Informe</a>
+                    <article class="project-card featured" role="article" aria-labelledby="lisa-title">
+                        <div class="project-image-container">
+                            <img src="proyectos/lisa.png" alt="Análisis LISA de resistividad - Clasificación espacial" class="project-image">
+                            <div class="project-overlay">
+                                <span class="project-status">Innovador</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 id="lisa-title">
+                                    <span class="project-icon">🗺️</span>
+                                    Análisis LISA - TRE
+                                </h3>
+                                <div class="project-badges">
+                                    <span class="tech-badge tre">TRE</span>
+                                    <span class="tech-badge analysis">Análisis Espacial</span>
+                                </div>
+                            </div>
+                            
+                            <p class="project-description">
+                                Implementación de análisis espacial LISA (Indicadores Locales de Asociación Espacial) para identificar 
+                                patrones de resistividad en levantamientos de Tomografía de Resistividad Eléctrica.
+                            </p>
+                            
+                            <div class="project-features">
+                                <h4>Clasificaciones LISA:</h4>
+                                <ul class="features-list">
+                                    <li><span class="feature-icon">🔴</span> High-High: Materiales secos/rocas impermeables</li>
+                                    <li><span class="feature-icon">🔵</span> Low-Low: Zonas saturadas/arcillas</li>
+                                    <li><span class="feature-icon">🟡</span> Transiciones: Fallas y contactos litológicos</li>
+                                    <li><span class="feature-icon">🎯</span> Visualización 3D de clusters</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Método:</span>
+                                    <span class="detail-value">Tomografía de Resistividad Eléctrica</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Técnica:</span>
+                                    <span class="detail-value">Análisis Espacial LISA</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-actions">
+                                <a href="#" class="btn primary-btn" aria-label="Descargar informe del análisis LISA">
+                                    <span class="btn-icon">📄</span>
+                                    Ver Análisis
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card featured" role="article" aria-labelledby="arqueologia-title">
+                        <div class="project-image-container">
+                            <img src="proyectos/Wonderaztecs.png" alt="Prospección arqueológica GPR - Centro Histórico CDMX" class="project-image">
+                            <div class="project-overlay">
+                                <span class="project-status heritage">Patrimonio</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 id="arqueologia-title">
+                                    <span class="project-icon">🏛️</span>
+                                    Prospección Arqueológica GPR
+                                </h3>
+                                <div class="project-badges">
+                                    <span class="tech-badge gpr">GPR</span>
+                                    <span class="tech-badge archaeology">Arqueología</span>
+                                </div>
+                            </div>
+                            
+                            <p class="project-description">
+                                Levantamiento geofísico con GPR en República de Perú 57, Centro Histórico de CDMX, 
+                                para identificar estructuras arqueológicas subterráneas antes de construcción.
+                            </p>
+                            
+                            <div class="project-features">
+                                <h4>Objetivos del Estudio:</h4>
+                                <ul class="features-list">
+                                    <li><span class="feature-icon">🔍</span> Detección de estructuras arqueológicas</li>
+                                    <li><span class="feature-icon">🗺️</span> Mapeo de anomalías subterráneas</li>
+                                    <li><span class="feature-icon">🏗️</span> Planificación de construcción segura</li>
+                                    <li><span class="feature-icon">🏛️</span> Preservación del patrimonio cultural</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Método:</span>
+                                    <span class="detail-value">Radar de Penetración Terrestre (GPR)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Ubicación:</span>
+                                    <span class="detail-value">Centro Histórico, CDMX</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-actions">
+                                <a href="proyectos/reporte-peru57.pdf" download class="btn primary-btn" aria-label="Descargar informe de prospección arqueológica">
+                                    <span class="btn-icon">📄</span>
+                                    Descargar Informe
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card featured" role="article" aria-labelledby="pemex-title">
+                        <div class="project-image-container">
+                            <img src="proyectos/gprmty.png" alt="Localización de tuberías PEMEX - GPR Monterrey" class="project-image">
+                            <div class="project-overlay">
+                                <span class="project-status industrial">Industrial</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 id="pemex-title">
+                                    <span class="project-icon">🔧</span>
+                                    Localización Tuberías PEMEX
+                                </h3>
+                                <div class="project-badges">
+                                    <span class="tech-badge gpr">GPR</span>
+                                    <span class="tech-badge industrial">Industrial</span>
+                                </div>
+                            </div>
+                            
+                            <p class="project-description">
+                                Localización precisa de tuberías de PEMEX en Monterrey utilizando GPR, cubriendo 6.3 km lineales 
+                                en 15 levantamientos para apoyo a operaciones industriales.
+                            </p>
+                            
+                            <div class="project-features">
+                                <h4>Metodología Aplicada:</h4>
+                                <ul class="features-list">
+                                    <li><span class="feature-icon">📏</span> 15 levantamientos, 6.3 km lineales</li>
+                                    <li><span class="feature-icon">💻</span> Procesamiento con GPRPy</li>
+                                    <li><span class="feature-icon">🗺️</span> Mallado completo del área</li>
+                                    <li><span class="feature-icon">🎯</span> Localización precisa de tuberías</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Método:</span>
+                                    <span class="detail-value">Radar de Penetración Terrestre (GPR)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Cobertura:</span>
+                                    <span class="detail-value">6.3 km lineales</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-actions">
+                                <a href="proyectos/ESTUDIO-GEOFISICO-GPR-MONTERREY.pdf" download class="btn primary-btn" aria-label="Descargar informe del estudio GPR Monterrey">
+                                    <span class="btn-icon">📄</span>
+                                    Descargar Informe
+                                </a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-                <div class="project-card">
-                    <img src="proyectos/lisa.png" alt="TRE">
-                    <h3>Levantamientos de TRE para encontrar agua: Clasificación LISA</h3>
-                    <p>
-                        Este proyecto utiliza la técnica de análisis espacial LISA (Indicadores Locales de Asociación Espacial) para identificar patrones locales de resistividad en levantamientos de Sondeo Eléctrico Vertical (TRE). 
-                        El objetivo es analizar la distribución espacial de resistividades para identificar características geológicas o hidrogeológicas relevantes.
-                    </p>
-                    <p><strong>Clasificación de LISA:</strong></p>
-                    <ul>
-                        <li><strong>High-High:</strong> Valores altos agrupados con otros valores altos, indicando materiales secos y compactos o rocas impermeables.</li>
-                        <li><strong>Low-Low:</strong> Valores bajos agrupados con otros valores bajos, asociados con zonas saturadas de agua o arcillas.</li>
-                        <li><strong>High-Low / Low-High:</strong> Transiciones abruptas entre materiales, como fallas o contactos litológicos.</li>
-                        <li><strong>No significativo (NaN):</strong> Áreas sin patrones claros que requieren más análisis.</li>
-                    </ul>
-                    <p><strong>Aplicaciones en el proyecto:</strong></p>
-                    <ul>
-                        <li>Visualización de clusters en 3D para facilitar la interpretación espacial.</li>
-                        <li>Correlación con datos geológicos para identificar acuíferos, fallas o contactos litológicos.</li>
-                        <li>Priorización de zonas de estudio con patrones significativos.</li>
-                    </ul>
-                    <p><strong>Métodos:</strong> TRE</p>
-                    <a href="docs/proyecto_geofisico1.pdf" download class="btn">Descargar Informe</a>
+                
+                <!-- Methodology Section -->
+                <div class="methodology-section">
+                    <div class="methodology-header">
+                        <h3>
+                            <span class="methodology-icon">🔬</span>
+                            Metodologías Aplicadas
+                        </h3>
+                        <p>Técnicas geofísicas especializadas para cada tipo de estudio</p>
+                    </div>
+                    <div class="methodology-grid">
+                        <div class="method-card">
+                            <div class="method-icon">⚡</div>
+                            <h4>Sondeo Eléctrico Vertical (SEV)</h4>
+                            <p>Caracterización estratigráfica y detección de acuíferos</p>
+                        </div>
+                        <div class="method-card">
+                            <div class="method-icon">📡</div>
+                            <h4>Radar de Penetración (GPR)</h4>
+                            <p>Detección de estructuras y objetos enterrados</p>
+                        </div>
+                        <div class="method-card">
+                            <div class="method-icon">🗺️</div>
+                            <h4>Tomografía de Resistividad (TRE)</h4>
+                            <p>Imágenes 2D/3D de variaciones de resistividad</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <img src="proyectos/Wonderaztecs.png" alt="Búsqueda de vestigios arqueológicos">
-                    <h3>Búsqueda de vestigios arqueológicos mediante GPR</h3>
-                    <p>
-                        Este proyecto describe el levantamiento geofísico realizado mediante Radar de Penetración Terrestre (GPR) en el inmueble ubicado en República de Perú 57, en el Centro Histórico de la Ciudad de México. 
-                        El objetivo principal fue identificar estructuras arqueológicas subterráneas, como cimientos, canales o posibles restos arquitectónicos, para evaluar la viabilidad de construir una bodega subterránea sin afectar el patrimonio cultural.
-                    </p>
-                    <p><strong>Objetivos del Estudio:</strong></p>
-                    <ul>
-                        <li>Detectar y analizar anomalías en el subsuelo que puedan corresponder a estructuras arquitectónicas antiguas.</li>
-                        <li>Mapear zonas con posibles restos arqueológicos para planificar la construcción de la bodega subterránea.</li>
-                        <li>Proveer una interpretación preliminar de las anomalías subterráneas con recomendaciones específicas para el diseño y construcción.</li>
-                    </ul>
-                    <p><strong>Métodos:</strong> Radar de Penetración Terrestre (GPR)</p>
-                    <a href="proyectos/reporte-peru57.pdf" download class="btn">Descargar Informe</a>
-                </div>
-                <div class="project-card">
-                    <img src="proyectos/gprmty.png" alt="Proyecto Geofísico en Monterrey">
-                    <h3>Procesamiento de datos de GPR para encontrar tuberías de PEMEX</h3>
-                    <p>
-                        Este estudio tuvo como objetivo principal localizar una tubería específica de PEMEX en el subsuelo de un área de Monterrey, México, utilizando tecnología de Radar de Penetración Terrestre (GPR). 
-                        El objetivo fue proporcionar información precisa y confiable para la planificación y ejecución de proyectos en la zona.
-                    </p>
-                    <p><strong>Objetivos específicos:</strong></p>
-                    <ul>
-                        <li>Delimitar la ubicación exacta de la tubería en términos de profundidad y distancia.</li>
-                        <li>Detectar posibles riesgos o interferencias en el subsuelo, como objetos enterrados o zonas alteradas.</li>
-                        <li>Proveer información técnica para respaldar decisiones operativas relacionadas con excavaciones o inspecciones.</li>
-                        <li>Validar la eficacia del GPR bajo las condiciones geológicas y urbanas específicas del área de Monterrey.</li>
-                    </ul>
-                    <p><strong>Metodología:</strong></p>
-                    <ul>
-                        <li>Se realizaron 15 levantamientos de GPR, cubriendo un total de 6300 metros lineales.</li>
-                        <li>Los datos recolectados fueron procesados con el software GPRPy, aplicando filtros y ajustes para mejorar la visualización de anomalías.</li>
-                        <li>Se generó un mallado que cubrió toda la zona de estudio, marcando los inicios y finales de cada línea en campo.</li>
-                    </ul>
-                    <p><strong>Métodos:</strong> Radar de Penetración Terrestre (GPR)</p>
-                    <a href="proyectos/ESTUDIO-GEOFISICO-GPR-MONTERREY.pdf" download class="btn">Descargar Informe</a>
-                </div>
+            </div>
         </section>
     </main>
     <footer>

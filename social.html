@@ -1,19 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>En vivo</title>
+    <title>Contenido Multimedia - JOMA</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <a href="index.html">
-            <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+    <a href="#main" class="skip-link">Saltar al contenido principal</a>
+    <header role="banner">
+        <a href="index.html" aria-label="Volver al inicio">
+            <img src="images_web/jomac.png" alt="Logo JOMA - José María García Márquez, Ingeniero Geofísico" class="logo">
         </a>
-        <h1>Media</h1>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Contenido Multimedia</h1>
+                <p>Streaming y Comunidad</p>
+            </div>
+        </div>
     </header>
-    <main>
+    
+    <main id="main" role="main">
+        <!-- Hero Section -->
+        <section class="page-hero social-hero" aria-labelledby="hero-heading">
+            <div class="hero-content-wrapper">
+                <div class="hero-text-content">
+                    <h2 id="hero-heading">
+                        <span class="hero-subtitle">📺 Multimedia</span>
+                        <span class="hero-title">Contenido en Vivo y Comunidad</span>
+                    </h2>
+                    <p class="hero-description">
+                        Streams educativos, tutoriales en vivo y contenido interactivo sobre geofísica y programación. 
+                        Únete a nuestra comunidad y aprende mientras exploramos juntos las ciencias de la Tierra.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-badge">
+                            <span class="stat-icon">🎥</span>
+                            <span class="stat-text">Streaming</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="stat-icon">👥</span>
+                            <span class="stat-text">Comunidad</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="stat-icon">📚</span>
+                            <span class="stat-text">Educativo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="streaming-visual">
+                        <div class="stream-setup">
+                            <div class="monitor">🖥️</div>
+                            <div class="camera">📹</div>
+                            <div class="mic">🎤</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="live">
             <h2>En Vivo</h2>
             <div class="live-banner">EN VIVO</div>

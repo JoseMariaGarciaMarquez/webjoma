@@ -1,19 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publicaciones & Newsletter</title>
+    <title>Publicaciones & Newsletter - JOMA</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <a href="index.html">
-            <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+    <a href="#main" class="skip-link">Saltar al contenido principal</a>
+    <header role="banner">
+        <a href="index.html" aria-label="Volver al inicio">
+            <img src="images_web/jomac.png" alt="Logo JOMA - José María García Márquez, Ingeniero Geofísico" class="logo">
         </a>
-        <h1>Publicaciones & Newsletter</h1>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Publicaciones & Newsletter</h1>
+                <p>Conocimiento Científico Compartido</p>
+            </div>
+        </div>
     </header>
-    <main>
+    
+    <main id="main" role="main">
+        <!-- Hero Section -->
+        <section class="page-hero publications-hero" aria-labelledby="hero-heading">
+            <div class="hero-content-wrapper">
+                <div class="hero-text-content">
+                    <h2 id="hero-heading">
+                        <span class="hero-subtitle">📚 Publicaciones</span>
+                        <span class="hero-title">Investigación y Divulgación</span>
+                    </h2>
+                    <p class="hero-description">
+                        Artículos técnicos, investigaciones y newsletter con las últimas novedades en geofísica aplicada. 
+                        Comparto conocimientos y descubrimientos para contribuir al avance de la ciencia.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-badge">
+                            <span class="stat-icon">📄</span>
+                            <span class="stat-text">Artículos</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="stat-icon">📧</span>
+                            <span class="stat-text">Newsletter</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="stat-icon">🔬</span>
+                            <span class="stat-text">Investigación</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="publications-visual">
+                        <div class="publication-stack">
+                            <div class="paper paper-1">📄</div>
+                            <div class="paper paper-2">📊</div>
+                            <div class="paper paper-3">📈</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="publications">
             <h2>Publicaciones</h2>
             <div class="publications-grid">
