@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+    <a href="#main" class="skip-link">Saltar al contenido principal</a>
+    <header role="banner">
+        <img src="images_web/jomac.png" alt="Logo JOMA - José María García Márquez, Ingeniero Geofísico" class="logo">
         <div class="header-content">
             <div class="header-text">
                 <h1>JOMA - Ingeniero Geofísico</h1>
@@ -16,7 +17,7 @@
             </div>
         </div>
     </header>
-    <main>
+    <main id="main" role="main">
         <!-- Decorative background elements -->
         <div class="bg-decorations">
             <div class="decoration decoration-1"></div>
@@ -24,85 +25,231 @@
             <div class="decoration decoration-3"></div>
         </div>
 
-<section id="about">
-    <h2>¿Quién soy?</h2>
-    <div class="about-content">
-        <div class="about-text">
-            <p>
-                Soy José María García Márquez, ingeniero geofísico con experiencia en procesamiento de datos sísmicos, análisis de GPR (más de 6 km de datos), sondeos eléctricos verticales (VES) y modelado geológico. He trabajado en minería, estudios arqueológicos y evaluación de recursos hídricos, combinando la ciencia y la tecnología para resolver retos complejos del subsuelo.
-            </p>
-            <p>
-                Domino Python y herramientas como simPEG, PyGIMLi y ResIPy para inversión y modelado geofísico, así como software especializado (GPRPy, ObsPy, QGIS, AutoCAD, LeapFrog). He desarrollado y contribuido a librerías de código abierto para el análisis e interpretación de datos geofísicos, como <a href="https://github.com/JoseMariaGarciaMarquez/pypozo" target="_blank">pypozo</a> y <a href="https://github.com/JoseMariaGarciaMarquez/hvsrlearn" target="_blank">hvsrlearn</a>.
-            </p>
-            <p>
-                Ofrezco servicios de asesoría personalizada en proyectos de geofísica: desde la planeación y ejecución de campañas de campo, hasta el procesamiento, modelado e interpretación de datos. Si tienes un proyecto en mente, necesitas interpretación de datos, o buscas capacitación en software geofísico, <strong>confiarme tu proyecto es la mejor decisión</strong>.
-            </p>
-            <p>
-                ¿Tienes dudas o necesitas orientación? ¡Agenda una asesoría conmigo! Escríbeme a <a href="mailto:josegm@geofisa.com">josegm@geofisa.com</a> y trabajemos juntos en tu próximo reto profesional.
-            </p>
-
+<section id="about" aria-labelledby="about-heading">
+    <div class="hero-background">
+        <div class="floating-elements">
+            <div class="floating-element" style="--delay: 0s; --duration: 6s;"></div>
+            <div class="floating-element" style="--delay: 2s; --duration: 8s;"></div>
+            <div class="floating-element" style="--delay: 4s; --duration: 7s;"></div>
         </div>
-        <img src="images_web/yo.png" alt="José María García Márquez" class="about-image">
+    </div>
+    
+    <div class="hero-content">
+        <div class="hero-text">
+            <h2 id="about-heading">
+                <span class="hero-greeting">Hola, soy</span>
+                <span class="hero-name">José María García Márquez</span>
+                <span class="hero-title">Ingeniero Geofísico</span>
+            </h2>
+            
+            <div class="hero-description">
+                <p class="hero-intro">
+                    Especialista en <strong>procesamiento de datos sísmicos</strong>, análisis de GPR y modelado geológico. 
+                    Combino ciencia y tecnología para resolver los retos más complejos del subsuelo.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">6+ km</span>
+                        <span class="stat-label">Datos GPR</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Proyectos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Sectores</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-cta">
+                <a href="mailto:josegm@geofisa.com" class="cta-primary" aria-label="Contactar para asesoría profesional">
+                    <span class="cta-text">¡Hablemos de tu proyecto!</span>
+                    <span class="cta-icon">✨</span>
+                </a>
+                <a href="#menu" class="cta-secondary" aria-label="Explorar portafolio de proyectos">
+                    Ver Portafolio
+                </a>
+            </div>
+        </div>
         
+        <div class="hero-visual">
+            <div class="profile-container">
+                <img src="images_web/yo.png" alt="José María García Márquez, ingeniero geofísico especialista en procesamiento sísmico" class="profile-image">
+                <div class="profile-glow"></div>
+            </div>
+            
+            <div class="tech-stack">
+                <div class="tech-item" style="--delay: 0.5s;">
+                    <span class="tech-icon">🐍</span>
+                    <span class="tech-name">Python</span>
+                </div>
+                <div class="tech-item" style="--delay: 1s;">
+                    <span class="tech-icon">📊</span>
+                    <span class="tech-name">simPEG</span>
+                </div>
+                <div class="tech-item" style="--delay: 1.5s;">
+                    <span class="tech-icon">🌊</span>
+                    <span class="tech-name">GPRPy</span>
+                </div>
+                <div class="tech-item" style="--delay: 2s;">
+                    <span class="tech-icon">🗺️</span>
+                    <span class="tech-name">QGIS</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="hero-scroll-indicator">
+        <span class="scroll-text">Conoce más</span>
+        <div class="scroll-arrow"></div>
+    </div>
+</section>
+
+<!-- Detailed About Section -->
+<section id="about-details" aria-labelledby="details-heading">
+    <div class="details-container">
+        <div class="details-header">
+            <h2 id="details-heading">Mi Experiencia</h2>
+            <p>Combinando ciencia, tecnología y pasión para resolver los retos más complejos del subsuelo</p>
+        </div>
+        
+        <div class="experience-grid">
+            <div class="experience-card">
+                <div class="exp-icon">🔬</div>
+                <h3>Investigación Aplicada</h3>
+                <p>Especialización en procesamiento de datos sísmicos, análisis de GPR y sondeos eléctricos verticales (VES). He trabajado en minería, estudios arqueológicos y evaluación de recursos hídricos.</p>
+                <ul class="exp-list">
+                    <li>Más de 6 km de datos GPR procesados</li>
+                    <li>Modelado geológico avanzado</li>
+                    <li>Análisis multiescala del subsuelo</li>
+                </ul>
+            </div>
+            
+            <div class="experience-card">
+                <div class="exp-icon">💻</div>
+                <h3>Desarrollo Tecnológico</h3>
+                <p>Dominio de Python y herramientas especializadas como simPEG, PyGIMLi y ResIPy. Desarrollo de software geofísico y contribución a proyectos de código abierto.</p>
+                <div class="tech-badges">
+                    <span class="tech-badge">simPEG</span>
+                    <span class="tech-badge">PyGIMLi</span>
+                    <span class="tech-badge">GPRPy</span>
+                    <span class="tech-badge">QGIS</span>
+                    <span class="tech-badge">ObsPy</span>
+                </div>
+                <div class="github-projects">
+                    <a href="https://github.com/JoseMariaGarciaMarquez/pypozo" target="_blank" rel="noopener noreferrer" class="github-link">
+                        <span class="github-icon">🔗</span> pypozo
+                    </a>
+                    <a href="https://github.com/JoseMariaGarciaMarquez/hvsrlearn" target="_blank" rel="noopener noreferrer" class="github-link">
+                        <span class="github-icon">🔗</span> hvsrlearn
+                    </a>
+                </div>
+            </div>
+            
+            <div class="experience-card">
+                <div class="exp-icon">🎯</div>
+                <h3>Consultoría Especializada</h3>
+                <p>Servicios de asesoría personalizada desde la planeación de campañas de campo hasta el procesamiento e interpretación final de datos geofísicos.</p>
+                <div class="service-list">
+                    <div class="service-item">
+                        <span class="service-icon">📋</span>
+                        <span>Planeación de campañas</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">⚡</span>
+                        <span>Procesamiento de datos</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">📊</span>
+                        <span>Modelado e interpretación</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">🎓</span>
+                        <span>Capacitación técnica</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <div class="cta-content">
+                <h3>¿Listo para comenzar tu proyecto?</h3>
+                <p>Ya sea que necesites análisis de datos, interpretación geofísica o capacitación especializada, estoy aquí para ayudarte a alcanzar tus objetivos.</p>
+                <div class="cta-buttons">
+                    <a href="mailto:josegm@geofisa.com" class="cta-btn primary">
+                        <span class="btn-icon">✉️</span>
+                        Contáctame Ahora
+                    </a>
+                    <a href="#menu" class="cta-btn secondary">
+                        Ver Mi Trabajo
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
-            <div class="about-cards">
-                <div class="card">
-                    <h3>Contacto</h3>
-                    <img src="images_web/tarjeta.png" alt="Tarjeta de Contacto" style="width: 100%; border-radius: 10px; margin-bottom: 1rem;">
-                    <p>Correo: <a href="mailto:josegm@geofisa.com">josegm@geofisa.com</a></p>
+            <div class="about-cards" role="region" aria-label="Información de contacto y recursos">
+                <div class="card" role="article" aria-labelledby="contact-heading">
+                    <h3 id="contact-heading">Contacto</h3>
+                    <img src="images_web/tarjeta.png" alt="Tarjeta de presentación profesional de JOMA" style="width: 100%; border-radius: 10px; margin-bottom: 1rem;">
+                    <p>Correo: <a href="mailto:josegm@geofisa.com" aria-label="Enviar correo electrónico a josegm@geofisa.com">josegm@geofisa.com</a></p>
                 </div>
-            <div class="card patreon-orange patreon-carousel-card">
-                <h3>Patreon</h3>
+            <div class="card patreon-orange patreon-carousel-card" role="article" aria-labelledby="patreon-heading">
+                <h3 id="patreon-heading">Patreon</h3>
                 <p>
                     Apoya mi trabajo y accede a contenido exclusivo en Patreon. Con tu apoyo, puedo seguir desarrollando proyectos geofísicos y compartiendo conocimientos con la comunidad.
                 </p>
-                <div class="patreon-carousel">
-                    <button class="carousel-arrow left">&#8592;</button>
+                <div class="patreon-carousel" role="region" aria-label="Lista de patrocinadores" aria-live="polite">
+                    <button class="carousel-arrow left" aria-label="Anterior patrocinador">&#8592;</button>
                     <div class="carousel-content">
                         <span class="patreon-name">Abimelet Hernández</span>
                     </div>
-                    <button class="carousel-arrow right">&#8594;</button>
+                    <button class="carousel-arrow right" aria-label="Siguiente patrocinador">&#8594;</button>
                 </div>
-                <a href="https://www.patreon.com/c/chemitas" target="_blank" class="btn patreon-btn">Visitar Patreon</a>
+                <a href="https://www.patreon.com/c/chemitas" target="_blank" rel="noopener noreferrer" class="btn patreon-btn" aria-label="Visitar página de Patreon de JOMA">Visitar Patreon</a>
             </div>
-                <div class="card">
+                <div class="card" role="article" aria-labelledby="cv-heading">
                     <iframe 
                         src="docs/cv_josemaria_garciamarquez_en_.pdf" 
                         width="100%" 
                         height="200px" 
-                        style="border: 1px solid #ddd; border-radius: 10px;">
+                        style="border: 1px solid #ddd; border-radius: 10px;"
+                        title="Vista previa del currículum vitae de José María García Márquez"
+                        aria-label="Documento PDF del currículum vitae">
                     </iframe>
-                    <h3>Currículum Vitae</h3>
+                    <h3 id="cv-heading">Currículum Vitae</h3>
                     <p>Descarga mi CV para más información sobre mi experiencia profesional.</p>
-                    <a href="docs/cv_josemaria_garciamarquez_en_.pdf" download class="btn">Descargar CV</a>
+                    <a href="docs/cv_josemaria_garciamarquez_en_.pdf" download class="btn" aria-label="Descargar currículum vitae en formato PDF">Descargar CV</a>
                 </div>
                 
-                <div class="card payment-card">
-                    <h3>💳 Métodos de Pago</h3>
+                <div class="card payment-card" role="article" aria-labelledby="payment-heading">
+                    <h3 id="payment-heading">💳 Métodos de Pago</h3>
                     <p>Realiza pagos de forma segura para servicios de consultoría, cursos o donaciones.</p>
                     
-                    <div class="payment-options">
+                    <div class="payment-options" role="group" aria-label="Opciones de pago disponibles">
                         <div class="payment-option">
                             <div class="payment-header">
-                                <span class="payment-icon">💰</span>
+                                <span class="payment-icon" aria-hidden="true">💰</span>
                                 <strong>PayPal</strong>
                             </div>
                             <p class="payment-desc">Pago internacional seguro</p>
-                            <a href="https://paypal.me/Chemitas96?country.x=MX&locale.x=es_XC" target="_blank" class="btn payment-btn paypal-btn">
+                            <a href="https://paypal.me/Chemitas96?country.x=MX&locale.x=es_XC" target="_blank" rel="noopener noreferrer" class="btn payment-btn paypal-btn" aria-label="Realizar pago a través de PayPal">
                                 Pagar con PayPal
                             </a>
                         </div>
                         
                         <div class="payment-option">
                             <div class="payment-header">
-                                <span class="payment-icon">🏦</span>
+                                <span class="payment-icon" aria-hidden="true">🏦</span>
                                 <strong>Transferencia Bancaria</strong>
                             </div>
                             <p class="payment-desc">CLABE Mercado Pago</p>
                             <div class="clabe-container">
-                                <input type="text" value="722969020064117820" id="clabe-input" readonly class="clabe-input">
-                                <button onclick="copyClabe()" class="copy-btn" title="Copiar CLABE">📋</button>
+                                <input type="text" value="722969020064117820" id="clabe-input" readonly class="clabe-input" aria-label="Número CLABE para transferencia bancaria">
+                                <button onclick="copyClabe()" class="copy-btn" title="Copiar CLABE al portapapeles" aria-label="Copiar número CLABE">📋</button>
                             </div>
                         </div>
                     </div>
@@ -113,130 +260,278 @@
             -->
         </section>
 
-        <section id="news">
-            <h2>📢 Noticias y Avisos</h2>
-            <div class="news-container">
-                <div class="news-item success">
-                    <div class="news-header">
-                        <h3 class="news-title">💻 HVSRLearn 2.0 - Rediseño Completo</h3>
-                        <span class="news-date">18 May 2025</span>
-                    </div>
-                    <div class="news-content">
+        <section id="news" aria-labelledby="news-heading">
+            <h2 id="news-heading">📢 Noticias y Avisos</h2>
+            
+            <!-- Filter tabs for better space efficiency -->
+            <div class="news-filter" role="tablist" aria-label="Filtrar noticias por categoría">
+                <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" aria-controls="news-container">
+                    Todas
+                </button>
+                <button class="filter-btn" data-filter="success" role="tab" aria-selected="false" aria-controls="news-container">
+                    Lanzamientos
+                </button>
+                <button class="filter-btn" data-filter="info" role="tab" aria-selected="false" aria-controls="news-container">
+                    Educativo
+                </button>
+                <button class="filter-btn" data-filter="warning" role="tab" aria-selected="false" aria-controls="news-container">
+                    Importantes
+                </button>
+            </div>
+            
+            <div class="news-container" id="news-container" role="tabpanel" aria-labelledby="news-heading">
+                <article class="news-item success" data-category="success" role="article" aria-labelledby="news-1-title">
+                    <button class="news-toggle" aria-expanded="false" aria-controls="news-1-content" onclick="toggleNews('news-1')">
+                        <div class="news-header">
+                            <h3 class="news-title" id="news-1-title">💻 HVSRLearn 2.0 - Rediseño Completo</h3>
+                            <span class="news-date" aria-label="Fecha de publicación">18 May 2025</span>
+                            <span class="expand-icon" aria-hidden="true">▼</span>
+                        </div>
+                        <div class="news-preview">
+                            Lanzamiento de HVSRLearn 2.0 con arquitectura completamente rediseñada...
+                        </div>
+                    </button>
+                    <div class="news-content" id="news-1-content" aria-hidden="true">
                         Lanzamiento de HVSRLearn 2.0 con arquitectura completamente rediseñada. Nuevas características incluyen: ventana dedicada de procesamiento con filtros pasa-banda, ventana específica para cálculo HVSR, carga simultánea de componentes Z/N/E, y validaciones mejoradas. El código es ahora más flexible y adaptable para futuras funcionalidades.
+                        <a href="https://github.com/JoseMariaGarciaMarquez/hvsrlearn" target="_blank" rel="noopener noreferrer" class="news-link" aria-label="Visitar repositorio HVSRLearn en GitHub">
+                            Ver en GitHub
+                        </a>
                     </div>
-                    <span class="news-tag success">Lanzamiento</span>
-                </div>
+                    <span class="news-tag success" aria-label="Categoría: Lanzamiento">Lanzamiento</span>
+                </article>
 
-                <div class="news-item info">
-                    <div class="news-header">
-                        <h3 class="news-title">💧 Nuevo Curso: Python Aplicado a la Hidráulica</h3>
-                        <span class="news-date">15 Jun 2025</span>
-                    </div>
-                    <div class="news-content">
+                <article class="news-item info" data-category="info" role="article" aria-labelledby="news-2-title">
+                    <button class="news-toggle" aria-expanded="false" aria-controls="news-2-content" onclick="toggleNews('news-2')">
+                        <div class="news-header">
+                            <h3 class="news-title" id="news-2-title">💧 Nuevo Curso: Python Aplicado a la Hidráulica</h3>
+                            <span class="news-date" aria-label="Fecha de publicación">15 Jun 2025</span>
+                            <span class="expand-icon" aria-hidden="true">▼</span>
+                        </div>
+                        <div class="news-preview">
+                            "Python Aplicado a la Hidráulica con Integración en Sistemas de Información Geográfica (SIG)"...
+                        </div>
+                    </button>
+                    <div class="news-content" id="news-2-content" aria-hidden="true">
                         "Python Aplicado a la Hidráulica con Integración en Sistemas de Información Geográfica (SIG)". 16 horas de duración, 8 sesiones teórico-prácticas. Nivel básico a intermedio enfocado en automatización de cálculos hidráulicos y análisis geoespacial. Más cursos próximamente en la sección de material académico.
                     </div>
-                    <span class="news-tag info">Educativo</span>
-                </div>
+                    <span class="news-tag info" aria-label="Categoría: Educativo">Educativo</span>
+                </article>
 
-                <div class="news-item warning">
-                    <div class="news-header">
-                        <h3 class="news-title">⚠️ Actualización de Niveles Patreon</h3>
-                        <span class="news-date">25 Jun 2025</span>
-                    </div>
-                    <div class="news-content">
+                <article class="news-item warning" data-category="warning" role="article" aria-labelledby="news-3-title">
+                    <button class="news-toggle" aria-expanded="false" aria-controls="news-3-content" onclick="toggleNews('news-3')">
+                        <div class="news-header">
+                            <h3 class="news-title" id="news-3-title">⚠️ Actualización de Niveles Patreon</h3>
+                            <span class="news-date" aria-label="Fecha de publicación">25 Jun 2025</span>
+                            <span class="expand-icon" aria-hidden="true">▼</span>
+                        </div>
+                        <div class="news-preview">
+                            Los niveles de Patreon están siendo actualizados con nuevos beneficios...
+                        </div>
+                    </button>
+                    <div class="news-content" id="news-3-content" aria-hidden="true">
                         Los niveles de Patreon están siendo actualizados con nuevos beneficios y contenido exclusivo. Pronto tendrás acceso a material adicional, tutoriales avanzados y participación en sesiones privadas de Q&A. Mantente atento a los anuncios.
                     </div>
-                    <span class="news-tag warning">Importante</span>
-                </div>
+                    <span class="news-tag warning" aria-label="Categoría: Importante">Importante</span>
+                </article>
 
-                <div class="news-item success">
-                    <div class="news-header">
-                        <h3 class="news-title">💬 Servidor Discord Oficial</h3>
-                        <span class="news-date">20 Jun 2025</span>
-                    </div>
-                    <div class="news-content">
+                <article class="news-item success" data-category="success" role="article" aria-labelledby="news-4-title">
+                    <button class="news-toggle" aria-expanded="false" aria-controls="news-4-content" onclick="toggleNews('news-4')">
+                        <div class="news-header">
+                            <h3 class="news-title" id="news-4-title">💬 Servidor Discord Oficial</h3>
+                            <span class="news-date" aria-label="Fecha de publicación">20 Jun 2025</span>
+                            <span class="expand-icon" aria-hidden="true">▼</span>
+                        </div>
+                        <div class="news-preview">
+                            ¡Ya tenemos servidor Discord oficial! Un espacio dedicado para la comunidad geofísica...
+                        </div>
+                    </button>
+                    <div class="news-content" id="news-4-content" aria-hidden="true">
                         ¡Ya tenemos servidor Discord oficial! Un espacio dedicado para la comunidad geofísica donde podrás hacer preguntas, compartir proyectos, participar en discusiones técnicas y estar al día con las últimas novedades. Únete y forma parte de nuestra comunidad.
                     </div>
-                    <span class="news-tag success">Comunidad</span>
-                </div>
+                    <span class="news-tag success" aria-label="Categoría: Comunidad">Comunidad</span>
+                </article>
 
-                <div class="news-item info">
-                    <div class="news-header">
-                        <h3 class="news-title">🔬 Desarrollo: Script MASW con ML</h3>
-                        <span class="news-date">10 Jun 2025</span>
-                    </div>
-                    <div class="news-content">
+                <article class="news-item info" data-category="info" role="article" aria-labelledby="news-5-title">
+                    <button class="news-toggle" aria-expanded="false" aria-controls="news-5-content" onclick="toggleNews('news-5')">
+                        <div class="news-header">
+                            <h3 class="news-title" id="news-5-title">🔬 Desarrollo: Script MASW con ML</h3>
+                            <span class="news-date" aria-label="Fecha de publicación">10 Jun 2025</span>
+                            <span class="expand-icon" aria-hidden="true">▼</span>
+                        </div>
+                        <div class="news-preview">
+                            Trabajando en un script innovador para automatizar el preprocesado de ondas sísmicas MASW...
+                        </div>
+                    </button>
+                    <div class="news-content" id="news-5-content" aria-hidden="true">
                         Trabajando en un script innovador para automatizar el preprocesado de ondas sísmicas MASW utilizando machine learning. Implementando librerías como scikit-learn y técnicas avanzadas de procesamiento de señales. Próximamente más detalles sobre esta herramienta revolucionaria.
                     </div>
-                    <span class="news-tag info">Desarrollo</span>
-                </div>
+                    <span class="news-tag info" aria-label="Categoría: Desarrollo">Desarrollo</span>
+                </article>
 
-                <div class="news-item info">
-                    <div class="news-header">
-                        <h3 class="news-title">📚 Material Académico Ampliado</h3>
-                        <span class="news-date">5 Jun 2025</span>
-                    </div>
-                    <div class="news-content">
+                <article class="news-item info" data-category="info" role="article" aria-labelledby="news-6-title">
+                    <button class="news-toggle" aria-expanded="false" aria-controls="news-6-content" onclick="toggleNews('news-6')">
+                        <div class="news-header">
+                            <h3 class="news-title" id="news-6-title">📚 Material Académico Ampliado</h3>
+                            <span class="news-date" aria-label="Fecha de publicación">5 Jun 2025</span>
+                            <span class="expand-icon" aria-hidden="true">▼</span>
+                        </div>
+                        <div class="news-preview">
+                            La sección de material académico se está expandiendo con nuevos cursos...
+                        </div>
+                    </button>
+                    <div class="news-content" id="news-6-content" aria-hidden="true">
                         La sección de material académico se está expandiendo con nuevos cursos, tutoriales y recursos educativos. Pronto encontrarás contenido sobre procesamiento de señales, análisis estadístico aplicado a geofísica, y herramientas de código abierto.
                     </div>
-                    <span class="news-tag info">Academia</span>
-                </div>
+                    <span class="news-tag info" aria-label="Categoría: Academia">Academia</span>
+                </article>
             </div>
         </section>
 
-        <section id="menu">
-            <h2>Explora mi Portafolio</h2>
-            <div class="menu-cards">
-                <div class="card">
-                    <a href="geofisica.html">
-                        <img src="images_web/geofisica.png" alt="Proyectos de Geofísica">
-                        <h3>Proyectos de Geofísica</h3>
-                        <p>Descubre mis proyectos y estudios en geofísica.</p>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="coding.html">
-                        <img src="images_web/programacion.png" alt="Proyectos de Programación">
-                        <h3>Proyectos de Programación</h3>
-                        <p>Descubre mis proyectos de programación y desarrollo.</p>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="construccion.html">
-                        <img src="images_web/mapa.png" alt="Mapa">
-                        <h3>Mapa</h3>
-                        <p>Visualiza las zonas de estudio y proyectos realizados.</p>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="construccion.html">
-                        <img src="images_web/store.png" alt="Tienda">
-                        <h3>Tienda</h3>
-                        <p>Accede a productos y material académico.</p>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="social.html">
-                        <img src="images_web/social.png" alt="Redes Sociales">
-                        <h3>Multimedia</h3>
-                        <p>Conéctate conmigo en vivo y explora clips destacados.</p>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="publications.html">
-                        <img src="images_web/publications.png" alt="Publicaciones">
-                        <h3>Publicaciones</h3>
-                        <p>Descarga artículos técnicos y suscríbete a mi newsletter.</p>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="blog.html">
-                        <img src="images_web/blog.png" alt="Blog">
-                        <h3>Blog</h3>
-                        <p>Lee mis experiencias y reflexiones sobre la geofísica.</p>
-                    </a>
+        <section id="menu" aria-labelledby="menu-heading">
+            <div class="portfolio-header">
+                <h2 id="menu-heading">
+                    <span class="portfolio-title">Mi Portafolio</span>
+                    <span class="portfolio-subtitle">Explora mis proyectos y especialidades</span>
+                </h2>
+                <div class="portfolio-description">
+                    <p>Desde análisis geofísicos hasta desarrollo de software, cada proyecto refleja mi pasión por resolver problemas complejos con tecnología innovadora.</p>
                 </div>
             </div>
+            
+            <nav class="portfolio-grid" role="navigation" aria-label="Navegación principal del portafolio">
+                <div class="portfolio-card geofisica" role="article">
+                    <div class="card-background"></div>
+                    <div class="card-icon">
+                        <span class="icon-wave">🌊</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Geofísica Aplicada</h3>
+                        <p>Estudios sísmicos, GPR y modelado del subsuelo para minería, arqueología y recursos hídricos.</p>
+                        <div class="card-stats">
+                            <span class="stat">+50 estudios</span>
+                            <span class="stat">6+ km GPR</span>
+                        </div>
+                    </div>
+                    <a href="geofisica.html" class="card-link" aria-label="Ver proyectos de geofísica aplicada">
+                        <span class="link-text">Explorar Proyectos</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="portfolio-card programming" role="article">
+                    <div class="card-background"></div>
+                    <div class="card-icon">
+                        <span class="icon-code">💻</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Desarrollo de Software</h3>
+                        <p>Librerías Python para análisis geofísico, herramientas de código abierto y automatización.</p>
+                        <div class="card-stats">
+                            <span class="stat">Python</span>
+                            <span class="stat">Open Source</span>
+                        </div>
+                    </div>
+                    <a href="coding.html" class="card-link" aria-label="Ver proyectos de programación y desarrollo">
+                        <span class="link-text">Ver Código</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="portfolio-card mapping" role="article">
+                    <div class="card-background"></div>
+                    <div class="card-icon">
+                        <span class="icon-map">🗺️</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Mapeo Interactivo</h3>
+                        <p>Visualización geoespacial de proyectos realizados y análisis territorial.</p>
+                        <div class="card-stats">
+                            <span class="stat">QGIS</span>
+                            <span class="stat">WebGIS</span>
+                        </div>
+                    </div>
+                    <a href="construccion.html" class="card-link" aria-label="Acceder al mapa interactivo de proyectos">
+                        <span class="link-text">Ver Mapa</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="portfolio-card education" role="article">
+                    <div class="card-background"></div>
+                    <div class="card-icon">
+                        <span class="icon-education">🎓</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Material Académico</h3>
+                        <p>Cursos, tutoriales y recursos educativos especializados en geofísica y programación.</p>
+                        <div class="card-stats">
+                            <span class="stat">Cursos</span>
+                            <span class="stat">Tutoriales</span>
+                        </div>
+                    </div>
+                    <a href="construccion.html" class="card-link" aria-label="Acceder a cursos y material educativo">
+                        <span class="link-text">Aprender</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="portfolio-card multimedia" role="article">
+                    <div class="card-background"></div>
+                    <div class="card-icon">
+                        <span class="icon-multimedia">📺</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Contenido Multimedia</h3>
+                        <p>Videos educativos, streams en vivo y contenido interactivo para la comunidad.</p>
+                        <div class="card-stats">
+                            <span class="stat">Streaming</span>
+                            <span class="stat">Comunidad</span>
+                        </div>
+                    </div>
+                    <a href="social.html" class="card-link" aria-label="Ver contenido multimedia y redes sociales">
+                        <span class="link-text">Ver Contenido</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="portfolio-card publications" role="article">
+                    <div class="card-background"></div>
+                    <div class="card-icon">
+                        <span class="icon-publications">📚</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Publicaciones</h3>
+                        <p>Artículos técnicos, investigaciones y newsletter con las últimas novedades del sector.</p>
+                        <div class="card-stats">
+                            <span class="stat">Artículos</span>
+                            <span class="stat">Newsletter</span>
+                        </div>
+                    </div>
+                    <a href="publications.html" class="card-link" aria-label="Descargar publicaciones científicas">
+                        <span class="link-text">Leer Más</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="portfolio-card blog" role="article">
+                    <div class="card-background"></div>
+                    <div class="card-icon">
+                        <span class="icon-blog">✍️</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Blog Personal</h3>
+                        <p>Reflexiones, experiencias y perspectivas sobre la geofísica y el desarrollo tecnológico.</p>
+                        <div class="card-stats">
+                            <span class="stat">Reflexiones</span>
+                            <span class="stat">Experiencias</span>
+                        </div>
+                    </div>
+                    <a href="blog.html" class="card-link" aria-label="Leer blog personal sobre geofísica">
+                        <span class="link-text">Leer Blog</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+            </nav>
         </section>
     </main>
     <footer>
@@ -328,6 +623,97 @@ function copyClabe() {
         }, 2000);
     }
 }
+
+// News toggle functionality
+function toggleNews(newsId) {
+    const toggle = document.querySelector(`[aria-controls="${newsId}"]`);
+    const content = document.getElementById(newsId);
+    const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+    
+    // Toggle ARIA states
+    toggle.setAttribute('aria-expanded', !isExpanded);
+    content.setAttribute('aria-hidden', isExpanded);
+    
+    // Toggle visual states
+    if (isExpanded) {
+        content.classList.remove('expanded');
+    } else {
+        content.classList.add('expanded');
+    }
+}
+
+// News filtering functionality
+function initNewsFilters() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const newsItems = document.querySelectorAll('.news-item');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.getAttribute('data-filter');
+            
+            // Update ARIA states
+            filterBtns.forEach(b => {
+                b.setAttribute('aria-selected', 'false');
+                b.classList.remove('active');
+            });
+            btn.setAttribute('aria-selected', 'true');
+            btn.classList.add('active');
+            
+            // Filter news items
+            newsItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    item.classList.remove('hidden');
+                    item.style.display = 'block';
+                } else {
+                    item.classList.add('hidden');
+                    item.style.display = 'none';
+                }
+            });
+            
+            // Announce to screen readers
+            const visibleCount = document.querySelectorAll('.news-item:not(.hidden)').length;
+            const announcement = `Mostrando ${visibleCount} ${visibleCount === 1 ? 'noticia' : 'noticias'}`;
+            announceToScreenReader(announcement);
+        });
+    });
+}
+
+// Screen reader announcements
+function announceToScreenReader(message) {
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.style.position = 'absolute';
+    announcement.style.left = '-10000px';
+    announcement.style.width = '1px';
+    announcement.style.height = '1px';
+    announcement.style.overflow = 'hidden';
+    announcement.textContent = message;
+    
+    document.body.appendChild(announcement);
+    
+    setTimeout(() => {
+        document.body.removeChild(announcement);
+    }, 1000);
+}
+
+// Keyboard navigation improvements
+function initKeyboardNavigation() {
+    // Handle Enter and Space for news toggles
+    document.addEventListener('keydown', (e) => {
+        if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('news-toggle')) {
+            e.preventDefault();
+            e.target.click();
+        }
+    });
+}
+
+// Initialize all accessibility features
+document.addEventListener('DOMContentLoaded', () => {
+    initNewsFilters();
+    initKeyboardNavigation();
+});
 </script>
 </html>
 
