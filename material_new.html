@@ -8,12 +8,11 @@
     <link rel="icon" href="images_web/jomac.png" type="image/png">
 </head>
 <body>
-    <!-- Simple Header for Secondary Pages -->
-    <header class="secondary-page-header" role="banner">
+    <header role="banner" class="main-header secondary-header">
         <div class="header-container">
             <div class="header-brand">
-                <a href="index.html" class="brand-link" aria-label="Volver al inicio">
-                    <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+                <a href="index.html" aria-label="Volver al inicio" class="brand-link">
+                    <img src="images_web/jomac.png" alt="Logo JOMA - José María García Márquez, Ingeniero Geofísico" class="logo">
                     <div class="brand-info">
                         <h1>JOMA</h1>
                         <span class="brand-subtitle">Material Académico</span>
@@ -21,21 +20,22 @@
                 </a>
             </div>
             
-            <nav class="secondary-nav" role="navigation" aria-label="Navegación secundaria">
+            <nav class="main-nav" role="navigation" aria-label="Navegación principal">
                 <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">🏠 Inicio</a></li>
-                    <li><a href="geofisica.html" class="nav-link">🌍 Geofísica</a></li>
-                    <li><a href="coding.html" class="nav-link">💻 Programación</a></li>
-                    <li><a href="social.html" class="nav-link">📱 Social</a></li>
-                    <li><a href="material.html" class="nav-link active">📚 Material</a></li>
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="index.html#menu" class="nav-link">Portafolio</a></li>
+                    <li><a href="index.html#news" class="nav-link">Noticias</a></li>
+                    <li><a href="index.html#contact-heading" class="nav-link">Contacto</a></li>
                 </ul>
             </nav>
 
-            <button class="menu-toggle" aria-label="Abrir menú móvil" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="header-actions">
+                <button class="menu-toggle" aria-label="Abrir menú móvil" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
     
@@ -52,13 +52,10 @@
             <button class="mobile-nav-close" id="mobileNavClose" aria-label="Cerrar menú">×</button>
         </div>
         <ul class="mobile-nav-links">
-            <li><a href="index.html" onclick="closeMobileNav()">🏠 Inicio</a></li>
-            <li><a href="geofisica.html" onclick="closeMobileNav()">🌍 Geofísica</a></li>
-            <li><a href="coding.html" onclick="closeMobileNav()">💻 Programación</a></li>
-            <li><a href="social.html" onclick="closeMobileNav()">📱 Social</a></li>
-            <li><a href="material.html" onclick="closeMobileNav()" class="active">📚 Material</a></li>
-            <li><a href="publications.html" onclick="closeMobileNav()">📄 Publicaciones</a></li>
-            <li><a href="blog.html" onclick="closeMobileNav()">✍️ Blog</a></li>
+            <li><a href="index.html" onclick="closeMobileNav()">Inicio</a></li>
+            <li><a href="index.html#menu" onclick="closeMobileNav()">Portafolio</a></li>
+            <li><a href="index.html#news" onclick="closeMobileNav()">Noticias</a></li>
+            <li><a href="index.html#contact-heading" onclick="closeMobileNav()">Contacto</a></li>
         </ul>
     </div>
     
@@ -300,59 +297,59 @@
     <footer>
         <p>&copy; 2025 JOMA - Ingeniero Geofísico. Todos los derechos reservados.</p>
     </footer>
-
-    <script>
-        // Simplified and unified mobile navigation script
-        function toggleMobileNav() {
-            const mobileNav = document.getElementById('mobileNav');
-            const menuToggle = document.querySelector('.menu-toggle');
-            const body = document.body;
-            
-            if (mobileNav.classList.contains('active')) {
-                closeMobileNav();
-            } else {
-                mobileNav.classList.add('active');
-                mobileNav.style.display = 'block';
-                body.classList.add('mobile-menu-open');
-                menuToggle.setAttribute('aria-expanded', 'true');
-            }
-        }
-
-        function closeMobileNav() {
-            const mobileNav = document.getElementById('mobileNav');
-            const menuToggle = document.querySelector('.menu-toggle');
-            const body = document.body;
-            
-            mobileNav.classList.remove('active');
-            body.classList.remove('mobile-menu-open');
-            menuToggle.setAttribute('aria-expanded', 'false');
-            
-            setTimeout(() => {
-                mobileNav.style.display = 'none';
-            }, 300);
-        }
-
-        // Initialize mobile menu
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const mobileNavClose = document.getElementById('mobileNavClose');
-            
-            if (menuToggle) {
-                menuToggle.addEventListener('click', toggleMobileNav);
-            }
-            
-            if (mobileNavClose) {
-                mobileNavClose.addEventListener('click', closeMobileNav);
-            }
-            
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', (e) => {
-                const mobileNav = document.getElementById('mobileNav');
-                if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
-                    closeMobileNav();
-                }
-            });
-        });
-    </script>
 </body>
+
+<script>
+// Mobile menu functionality
+function toggleMobileNav() {
+    const mobileNav = document.getElementById('mobileNav');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const body = document.body;
+    
+    if (mobileNav.classList.contains('active')) {
+        closeMobileNav();
+    } else {
+        mobileNav.classList.add('active');
+        mobileNav.style.display = 'block';
+        body.classList.add('mobile-menu-open');
+        menuToggle.setAttribute('aria-expanded', 'true');
+    }
+}
+
+function closeMobileNav() {
+    const mobileNav = document.getElementById('mobileNav');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const body = document.body;
+    
+    mobileNav.classList.remove('active');
+    body.classList.remove('mobile-menu-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    
+    setTimeout(() => {
+        mobileNav.style.display = 'none';
+    }, 300);
+}
+
+// Initialize mobile menu
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+    
+    if (menuToggle) {
+        menuToggle.addEventListener('click', toggleMobileNav);
+    }
+    
+    if (mobileNavClose) {
+        mobileNavClose.addEventListener('click', closeMobileNav);
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const mobileNav = document.getElementById('mobileNav');
+        if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
+            closeMobileNav();
+        }
+    });
+});
+</script>
 </html>

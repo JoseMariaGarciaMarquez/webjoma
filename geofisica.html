@@ -7,91 +7,182 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="#main" class="skip-link">Saltar al contenido principal</a>
-    <header role="banner">
-        <a href="index.html" aria-label="Volver al inicio">
-            <img src="images_web/jomac.png" alt="Logo JOMA - José María García Márquez, Ingeniero Geofísico" class="logo">
-        </a>
-        <div class="header-content">
-            <div class="header-text">
-                <h1>Proyectos de Geofísica</h1>
-                <p>Análisis del Subsuelo y Exploración</p>
+    <!-- Simple Header for Secondary Pages -->
+    <header class="secondary-page-header" role="banner">
+        <div class="header-container">
+            <div class="header-brand">
+                <a href="index.html" class="brand-link" aria-label="Volver al inicio">
+                    <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+                    <div class="brand-info">
+                        <h1>JOMA</h1>
+                        <span class="brand-subtitle">Geofísica Aplicada</span>
+                    </div>
+                </a>
             </div>
+            
+            <nav class="secondary-nav" role="navigation" aria-label="Navegación secundaria">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">🏠 Inicio</a></li>
+                    <li><a href="geofisica.html" class="nav-link active">🌍 Geofísica</a></li>
+                    <li><a href="coding.html" class="nav-link">💻 Programación</a></li>
+                    <li><a href="social.html" class="nav-link">📱 Social</a></li>
+                    <li><a href="material.html" class="nav-link">📚 Material</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-toggle" aria-label="Abrir menú móvil" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
     
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <div class="header-brand">
+                <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+                <div class="brand-info">
+                    <h1>JOMA</h1>
+                    <span class="brand-subtitle">Geofísica Aplicada</span>
+                </div>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Cerrar menú">×</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" onclick="closeMobileNav()">🏠 Inicio</a></li>
+            <li><a href="geofisica.html" onclick="closeMobileNav()" class="active">🌍 Geofísica</a></li>
+            <li><a href="coding.html" onclick="closeMobileNav()">💻 Programación</a></li>
+            <li><a href="social.html" onclick="closeMobileNav()">📱 Social</a></li>
+            <li><a href="material.html" onclick="closeMobileNav()">📚 Material</a></li>
+            <li><a href="publications.html" onclick="closeMobileNav()">📄 Publicaciones</a></li>
+            <li><a href="blog.html" onclick="closeMobileNav()">✍️ Blog</a></li>
+        </ul>
+    </div>
+    
     <main id="main" role="main">
+        <!-- Decorative background elements -->
+        <div class="bg-decorations">
+            <div class="decoration decoration-1"></div>
+            <div class="decoration decoration-2"></div>
+            <div class="decoration decoration-3"></div>
+        </div>
+
         <!-- Hero Section -->
-        <section class="page-hero geophysics-hero" aria-labelledby="hero-heading">
-            <div class="hero-content-wrapper">
-                <div class="hero-text-content">
+        <section class="secondary-hero geophysics-hero" aria-labelledby="hero-heading">
+            <div class="hero-background">
+                <div class="floating-elements">
+                    <div class="floating-element" style="--delay: 0s; --duration: 6s;">⚡</div>
+                    <div class="floating-element" style="--delay: 2s; --duration: 8s;">📡</div>
+                    <div class="floating-element" style="--delay: 4s; --duration: 7s;">🌊</div>
+                    <div class="floating-element" style="--delay: 1s; --duration: 9s;">🔍</div>
+                </div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-text">
                     <h2 id="hero-heading">
-                        <span class="hero-subtitle">🌊 Geofísica Aplicada</span>
-                        <span class="hero-title">Explorando el Subsuelo</span>
+                        <span class="hero-greeting">Geofísica Aplicada</span>
+                        <span class="hero-name">Explorando el Subsuelo</span>
+                        <span class="hero-title">Ciencia & Tecnología</span>
                     </h2>
-                    <p class="hero-description">
-                        Especializado en métodos geofísicos para caracterización del subsuelo, prospección de agua subterránea, 
-                        estudios arqueológicos y evaluación de recursos minerales. Cada proyecto combina rigor científico con tecnología avanzada.
-                    </p>
-                    <div class="hero-stats">
-                        <div class="stat-badge">
-                            <span class="stat-icon">⚡</span>
-                            <span class="stat-text">SEV & ERT</span>
-                        </div>
-                        <div class="stat-badge">
-                            <span class="stat-icon">📡</span>
-                            <span class="stat-text">GPR</span>
-                        </div>
-                        <div class="stat-badge">
-                            <span class="stat-icon">🔍</span>
-                            <span class="stat-text">10+ Estudios</span>
+                    
+                    <div class="hero-description">
+                        <p class="hero-intro">
+                            Especializado en <strong>métodos geofísicos avanzados</strong> para caracterización del subsuelo, 
+                            prospección de agua subterránea y estudios arqueológicos. Cada proyecto combina rigor científico con tecnología de vanguardia.
+                        </p>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">6+ km</span>
+                                <span class="stat-label">Datos GPR</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Levantamientos</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">4</span>
+                                <span class="stat-label">Métodos</span>
+                            </div>
                         </div>
                     </div>
+                    
+                    <div class="hero-cta">
+                        <a href="mailto:josegm@geofisa.com" class="cta-primary" aria-label="Contactar para consultoría geofísica">
+                            <span class="cta-text">¡Consultemos tu proyecto!</span>
+                            <span class="cta-icon">🔬</span>
+                        </a>
+                        <a href="#projects" class="cta-secondary" aria-label="Ver proyectos realizados">
+                            Ver Proyectos
+                        </a>
+                    </div>
                 </div>
+                
                 <div class="hero-visual">
                     <div class="geophysics-showcase">
-                        <div class="floating-elements">
-                            <div class="floating-element electric">⚡</div>
-                            <div class="floating-element radar">📡</div>
-                            <div class="floating-element search">🔍</div>
-                            <div class="floating-element earth">🌍</div>
+                        <div class="tech-grid">
+                            <div class="tech-item" style="--delay: 0.5s;">
+                                <span class="tech-icon">⚡</span>
+                                <span class="tech-name">SEV</span>
+                            </div>
+                            <div class="tech-item" style="--delay: 1s;">
+                                <span class="tech-icon">📡</span>
+                                <span class="tech-name">GPR</span>
+                            </div>
+                            <div class="tech-item" style="--delay: 1.5s;">
+                                <span class="tech-icon">🗺️</span>
+                                <span class="tech-name">TRE</span>
+                            </div>
+                            <div class="tech-item" style="--delay: 2s;">
+                                <span class="tech-icon">🌊</span>
+                                <span class="tech-name">Sísmica</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <div class="hero-scroll-indicator">
+                <span class="scroll-text">Ver proyectos</span>
+                <div class="scroll-arrow"></div>
             </div>
         </section>
         <!-- Proyectos Section -->
         <section id="projects" aria-labelledby="projects-heading">
-            <div class="section-container">
-                <div class="section-header">
-                    <h2 id="projects-heading">Proyectos de Geofísica</h2>
-                    <p>Estudios especializados en caracterización del subsuelo y exploración geofísica</p>
+            <div class="portfolio-header">
+                <h2 id="projects-heading">
+                    <span class="portfolio-title">Proyectos Destacados</span>
+                    <span class="portfolio-subtitle">Estudios geofísicos especializados</span>
+                </h2>
+                <div class="portfolio-description">
+                    <p>Cada proyecto representa un reto único resuelto con metodologías geofísicas avanzadas y tecnología de punta.</p>
                 </div>
-                
-                <div class="projects-grid modern-grid">
-                    <article class="project-card featured" role="article" aria-labelledby="malinche-title">
+            </div>
+            
+            <div class="projects-container">
+                <div class="portfolio-grid projects-grid">
+                    <article class="portfolio-card project-card featured" role="article" aria-labelledby="malinche-title">
+                        <div class="card-background"></div>
                         <div class="project-image-container">
                             <img src="proyectos/perfil-sev1-sev2-nuevo.png" alt="Perfil de SEV en La Malinche - Caracterización hidrogeológica" class="project-image">
                             <div class="project-overlay">
-                                <span class="project-status">Completado</span>
+                                <span class="project-status completed">Completado</span>
                             </div>
                         </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 id="malinche-title">
-                                    <span class="project-icon">💧</span>
-                                    Prospección de Agua - La Malinche
-                                </h3>
-                                <div class="project-badges">
-                                    <span class="tech-badge sev">SEV</span>
-                                    <span class="tech-badge hydro">Hidrogeología</span>
-                                </div>
+                        <div class="card-content project-content">
+                            <div class="card-icon project-header">
+                                <span class="icon-water">💧</span>
                             </div>
+                            <h3 id="malinche-title">Prospección de Agua - La Malinche</h3>
+                            <p>Caracterización hidrogeológica del subsuelo mediante sondeo eléctrico vertical (SEV) en La Malinche, Tlaxcala, para optimizar la ubicación de futuros pozos de agua.</p>
                             
-                            <p class="project-description">
-                                Caracterización hidrogeológica del subsuelo mediante sondeo eléctrico vertical (SEV) en La Malinche, Tlaxcala, 
-                                para optimizar la ubicación de futuros pozos de agua.
-                            </p>
+                            <div class="project-badges card-stats">
+                                <span class="stat tech-badge sev">SEV</span>
+                                <span class="stat tech-badge hydro">Hidrogeología</span>
+                            </div>
                             
                             <div class="project-features">
                                 <h4>Objetivos Alcanzados:</h4>
@@ -99,190 +190,118 @@
                                     <li><span class="feature-icon">🔍</span> Caracterización estratigráfica completa</li>
                                     <li><span class="feature-icon">💧</span> Identificación de zonas acuíferas</li>
                                     <li><span class="feature-icon">📊</span> Modelado geoeléctrico avanzado</li>
-                                    <li><span class="feature-icon">📋</span> Recomendaciones técnicas para perforación</li>
                                 </ul>
                             </div>
-                            
-                            <div class="project-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Método:</span>
-                                    <span class="detail-value">Sondeo Eléctrico Vertical (SEV)</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Ubicación:</span>
-                                    <span class="detail-value">La Malinche, Tlaxcala</span>
-                                </div>
-                            </div>
-                            
-                            <div class="project-actions">
-                                <a href="proyectos/tlaxcala-sev.docx.pdf" download class="btn primary-btn" aria-label="Descargar informe técnico del proyecto Malinche">
-                                    <span class="btn-icon">📄</span>
-                                    Descargar Informe
-                                </a>
-                            </div>
                         </div>
+                        <a href="proyectos/tlaxcala-sev.docx.pdf" download class="card-link project-link" aria-label="Descargar informe técnico del proyecto Malinche">
+                            <span class="link-text">Descargar Informe</span>
+                            <span class="link-arrow">→</span>
+                        </a>
                     </article>
 
-                    <article class="project-card featured" role="article" aria-labelledby="lisa-title">
+                    <article class="portfolio-card project-card featured" role="article" aria-labelledby="lisa-title">
+                        <div class="card-background"></div>
                         <div class="project-image-container">
                             <img src="proyectos/lisa.png" alt="Análisis LISA de resistividad - Clasificación espacial" class="project-image">
                             <div class="project-overlay">
-                                <span class="project-status">Innovador</span>
+                                <span class="project-status innovative">Innovador</span>
                             </div>
                         </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 id="lisa-title">
-                                    <span class="project-icon">🗺️</span>
-                                    Análisis LISA - TRE
-                                </h3>
-                                <div class="project-badges">
-                                    <span class="tech-badge tre">TRE</span>
-                                    <span class="tech-badge analysis">Análisis Espacial</span>
-                                </div>
+                        <div class="card-content project-content">
+                            <div class="card-icon project-header">
+                                <span class="icon-analysis">🗺️</span>
                             </div>
+                            <h3 id="lisa-title">Análisis LISA - TRE</h3>
+                            <p>Implementación de análisis espacial LISA (Indicadores Locales de Asociación Espacial) para identificar patrones de resistividad en levantamientos de TRE.</p>
                             
-                            <p class="project-description">
-                                Implementación de análisis espacial LISA (Indicadores Locales de Asociación Espacial) para identificar 
-                                patrones de resistividad en levantamientos de Tomografía de Resistividad Eléctrica.
-                            </p>
+                            <div class="project-badges card-stats">
+                                <span class="stat tech-badge tre">TRE</span>
+                                <span class="stat tech-badge analysis">Análisis Espacial</span>
+                            </div>
                             
                             <div class="project-features">
                                 <h4>Clasificaciones LISA:</h4>
                                 <ul class="features-list">
-                                    <li><span class="feature-icon">🔴</span> High-High: Materiales secos/rocas impermeables</li>
+                                    <li><span class="feature-icon">🔴</span> High-High: Materiales secos/rocas</li>
                                     <li><span class="feature-icon">🔵</span> Low-Low: Zonas saturadas/arcillas</li>
-                                    <li><span class="feature-icon">🟡</span> Transiciones: Fallas y contactos litológicos</li>
-                                    <li><span class="feature-icon">🎯</span> Visualización 3D de clusters</li>
+                                    <li><span class="feature-icon">🟡</span> Transiciones: Fallas y contactos</li>
                                 </ul>
                             </div>
-                            
-                            <div class="project-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Método:</span>
-                                    <span class="detail-value">Tomografía de Resistividad Eléctrica</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Técnica:</span>
-                                    <span class="detail-value">Análisis Espacial LISA</span>
-                                </div>
-                            </div>
-                            
-                            <div class="project-actions">
-                                <a href="#" class="btn primary-btn" aria-label="Descargar informe del análisis LISA">
-                                    <span class="btn-icon">📄</span>
-                                    Ver Análisis
-                                </a>
-                            </div>
                         </div>
+                        <a href="#" class="card-link project-link" aria-label="Ver análisis LISA completo">
+                            <span class="link-text">Ver Análisis</span>
+                            <span class="link-arrow">→</span>
+                        </a>
                     </article>
 
-                    <article class="project-card featured" role="article" aria-labelledby="arqueologia-title">
+                    <article class="portfolio-card project-card featured" role="article" aria-labelledby="arqueologia-title">
+                        <div class="card-background"></div>
                         <div class="project-image-container">
                             <img src="proyectos/Wonderaztecs.png" alt="Prospección arqueológica GPR - Centro Histórico CDMX" class="project-image">
                             <div class="project-overlay">
                                 <span class="project-status heritage">Patrimonio</span>
                             </div>
                         </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 id="arqueologia-title">
-                                    <span class="project-icon">🏛️</span>
-                                    Prospección Arqueológica GPR
-                                </h3>
-                                <div class="project-badges">
-                                    <span class="tech-badge gpr">GPR</span>
-                                    <span class="tech-badge archaeology">Arqueología</span>
-                                </div>
+                        <div class="card-content project-content">
+                            <div class="card-icon project-header">
+                                <span class="icon-archaeology">🏛️</span>
                             </div>
+                            <h3 id="arqueologia-title">Prospección Arqueológica GPR</h3>
+                            <p>Levantamiento geofísico con GPR en República de Perú 57, Centro Histórico de CDMX, para identificar estructuras arqueológicas subterráneas.</p>
                             
-                            <p class="project-description">
-                                Levantamiento geofísico con GPR en República de Perú 57, Centro Histórico de CDMX, 
-                                para identificar estructuras arqueológicas subterráneas antes de construcción.
-                            </p>
+                            <div class="project-badges card-stats">
+                                <span class="stat tech-badge gpr">GPR</span>
+                                <span class="stat tech-badge archaeology">Arqueología</span>
+                            </div>
                             
                             <div class="project-features">
                                 <h4>Objetivos del Estudio:</h4>
                                 <ul class="features-list">
                                     <li><span class="feature-icon">🔍</span> Detección de estructuras arqueológicas</li>
                                     <li><span class="feature-icon">🗺️</span> Mapeo de anomalías subterráneas</li>
-                                    <li><span class="feature-icon">🏗️</span> Planificación de construcción segura</li>
                                     <li><span class="feature-icon">🏛️</span> Preservación del patrimonio cultural</li>
                                 </ul>
                             </div>
-                            
-                            <div class="project-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Método:</span>
-                                    <span class="detail-value">Radar de Penetración Terrestre (GPR)</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Ubicación:</span>
-                                    <span class="detail-value">Centro Histórico, CDMX</span>
-                                </div>
-                            </div>
-                            
-                            <div class="project-actions">
-                                <a href="proyectos/reporte-peru57.pdf" download class="btn primary-btn" aria-label="Descargar informe de prospección arqueológica">
-                                    <span class="btn-icon">📄</span>
-                                    Descargar Informe
-                                </a>
-                            </div>
                         </div>
+                        <a href="proyectos/reporte-peru57.pdf" download class="card-link project-link" aria-label="Descargar informe de prospección arqueológica">
+                            <span class="link-text">Descargar Informe</span>
+                            <span class="link-arrow">→</span>
+                        </a>
                     </article>
 
-                    <article class="project-card featured" role="article" aria-labelledby="pemex-title">
+                    <article class="portfolio-card project-card featured" role="article" aria-labelledby="pemex-title">
+                        <div class="card-background"></div>
                         <div class="project-image-container">
                             <img src="proyectos/gprmty.png" alt="Localización de tuberías PEMEX - GPR Monterrey" class="project-image">
                             <div class="project-overlay">
                                 <span class="project-status industrial">Industrial</span>
                             </div>
                         </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 id="pemex-title">
-                                    <span class="project-icon">🔧</span>
-                                    Localización Tuberías PEMEX
-                                </h3>
-                                <div class="project-badges">
-                                    <span class="tech-badge gpr">GPR</span>
-                                    <span class="tech-badge industrial">Industrial</span>
-                                </div>
+                        <div class="card-content project-content">
+                            <div class="card-icon project-header">
+                                <span class="icon-industrial">🔧</span>
                             </div>
+                            <h3 id="pemex-title">Localización Tuberías PEMEX</h3>
+                            <p>Localización precisa de tuberías de PEMEX en Monterrey utilizando GPR, cubriendo 6.3 km lineales en 15 levantamientos para apoyo a operaciones industriales.</p>
                             
-                            <p class="project-description">
-                                Localización precisa de tuberías de PEMEX en Monterrey utilizando GPR, cubriendo 6.3 km lineales 
-                                en 15 levantamientos para apoyo a operaciones industriales.
-                            </p>
+                            <div class="project-badges card-stats">
+                                <span class="stat tech-badge gpr">GPR</span>
+                                <span class="stat tech-badge industrial">Industrial</span>
+                            </div>
                             
                             <div class="project-features">
                                 <h4>Metodología Aplicada:</h4>
                                 <ul class="features-list">
                                     <li><span class="feature-icon">📏</span> 15 levantamientos, 6.3 km lineales</li>
                                     <li><span class="feature-icon">💻</span> Procesamiento con GPRPy</li>
-                                    <li><span class="feature-icon">🗺️</span> Mallado completo del área</li>
                                     <li><span class="feature-icon">🎯</span> Localización precisa de tuberías</li>
                                 </ul>
                             </div>
-                            
-                            <div class="project-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Método:</span>
-                                    <span class="detail-value">Radar de Penetración Terrestre (GPR)</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Cobertura:</span>
-                                    <span class="detail-value">6.3 km lineales</span>
-                                </div>
-                            </div>
-                            
-                            <div class="project-actions">
-                                <a href="proyectos/ESTUDIO-GEOFISICO-GPR-MONTERREY.pdf" download class="btn primary-btn" aria-label="Descargar informe del estudio GPR Monterrey">
-                                    <span class="btn-icon">📄</span>
-                                    Descargar Informe
-                                </a>
-                            </div>
                         </div>
+                        <a href="proyectos/ESTUDIO-GEOFISICO-GPR-MONTERREY.pdf" download class="card-link project-link" aria-label="Descargar informe del estudio GPR Monterrey">
+                            <span class="link-text">Descargar Informe</span>
+                            <span class="link-arrow">→</span>
+                        </a>
                     </article>
                 </div>
                 
@@ -299,25 +318,81 @@
                         <div class="method-card">
                             <div class="method-icon">⚡</div>
                             <h4>Sondeo Eléctrico Vertical (SEV)</h4>
-                            <p>Caracterización estratigráfica y detección de acuíferos</p>
+                            <p>Caracterización estratigráfica y detección de acuíferos mediante resistividad eléctrica</p>
                         </div>
                         <div class="method-card">
                             <div class="method-icon">📡</div>
                             <h4>Radar de Penetración (GPR)</h4>
-                            <p>Detección de estructuras y objetos enterrados</p>
+                            <p>Detección de alta resolución de estructuras y objetos enterrados usando ondas electromagnéticas</p>
                         </div>
                         <div class="method-card">
                             <div class="method-icon">🗺️</div>
                             <h4>Tomografía de Resistividad (TRE)</h4>
-                            <p>Imágenes 2D/3D de variaciones de resistividad</p>
+                            <p>Imágenes 2D/3D detalladas de variaciones de resistividad del subsuelo</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    
+    <footer>
     <footer>
         <p>&copy; 2025 JOMA - Ingeniero Geofísico. Todos los derechos reservados.</p>
     </footer>
+
+<script>
+// Simplified and unified mobile navigation script
+function toggleMobileNav() {
+    const mobileNav = document.getElementById('mobileNav');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const body = document.body;
+    
+    if (mobileNav.classList.contains('active')) {
+        closeMobileNav();
+    } else {
+        mobileNav.classList.add('active');
+        mobileNav.style.display = 'block';
+        body.classList.add('mobile-menu-open');
+        menuToggle.setAttribute('aria-expanded', 'true');
+    }
+}
+
+function closeMobileNav() {
+    const mobileNav = document.getElementById('mobileNav');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const body = document.body;
+    
+    mobileNav.classList.remove('active');
+    body.classList.remove('mobile-menu-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    
+    setTimeout(() => {
+        mobileNav.style.display = 'none';
+    }, 300);
+}
+
+// Initialize mobile menu
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+    
+    if (menuToggle) {
+        menuToggle.addEventListener('click', toggleMobileNav);
+    }
+    
+    if (mobileNavClose) {
+        mobileNavClose.addEventListener('click', closeMobileNav);
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const mobileNav = document.getElementById('mobileNav');
+        if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
+            closeMobileNav();
+        }
+    });
+});
+</script>
 </body>
 </html>

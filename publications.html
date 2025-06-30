@@ -7,18 +7,60 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="#main" class="skip-link">Saltar al contenido principal</a>
-    <header role="banner">
-        <a href="index.html" aria-label="Volver al inicio">
-            <img src="images_web/jomac.png" alt="Logo JOMA - José María García Márquez, Ingeniero Geofísico" class="logo">
-        </a>
-        <div class="header-content">
-            <div class="header-text">
-                <h1>Publicaciones & Newsletter</h1>
-                <p>Conocimiento Científico Compartido</p>
+    <!-- Simple Header for Secondary Pages -->
+    <header class="secondary-page-header" role="banner">
+        <div class="header-container">
+            <div class="header-brand">
+                <a href="index.html" class="brand-link" aria-label="Volver al inicio">
+                    <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+                    <div class="brand-info">
+                        <h1>JOMA</h1>
+                        <span class="brand-subtitle">Publicaciones</span>
+                    </div>
+                </a>
             </div>
+            
+            <nav class="secondary-nav" role="navigation" aria-label="Navegación secundaria">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">🏠 Inicio</a></li>
+                    <li><a href="geofisica.html" class="nav-link">🌍 Geofísica</a></li>
+                    <li><a href="coding.html" class="nav-link">💻 Programación</a></li>
+                    <li><a href="social.html" class="nav-link">📱 Social</a></li>
+                    <li><a href="material.html" class="nav-link">📚 Material</a></li>
+                    <li><a href="publications.html" class="nav-link active">📄 Publicaciones</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-toggle" aria-label="Abrir menú móvil" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
+    
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <div class="header-brand">
+                <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+                <div class="brand-info">
+                    <h1>JOMA</h1>
+                    <span class="brand-subtitle">Publicaciones</span>
+                </div>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Cerrar menú">×</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" onclick="closeMobileNav()">🏠 Inicio</a></li>
+            <li><a href="geofisica.html" onclick="closeMobileNav()">🌍 Geofísica</a></li>
+            <li><a href="coding.html" onclick="closeMobileNav()">💻 Programación</a></li>
+            <li><a href="social.html" onclick="closeMobileNav()">📱 Social</a></li>
+            <li><a href="material.html" onclick="closeMobileNav()">📚 Material</a></li>
+            <li><a href="publications.html" onclick="closeMobileNav()" class="active">📄 Publicaciones</a></li>
+            <li><a href="blog.html" onclick="closeMobileNav()">✍️ Blog</a></li>
+        </ul>
+    </div>
     
     <main id="main" role="main">
         <!-- Hero Section -->
@@ -60,36 +102,180 @@
                 </div>
             </div>
         </section>
-        <section id="publications">
-            <h2>Publicaciones</h2>
-            <div class="publications-grid">
-                <div class="publication-card">
-                    <iframe 
-                        src="publicaciones/articulo1.pdf" 
-                        width="100%" 
-                        height="200px" 
-                        style="border: 1px solid #ddd; border-radius: 10px;">
-                    </iframe>
-                    <h3>Artículo 1</h3>
-                    <p>Descripción del artículo 1.</p>
-                    <a href="publicaciones/articulo1.pdf" download class="btn">Descargar</a>
+        <!-- Publications Section -->
+        <section class="publications-section" id="publications" aria-labelledby="publications-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="publications-heading" class="section-title">
+                        <span class="section-icon">📚</span>
+                        Publicaciones Científicas
+                    </h2>
+                    <p class="section-description">
+                        Artículos técnicos y publicaciones científicas en geofísica aplicada
+                    </p>
                 </div>
-                <div class="publication-card">
-                    <iframe 
-                        src="publicaciones/nuevas-130425.pdf" 
-                        width="100%" 
-                        height="200px" 
-                        style="border: 1px solid #ddd; border-radius: 10px;">
-                    </iframe>
-                    <h3>Newsletter - Nuevas Actualizaciones</h3>
-                    <p>Consulta las últimas novedades y actualizaciones en este boletín.</p>
-                    <a href="publicaciones/nuevas-130425.pdf" download class="btn">Descargar</a>
+                
+                <div class="publications-grid">
+                    <article class="publication-card">
+                        <div class="publication-preview">
+                            <iframe 
+                                src="publicaciones/articulo1.pdf" 
+                                title="Vista previa del Artículo 1"
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="publication-content">
+                            <div class="publication-category">
+                                <span class="category-badge research">Investigación</span>
+                            </div>
+                            <h3 class="publication-title">Artículo 1</h3>
+                            <p class="publication-description">
+                                Descripción del artículo 1. Investigación aplicada en geofísica y métodos de exploración.
+                            </p>
+                            <div class="publication-meta">
+                                <span class="meta-item">
+                                    <span class="meta-icon">📅</span>
+                                    <span class="meta-text">2024</span>
+                                </span>
+                                <span class="meta-item">
+                                    <span class="meta-icon">📄</span>
+                                    <span class="meta-text">PDF</span>
+                                </span>
+                            </div>
+                            <div class="publication-actions">
+                                <a href="publicaciones/articulo1.pdf" download class="btn btn-primary">
+                                    <span class="btn-icon">⬇️</span>
+                                    Descargar
+                                </a>
+                                <a href="publicaciones/articulo1.pdf" target="_blank" class="btn btn-secondary">
+                                    <span class="btn-icon">👁️</span>
+                                    Ver
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="publication-card">
+                        <div class="publication-preview">
+                            <iframe 
+                                src="publicaciones/nuevas-130425.pdf" 
+                                title="Vista previa del Newsletter"
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="publication-content">
+                            <div class="publication-category">
+                                <span class="category-badge newsletter">Newsletter</span>
+                            </div>
+                            <h3 class="publication-title">Newsletter - Nuevas Actualizaciones</h3>
+                            <p class="publication-description">
+                                Consulta las últimas novedades y actualizaciones en este boletín mensual con información técnica y proyectos.
+                            </p>
+                            <div class="publication-meta">
+                                <span class="meta-item">
+                                    <span class="meta-icon">📅</span>
+                                    <span class="meta-text">Abril 2025</span>
+                                </span>
+                                <span class="meta-item">
+                                    <span class="meta-icon">📧</span>
+                                    <span class="meta-text">Newsletter</span>
+                                </span>
+                            </div>
+                            <div class="publication-actions">
+                                <a href="publicaciones/nuevas-130425.pdf" download class="btn btn-primary">
+                                    <span class="btn-icon">⬇️</span>
+                                    Descargar
+                                </a>
+                                <a href="publicaciones/nuevas-130425.pdf" target="_blank" class="btn btn-secondary">
+                                    <span class="btn-icon">👁️</span>
+                                    Ver
+                                </a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Portafolio de Proyectos. Todos los derechos reservados.</p>
+    
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">José María García Márquez</h3>
+                    <p class="footer-description">Ingeniero Geofísico especializado en exploración y análisis de datos geofísicos</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contacto</h4>
+                    <p class="footer-contact">Email: contacto@example.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Sígueme</h4>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="GitHub">GitHub</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 José María García Márquez. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Simplified and unified mobile navigation script
+        function toggleMobileNav() {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const body = document.body;
+            
+            if (mobileNav.classList.contains('active')) {
+                closeMobileNav();
+            } else {
+                mobileNav.classList.add('active');
+                mobileNav.style.display = 'block';
+                body.classList.add('mobile-menu-open');
+                menuToggle.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        function closeMobileNav() {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const body = document.body;
+            
+            mobileNav.classList.remove('active');
+            body.classList.remove('mobile-menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            
+            setTimeout(() => {
+                mobileNav.style.display = 'none';
+            }, 300);
+        }
+
+        // Initialize mobile menu
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileNavClose = document.getElementById('mobileNavClose');
+            
+            if (menuToggle) {
+                menuToggle.addEventListener('click', toggleMobileNav);
+            }
+            
+            if (mobileNavClose) {
+                mobileNavClose.addEventListener('click', closeMobileNav);
+            }
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                const mobileNav = document.getElementById('mobileNav');
+                if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
+                    closeMobileNav();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

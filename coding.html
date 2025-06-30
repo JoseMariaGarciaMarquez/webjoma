@@ -7,90 +7,182 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="#main" class="skip-link">Saltar al contenido principal</a>
-    <header role="banner">
-        <a href="index.html" aria-label="Volver al inicio">
-            <img src="images_web/jomac.png" alt="Logo JOMA - José María García Márquez, Ingeniero Geofísico" class="logo">
-        </a>
-        <div class="header-content">
-            <div class="header-text">
-                <h1>Proyectos de Programación</h1>
-                <p>Desarrollo de Software Geofísico</p>
+    <!-- Simple Header for Secondary Pages -->
+    <header class="secondary-page-header" role="banner">
+        <div class="header-container">
+            <div class="header-brand">
+                <a href="index.html" class="brand-link" aria-label="Volver al inicio">
+                    <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+                    <div class="brand-info">
+                        <h1>JOMA</h1>
+                        <span class="brand-subtitle">Desarrollo de Software</span>
+                    </div>
+                </a>
             </div>
+            
+            <nav class="secondary-nav" role="navigation" aria-label="Navegación secundaria">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">🏠 Inicio</a></li>
+                    <li><a href="geofisica.html" class="nav-link">🌍 Geofísica</a></li>
+                    <li><a href="coding.html" class="nav-link active">💻 Programación</a></li>
+                    <li><a href="social.html" class="nav-link">📱 Social</a></li>
+                    <li><a href="material.html" class="nav-link">📚 Material</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-toggle" aria-label="Abrir menú móvil" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
     
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <div class="header-brand">
+                <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+                <div class="brand-info">
+                    <h1>JOMA</h1>
+                    <span class="brand-subtitle">Desarrollo de Software</span>
+                </div>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Cerrar menú">×</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" onclick="closeMobileNav()">🏠 Inicio</a></li>
+            <li><a href="geofisica.html" onclick="closeMobileNav()">🌍 Geofísica</a></li>
+            <li><a href="coding.html" onclick="closeMobileNav()" class="active">💻 Programación</a></li>
+            <li><a href="social.html" onclick="closeMobileNav()">📱 Social</a></li>
+            <li><a href="material.html" onclick="closeMobileNav()">📚 Material</a></li>
+            <li><a href="publications.html" onclick="closeMobileNav()">📄 Publicaciones</a></li>
+            <li><a href="blog.html" onclick="closeMobileNav()">✍️ Blog</a></li>
+        </ul>
+    </div>
+    
     <main id="main" role="main">
+        <!-- Decorative background elements -->
+        <div class="bg-decorations">
+            <div class="decoration decoration-1"></div>
+            <div class="decoration decoration-2"></div>
+            <div class="decoration decoration-3"></div>
+        </div>
+
         <!-- Hero Section -->
-        <section class="page-hero programming-hero" aria-labelledby="hero-heading">
-            <div class="hero-content-wrapper">
-                <div class="hero-text-content">
+        <section class="secondary-hero programming-hero" aria-labelledby="hero-heading">
+            <div class="hero-background">
+                <div class="floating-elements">
+                    <div class="floating-element" style="--delay: 0s; --duration: 6s;">🐍</div>
+                    <div class="floating-element" style="--delay: 2s; --duration: 8s;">💻</div>
+                    <div class="floating-element" style="--delay: 4s; --duration: 7s;">📊</div>
+                    <div class="floating-element" style="--delay: 1s; --duration: 9s;">🌐</div>
+                </div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-text">
                     <h2 id="hero-heading">
-                        <span class="hero-subtitle">💻 Desarrollo de Software</span>
-                        <span class="hero-title">Herramientas Geofísicas Modernas</span>
+                        <span class="hero-greeting">Desarrollo de Software</span>
+                        <span class="hero-name">Herramientas Geofísicas</span>
+                        <span class="hero-title">Python & Open Source</span>
                     </h2>
-                    <p class="hero-description">
-                        Desarrollo herramientas especializadas en Python para análisis geofísico, procesamiento de datos sísmicos y visualización avanzada. Cada proyecto combina rigor científico con tecnología moderna.
-                    </p>
-                    <div class="hero-stats">
-                        <div class="stat-badge">
-                            <span class="stat-icon">🐍</span>
-                            <span class="stat-text">Python</span>
-                        </div>
-                        <div class="stat-badge">
-                            <span class="stat-icon">📊</span>
-                            <span class="stat-text">Análisis de Datos</span>
-                        </div>
-                        <div class="stat-badge">
-                            <span class="stat-icon">🌐</span>
-                            <span class="stat-text">Open Source</span>
+                    
+                    <div class="hero-description">
+                        <p class="hero-intro">
+                            Desarrollo <strong>herramientas especializadas en Python</strong> para análisis geofísico, 
+                            procesamiento de datos sísmicos y visualización avanzada. Código abierto para la comunidad científica.
+                        </p>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Repositorios</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Commits</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">2</span>
+                                <span class="stat-label">Apps GUI</span>
+                            </div>
                         </div>
                     </div>
+                    
+                    <div class="hero-cta">
+                        <a href="https://github.com/JoseMariaGarciaMarquez" target="_blank" rel="noopener noreferrer" class="cta-primary" aria-label="Ver perfil de GitHub">
+                            <span class="cta-text">¡Ver mi GitHub!</span>
+                            <span class="cta-icon">💻</span>
+                        </a>
+                        <a href="#projects" class="cta-secondary" aria-label="Ver proyectos de código">
+                            Ver Proyectos
+                        </a>
+                    </div>
                 </div>
+                
                 <div class="hero-visual">
                     <div class="coding-showcase">
-                        <div class="floating-elements">
-                            <div class="floating-element python">🐍</div>
-                            <div class="floating-element code">💻</div>
-                            <div class="floating-element data">📊</div>
-                            <div class="floating-element open">🌐</div>
+                        <div class="tech-grid">
+                            <div class="tech-item" style="--delay: 0.5s;">
+                                <span class="tech-icon">🐍</span>
+                                <span class="tech-name">Python</span>
+                            </div>
+                            <div class="tech-item" style="--delay: 1s;">
+                                <span class="tech-icon">🖥️</span>
+                                <span class="tech-name">PyQt5</span>
+                            </div>
+                            <div class="tech-item" style="--delay: 1.5s;">
+                                <span class="tech-icon">📊</span>
+                                <span class="tech-name">NumPy</span>
+                            </div>
+                            <div class="tech-item" style="--delay: 2s;">
+                                <span class="tech-icon">📈</span>
+                                <span class="tech-name">Matplotlib</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <div class="hero-scroll-indicator">
+                <span class="scroll-text">Ver código</span>
+                <div class="scroll-arrow"></div>
             </div>
         </section>
         <!-- Proyectos Section -->
         <section id="projects" aria-labelledby="projects-heading">
-            <div class="section-container">
-                <div class="section-header">
-                    <h2 id="projects-heading">Mis Proyectos</h2>
-                    <p>Herramientas especializadas desarrolladas para la comunidad geofísica</p>
+            <div class="portfolio-header">
+                <h2 id="projects-heading">
+                    <span class="portfolio-title">Proyectos de Código</span>
+                    <span class="portfolio-subtitle">Herramientas especializadas para la comunidad científica</span>
+                </h2>
+                <div class="portfolio-description">
+                    <p>Cada herramienta está diseñada para resolver problemas específicos en geofísica con código abierto y accesible.</p>
                 </div>
-                
-                <div class="projects-grid modern-grid">
-                    <article class="project-card featured" role="article" aria-labelledby="vespy-title">
+            </div>
+            
+            <div class="projects-container">
+                <div class="portfolio-grid projects-grid">
+                    <article class="portfolio-card project-card featured" role="article" aria-labelledby="vespy-title">
+                        <div class="card-background"></div>
                         <div class="project-image-container">
                             <img src="proyectos/vespy.png" alt="Interfaz de VESPY - Software de análisis VES" class="project-image">
                             <div class="project-overlay">
-                                <span class="project-status">Activo</span>
+                                <span class="project-status completed">Activo</span>
                             </div>
                         </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 id="vespy-title">
-                                    <span class="project-icon">⚡</span>
-                                    VESPY
-                                </h3>
-                                <div class="project-badges">
-                                    <span class="tech-badge python">Python</span>
-                                    <span class="tech-badge gui">PyQt5</span>
-                                </div>
+                        <div class="card-content project-content">
+                            <div class="card-icon project-header">
+                                <span class="icon-electric">⚡</span>
                             </div>
+                            <h3 id="vespy-title">VESPY</h3>
+                            <p>Aplicación avanzada para visualización y procesamiento de datos de Sondeo Eléctrico Vertical (VES). Diseñada especialmente para ingenieros y científicos en análisis de resistividad del subsuelo.</p>
                             
-                            <p class="project-description">
-                                Aplicación avanzada para visualización y procesamiento de datos de Sondeo Eléctrico Vertical (VES). 
-                                Diseñada para ingenieros y científicos en análisis de resistividad del subsuelo.
-                            </p>
+                            <div class="project-badges card-stats">
+                                <span class="stat tech-badge python">Python</span>
+                                <span class="stat tech-badge gui">PyQt5</span>
+                            </div>
                             
                             <div class="project-features">
                                 <h4>Características Principales:</h4>
@@ -99,47 +191,35 @@
                                     <li><span class="feature-icon">🔄</span> Inversión de resistividad automática</li>
                                     <li><span class="feature-icon">📈</span> Visualización gráfica avanzada</li>
                                     <li><span class="feature-icon">🎛️</span> Interfaz intuitiva con PyQt5</li>
-                                    <li><span class="feature-icon">📋</span> Gestión completa de modelos</li>
                                 </ul>
                             </div>
-                            
-                            <div class="project-actions">
-                                <a href="https://github.com/JoseMariaGarciaMarquez/vespy" target="_blank" rel="noopener noreferrer" class="btn primary-btn" aria-label="Ver código fuente de VESPY en GitHub">
-                                    <span class="btn-icon">💻</span>
-                                    Ver Código
-                                </a>
-                                <a href="#" class="btn secondary-btn" aria-label="Ver demostración de VESPY">
-                                    <span class="btn-icon">🎯</span>
-                                    Demo
-                                </a>
-                            </div>
                         </div>
+                        <a href="https://github.com/JoseMariaGarciaMarquez/vespy" target="_blank" rel="noopener noreferrer" class="card-link project-link" aria-label="Ver código fuente de VESPY en GitHub">
+                            <span class="link-text">Ver Código</span>
+                            <span class="link-arrow">→</span>
+                        </a>
                     </article>
 
-                    <article class="project-card featured" role="article" aria-labelledby="hvsrlearn-title">
+                    <article class="portfolio-card project-card featured" role="article" aria-labelledby="hvsrlearn-title">
+                        <div class="card-background"></div>
                         <div class="project-image-container">
                             <img src="proyectos/hvsrlearn.png" alt="Interfaz de HVSRLearn - Software de análisis sísmico" class="project-image">
                             <div class="project-overlay">
-                                <span class="project-status new">Actualizado</span>
+                                <span class="project-status innovative">v2.0 Actualizado</span>
                             </div>
                         </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 id="hvsrlearn-title">
-                                    <span class="project-icon">🌊</span>
-                                    HVSRLearn 2.0
-                                </h3>
-                                <div class="project-badges">
-                                    <span class="tech-badge python">Python</span>
-                                    <span class="tech-badge gui">Tkinter</span>
-                                    <span class="tech-badge new">v2.0</span>
-                                </div>
+                        <div class="card-content project-content">
+                            <div class="card-icon project-header">
+                                <span class="icon-seismic">🌊</span>
                             </div>
+                            <h3 id="hvsrlearn-title">HVSRLearn 2.0</h3>
+                            <p>Aplicación revolucionaria para cálculo y análisis de la Relación Espectral Horizontal a Vertical (HVSR). Completamente rediseñada con nuevas funcionalidades y arquitectura mejorada.</p>
                             
-                            <p class="project-description">
-                                Aplicación revolucionaria para cálculo y análisis de la Relación Espectral Horizontal a Vertical (HVSR). 
-                                Completamente rediseñada con nuevas funcionalidades y arquitectura mejorada.
-                            </p>
+                            <div class="project-badges card-stats">
+                                <span class="stat tech-badge python">Python</span>
+                                <span class="stat tech-badge gui">Tkinter</span>
+                                <span class="stat tech-badge new">v2.0</span>
+                            </div>
                             
                             <div class="project-features">
                                 <h4>Novedades v2.0:</h4>
@@ -148,22 +228,13 @@
                                     <li><span class="feature-icon">🎛️</span> Ventana dedicada de procesamiento</li>
                                     <li><span class="feature-icon">📊</span> Carga simultánea Z/N/E</li>
                                     <li><span class="feature-icon">⚡</span> Filtros pasa-banda mejorados</li>
-                                    <li><span class="feature-icon">🔍</span> Validaciones avanzadas</li>
-                                    <li><span class="feature-icon">💾</span> Exportación de resultados</li>
                                 </ul>
                             </div>
-                            
-                            <div class="project-actions">
-                                <a href="https://github.com/JoseMariaGarciaMarquez/hvsrlearn" target="_blank" rel="noopener noreferrer" class="btn primary-btn" aria-label="Ver código fuente de HVSRLearn en GitHub">
-                                    <span class="btn-icon">💻</span>
-                                    Ver Código
-                                </a>
-                                <a href="#" class="btn secondary-btn" aria-label="Ver demostración de HVSRLearn">
-                                    <span class="btn-icon">🎯</span>
-                                    Demo
-                                </a>
-                            </div>
                         </div>
+                        <a href="https://github.com/JoseMariaGarciaMarquez/hvsrlearn" target="_blank" rel="noopener noreferrer" class="card-link project-link" aria-label="Ver código fuente de HVSRLearn en GitHub">
+                            <span class="link-text">Ver Código</span>
+                            <span class="link-arrow">→</span>
+                        </a>
                     </article>
                 </div>
                 
@@ -200,8 +271,63 @@
             </div>
         </section>
     </main>
+    
     <footer>
         <p>&copy; 2025 JOMA - Ingeniero Geofísico. Todos los derechos reservados.</p>
     </footer>
+
+<script>
+// Simplified and unified mobile navigation script
+function toggleMobileNav() {
+    const mobileNav = document.getElementById('mobileNav');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const body = document.body;
+    
+    if (mobileNav.classList.contains('active')) {
+        closeMobileNav();
+    } else {
+        mobileNav.classList.add('active');
+        mobileNav.style.display = 'block';
+        body.classList.add('mobile-menu-open');
+        menuToggle.setAttribute('aria-expanded', 'true');
+    }
+}
+
+function closeMobileNav() {
+    const mobileNav = document.getElementById('mobileNav');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const body = document.body;
+    
+    mobileNav.classList.remove('active');
+    body.classList.remove('mobile-menu-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    
+    setTimeout(() => {
+        mobileNav.style.display = 'none';
+    }, 300);
+}
+
+// Initialize mobile menu
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+    
+    if (menuToggle) {
+        menuToggle.addEventListener('click', toggleMobileNav);
+    }
+    
+    if (mobileNavClose) {
+        mobileNavClose.addEventListener('click', closeMobileNav);
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const mobileNav = document.getElementById('mobileNav');
+        if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
+            closeMobileNav();
+        }
+    });
+});
+</script>
 </body>
 </html>

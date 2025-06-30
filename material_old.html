@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Académico - JOMA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images_web/jomac.png" type="image/png">
+</head>
+<body>
+    <header role="banner" class="main-header secondary-header">
+        <div class="header-container">
+            <div class="header-brand">
+                <a href="index.html" aria-label="Volver al inicio" class="brand-link">
+                    <img src="images_web/jomac.png" alt="Logo JOMA - José María García Márquez, Ingeniero Geofísico" class="logo">
+                    <div class="brand-info">
+                        <h1>JOMA</h1>
+                        <span class="brand-subtitle">Material Académico</span>
+                    </div>
+                </a>
+            </div>
+            
+            <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="index.html#menu" class="nav-link">Portafolio</a></li>
+                    <li><a href="index.html#news" class="nav-link">Noticias</a></li>
+                    <li><a href="index.html#contact-heading" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="menu-toggle" aria-label="Abrir menú móvil" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <div class="header-brand">
+                <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+                <div class="brand-info">
+                    <h1>JOMA</h1>
+                    <span class="brand-subtitle">Material Académico</span>
+                </div>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Cerrar menú">×</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" onclick="closeMobileNav()">Inicio</a></li>
+            <li><a href="index.html#menu" onclick="closeMobileNav()">Portafolio</a></li>
+            <li><a href="index.html#news" onclick="closeMobileNav()">Noticias</a></li>
+            <li><a href="index.html#contact-heading" onclick="closeMobileNav()">Contacto</a></li>
+        </ul>
+    </div>
+    
+    <main id="main" role="main">
+        <!-- Decorative background elements -->
+        <div class="bg-decorations">
+            <div class="decoration decoration-1"></div>
+            <div class="decoration decoration-2"></div>
+            <div class="decoration decoration-3"></div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="secondary-hero material-hero" aria-labelledby="hero-heading">
+            <div class="hero-background">
+                <div class="floating-elements">
+                    <div class="floating-element" style="--delay: 0s; --duration: 6s;">📚</div>
+                    <div class="floating-element" style="--delay: 2s; --duration: 8s;">📓</div>
+                    <div class="floating-element" style="--delay: 4s; --duration: 7s;">🔬</div>
+                    <div class="floating-element" style="--delay: 1s; --duration: 9s;">🎓</div>
+                </div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 id="hero-heading">
+                        <span class="hero-greeting">Material Académico</span>
+                        <span class="hero-name">Recursos Educativos</span>
+                        <span class="hero-title">Aprendizaje Interactivo</span>
+                    </h2>
+                    
+                    <div class="hero-description">
+                        <p class="hero-intro">
+                            <strong>Notebooks interactivos</strong>, documentos técnicos y recursos educativos especializados 
+                            en geofísica, análisis de datos y programación científica. Material desarrollado para apoyar el aprendizaje y la investigación.
+                        </p>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Notebooks</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Cursos</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">Python</span>
+                                <span class="stat-label">Especialidad</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <a href="#notebooks" class="cta-primary" aria-label="Ver notebooks interactivos">
+                            <span class="cta-text">¡Explorar Material!</span>
+                            <span class="cta-icon">�</span>
+                        </a>
+                        <a href="#courses" class="cta-secondary" aria-label="Ver cursos disponibles">
+                            Ver Cursos
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="academic-showcase">
+                        <div class="tech-grid">
+                            <div class="tech-item" style="--delay: 0.5s;">
+                                <span class="tech-icon">📓</span>
+                                <span class="tech-name">Jupyter</span>
+                            </div>
+                            <div class="tech-item" style="--delay: 1s;">
+                                <span class="tech-icon">🐍</span>
+                                <span class="tech-name">Python</span>
+                            </div>
+                            <div class="tech-item" style="--delay: 1.5s;">
+                                <span class="tech-icon">📊</span>
+                                <span class="tech-name">Pandas</span>
+                            </div>
+                            <div class="tech-item" style="--delay: 2s;">
+                                <span class="tech-icon">🎓</span>
+                                <span class="tech-name">Educación</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-scroll-indicator">
+                <span class="scroll-text">Ver recursos</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+                            <span class="stat-text">Investigación</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="academic-showcase">
+                        <div class="floating-elements">
+                            <div class="floating-element book">📖</div>
+                            <div class="floating-element code">💻</div>
+                            <div class="floating-element science">🔬</div>
+                            <div class="floating-element data">📊</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" aria-labelledby="resources-heading">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 id="resources-heading">Notebooks Educativos</h2>
+                    <p>Jupyter Notebooks interactivos para aprendizaje y análisis de datos geofísicos</p>
+                </div>
+                
+                <div class="projects-grid modern-grid">
+                    <!-- Notebook 1: Python SIG Geoespacial -->
+                    <article class="project-card featured" role="article" aria-labelledby="notebook1-title">
+                        <div class="project-image-container">
+                            <div class="notebook-preview-card">
+                                <div class="notebook-header-mini">
+                                    <span class="nb-dot red"></span>
+                                    <span class="nb-dot yellow"></span>
+                                    <span class="nb-dot green"></span>
+                                </div>
+                                <div class="notebook-content-mini">
+                                    <div class="code-line">📓 <strong>Python SIG Geoespacial</strong></div>
+                                    <div class="code-line">import geopandas as gpd</div>
+                                    <div class="code-line">import matplotlib.pyplot as plt</div>
+                                    <div class="code-line">🗺️ Análisis espacial...</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 id="notebook1-title">Python SIG Geoespacial</h3>
+                                <div class="project-tech">Jupyter • Python • GeoPandas • Matplotlib</div>
+                            </div>
+                            <div class="project-description">
+                                <p>Notebook interactivo sobre fundamentos de Sistemas de Información Geográfica usando Python. Incluye conceptos básicos, manejo de datos vectoriales y visualización geoespacial.</p>
+                            </div>
+                            <div class="project-links">
+                                <a href="notebooks-science/python_sig_geoespacial.ipynb" download class="link-primary">
+                                    <span class="link-icon">📥</span>
+                                    Descargar Notebook
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Notebook 2: HVSR -->
+                    <article class="project-card" role="article" aria-labelledby="notebook2-title">
+                        <div class="project-image-container">
+                            <div class="notebook-preview-card">
+                                <div class="notebook-header-mini">
+                                    <span class="nb-dot red"></span>
+                                    <span class="nb-dot yellow"></span>
+                                    <span class="nb-dot green"></span>
+                                </div>
+                                <div class="notebook-content-mini">
+                                    <div class="code-line">📊 <strong>Análisis HVSR</strong></div>
+                                    <div class="code-line">import numpy as np</div>
+                                    <div class="code-line">import pandas as pd</div>
+                                    <div class="code-line">🌊 Procesamiento sísmico...</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 id="notebook2-title">Análisis HVSR</h3>
+                                <div class="project-tech">Jupyter • Python • NumPy • Signal Processing</div>
+                            </div>
+                            <div class="project-description">
+                                <p>Notebook para análisis de razones espectrales H/V (HVSR) utilizando datos sísmicos. Incluye procesamiento de señales y caracterización de sitio.</p>
+                            </div>
+                            <div class="project-links">
+                                <a href="notebooks-science/hvsr.ipynb" download class="link-primary">
+                                    <span class="link-icon">📥</span>
+                                    Descargar Notebook
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 JOMA - Ingeniero Geofísico. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

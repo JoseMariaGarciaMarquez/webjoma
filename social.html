@@ -7,114 +7,379 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="#main" class="skip-link">Saltar al contenido principal</a>
-    <header role="banner">
-        <a href="index.html" aria-label="Volver al inicio">
-            <img src="images_web/jomac.png" alt="Logo JOMA - José María García Márquez, Ingeniero Geofísico" class="logo">
-        </a>
-        <div class="header-content">
-            <div class="header-text">
-                <h1>Contenido Multimedia</h1>
-                <p>Streaming y Comunidad</p>
+    <!-- Simple Header for Secondary Pages -->
+    <header class="secondary-page-header" role="banner">
+        <div class="header-container">
+            <div class="header-brand">
+                <a href="index.html" class="brand-link" aria-label="Volver al inicio">
+                    <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+                    <div class="brand-info">
+                        <h1>JOMA</h1>
+                        <span class="brand-subtitle">Redes Sociales</span>
+                    </div>
+                </a>
+            </div>
+            
+            <nav class="secondary-nav" role="navigation" aria-label="Navegación secundaria">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">🏠 Inicio</a></li>
+                    <li><a href="geofisica.html" class="nav-link">🌍 Geofísica</a></li>
+                    <li><a href="coding.html" class="nav-link">💻 Programación</a></li>
+                    <li><a href="social.html" class="nav-link active">📱 Social</a></li>
+                    <li><a href="material.html" class="nav-link">📚 Material</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="live-indicator-header">
+                    <span class="live-dot"></span>
+                    <span class="live-text">En Vivo</span>
+                </div>
+                <button class="menu-toggle" aria-label="Abrir menú móvil" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
     
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <div class="header-brand">
+                <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+                <div class="brand-info">
+                    <h1>JOMA</h1>
+                    <span class="brand-subtitle">Redes Sociales</span>
+                </div>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Cerrar menú">×</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" onclick="closeMobileNav()">🏠 Inicio</a></li>
+            <li><a href="geofisica.html" onclick="closeMobileNav()">🌍 Geofísica</a></li>
+            <li><a href="coding.html" onclick="closeMobileNav()">💻 Programación</a></li>
+            <li><a href="social.html" onclick="closeMobileNav()" class="active">📱 Social</a></li>
+            <li><a href="material.html" onclick="closeMobileNav()">📚 Material</a></li>
+            <li><a href="publications.html" onclick="closeMobileNav()">📄 Publicaciones</a></li>
+            <li><a href="blog.html" onclick="closeMobileNav()">✍️ Blog</a></li>
+        </ul>
+    </div>
+    
     <main id="main" role="main">
+        <!-- Decorative background elements -->
+        <div class="bg-decorations">
+            <div class="decoration decoration-1"></div>
+            <div class="decoration decoration-2"></div>
+            <div class="decoration decoration-3"></div>
+        </div>
+
         <!-- Hero Section -->
-        <section class="page-hero social-hero" aria-labelledby="hero-heading">
-            <div class="hero-content-wrapper">
-                <div class="hero-text-content">
+        <section class="secondary-hero social-hero" aria-labelledby="hero-heading">
+            <div class="hero-background">
+                <div class="floating-elements">
+                    <div class="floating-element" style="--delay: 0s; --duration: 6s;">📺</div>
+                    <div class="floating-element" style="--delay: 2s; --duration: 8s;">🎥</div>
+                    <div class="floating-element" style="--delay: 4s; --duration: 7s;">📚</div>
+                    <div class="floating-element" style="--delay: 1s; --duration: 9s;">👥</div>
+                </div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-text">
                     <h2 id="hero-heading">
-                        <span class="hero-subtitle">📺 Multimedia</span>
-                        <span class="hero-title">Contenido en Vivo y Comunidad</span>
+                        <span class="hero-greeting">Contenido Multimedia</span>
+                        <span class="hero-name">Streaming & Comunidad</span>
+                        <span class="hero-title">Educación en Vivo</span>
                     </h2>
-                    <p class="hero-description">
-                        Streams educativos, tutoriales en vivo y contenido interactivo sobre geofísica y programación. 
-                        Únete a nuestra comunidad y aprende mientras exploramos juntos las ciencias de la Tierra.
-                    </p>
-                    <div class="hero-stats">
-                        <div class="stat-badge">
-                            <span class="stat-icon">🎥</span>
-                            <span class="stat-text">Streaming</span>
-                        </div>
-                        <div class="stat-badge">
-                            <span class="stat-icon">👥</span>
-                            <span class="stat-text">Comunidad</span>
-                        </div>
-                        <div class="stat-badge">
-                            <span class="stat-icon">📚</span>
-                            <span class="stat-text">Educativo</span>
+                    
+                    <div class="hero-description">
+                        <p class="hero-intro">
+                            <strong>Streams educativos</strong>, tutoriales en vivo y contenido interactivo sobre geofísica y programación. 
+                            Únete a nuestra comunidad y aprende mientras exploramos juntos las ciencias de la Tierra.
+                        </p>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">Live</span>
+                                <span class="stat-label">Streaming</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Seguidores</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Comunidad</span>
+                            </div>
                         </div>
                     </div>
+                    
+                    <div class="hero-cta">
+                        <a href="#platforms" class="cta-primary" aria-label="Ver plataformas de streaming">
+                            <span class="cta-text">¡Únete al Stream!</span>
+                            <span class="cta-icon">📺</span>
+                        </a>
+                        <a href="#community" class="cta-secondary" aria-label="Unirse a la comunidad">
+                            Ver Comunidad
+                        </a>
+                    </div>
                 </div>
+                
                 <div class="hero-visual">
-                    <div class="social-showcase">
-                        <div class="floating-elements">
-                            <div class="floating-element video">🎥</div>
-                            <div class="floating-element community">👥</div>
-                            <div class="floating-element education">📚</div>
-                            <div class="floating-element streaming">📺</div>
+                    <div class="streaming-showcase">
+                        <div class="tech-grid">
+                            <div class="tech-item" style="--delay: 0.5s;">
+                                <span class="tech-icon">�</span>
+                                <span class="tech-name">Twitch</span>
+                            </div>
+                            <div class="tech-item" style="--delay: 1s;">
+                                <span class="tech-icon">▶️</span>
+                                <span class="tech-name">YouTube</span>
+                            </div>
+                            <div class="tech-item" style="--delay: 1.5s;">
+                                <span class="tech-icon">💬</span>
+                                <span class="tech-name">Discord</span>
+                            </div>
+                            <div class="tech-item" style="--delay: 2s;">
+                                <span class="tech-icon">🐦</span>
+                                <span class="tech-name">Twitter</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <div class="hero-scroll-indicator">
+                <span class="scroll-text">Ver plataformas</span>
+                <div class="scroll-arrow"></div>
+            </div>
         </section>
-        <section id="live">
-            <h2>En Vivo</h2>
-            <div class="live-banner">EN VIVO</div>
-                <iframe 
-                src="https://player.twitch.tv/?channel=chemitas96&parent=example.com&autoplay=false" 
-                frameborder="0" 
-                allowfullscreen 
-                width="100%" 
-                height="360">
-            </iframe>
-        </section>
-        <section id="videos">
-            <h2>Videos</h2>
-            <div class="videos-grid">
-                <div class="video-card featured">
-                    <h3>🎯 Video Destacado</h3>
-                    <iframe 
-                        src="https://www.youtube.com/embed/S_7LbCZNiOk" 
-                        frameborder="0" 
-                        allowfullscreen 
-                        width="100%" 
-                        height="250"
-                        title="Video destacado de JOMA">
-                    </iframe>
-                    <div class="video-info">
-                        <p>Contenido educativo especializado en geofísica y tecnología</p>
+
+        <!-- Platforms Section -->
+        <section id="platforms" aria-labelledby="platforms-heading">
+            <div class="portfolio-header">
+                <h2 id="platforms-heading">
+                    <span class="portfolio-title">Plataformas de Contenido</span>
+                    <span class="portfolio-subtitle">Sígueme en todas las redes sociales</span>
+                </h2>
+                <div class="portfolio-description">
+                    <p>Encuentra contenido educativo, streams en vivo y actualizaciones de proyectos en todas las plataformas.</p>
+                </div>
+            </div>
+            
+            <div class="platforms-container">
+                <div class="portfolio-grid platforms-grid">
+                    <article class="portfolio-card platform-card twitch" role="article" aria-labelledby="twitch-title">
+                        <div class="card-background"></div>
+                        <div class="platform-icon-container">
+                            <div class="platform-icon twitch-icon">📺</div>
+                            <div class="live-indicator" aria-label="Estado de transmisión en vivo">
+                                <span class="live-dot"></span>
+                                <span class="live-text">EN VIVO</span>
+                            </div>
+                        </div>
+                        <div class="card-content platform-content">
+                            <h3 id="twitch-title">Twitch</h3>
+                            <p>Streams educativos en vivo sobre geofísica, programación y análisis de datos. Únete a la comunidad para aprender en tiempo real.</p>
+                            
+                            <div class="platform-stats card-stats">
+                                <span class="stat">Streams semanales</span>
+                                <span class="stat">Chat interactivo</span>
+                            </div>
+                            
+                            <div class="platform-features">
+                                <h4>En los streams encontrarás:</h4>
+                                <ul class="features-list">
+                                    <li><span class="feature-icon">🔴</span> Desarrollo de software en vivo</li>
+                                    <li><span class="feature-icon">📚</span> Tutoriales de geofísica</li>
+                                    <li><span class="feature-icon">💬</span> Q&A con la comunidad</li>
+                                    <li><span class="feature-icon">🎯</span> Resolución de problemas reales</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="https://www.twitch.tv/chemitas96" target="_blank" rel="noopener noreferrer" class="card-link platform-link" aria-label="Visitar canal de Twitch">
+                            <span class="link-text">Ver Canal</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </article>
+
+                    <article class="portfolio-card platform-card youtube" role="article" aria-labelledby="youtube-title">
+                        <div class="card-background"></div>
+                        <div class="platform-icon-container">
+                            <div class="platform-icon youtube-icon">▶️</div>
+                        </div>
+                        <div class="card-content platform-content">
+                            <h3 id="youtube-title">YouTube</h3>
+                            <p>Videos educativos, conferencias técnicas y contenido de archivo. Perfecto para aprender a tu ritmo y repasar conceptos.</p>
+                            
+                            <div class="platform-stats card-stats">
+                                <span class="stat">Contenido educativo</span>
+                                <span class="stat">Conferencias</span>
+                            </div>
+                            
+                            <div class="platform-features">
+                                <h4>Contenido disponible:</h4>
+                                <ul class="features-list">
+                                    <li><span class="feature-icon">🎥</span> Tutoriales detallados</li>
+                                    <li><span class="feature-icon">🎙️</span> Conferencias técnicas</li>
+                                    <li><span class="feature-icon">📊</span> Análisis de casos de estudio</li>
+                                    <li><span class="feature-icon">💡</span> Tips y mejores prácticas</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="https://www.youtube.com/@chemitas96" target="_blank" rel="noopener noreferrer" class="card-link platform-link" aria-label="Visitar canal de YouTube">
+                            <span class="link-text">Ver Videos</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </article>
+
+                    <article class="portfolio-card platform-card discord" role="article" aria-labelledby="discord-title">
+                        <div class="card-background"></div>
+                        <div class="platform-icon-container">
+                            <div class="platform-icon discord-icon">💬</div>
+                        </div>
+                        <div class="card-content platform-content">
+                            <h3 id="discord-title">Discord</h3>
+                            <p>Comunidad oficial donde puedes hacer preguntas, compartir proyectos y conectar con otros profesionales de geofísica.</p>
+                            
+                            <div class="platform-stats card-stats">
+                                <span class="stat">Comunidad activa</span>
+                                <span class="stat">Soporte 24/7</span>
+                            </div>
+                            
+                            <div class="platform-features">
+                                <h4>En el servidor encontrarás:</h4>
+                                <ul class="features-list">
+                                    <li><span class="feature-icon">❓</span> Canal de preguntas y ayuda</li>
+                                    <li><span class="feature-icon">💼</span> Proyectos colaborativos</li>
+                                    <li><span class="feature-icon">📢</span> Anuncios y noticias</li>
+                                    <li><span class="feature-icon">🤝</span> Networking profesional</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="card-link platform-link" aria-label="Unirse al servidor de Discord">
+                            <span class="link-text">Unirse</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </article>
+
+                    <article class="portfolio-card platform-card twitter" role="article" aria-labelledby="twitter-title">
+                        <div class="card-background"></div>
+                        <div class="platform-icon-container">
+                            <div class="platform-icon twitter-icon">🐦</div>
+                        </div>
+                        <div class="card-content platform-content">
+                            <h3 id="twitter-title">Twitter</h3>
+                            <p>Actualizaciones rápidas, noticias del sector, reflexiones técnicas y anuncios de nuevos proyectos y streams.</p>
+                            
+                            <div class="platform-stats card-stats">
+                                <span class="stat">Actualizaciones diarias</span>
+                                <span class="stat">Noticias técnicas</span>
+                            </div>
+                            
+                            <div class="platform-features">
+                                <h4>Sígueme para:</h4>
+                                <ul class="features-list">
+                                    <li><span class="feature-icon">📰</span> Noticias de geofísica</li>
+                                    <li><span class="feature-icon">🔔</span> Notificaciones de streams</li>
+                                    <li><span class="feature-icon">💭</span> Reflexiones técnicas</li>
+                                    <li><span class="feature-icon">🚀</span> Anuncios de proyectos</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="https://twitter.com/chemitas96" target="_blank" rel="noopener noreferrer" class="card-link platform-link" aria-label="Seguir en Twitter">
+                            <span class="link-text">Seguir</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </article>
+                </div>
+                
+                <!-- Live Stream Section -->
+                <div id="live-stream" class="live-stream-section">
+                    <div class="live-stream-header">
+                        <h3>
+                            <span class="live-icon">🔴</span>
+                            Stream en Vivo
+                        </h3>
+                        <div class="live-status">
+                            <span class="live-dot"></span>
+                            <span class="live-text">Conectado</span>
+                        </div>
                     </div>
-                </div>
-                <div class="video-card">
-                    <h3>🔬 Análisis Técnico</h3>
-                    <iframe 
-                        src="https://www.youtube.com/embed/2hjc1eCp5l4" 
-                        frameborder="0" 
-                        allowfullscreen 
-                        width="100%" 
-                        height="200"
-                        title="Análisis técnico geofísico">
-                    </iframe>
-                </div>
-                <div class="video-card">
-                    <h3>🎥 Conferencia</h3>
-                    <iframe 
-                        src="https://www.youtube.com/embed/aVHjMlKisFU?start=629" 
-                        frameborder="0" 
-                        allowfullscreen 
-                        width="100%" 
-                        height="200"
-                        title="Conferencia técnica">
-                    </iframe>
+                    <div class="stream-container">
+                        <iframe 
+                            src="https://player.twitch.tv/?channel=chemitas96&parent=localhost&autoplay=false" 
+                            frameborder="0" 
+                            allowfullscreen 
+                            width="100%" 
+                            height="400"
+                            title="Stream en vivo de JOMA en Twitch">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+    
     <footer>
         <p>&copy; 2025 JOMA - Ingeniero Geofísico. Todos los derechos reservados.</p>
     </footer>
+</body>
+
+<script>
+// Mobile menu functionality
+function toggleMobileNav() {
+    const mobileNav = document.getElementById('mobileNav');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const body = document.body;
+    
+    if (mobileNav.classList.contains('active')) {
+        closeMobileNav();
+    } else {
+        mobileNav.classList.add('active');
+        mobileNav.style.display = 'block';
+        body.classList.add('mobile-menu-open');
+        menuToggle.setAttribute('aria-expanded', 'true');
+    }
+}
+
+function closeMobileNav() {
+    const mobileNav = document.getElementById('mobileNav');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const body = document.body;
+    
+    mobileNav.classList.remove('active');
+    body.classList.remove('mobile-menu-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    
+    setTimeout(() => {
+        mobileNav.style.display = 'none';
+    }, 300);
+}
+
+// Initialize mobile menu
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+    
+    if (menuToggle) {
+        menuToggle.addEventListener('click', toggleMobileNav);
+    }
+    
+    if (mobileNavClose) {
+        mobileNavClose.addEventListener('click', closeMobileNav);
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const mobileNav = document.getElementById('mobileNav');
+        if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
+            closeMobileNav();
+        }
+    });
+});
+</script>
 </body>
 </html>

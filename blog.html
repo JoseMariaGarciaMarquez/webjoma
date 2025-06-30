@@ -7,18 +7,60 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="#main" class="skip-link">Saltar al contenido principal</a>
-    <header role="banner">
-        <a href="index.html" aria-label="Volver al inicio">
-            <img src="images_web/jomac.png" alt="Logo JOMA - José María García Márquez, Ingeniero Geofísico" class="logo">
-        </a>
-        <div class="header-content">
-            <div class="header-text">
-                <h1>Blog Personal</h1>
-                <p>Reflexiones y Experiencias</p>
+    <!-- Simple Header for Secondary Pages -->
+    <header class="secondary-page-header" role="banner">
+        <div class="header-container">
+            <div class="header-brand">
+                <a href="index.html" class="brand-link" aria-label="Volver al inicio">
+                    <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+                    <div class="brand-info">
+                        <h1>JOMA</h1>
+                        <span class="brand-subtitle">Blog Personal</span>
+                    </div>
+                </a>
             </div>
+            
+            <nav class="secondary-nav" role="navigation" aria-label="Navegación secundaria">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">🏠 Inicio</a></li>
+                    <li><a href="geofisica.html" class="nav-link">🌍 Geofísica</a></li>
+                    <li><a href="coding.html" class="nav-link">💻 Programación</a></li>
+                    <li><a href="social.html" class="nav-link">📱 Social</a></li>
+                    <li><a href="material.html" class="nav-link">📚 Material</a></li>
+                    <li><a href="blog.html" class="nav-link active">✍️ Blog</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-toggle" aria-label="Abrir menú móvil" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
+    
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <div class="header-brand">
+                <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+                <div class="brand-info">
+                    <h1>JOMA</h1>
+                    <span class="brand-subtitle">Blog Personal</span>
+                </div>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Cerrar menú">×</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" onclick="closeMobileNav()">🏠 Inicio</a></li>
+            <li><a href="geofisica.html" onclick="closeMobileNav()">🌍 Geofísica</a></li>
+            <li><a href="coding.html" onclick="closeMobileNav()">💻 Programación</a></li>
+            <li><a href="social.html" onclick="closeMobileNav()">📱 Social</a></li>
+            <li><a href="material.html" onclick="closeMobileNav()">📚 Material</a></li>
+            <li><a href="publications.html" onclick="closeMobileNav()">📄 Publicaciones</a></li>
+            <li><a href="blog.html" onclick="closeMobileNav()" class="active">✍️ Blog</a></li>
+        </ul>
+    </div>
     
     <main id="main" role="main">
         <!-- Hero Section -->
@@ -205,8 +247,85 @@
             </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 JOMA - Ingeniero Geofísico. Todos los derechos reservados.</p>
+    
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">José María García Márquez</h3>
+                    <p class="footer-description">Ingeniero Geofísico especializado en exploración y análisis de datos geofísicos</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contacto</h4>
+                    <p class="footer-contact">Email: contacto@example.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Sígueme</h4>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="GitHub">GitHub</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 José María García Márquez. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Simplified and unified mobile navigation script
+        function toggleMobileNav() {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const body = document.body;
+            
+            if (mobileNav.classList.contains('active')) {
+                closeMobileNav();
+            } else {
+                mobileNav.classList.add('active');
+                mobileNav.style.display = 'block';
+                body.classList.add('mobile-menu-open');
+                menuToggle.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        function closeMobileNav() {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const body = document.body;
+            
+            mobileNav.classList.remove('active');
+            body.classList.remove('mobile-menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            
+            setTimeout(() => {
+                mobileNav.style.display = 'none';
+            }, 300);
+        }
+
+        // Initialize mobile menu
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileNavClose = document.getElementById('mobileNavClose');
+            
+            if (menuToggle) {
+                menuToggle.addEventListener('click', toggleMobileNav);
+            }
+            
+            if (mobileNavClose) {
+                mobileNavClose.addEventListener('click', closeMobileNav);
+            }
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                const mobileNav = document.getElementById('mobileNav');
+                if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
+                    closeMobileNav();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
