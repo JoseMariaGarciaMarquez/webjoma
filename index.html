@@ -39,6 +39,28 @@
             </div>
         </div>
     </header>
+    
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <div class="header-brand">
+                <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
+                <div class="brand-info">
+                    <h1>JOMA</h1>
+                    <span class="brand-subtitle">Ingeniero Geofísico</span>
+                </div>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Cerrar menú">×</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#about" onclick="closeMobileNav()">Inicio</a></li>
+            <li><a href="#menu" onclick="closeMobileNav()">Portafolio</a></li>
+            <li><a href="#news" onclick="closeMobileNav()">Noticias</a></li>
+            <li><a href="#contact-heading" onclick="closeMobileNav()">Contacto</a></li>
+            <li><a href="social.html" onclick="closeMobileNav()">En Vivo</a></li>
+        </ul>
+    </div>
+    
     <main id="main" role="main">
         <!-- Decorative background elements -->
         <div class="bg-decorations">
@@ -749,8 +771,58 @@ function initKeyboardNavigation() {
     });
 }
 
-// Initialize all accessibility features
+// Mobile menu functionality
+function toggleMobileNav() {
+    const mobileNav = document.getElementById('mobileNav');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const body = document.body;
+    
+    if (mobileNav.classList.contains('active')) {
+        closeMobileNav();
+    } else {
+        mobileNav.classList.add('active');
+        mobileNav.style.display = 'block';
+        body.classList.add('mobile-menu-open');
+        menuToggle.setAttribute('aria-expanded', 'true');
+    }
+}
+
+function closeMobileNav() {
+    const mobileNav = document.getElementById('mobileNav');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const body = document.body;
+    
+    mobileNav.classList.remove('active');
+    body.classList.remove('mobile-menu-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    
+    setTimeout(() => {
+        mobileNav.style.display = 'none';
+    }, 300);
+}
+
+// Initialize mobile menu
 document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+    
+    if (menuToggle) {
+        menuToggle.addEventListener('click', toggleMobileNav);
+    }
+    
+    if (mobileNavClose) {
+        mobileNavClose.addEventListener('click', closeMobileNav);
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const mobileNav = document.getElementById('mobileNav');
+        if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
+            closeMobileNav();
+        }
+    });
+    
+    // Existing initialization code...
     initNewsFilters();
     initKeyboardNavigation();
     
@@ -764,6 +836,32 @@ document.addEventListener('DOMContentLoaded', () => {
     
     console.log('News system initialized');
 });
+
+// Mobile navigation functionality
+const mobileNav = document.getElementById('mobileNav');
+const mobileNavClose = document.getElementById('mobileNavClose');
+const menuToggle = document.querySelector('.menu-toggle');
+
+menuToggle.addEventListener('click', () => {
+    mobileNav.style.display = 'block';
+    setTimeout(() => {
+        mobileNav.classList.add('open');
+    }, 10);
+});
+
+mobileNavClose.addEventListener('click', () => {
+    mobileNav.classList.remove('open');
+    setTimeout(() => {
+        mobileNav.style.display = 'none';
+    }, 300);
+});
+
+function closeMobileNav() {
+    mobileNav.classList.remove('open');
+    setTimeout(() => {
+        mobileNav.style.display = 'none';
+    }, 300);
+}
 </script>
 </html>
 
