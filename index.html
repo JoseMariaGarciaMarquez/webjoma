@@ -7,13 +7,35 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="#main" class="skip-link">Saltar al contenido principal</a>
-    <header role="banner">
-        <img src="images_web/jomac.png" alt="Logo JOMA - José María García Márquez, Ingeniero Geofísico" class="logo">
-        <div class="header-content">
-            <div class="header-text">
-                <h1>JOMA - Ingeniero Geofísico</h1>
-                <p>José María García Márquez</p>
+    <header role="banner" class="main-header">
+        <div class="header-container">
+            <div class="header-brand">
+                <img src="images_web/jomac.png" alt="Logo JOMA - José María García Márquez, Ingeniero Geofísico" class="logo">
+                <div class="brand-info">
+                    <h1>JOMA</h1>
+                    <span class="brand-subtitle">Ingeniero Geofísico</span>
+                </div>
+            </div>
+            
+            <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link active">Inicio</a></li>
+                    <li><a href="#menu" class="nav-link">Portafolio</a></li>
+                    <li><a href="#news" class="nav-link">Noticias</a></li>
+                    <li><a href="#contact-heading" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="social.html" class="action-btn live-btn" aria-label="Ver contenido en vivo">
+                    <span class="live-indicator"></span>
+                    En Vivo
+                </a>
+                <button class="menu-toggle" aria-label="Abrir menú móvil" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
@@ -54,7 +76,7 @@
                         <span class="stat-label">Datos GPR</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">50+</span>
+                        <span class="stat-number">10+</span>
                         <span class="stat-label">Proyectos</span>
                     </div>
                     <div class="stat-item">
@@ -79,6 +101,14 @@
             <div class="profile-container">
                 <img src="images_web/yo.png" alt="José María García Márquez, ingeniero geofísico especialista en procesamiento sísmico" class="profile-image">
                 <div class="profile-glow"></div>
+                <!-- Escudo UNAM FI -->
+                <div class="university-badge-hero">
+                    <img src="images_web/escudo_fi_color.png" alt="Escudo Facultad de Ingeniería UNAM" class="university-emblem">
+                    <div class="university-label">
+                        <span class="uni-name">UNAM</span>
+                        <span class="uni-faculty">Fac. Ingeniería</span>
+                    </div>
+                </div>
             </div>
             
             <div class="tech-stack">
@@ -408,7 +438,7 @@
                         <h3>Geofísica Aplicada</h3>
                         <p>Estudios sísmicos, GPR y modelado del subsuelo para minería, arqueología y recursos hídricos.</p>
                         <div class="card-stats">
-                            <span class="stat">+50 estudios</span>
+                            <span class="stat">+10 estudios</span>
                             <span class="stat">6+ km GPR</span>
                         </div>
                     </div>
@@ -465,12 +495,12 @@
                         <h3>Material Académico</h3>
                         <p>Cursos, tutoriales y recursos educativos especializados en geofísica y programación.</p>
                         <div class="card-stats">
-                            <span class="stat">Cursos</span>
-                            <span class="stat">Tutoriales</span>
+                            <span class="stat">Notebooks</span>
+                            <span class="stat">UNAM FI</span>
                         </div>
                     </div>
-                    <a href="construccion.html" class="card-link" aria-label="Acceder a cursos y material educativo">
-                        <span class="link-text">Aprender</span>
+                    <a href="material.html" class="card-link" aria-label="Acceder a cursos y material educativo">
+                        <span class="link-text">Ver Material</span>
                         <span class="link-arrow">→</span>
                     </a>
                 </div>

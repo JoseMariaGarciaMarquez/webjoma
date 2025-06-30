@@ -49,62 +49,161 @@
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <div class="blog-visual">
-                        <div class="writing-desk">
-                            <div class="desk-items">
-                                <div class="notebook">📔</div>
-                                <div class="pen">✏️</div>
-                                <div class="coffee">☕</div>
-                                <div class="laptop">💻</div>
-                            </div>
+                    <div class="blog-showcase">
+                        <div class="floating-elements">
+                            <div class="floating-element writing">�</div>
+                            <div class="floating-element thinking">💭</div>
+                            <div class="floating-element science">🔬</div>
+                            <div class="floating-element tech">💻</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <div class="blog-post" id="post1">
-            <img src="blog/copiloto.png" alt="GitHub Copilot">
-            <div class="blog-content">
-                <h3>Mi experiencia con GitHub Copilot: ¿Revolución en la programación o solo un asistente más?</h3>
-                <p>
-                    Desde que GitHub Copilot se volvió gratuito para estudiantes y algunos desarrolladores, no dudé en probarlo con más frecuencia. Después de unos meses de uso intensivo, decidí pagar la suscripción para sacarle aún más provecho y ver hasta dónde podía llegar con esta herramienta.
-                </p>
-                <a href="#post1" class="read-more">Leer más</a>
-            </div>
-        </div>
 
-        <div class="blog-post" id="post2">
-            <img src="blog/geolitix.png" alt="Geolitix">
-            <div class="blog-content">
-                <h3>Explorando Geolitix: Mi Experiencia con una Herramienta de Procesamiento Geofísico</h3>
-                <p>
-                    Como profesional en el campo de la geofísica, siempre busco herramientas que hagan mi trabajo más eficiente y preciso. En mi reciente experiencia con Geolitix, descubrí una solución robusta que simplifica de manera sorprendente el procesamiento e interpretación de datos.
-                </p>
-                <a href="#post2" class="read-more">Leer más</a>
-            </div>
-        </div>
+        <!-- Blog Posts Section -->
+        <section class="projects-section" aria-labelledby="posts-heading">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 id="posts-heading">Artículos Recientes</h2>
+                    <p>Reflexiones sobre tecnología, geofísica y experiencias profesionales</p>
+                </div>
+                
+                <div class="modern-grid">
+                    <!-- Post 1: GitHub Copilot -->
+                    <article class="project-card featured" role="article" aria-labelledby="post1-title">
+                        <div class="project-image-container">
+                            <img src="blog/copiloto.png" alt="GitHub Copilot - Herramienta de asistencia para programación" class="project-image">
+                            <div class="project-overlay">
+                                <span class="project-category">🤖 Tecnología</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 id="post1-title">Mi experiencia con GitHub Copilot</h3>
+                                <div class="project-meta">
+                                    <span class="project-date">📅 Diciembre 2024</span>
+                                    <span class="read-time">⏱️ 5 min</span>
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <p>¿Revolución en la programación o solo un asistente más? Comparto mi experiencia después de meses de uso intensivo con esta herramienta de IA.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">GitHub</span>
+                                <span class="tag">IA</span>
+                                <span class="tag">Productividad</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#post1" class="link-primary">
+                                    <span class="link-icon">📖</span>
+                                    Leer artículo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
 
-        <div class="blog-post" id="post3">
-            <img src="blog/gprpy.png" alt="GPRPy">
-            <div class="blog-content">
-                <h3>Mi experiencia usando GPRPy: una herramienta poderosa para el procesamiento de datos GPR</h3>
-                <p>
-                    Procesar más de 6 kilómetros de datos de GPR sin licencias de software especializado fue un reto. GPRPy, un software basado en Python, se convirtió en mi solución ideal para este desafío.
-                </p>
-                <a href="#post3" class="read-more">Leer más</a>
-            </div>
-        </div>
+                    <!-- Post 2: Geolitix -->
+                    <article class="project-card" role="article" aria-labelledby="post2-title">
+                        <div class="project-image-container">
+                            <img src="blog/geolitix.png" alt="Geolitix - Software de procesamiento geofísico" class="project-image">
+                            <div class="project-overlay">
+                                <span class="project-category">🌍 Geofísica</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 id="post2-title">Explorando Geolitix</h3>
+                                <div class="project-meta">
+                                    <span class="project-date">📅 Noviembre 2024</span>
+                                    <span class="read-time">⏱️ 4 min</span>
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <p>Mi experiencia con una herramienta robusta que simplifica el procesamiento e interpretación de datos geofísicos de manera sorprendente.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">Software</span>
+                                <span class="tag">Análisis</span>
+                                <span class="tag">Datos</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#post2" class="link-primary">
+                                    <span class="link-icon">📖</span>
+                                    Leer artículo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
 
-        <div class="blog-post" id="post4">
-            <img src="blog/opensource.png" alt="Software Libre">
-            <div class="blog-content">
-                <h3>La filosofía del software libre: un movimiento de tecnología y principios</h3>
-                <p>
-                    En un mundo donde la tecnología desempeña un papel crucial, el software libre surge como una alternativa ética y colaborativa. Exploramos sus principios y su impacto en la sociedad.
-                </p>
-                <a href="#post4" class="read-more">Leer más</a>
+                    <!-- Post 3: GPRPy -->
+                    <article class="project-card" role="article" aria-labelledby="post3-title">
+                        <div class="project-image-container">
+                            <img src="blog/gprpy.png" alt="GPRPy - Software Python para procesamiento GPR" class="project-image">
+                            <div class="project-overlay">
+                                <span class="project-category">🐍 Python</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 id="post3-title">GPRPy: Procesamiento de datos GPR</h3>
+                                <div class="project-meta">
+                                    <span class="project-date">📅 Octubre 2024</span>
+                                    <span class="read-time">⏱️ 6 min</span>
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <p>Una herramienta poderosa basada en Python que me permitió procesar más de 6 kilómetros de datos GPR sin licencias costosas.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">GPR</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Open Source</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#post3" class="link-primary">
+                                    <span class="link-icon">📖</span>
+                                    Leer artículo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Post 4: Software Libre -->
+                    <article class="project-card" role="article" aria-labelledby="post4-title">
+                        <div class="project-image-container">
+                            <img src="blog/opensource.png" alt="Software Libre - Filosofía de código abierto" class="project-image">
+                            <div class="project-overlay">
+                                <span class="project-category">💭 Filosofía</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 id="post4-title">La filosofía del software libre</h3>
+                                <div class="project-meta">
+                                    <span class="project-date">📅 Septiembre 2024</span>
+                                    <span class="read-time">⏱️ 7 min</span>
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <p>Un movimiento de tecnología y principios. Exploramos cómo el software libre surge como alternativa ética y colaborativa en nuestro mundo digital.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">Open Source</span>
+                                <span class="tag">Ética</span>
+                                <span class="tag">Colaboración</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#post4" class="link-primary">
+                                    <span class="link-icon">📖</span>
+                                    Leer artículo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2025 JOMA - Ingeniero Geofísico. Todos los derechos reservados.</p>

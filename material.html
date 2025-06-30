@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Académico - José María García Márquez</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images_web/jomac.png" type="image/png">
+</head>
+
+<body>
+    <a href="#main" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- Header -->
+    <header role="banner">
+        <a href="index.html" aria-label="Volver al inicio">
+            <img src="images_web/jomac.png" alt="Logo JOMA - José María García Márquez, Ingeniero Geofísico" class="logo">
+        </a>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Material Académico</h1>
+                <p>Recursos Educativos y Científicos</p>
+            </div>
+        </div>
+    </header>
+
+    <main id="main" role="main">
+        <!-- Hero Section -->
+        <section class="page-hero material-hero" aria-labelledby="hero-heading">
+            <div class="hero-content-wrapper">
+                <div class="hero-text-content">
+                    <h2 id="hero-heading">
+                        <span class="hero-subtitle">📚 Material Académico</span>
+                        <span class="hero-title">Recursos Educativos</span>
+                    </h2>
+                    <p class="hero-description">
+                        Notebooks interactivos, documentos técnicos y recursos educativos especializados en geofísica, análisis de datos y programación científica. Material desarrollado para apoyar el aprendizaje y la investigación.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-badge">
+                            <span class="stat-icon">📓</span>
+                            <span class="stat-text">Notebooks</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="stat-icon">📄</span>
+                            <span class="stat-text">Documentos</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="stat-icon">🔬</span>
+                            <span class="stat-text">Investigación</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="academic-showcase">
+                        <div class="floating-elements">
+                            <div class="floating-element book">📖</div>
+                            <div class="floating-element code">💻</div>
+                            <div class="floating-element science">🔬</div>
+                            <div class="floating-element data">📊</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" aria-labelledby="resources-heading">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 id="resources-heading">Notebooks Educativos</h2>
+                    <p>Jupyter Notebooks interactivos para aprendizaje y análisis de datos geofísicos</p>
+                </div>
+                
+                <div class="projects-grid modern-grid">
+                    <!-- Notebook 1: Python SIG Geoespacial -->
+                    <article class="project-card featured" role="article" aria-labelledby="notebook1-title">
+                        <div class="project-image-container">
+                            <div class="notebook-preview-card">
+                                <div class="notebook-header-mini">
+                                    <span class="nb-dot red"></span>
+                                    <span class="nb-dot yellow"></span>
+                                    <span class="nb-dot green"></span>
+                                </div>
+                                <div class="notebook-content-mini">
+                                    <div class="code-line">📓 <strong>Python SIG Geoespacial</strong></div>
+                                    <div class="code-line">import geopandas as gpd</div>
+                                    <div class="code-line">import matplotlib.pyplot as plt</div>
+                                    <div class="code-line">🗺️ Análisis espacial...</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 id="notebook1-title">Python SIG Geoespacial</h3>
+                                <div class="project-tech">Jupyter • Python • GeoPandas • Matplotlib</div>
+                            </div>
+                            <div class="project-description">
+                                <p>Notebook interactivo sobre fundamentos de Sistemas de Información Geográfica usando Python. Incluye conceptos básicos, manejo de datos vectoriales y visualización geoespacial.</p>
+                            </div>
+                            <div class="project-links">
+                                <a href="notebooks-science/python_sig_geoespacial.ipynb" download class="link-primary">
+                                    <span class="link-icon">📥</span>
+                                    Descargar Notebook
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Notebook 2: HVSR -->
+                    <article class="project-card" role="article" aria-labelledby="notebook2-title">
+                        <div class="project-image-container">
+                            <div class="notebook-preview-card">
+                                <div class="notebook-header-mini">
+                                    <span class="nb-dot red"></span>
+                                    <span class="nb-dot yellow"></span>
+                                    <span class="nb-dot green"></span>
+                                </div>
+                                <div class="notebook-content-mini">
+                                    <div class="code-line">📊 <strong>Análisis HVSR</strong></div>
+                                    <div class="code-line">import numpy as np</div>
+                                    <div class="code-line">import pandas as pd</div>
+                                    <div class="code-line">🌊 Procesamiento sísmico...</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 id="notebook2-title">Análisis HVSR</h3>
+                                <div class="project-tech">Jupyter • Python • NumPy • Signal Processing</div>
+                            </div>
+                            <div class="project-description">
+                                <p>Notebook para análisis de razones espectrales H/V (HVSR) utilizando datos sísmicos. Incluye procesamiento de señales y caracterización de sitio.</p>
+                            </div>
+                            <div class="project-links">
+                                <a href="notebooks-science/hvsr.ipynb" download class="link-primary">
+                                    <span class="link-icon">📥</span>
+                                    Descargar Notebook
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 JOMA - Ingeniero Geofísico. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
