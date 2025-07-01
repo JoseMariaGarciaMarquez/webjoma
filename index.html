@@ -5,6 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JOMA - Ingeniero Geofísico</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Featured Projects Carousel Styles */
+        .featured-carousel {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .featured-project {
+            display: none;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.5s ease-in-out;
+        }
+        
+        .featured-project.active {
+            display: block;
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+            pointer-events: none;
+        }
+        
+        .carousel-prev,
+        .carousel-next {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            pointer-events: all;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .carousel-prev:hover,
+        .carousel-next:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: scale(1.1);
+        }
+        
+        /* Fix broken emoji icons */
+        .mini-card.multimedia .mini-icon {
+            font-size: 2rem;
+        }
+        
+        .mini-card.multimedia .mini-icon::before {
+            content: "📺";
+        }
+        
+        .mini-card.publications .mini-icon {
+            font-size: 2rem;
+        }
+        
+        .mini-card.publications .mini-icon::before {
+            content: "📚";
+        }
+    </style>
 </head>
 <body>
     <header role="banner" class="main-header">
@@ -452,52 +524,157 @@
             
             <!-- Dashboard Style Portfolio -->
             <div class="portfolio-dashboard" role="navigation" aria-label="Dashboard de portafolio">
-                <!-- Featured Project - Main Card -->
-                <div class="featured-project" data-category="geofisica">
-                    <div class="featured-background"></div>
-                    <div class="featured-content">
-                        <div class="featured-badge">
-                            <span class="badge-icon">⭐</span>
-                            <span class="badge-text">Proyecto Destacado</span>
-                        </div>
-                        <div class="featured-header">
-                            <div class="featured-icon">🌊</div>
-                            <div class="featured-info">
-                                <h3>Geofísica Aplicada</h3>
-                                <p>Estudios sísmicos, GPR y modelado del subsuelo para minería, arqueología y recursos hídricos.</p>
-                            </div>
-                        </div>
-                        <div class="featured-stats">
-                            <div class="stat-group">
-                                <span class="stat-number">10+</span>
-                                <span class="stat-label">Estudios Realizados</span>
-                            </div>
-                            <div class="stat-group">
-                                <span class="stat-number">6+ km</span>
-                                <span class="stat-label">Datos GPR</span>
-                            </div>
-                            <div class="stat-group">
-                                <span class="stat-number">3</span>
-                                <span class="stat-label">Sectores</span>
-                            </div>
-                        </div>
-                        <div class="featured-technologies">
-                            <span class="tech-tag">GPRPy</span>
-                            <span class="tech-tag">simPEG</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">QGIS</span>
-                        </div>
+                <!-- Featured Projects Carousel - Main Card -->
+                <div class="featured-carousel">
+                    <div class="carousel-controls">
+                        <button class="carousel-prev" aria-label="Proyecto anterior">‹</button>
+                        <button class="carousel-next" aria-label="Siguiente proyecto">›</button>
                     </div>
-                    <a href="geofisica.html" class="featured-link" aria-label="Explorar proyectos de geofísica aplicada">
-                        <span class="link-text">Explorar Proyectos</span>
-                        <span class="link-icon">→</span>
-                    </a>
+                    
+                    <!-- Project 1: SEV Malinche -->
+                    <div class="featured-project active" data-category="geofisica" data-project="sev-malinche">
+                        <div class="featured-background"></div>
+                        <div class="featured-content">
+                            <div class="featured-badge">
+                                <span class="badge-icon">⭐</span>
+                                <span class="badge-text">Proyecto Destacado</span>
+                            </div>
+                            <div class="featured-header">
+                                <div class="featured-icon">🌎</div>
+                                <div class="featured-info">
+                                    <h3>SEV en La Malinche</h3>
+                                    <p>Sondeo eléctrico vertical para caracterización geoeléctrica del subsuelo en el volcán La Malinche, Tlaxcala.</p>
+                                </div>
+                            </div>
+                            <div class="featured-stats">
+                                <div class="stat-group">
+                                    <span class="stat-number">150m</span>
+                                    <span class="stat-label">Profundidad</span>
+                                </div>
+                                <div class="stat-group">
+                                    <span class="stat-number">4</span>
+                                    <span class="stat-label">Capas</span>
+                                </div>
+                                <div class="stat-group">
+                                    <span class="stat-number">Volcánico</span>
+                                    <span class="stat-label">Contexto</span>
+                                </div>
+                            </div>
+                            <div class="featured-technologies">
+                                <span class="tech-tag">ResIPy</span>
+                                <span class="tech-tag">QGIS</span>
+                                <span class="tech-tag">Análisis Geoeléctrico</span>
+                            </div>
+                        </div>
+                        <a href="geofisica.html" class="featured-link" aria-label="Ver proyecto SEV La Malinche">
+                            <span class="link-text">Ver Proyecto</span>
+                            <span class="link-icon">→</span>
+                        </a>
+                    </div>
+
+                    <!-- Project 2: HVSRLearn -->
+                    <div class="featured-project" data-category="programming" data-project="hvsrlearn">
+                        <div class="featured-background"></div>
+                        <div class="featured-content">
+                            <div class="featured-badge">
+                                <span class="badge-icon">⭐</span>
+                                <span class="badge-text">Proyecto Destacado</span>
+                            </div>
+                            <div class="featured-header">
+                                <div class="featured-icon">💻</div>
+                                <div class="featured-info">
+                                    <h3>HVSRLearn 2.0</h3>
+                                    <p>Software Python para análisis automático de ruido sísmico ambiental usando técnica HVSR con machine learning.</p>
+                                </div>
+                            </div>
+                            <div class="featured-stats">
+                                <div class="stat-group">
+                                    <span class="stat-number">2.0</span>
+                                    <span class="stat-label">Versión</span>
+                                </div>
+                                <div class="stat-group">
+                                    <span class="stat-number">Open</span>
+                                    <span class="stat-label">Source</span>
+                                </div>
+                                <div class="stat-group">
+                                    <span class="stat-number">ML</span>
+                                    <span class="stat-label">Powered</span>
+                                </div>
+                            </div>
+                            <div class="featured-technologies">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">NumPy</span>
+                                <span class="tech-tag">Matplotlib</span>
+                                <span class="tech-tag">ObsPy</span>
+                            </div>
+                        </div>
+                        <a href="coding.html" class="featured-link" aria-label="Ver proyecto HVSRLearn">
+                            <span class="link-text">Ver Código</span>
+                            <span class="link-icon">→</span>
+                        </a>
+                    </div>
+
+                    <!-- Project 3: GPR Monterrey -->
+                    <div class="featured-project" data-category="geofisica" data-project="gpr-monterrey">
+                        <div class="featured-background"></div>
+                        <div class="featured-content">
+                            <div class="featured-badge">
+                                <span class="badge-icon">⭐</span>
+                                <span class="badge-text">Proyecto Destacado</span>
+                            </div>
+                            <div class="featured-header">
+                                <div class="featured-icon">🌎</div>
+                                <div class="featured-info">
+                                    <h3>Estudio GPR Monterrey</h3>
+                                    <p>Ground Penetrating Radar para detección de servicios subterráneos y caracterización del subsuelo urbano.</p>
+                                </div>
+                            </div>
+                            <div class="featured-stats">
+                                <div class="stat-group">
+                                    <span class="stat-number">2+ km</span>
+                                    <span class="stat-label">Perfiles</span>
+                                </div>
+                                <div class="stat-group">
+                                    <span class="stat-number">400MHz</span>
+                                    <span class="stat-label">Antena</span>
+                                </div>
+                                <div class="stat-group">
+                                    <span class="stat-number">Urbano</span>
+                                    <span class="stat-label">Ambiente</span>
+                                </div>
+                            </div>
+                            <div class="featured-technologies">
+                                <span class="tech-tag">GPRPy</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">QGIS</span>
+                            </div>
+                        </div>
+                        <a href="geofisica.html" class="featured-link" aria-label="Ver estudio GPR Monterrey">
+                            <span class="link-text">Ver Estudio</span>
+                            <span class="link-icon">→</span>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Mini Cards Grid -->
                 <div class="mini-cards-grid">
+                    <div class="mini-card geofisica" data-category="geofisica">
+                        <div class="mini-icon">🌎</div>
+                        <div class="mini-content">
+                            <h4>Geofísica Aplicada</h4>
+                            <p>Estudios sísmicos, GPR y sondeos eléctricos</p>
+                            <div class="mini-stats">
+                                <span class="mini-stat">10+ Estudios</span>
+                                <span class="mini-stat">6+ km GPR</span>
+                            </div>
+                        </div>
+                        <a href="geofisica.html" class="mini-link" aria-label="Ver proyectos de geofísica">
+                            <span class="mini-arrow">→</span>
+                        </a>
+                    </div>
+
                     <div class="mini-card programming" data-category="programming">
-                        <div class="mini-icon">�</div>
+                        <div class="mini-icon">💻</div>
                         <div class="mini-content">
                             <h4>Desarrollo de Software</h4>
                             <p>Librerías Python para análisis geofísico</p>
@@ -527,7 +704,7 @@
                     </div>
 
                     <div class="mini-card multimedia" data-category="multimedia">
-                        <div class="mini-icon">📺</div>
+                        <div class="mini-icon"></div>
                         <div class="mini-content">
                             <h4>Contenido Multimedia</h4>
                             <p>Videos educativos y streams en vivo</p>
@@ -542,7 +719,7 @@
                     </div>
 
                     <div class="mini-card publications" data-category="publications">
-                        <div class="mini-icon">📚</div>
+                        <div class="mini-icon"></div>
                         <div class="mini-content">
                             <h4>Publicaciones</h4>
                             <p>Artículos técnicos e investigaciones</p>
@@ -552,21 +729,6 @@
                             </div>
                         </div>
                         <a href="publications.html" class="mini-link" aria-label="Descargar publicaciones">
-                            <span class="mini-arrow">→</span>
-                        </a>
-                    </div>
-
-                    <div class="mini-card mapping" data-category="mapping">
-                        <div class="mini-icon">🗺️</div>
-                        <div class="mini-content">
-                            <h4>Mapeo Interactivo</h4>
-                            <p>Visualización geoespacial de proyectos</p>
-                            <div class="mini-stats">
-                                <span class="mini-stat">QGIS</span>
-                                <span class="mini-stat">WebGIS</span>
-                            </div>
-                        </div>
-                        <a href="construccion.html" class="mini-link" aria-label="Acceder al mapa interactivo">
                             <span class="mini-arrow">→</span>
                         </a>
                     </div>
@@ -592,7 +754,7 @@
                     <h4>Acceso Rápido</h4>
                     <div class="quick-nav-items">
                         <button class="quick-nav-btn" data-highlight="geofisica" aria-label="Destacar geofísica">
-                            <span class="quick-icon">🌊</span>
+                            <span class="quick-icon">🌎</span>
                             <span class="quick-text">Geofísica</span>
                         </button>
                         <button class="quick-nav-btn" data-highlight="programming" aria-label="Destacar programación">
@@ -848,6 +1010,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
+    // Initialize dashboard quick navigation
+    initDashboardNavigation();
+    
+    // Initialize featured projects carousel
+    initFeaturedCarousel();
+    
     // Existing initialization code...
     initNewsFilters();
     initKeyboardNavigation();
@@ -862,6 +1030,96 @@ document.addEventListener('DOMContentLoaded', () => {
     
     console.log('News system initialized');
 });
+
+// Dashboard Navigation Functionality
+function initDashboardNavigation() {
+    const quickNavBtns = document.querySelectorAll('.quick-nav-btn');
+    const featuredProjects = document.querySelectorAll('.featured-project');
+    const miniCards = document.querySelectorAll('.mini-card');
+    
+    quickNavBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const highlight = btn.getAttribute('data-highlight');
+            
+            // Remove active states
+            quickNavBtns.forEach(b => b.classList.remove('active'));
+            featuredProjects.forEach(project => project.classList.remove('highlighted', 'dimmed'));
+            miniCards.forEach(card => card.classList.remove('highlighted', 'dimmed'));
+            
+            // Add active state to clicked button
+            btn.classList.add('active');
+            
+            if (highlight === 'all') {
+                // Show all cards normally
+                featuredProjects.forEach(project => project.classList.remove('dimmed'));
+                miniCards.forEach(card => card.classList.remove('dimmed'));
+            } else {
+                // Highlight specific category
+                featuredProjects.forEach(project => {
+                    if (project.getAttribute('data-category') === highlight) {
+                        project.classList.add('highlighted');
+                    } else {
+                        project.classList.add('dimmed');
+                    }
+                });
+                
+                miniCards.forEach(card => {
+                    if (card.getAttribute('data-category') === highlight) {
+                        card.classList.add('highlighted');
+                    } else {
+                        card.classList.add('dimmed');
+                    }
+                });
+            }
+            
+            // Announce to screen readers
+            const categoryName = highlight === 'all' ? 'todas las categorías' : 
+                                highlight === 'geofisica' ? 'geofísica' :
+                                highlight === 'programming' ? 'programación' : 'educación';
+            announceToScreenReader(`Destacando ${categoryName}`);
+        });
+    });
+}
+
+// Featured Projects Carousel
+function initFeaturedCarousel() {
+    const featuredProjects = document.querySelectorAll('.featured-project');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    let currentProject = 0;
+    
+    function showProject(index) {
+        featuredProjects.forEach((project, i) => {
+            project.classList.toggle('active', i === index);
+        });
+        
+        // Update navigation buttons
+        const currentCategory = featuredProjects[index].getAttribute('data-category');
+        const projectName = featuredProjects[index].querySelector('h3').textContent;
+        announceToScreenReader(`Mostrando proyecto: ${projectName}`);
+    }
+    
+    function nextProject() {
+        currentProject = (currentProject + 1) % featuredProjects.length;
+        showProject(currentProject);
+    }
+    
+    function prevProject() {
+        currentProject = (currentProject - 1 + featuredProjects.length) % featuredProjects.length;
+        showProject(currentProject);
+    }
+    
+    if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', prevProject);
+        nextBtn.addEventListener('click', nextProject);
+        
+        // Auto-rotate every 8 seconds
+        setInterval(nextProject, 8000);
+    }
+    
+    // Initialize first project
+    showProject(0);
+}
 
 // Mobile navigation functionality
 const mobileNav = document.getElementById('mobileNav');
