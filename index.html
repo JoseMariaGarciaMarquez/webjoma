@@ -450,140 +450,166 @@
                 </div>
             </div>
             
-            <nav class="portfolio-grid" role="navigation" aria-label="Navegación principal del portafolio">
-                <div class="portfolio-card geofisica" role="article">
-                    <div class="card-background"></div>
-                    <div class="card-icon">
-                        <span class="icon-wave">🌊</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Geofísica Aplicada</h3>
-                        <p>Estudios sísmicos, GPR y modelado del subsuelo para minería, arqueología y recursos hídricos.</p>
-                        <div class="card-stats">
-                            <span class="stat">+10 estudios</span>
-                            <span class="stat">6+ km GPR</span>
+            <!-- Dashboard Style Portfolio -->
+            <div class="portfolio-dashboard" role="navigation" aria-label="Dashboard de portafolio">
+                <!-- Featured Project - Main Card -->
+                <div class="featured-project" data-category="geofisica">
+                    <div class="featured-background"></div>
+                    <div class="featured-content">
+                        <div class="featured-badge">
+                            <span class="badge-icon">⭐</span>
+                            <span class="badge-text">Proyecto Destacado</span>
+                        </div>
+                        <div class="featured-header">
+                            <div class="featured-icon">🌊</div>
+                            <div class="featured-info">
+                                <h3>Geofísica Aplicada</h3>
+                                <p>Estudios sísmicos, GPR y modelado del subsuelo para minería, arqueología y recursos hídricos.</p>
+                            </div>
+                        </div>
+                        <div class="featured-stats">
+                            <div class="stat-group">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Estudios Realizados</span>
+                            </div>
+                            <div class="stat-group">
+                                <span class="stat-number">6+ km</span>
+                                <span class="stat-label">Datos GPR</span>
+                            </div>
+                            <div class="stat-group">
+                                <span class="stat-number">3</span>
+                                <span class="stat-label">Sectores</span>
+                            </div>
+                        </div>
+                        <div class="featured-technologies">
+                            <span class="tech-tag">GPRPy</span>
+                            <span class="tech-tag">simPEG</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">QGIS</span>
                         </div>
                     </div>
-                    <a href="geofisica.html" class="card-link" aria-label="Ver proyectos de geofísica aplicada">
+                    <a href="geofisica.html" class="featured-link" aria-label="Explorar proyectos de geofísica aplicada">
                         <span class="link-text">Explorar Proyectos</span>
-                        <span class="link-arrow">→</span>
+                        <span class="link-icon">→</span>
                     </a>
                 </div>
 
-                <div class="portfolio-card programming" role="article">
-                    <div class="card-background"></div>
-                    <div class="card-icon">
-                        <span class="icon-code">💻</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Desarrollo de Software</h3>
-                        <p>Librerías Python para análisis geofísico, herramientas de código abierto y automatización.</p>
-                        <div class="card-stats">
-                            <span class="stat">Python</span>
-                            <span class="stat">Open Source</span>
+                <!-- Mini Cards Grid -->
+                <div class="mini-cards-grid">
+                    <div class="mini-card programming" data-category="programming">
+                        <div class="mini-icon">�</div>
+                        <div class="mini-content">
+                            <h4>Desarrollo de Software</h4>
+                            <p>Librerías Python para análisis geofísico</p>
+                            <div class="mini-stats">
+                                <span class="mini-stat">Python</span>
+                                <span class="mini-stat">Open Source</span>
+                            </div>
                         </div>
+                        <a href="coding.html" class="mini-link" aria-label="Ver proyectos de programación">
+                            <span class="mini-arrow">→</span>
+                        </a>
                     </div>
-                    <a href="coding.html" class="card-link" aria-label="Ver proyectos de programación y desarrollo">
-                        <span class="link-text">Ver Código</span>
-                        <span class="link-arrow">→</span>
-                    </a>
+
+                    <div class="mini-card education" data-category="education">
+                        <div class="mini-icon">🎓</div>
+                        <div class="mini-content">
+                            <h4>Material Académico</h4>
+                            <p>Cursos y recursos educativos especializados</p>
+                            <div class="mini-stats">
+                                <span class="mini-stat">Notebooks</span>
+                                <span class="mini-stat">UNAM FI</span>
+                            </div>
+                        </div>
+                        <a href="material.html" class="mini-link" aria-label="Acceder a material educativo">
+                            <span class="mini-arrow">→</span>
+                        </a>
+                    </div>
+
+                    <div class="mini-card multimedia" data-category="multimedia">
+                        <div class="mini-icon">📺</div>
+                        <div class="mini-content">
+                            <h4>Contenido Multimedia</h4>
+                            <p>Videos educativos y streams en vivo</p>
+                            <div class="mini-stats">
+                                <span class="mini-stat">Streaming</span>
+                                <span class="mini-stat">Comunidad</span>
+                            </div>
+                        </div>
+                        <a href="social.html" class="mini-link" aria-label="Ver contenido multimedia">
+                            <span class="mini-arrow">→</span>
+                        </a>
+                    </div>
+
+                    <div class="mini-card publications" data-category="publications">
+                        <div class="mini-icon">📚</div>
+                        <div class="mini-content">
+                            <h4>Publicaciones</h4>
+                            <p>Artículos técnicos e investigaciones</p>
+                            <div class="mini-stats">
+                                <span class="mini-stat">Artículos</span>
+                                <span class="mini-stat">Newsletter</span>
+                            </div>
+                        </div>
+                        <a href="publications.html" class="mini-link" aria-label="Descargar publicaciones">
+                            <span class="mini-arrow">→</span>
+                        </a>
+                    </div>
+
+                    <div class="mini-card mapping" data-category="mapping">
+                        <div class="mini-icon">🗺️</div>
+                        <div class="mini-content">
+                            <h4>Mapeo Interactivo</h4>
+                            <p>Visualización geoespacial de proyectos</p>
+                            <div class="mini-stats">
+                                <span class="mini-stat">QGIS</span>
+                                <span class="mini-stat">WebGIS</span>
+                            </div>
+                        </div>
+                        <a href="construccion.html" class="mini-link" aria-label="Acceder al mapa interactivo">
+                            <span class="mini-arrow">→</span>
+                        </a>
+                    </div>
+
+                    <div class="mini-card blog" data-category="blog">
+                        <div class="mini-icon">✍️</div>
+                        <div class="mini-content">
+                            <h4>Blog Personal</h4>
+                            <p>Reflexiones sobre geofísica y tecnología</p>
+                            <div class="mini-stats">
+                                <span class="mini-stat">Reflexiones</span>
+                                <span class="mini-stat">Experiencias</span>
+                            </div>
+                        </div>
+                        <a href="blog.html" class="mini-link" aria-label="Leer blog personal">
+                            <span class="mini-arrow">→</span>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="portfolio-card mapping" role="article">
-                    <div class="card-background"></div>
-                    <div class="card-icon">
-                        <span class="icon-map">🗺️</span>
+                <!-- Quick Navigation -->
+                <div class="quick-nav">
+                    <h4>Acceso Rápido</h4>
+                    <div class="quick-nav-items">
+                        <button class="quick-nav-btn" data-highlight="geofisica" aria-label="Destacar geofísica">
+                            <span class="quick-icon">🌊</span>
+                            <span class="quick-text">Geofísica</span>
+                        </button>
+                        <button class="quick-nav-btn" data-highlight="programming" aria-label="Destacar programación">
+                            <span class="quick-icon">💻</span>
+                            <span class="quick-text">Código</span>
+                        </button>
+                        <button class="quick-nav-btn" data-highlight="education" aria-label="Destacar educación">
+                            <span class="quick-icon">🎓</span>
+                            <span class="quick-text">Educación</span>
+                        </button>
+                        <button class="quick-nav-btn" data-highlight="all" aria-label="Mostrar todo">
+                            <span class="quick-icon">📋</span>
+                            <span class="quick-text">Ver Todo</span>
+                        </button>
                     </div>
-                    <div class="card-content">
-                        <h3>Mapeo Interactivo</h3>
-                        <p>Visualización geoespacial de proyectos realizados y análisis territorial.</p>
-                        <div class="card-stats">
-                            <span class="stat">QGIS</span>
-                            <span class="stat">WebGIS</span>
-                        </div>
-                    </div>
-                    <a href="construccion.html" class="card-link" aria-label="Acceder al mapa interactivo de proyectos">
-                        <span class="link-text">Ver Mapa</span>
-                        <span class="link-arrow">→</span>
-                    </a>
                 </div>
-
-                <div class="portfolio-card education" role="article">
-                    <div class="card-background"></div>
-                    <div class="card-icon">
-                        <span class="icon-education">🎓</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Material Académico</h3>
-                        <p>Cursos, tutoriales y recursos educativos especializados en geofísica y programación.</p>
-                        <div class="card-stats">
-                            <span class="stat">Notebooks</span>
-                            <span class="stat">UNAM FI</span>
-                        </div>
-                    </div>
-                    <a href="material.html" class="card-link" aria-label="Acceder a cursos y material educativo">
-                        <span class="link-text">Ver Material</span>
-                        <span class="link-arrow">→</span>
-                    </a>
-                </div>
-
-                <div class="portfolio-card multimedia" role="article">
-                    <div class="card-background"></div>
-                    <div class="card-icon">
-                        <span class="icon-multimedia">📺</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Contenido Multimedia</h3>
-                        <p>Videos educativos, streams en vivo y contenido interactivo para la comunidad.</p>
-                        <div class="card-stats">
-                            <span class="stat">Streaming</span>
-                            <span class="stat">Comunidad</span>
-                        </div>
-                    </div>
-                    <a href="social.html" class="card-link" aria-label="Ver contenido multimedia y redes sociales">
-                        <span class="link-text">Ver Contenido</span>
-                        <span class="link-arrow">→</span>
-                    </a>
-                </div>
-
-                <div class="portfolio-card publications" role="article">
-                    <div class="card-background"></div>
-                    <div class="card-icon">
-                        <span class="icon-publications">📚</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Publicaciones</h3>
-                        <p>Artículos técnicos, investigaciones y newsletter con las últimas novedades del sector.</p>
-                        <div class="card-stats">
-                            <span class="stat">Artículos</span>
-                            <span class="stat">Newsletter</span>
-                        </div>
-                    </div>
-                    <a href="publications.html" class="card-link" aria-label="Descargar publicaciones científicas">
-                        <span class="link-text">Leer Más</span>
-                        <span class="link-arrow">→</span>
-                    </a>
-                </div>
-
-                <div class="portfolio-card blog" role="article">
-                    <div class="card-background"></div>
-                    <div class="card-icon">
-                        <span class="icon-blog">✍️</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Blog Personal</h3>
-                        <p>Reflexiones, experiencias y perspectivas sobre la geofísica y el desarrollo tecnológico.</p>
-                        <div class="card-stats">
-                            <span class="stat">Reflexiones</span>
-                            <span class="stat">Experiencias</span>
-                        </div>
-                    </div>
-                    <a href="blog.html" class="card-link" aria-label="Leer blog personal sobre geofísica">
-                        <span class="link-text">Leer Blog</span>
-                        <span class="link-arrow">→</span>
-                    </a>
-                </div>
-            </nav>
+            </div>
         </section>
     </main>
     <footer>
