@@ -405,106 +405,67 @@
             
             <div class="news-container" id="news-container" role="tabpanel" aria-labelledby="news-heading">
                 <article class="news-item success" data-category="success" role="article" aria-labelledby="news-1-title">
-                    <button class="news-toggle" aria-expanded="false" aria-controls="news-1-content" onclick="toggleNews('news-1')">
-                        <div class="news-header">
-                            <h3 class="news-title" id="news-1-title">💻 HVSRLearn 2.0 - Rediseño Completo</h3>
-                            <span class="news-date" aria-label="Fecha de publicación">18 May 2025</span>
-                            <span class="expand-icon" aria-hidden="true">▼</span>
-                        </div>
-                        <div class="news-preview">
-                            Lanzamiento de HVSRLearn 2.0 con arquitectura completamente rediseñada...
-                        </div>
-                    </button>
-                    <div class="news-content" id="news-1-content" aria-hidden="true">
-                        Lanzamiento de HVSRLearn 2.0 con arquitectura completamente rediseñada. Nuevas características incluyen: ventana dedicada de procesamiento con filtros pasa-banda, ventana específica para cálculo HVSR, carga simultánea de componentes Z/N/E, y validaciones mejoradas. El código es ahora más flexible y adaptable para futuras funcionalidades.
-                        <a href="https://github.com/JoseMariaGarciaMarquez/hvsrlearn" target="_blank" rel="noopener noreferrer" class="news-link" aria-label="Visitar repositorio HVSRLearn en GitHub">
-                            Ver en GitHub
-                        </a>
+                    <div class="news-header">
+                        <h3 class="news-title" id="news-1-title">💻 HVSRLearn 2.0 - Rediseño Completo</h3>
+                        <span class="news-date" aria-label="Fecha de publicación">18 May 2025</span>
+                    </div>
+                    <div class="news-summary">
+                        Lanzamiento de HVSRLearn 2.0 con arquitectura completamente rediseñada. Ahora incluye: procesamiento con filtros pasa-banda, ventana específica para HVSR, carga simultánea de componentes y validaciones mejoradas. <a href="https://github.com/JoseMariaGarciaMarquez/hvsrlearn" target="_blank" rel="noopener noreferrer" class="news-link" aria-label="Visitar repositorio HVSRLearn en GitHub">Ver en GitHub</a>
                     </div>
                     <span class="news-tag success" aria-label="Categoría: Lanzamiento">Lanzamiento</span>
                 </article>
 
                 <article class="news-item info" data-category="info" role="article" aria-labelledby="news-2-title">
-                    <button class="news-toggle" aria-expanded="false" aria-controls="news-2-content" onclick="toggleNews('news-2')">
-                        <div class="news-header">
-                            <h3 class="news-title" id="news-2-title">💧 Nuevo Curso: Python Aplicado a la Hidráulica</h3>
-                            <span class="news-date" aria-label="Fecha de publicación">15 Jun 2025</span>
-                            <span class="expand-icon" aria-hidden="true">▼</span>
-                        </div>
-                        <div class="news-preview">
-                            "Python Aplicado a la Hidráulica con Integración en Sistemas de Información Geográfica (SIG)"...
-                        </div>
-                    </button>
-                    <div class="news-content" id="news-2-content" aria-hidden="true">
-                        "Python Aplicado a la Hidráulica con Integración en Sistemas de Información Geográfica (SIG)". 16 horas de duración, 8 sesiones teórico-prácticas. Nivel básico a intermedio enfocado en automatización de cálculos hidráulicos y análisis geoespacial. Más cursos próximamente en la sección de material académico.
+                    <div class="news-header">
+                        <h3 class="news-title" id="news-2-title">💧 Nuevo Curso: Python Aplicado a la Hidráulica</h3>
+                        <span class="news-date" aria-label="Fecha de publicación">15 Jun 2025</span>
+                    </div>
+                    <div class="news-summary">
+                        Curso "Python Aplicado a la Hidráulica con SIG": 16 horas, 8 sesiones teórico-prácticas. Automatización de cálculos hidráulicos y análisis geoespacial. Más cursos próximamente en la sección de material académico.
                     </div>
                     <span class="news-tag info" aria-label="Categoría: Educativo">Educativo</span>
                 </article>
 
                 <article class="news-item warning" data-category="warning" role="article" aria-labelledby="news-3-title">
-                    <button class="news-toggle" aria-expanded="false" aria-controls="news-3-content" onclick="toggleNews('news-3')">
-                        <div class="news-header">
-                            <h3 class="news-title" id="news-3-title">⚠️ Actualización de Niveles Patreon</h3>
-                            <span class="news-date" aria-label="Fecha de publicación">25 Jun 2025</span>
-                            <span class="expand-icon" aria-hidden="true">▼</span>
-                        </div>
-                        <div class="news-preview">
-                            Los niveles de Patreon están siendo actualizados con nuevos beneficios...
-                        </div>
-                    </button>
-                    <div class="news-content" id="news-3-content" aria-hidden="true">
-                        Los niveles de Patreon están siendo actualizados con nuevos beneficios y contenido exclusivo. Pronto tendrás acceso a material adicional, tutoriales avanzados y participación en sesiones privadas de Q&A. Mantente atento a los anuncios.
+                    <div class="news-header">
+                        <h3 class="news-title" id="news-3-title">⚠️ Actualización de Niveles Patreon</h3>
+                        <span class="news-date" aria-label="Fecha de publicación">25 Jun 2025</span>
+                    </div>
+                    <div class="news-summary">
+                        Los niveles de Patreon están siendo actualizados con nuevos beneficios y contenido exclusivo. Pronto acceso a material adicional, tutoriales avanzados y sesiones privadas de Q&A.
                     </div>
                     <span class="news-tag warning" aria-label="Categoría: Importante">Importante</span>
                 </article>
 
                 <article class="news-item success" data-category="success" role="article" aria-labelledby="news-4-title">
-                    <button class="news-toggle" aria-expanded="false" aria-controls="news-4-content" onclick="toggleNews('news-4')">
-                        <div class="news-header">
-                            <h3 class="news-title" id="news-4-title">💬 Servidor Discord Oficial</h3>
-                            <span class="news-date" aria-label="Fecha de publicación">20 Jun 2025</span>
-                            <span class="expand-icon" aria-hidden="true">▼</span>
-                        </div>
-                        <div class="news-preview">
-                            ¡Ya tenemos servidor Discord oficial! Un espacio dedicado para la comunidad geofísica...
-                        </div>
-                    </button>
-                    <div class="news-content" id="news-4-content" aria-hidden="true">
-                        ¡Ya tenemos servidor Discord oficial! Un espacio dedicado para la comunidad geofísica donde podrás hacer preguntas, compartir proyectos, participar en discusiones técnicas y estar al día con las últimas novedades. Únete y forma parte de nuestra comunidad.
+                    <div class="news-header">
+                        <h3 class="news-title" id="news-4-title">💬 Servidor Discord Oficial</h3>
+                        <span class="news-date" aria-label="Fecha de publicación">20 Jun 2025</span>
+                    </div>
+                    <div class="news-summary">
+                        ¡Ya tenemos servidor Discord oficial! Espacio para preguntas, compartir proyectos y participar en discusiones técnicas. Únete a la comunidad.
                     </div>
                     <span class="news-tag success" aria-label="Categoría: Comunidad">Comunidad</span>
                 </article>
 
                 <article class="news-item info" data-category="info" role="article" aria-labelledby="news-5-title">
-                    <button class="news-toggle" aria-expanded="false" aria-controls="news-5-content" onclick="toggleNews('news-5')">
-                        <div class="news-header">
-                            <h3 class="news-title" id="news-5-title">🔬 Desarrollo: Script MASW con ML</h3>
-                            <span class="news-date" aria-label="Fecha de publicación">10 Jun 2025</span>
-                            <span class="expand-icon" aria-hidden="true">▼</span>
-                        </div>
-                        <div class="news-preview">
-                            Trabajando en un script innovador para automatizar el preprocesado de ondas sísmicas MASW...
-                        </div>
-                    </button>
-                    <div class="news-content" id="news-5-content" aria-hidden="true">
-                        Trabajando en un script innovador para automatizar el preprocesado de ondas sísmicas MASW utilizando machine learning. Implementando librerías como scikit-learn y técnicas avanzadas de procesamiento de señales. Próximamente más detalles sobre esta herramienta revolucionaria.
+                    <div class="news-header">
+                        <h3 class="news-title" id="news-5-title">🔬 Desarrollo: Script MASW con ML</h3>
+                        <span class="news-date" aria-label="Fecha de publicación">10 Jun 2025</span>
+                    </div>
+                    <div class="news-summary">
+                        Desarrollo de script para automatizar el preprocesado de ondas sísmicas MASW usando machine learning. Pronto más detalles sobre esta herramienta.
                     </div>
                     <span class="news-tag info" aria-label="Categoría: Desarrollo">Desarrollo</span>
                 </article>
 
                 <article class="news-item info" data-category="info" role="article" aria-labelledby="news-6-title">
-                    <button class="news-toggle" aria-expanded="false" aria-controls="news-6-content" onclick="toggleNews('news-6')">
-                        <div class="news-header">
-                            <h3 class="news-title" id="news-6-title">📚 Material Académico Ampliado</h3>
-                            <span class="news-date" aria-label="Fecha de publicación">5 Jun 2025</span>
-                            <span class="expand-icon" aria-hidden="true">▼</span>
-                        </div>
-                        <div class="news-preview">
-                            La sección de material académico se está expandiendo con nuevos cursos...
-                        </div>
-                    </button>
-                    <div class="news-content" id="news-6-content" aria-hidden="true">
-                        La sección de material académico se está expandiendo con nuevos cursos, tutoriales y recursos educativos. Pronto encontrarás contenido sobre procesamiento de señales, análisis estadístico aplicado a geofísica, y herramientas de código abierto.
+                    <div class="news-header">
+                        <h3 class="news-title" id="news-6-title">📚 Material Académico Ampliado</h3>
+                        <span class="news-date" aria-label="Fecha de publicación">5 Jun 2025</span>
+                    </div>
+                    <div class="news-summary">
+                        La sección de material académico se expande con nuevos cursos, tutoriales y recursos educativos sobre procesamiento de señales y análisis estadístico aplicado a geofísica.
                     </div>
                     <span class="news-tag info" aria-label="Categoría: Academia">Academia</span>
                 </article>
@@ -524,139 +485,7 @@
             
             <!-- Dashboard Style Portfolio -->
             <div class="portfolio-dashboard" role="navigation" aria-label="Dashboard de portafolio">
-                <!-- Featured Projects Carousel - Main Card -->
-                <div class="featured-carousel">
-                    <div class="carousel-controls">
-                        <button class="carousel-prev" aria-label="Proyecto anterior">‹</button>
-                        <button class="carousel-next" aria-label="Siguiente proyecto">›</button>
-                    </div>
-                    
-                    <!-- Project 1: SEV Malinche -->
-                    <div class="featured-project active" data-category="geofisica" data-project="sev-malinche">
-                        <div class="featured-background"></div>
-                        <div class="featured-content">
-                            <div class="featured-badge">
-                                <span class="badge-icon">⭐</span>
-                                <span class="badge-text">Proyecto Destacado</span>
-                            </div>
-                            <div class="featured-header">
-                                <div class="featured-icon">🌎</div>
-                                <div class="featured-info">
-                                    <h3>SEV en La Malinche</h3>
-                                    <p>Sondeo eléctrico vertical para caracterización geoeléctrica del subsuelo en el volcán La Malinche, Tlaxcala.</p>
-                                </div>
-                            </div>
-                            <div class="featured-stats">
-                                <div class="stat-group">
-                                    <span class="stat-number">150m</span>
-                                    <span class="stat-label">Profundidad</span>
-                                </div>
-                                <div class="stat-group">
-                                    <span class="stat-number">4</span>
-                                    <span class="stat-label">Capas</span>
-                                </div>
-                                <div class="stat-group">
-                                    <span class="stat-number">Volcánico</span>
-                                    <span class="stat-label">Contexto</span>
-                                </div>
-                            </div>
-                            <div class="featured-technologies">
-                                <span class="tech-tag">ResIPy</span>
-                                <span class="tech-tag">QGIS</span>
-                                <span class="tech-tag">Análisis Geoeléctrico</span>
-                            </div>
-                        </div>
-                        <a href="geofisica.html" class="featured-link" aria-label="Ver proyecto SEV La Malinche">
-                            <span class="link-text">Ver Proyecto</span>
-                            <span class="link-icon">→</span>
-                        </a>
-                    </div>
-
-                    <!-- Project 2: HVSRLearn -->
-                    <div class="featured-project" data-category="programming" data-project="hvsrlearn">
-                        <div class="featured-background"></div>
-                        <div class="featured-content">
-                            <div class="featured-badge">
-                                <span class="badge-icon">⭐</span>
-                                <span class="badge-text">Proyecto Destacado</span>
-                            </div>
-                            <div class="featured-header">
-                                <div class="featured-icon">💻</div>
-                                <div class="featured-info">
-                                    <h3>HVSRLearn 2.0</h3>
-                                    <p>Software Python para análisis automático de ruido sísmico ambiental usando técnica HVSR con machine learning.</p>
-                                </div>
-                            </div>
-                            <div class="featured-stats">
-                                <div class="stat-group">
-                                    <span class="stat-number">2.0</span>
-                                    <span class="stat-label">Versión</span>
-                                </div>
-                                <div class="stat-group">
-                                    <span class="stat-number">Open</span>
-                                    <span class="stat-label">Source</span>
-                                </div>
-                                <div class="stat-group">
-                                    <span class="stat-number">ML</span>
-                                    <span class="stat-label">Powered</span>
-                                </div>
-                            </div>
-                            <div class="featured-technologies">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">NumPy</span>
-                                <span class="tech-tag">Matplotlib</span>
-                                <span class="tech-tag">ObsPy</span>
-                            </div>
-                        </div>
-                        <a href="coding.html" class="featured-link" aria-label="Ver proyecto HVSRLearn">
-                            <span class="link-text">Ver Código</span>
-                            <span class="link-icon">→</span>
-                        </a>
-                    </div>
-
-                    <!-- Project 3: GPR Monterrey -->
-                    <div class="featured-project" data-category="geofisica" data-project="gpr-monterrey">
-                        <div class="featured-background"></div>
-                        <div class="featured-content">
-                            <div class="featured-badge">
-                                <span class="badge-icon">⭐</span>
-                                <span class="badge-text">Proyecto Destacado</span>
-                            </div>
-                            <div class="featured-header">
-                                <div class="featured-icon">🌎</div>
-                                <div class="featured-info">
-                                    <h3>Estudio GPR Monterrey</h3>
-                                    <p>Ground Penetrating Radar para detección de servicios subterráneos y caracterización del subsuelo urbano.</p>
-                                </div>
-                            </div>
-                            <div class="featured-stats">
-                                <div class="stat-group">
-                                    <span class="stat-number">2+ km</span>
-                                    <span class="stat-label">Perfiles</span>
-                                </div>
-                                <div class="stat-group">
-                                    <span class="stat-number">400MHz</span>
-                                    <span class="stat-label">Antena</span>
-                                </div>
-                                <div class="stat-group">
-                                    <span class="stat-number">Urbano</span>
-                                    <span class="stat-label">Ambiente</span>
-                                </div>
-                            </div>
-                            <div class="featured-technologies">
-                                <span class="tech-tag">GPRPy</span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">QGIS</span>
-                            </div>
-                        </div>
-                        <a href="geofisica.html" class="featured-link" aria-label="Ver estudio GPR Monterrey">
-                            <span class="link-text">Ver Estudio</span>
-                            <span class="link-icon">→</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Mini Cards Grid -->
+                <!-- Columna Izquierda: Mini Cards -->
                 <div class="mini-cards-grid">
                     <div class="mini-card geofisica" data-category="geofisica">
                         <div class="mini-icon">🌎</div>
@@ -748,27 +577,142 @@
                         </a>
                     </div>
                 </div>
+                <!-- Columna Derecha: Proyecto Destacado arriba, Acceso Rápido abajo -->
+                <div class="portfolio-featured-col">
+                    <div class="featured-carousel portfolio-featured-compact">
+                        <div class="carousel-controls">
+                            <button class="carousel-prev" aria-label="Proyecto anterior">‹</button>
+                            <button class="carousel-next" aria-label="Siguiente proyecto">›</button>
+                        </div>
+                        <!-- Project 1: SEV Malinche -->
+                        <div class="featured-project active" data-category="geofisica" data-project="sev-malinche">
+                            <div class="featured-background"></div>
+                            <div class="featured-content">
+                                <div class="featured-badge">
+                                    <span class="badge-icon">⭐</span>
+                                    <span class="badge-text">Proyecto Destacado</span>
+                                </div>
+                                <div class="featured-header">
+                                    <div class="featured-icon">🌎</div>
+                                    <div class="featured-info">
+                                        <h3>SEV en La Malinche</h3>
+                                        <p>Sondeo eléctrico vertical para caracterización geoeléctrica del subsuelo en el volcán La Malinche, Tlaxcala.</p>
+                                    </div>
+                                </div>
+                                <div class="featured-stats">
+                                    <div class="stat-group">
+                                        <span class="stat-number">150m</span>
+                                        <span class="stat-label">Profundidad</span>
+                                    </div>
+                                    <div class="stat-group">
+                                        <span class="stat-number">4</span>
+                                        <span class="stat-label">Capas</span>
+                                    </div>
+                                    <div class="stat-group">
+                                        <span class="stat-number">Volcánico</span>
+                                        <span class="stat-label">Contexto</span>
+                                    </div>
+                                </div>
+                                <div class="featured-technologies">
+                                    <span class="tech-tag">ResIPy</span>
+                                    <span class="tech-tag">QGIS</span>
+                                    <span class="tech-tag">Análisis Geoeléctrico</span>
+                                </div>
+                            </div>
+                            <a href="geofisica.html" class="featured-link" aria-label="Ver proyecto SEV La Malinche">
+                                <span class="link-text">Ver Proyecto</span>
+                                <span class="link-icon">→</span>
+                            </a>
+                        </div>
 
-                <!-- Quick Navigation -->
-                <div class="quick-nav">
-                    <h4>Acceso Rápido</h4>
-                    <div class="quick-nav-items">
-                        <button class="quick-nav-btn" data-highlight="geofisica" aria-label="Destacar geofísica">
-                            <span class="quick-icon">🌎</span>
-                            <span class="quick-text">Geofísica</span>
-                        </button>
-                        <button class="quick-nav-btn" data-highlight="programming" aria-label="Destacar programación">
-                            <span class="quick-icon">💻</span>
-                            <span class="quick-text">Código</span>
-                        </button>
-                        <button class="quick-nav-btn" data-highlight="education" aria-label="Destacar educación">
-                            <span class="quick-icon">🎓</span>
-                            <span class="quick-text">Educación</span>
-                        </button>
-                        <button class="quick-nav-btn" data-highlight="all" aria-label="Mostrar todo">
-                            <span class="quick-icon">📋</span>
-                            <span class="quick-text">Ver Todo</span>
-                        </button>
+                        <!-- Project 2: HVSRLearn -->
+                        <div class="featured-project" data-category="programming" data-project="hvsrlearn">
+                            <div class="featured-background"></div>
+                            <div class="featured-content">
+                                <div class="featured-badge">
+                                    <span class="badge-icon">⭐</span>
+                                    <span class="badge-text">Proyecto Destacado</span>
+                                </div>
+                                <div class="featured-header">
+                                    <div class="featured-icon">💻</div>
+                                    <div class="featured-info">
+                                        <h3>HVSRLearn 2.0</h3>
+                                        <p>Software Python para análisis automático de ruido sísmico ambiental usando técnica HVSR con machine learning.</p>
+                                    </div>
+                                </div>
+                                <div class="featured-stats">
+                                    <div class="stat-group">
+                                        <span class="stat-number">2.0</span>
+                                        <span class="stat-label">Versión</span>
+                                    </div>
+                                    <div class="stat-group">
+                                        <span class="stat-number">Open</span>
+                                        <span class="stat-label">Source</span>
+                                    </div>
+                                    <div class="stat-group">
+                                        <span class="stat-number">ML</span>
+                                        <span class="stat-label">Powered</span>
+                                    </div>
+                                </div>
+                                <div class="featured-technologies">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">NumPy</span>
+                                    <span class="tech-tag">Matplotlib</span>
+                                    <span class="tech-tag">ObsPy</span>
+                                </div>
+                            </div>
+                            <a href="coding.html" class="featured-link" aria-label="Ver proyecto HVSRLearn">
+                                <span class="link-text">Ver Código</span>
+                                <span class="link-icon">→</span>
+                            </a>
+                        </div>
+
+                        <!-- Project 3: GPR Monterrey -->
+                        <div class="featured-project" data-category="geofisica" data-project="gpr-monterrey">
+                            <div class="featured-background"></div>
+                            <div class="featured-content">
+                                <div class="featured-badge">
+                                    <span class="badge-icon">⭐</span>
+                                    <span class="badge-text">Proyecto Destacado</span>
+                                </div>
+                                <div class="featured-header">
+                                    <div class="featured-icon">🌎</div>
+                                    <div class="featured-info">
+                                        <h3>Estudio GPR Monterrey</h3>
+                                        <p>Ground Penetrating Radar para detección de servicios subterráneos y caracterización del subsuelo urbano.</p>
+                                    </div>
+                                </div>
+                                <div class="featured-stats">
+                                    <div class="stat-group">
+                                        <span class="stat-number">2+ km</span>
+                                        <span class="stat-label">Perfiles</span>
+                                    </div>
+                                    <div class="stat-group">
+                                        <span class="stat-number">400MHz</span>
+                                        <span class="stat-label">Antena</span>
+                                    </div>
+                                    <div class="stat-group">
+                                        <span class="stat-number">Urbano</span>
+                                        <span class="stat-label">Ambiente</span>
+                                    </div>
+                                </div>
+                                <div class="featured-technologies">
+                                    <span class="tech-tag">GPRPy</span>
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">QGIS</span>
+                                </div>
+                            </div>
+                            <a href="geofisica.html" class="featured-link" aria-label="Ver estudio GPR Monterrey">
+                                <span class="link-text">Ver Estudio</span>
+                                <span class="link-icon">→</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-quicknav-below">
+                        <div class="card portfolio-info-card" role="region" aria-label="Resumen del portafolio">
+                            <h4>¿Qué encontrarás aquí?</h4>
+                            <p>Explora proyectos de geofísica aplicada, desarrollo de software científico, material educativo, publicaciones y más. Cada sección refleja mi experiencia y pasión por la innovación tecnológica en ciencias de la Tierra.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -864,33 +808,7 @@ function copyClabe() {
     }
 }
 
-// News toggle functionality
-function toggleNews(newsId) {
-    const toggle = document.querySelector(`[aria-controls="${newsId}"]`);
-    const content = document.getElementById(newsId);
-    
-    if (!toggle || !content) {
-        console.error('News toggle elements not found for:', newsId);
-        return;
-    }
-    
-    const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-    
-    // Toggle ARIA states
-    toggle.setAttribute('aria-expanded', !isExpanded);
-    content.setAttribute('aria-hidden', isExpanded);
-    
-    // Toggle visual states with force
-    if (isExpanded) {
-        content.classList.remove('expanded');
-        content.style.maxHeight = '0';
-        content.style.opacity = '0';
-    } else {
-        content.classList.add('expanded');
-        content.style.maxHeight = '500px';
-        content.style.opacity = '1';
-    }
-}
+
 
 // News filtering functionality
 function initNewsFilters() {
@@ -1019,15 +937,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Existing initialization code...
     initNewsFilters();
     initKeyboardNavigation();
-    
-    // Initialize news items state
-    const newsContents = document.querySelectorAll('.news-content');
-    newsContents.forEach(content => {
-        content.setAttribute('aria-hidden', 'true');
-        content.style.maxHeight = '0';
-        content.style.opacity = '0';
-    });
-    
+    // No toggle/expand for news: show all summaries directly
     console.log('News system initialized');
 });
 
@@ -1119,32 +1029,6 @@ function initFeaturedCarousel() {
     
     // Initialize first project
     showProject(0);
-}
-
-// Mobile navigation functionality
-const mobileNav = document.getElementById('mobileNav');
-const mobileNavClose = document.getElementById('mobileNavClose');
-const menuToggle = document.querySelector('.menu-toggle');
-
-menuToggle.addEventListener('click', () => {
-    mobileNav.style.display = 'block';
-    setTimeout(() => {
-        mobileNav.classList.add('open');
-    }, 10);
-});
-
-mobileNavClose.addEventListener('click', () => {
-    mobileNav.classList.remove('open');
-    setTimeout(() => {
-        mobileNav.style.display = 'none';
-    }, 300);
-});
-
-function closeMobileNav() {
-    mobileNav.classList.remove('open');
-    setTimeout(() => {
-        mobileNav.style.display = 'none';
-    }, 300);
 }
 </script>
 </html>
