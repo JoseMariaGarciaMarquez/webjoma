@@ -1,3 +1,105 @@
+/* --- TARJETAS Y DASHBOARD RESPONSIVO --- */
+@media (max-width: 700px) {
+  .card,
+  .portfolio-info-card,
+  .payment-card,
+  .mini-card,
+  .news-item,
+  .featured-project,
+  .about-cards,
+  .patreon-carousel-card {
+    max-width: 98vw !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .mini-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  .portfolio-dashboard {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  .portfolio-featured-col {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+  }
+  .featured-carousel {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+  }
+  .about-cards {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+  .news-container {
+    width: 100% !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
+/* --- LOGO Y HEADER RESPONSIVO --- */
+@media (max-width: 700px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.5rem 0.5rem 0 0.5rem !important;
+    gap: 0.5rem;
+  }
+  .header-brand {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 0.2rem;
+  }
+  .header-brand .logo {
+    display: block;
+    margin: 0 auto 0.2rem auto !important;
+    max-width: 140px !important;
+    min-width: 90px !important;
+    width: 30vw !important;
+    height: auto !important;
+    aspect-ratio: 1/1 !important;
+  }
+  .brand-info {
+    text-align: center !important;
+    width: 100%;
+  }
+  .main-nav {
+    width: 100%;
+    justify-content: center !important;
+    margin: 0.2rem 0 0.2rem 0 !important;
+  }
+  .nav-list {
+    flex-direction: row;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    width: 100%;
+    padding: 0;
+  }
+  .header-actions {
+    width: 100%;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0.2rem 0 0.2rem 0 !important;
+    gap: 0.5rem;
+  }
+  .menu-toggle {
+    margin-left: 0 !important;
+  }
+}
 /* --- CONTRASTE Y ACCESIBILIDAD GLOBAL --- */
 html, body {
   color: #222 !important;
