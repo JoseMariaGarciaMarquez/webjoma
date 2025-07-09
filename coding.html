@@ -164,6 +164,52 @@
             
             <div class="projects-container">
                 <div class="portfolio-grid projects-grid">
+                    <article class="portfolio-card project-card featured" role="article" aria-labelledby="pypozo-title">
+                        <div class="card-background"></div>
+                        <div class="project-image-container">
+                            <img src="images_web/pypozo.png" alt="Interfaz de PyPozo 2.0 - Software de análisis de pozos" class="project-image">
+                            <div class="project-overlay">
+                                <span class="project-status completed">Activo</span>
+                            </div>
+                        </div>
+                        <div class="card-content project-content">
+                            <div class="card-icon project-header">
+                                <span class="icon-electric">🛢️</span>
+                            </div>
+                            <h3 id="pypozo-title">PyPozo 2.0</h3>
+                            <p>Aplicación profesional de escritorio para el análisis de pozos petroleros y de agua subterránea. Alternativa open source a WellCAD, con interfaz moderna y herramientas automáticas para el análisis petrofísico estándar.</p>
+                            <div class="project-badges card-stats">
+                                <span class="stat tech-badge python">Python</span>
+                                <span class="stat tech-badge gui">PyQt5</span>
+                                <span class="stat tech-badge opensource">Open Source</span>
+                            </div>
+                            <div class="project-features">
+                                <h4>Características PyPozo Básico:</h4>
+                                <ul class="features-list">
+                                    <li><span class="feature-icon">📂</span> Carga archivos LAS y visualiza múltiples curvas de registros</li>
+                                    <li><span class="feature-icon">🔀</span> Selección, comparación y fusión de curvas de diferentes pozos</li>
+                                    <li><span class="feature-icon">🧮</span> Cálculos petrofísicos estándar: VCL, PHIE, Sw, permeabilidad, análisis litológico</li>
+                                    <li><span class="feature-icon">📈</span> Exportación de resultados y gráficos en formatos estándar</li>
+                                    <li><span class="feature-icon">⚡</span> Análisis rápido y herramientas automáticas</li>
+                                    <li><span class="feature-icon">🖥️</span> Interfaz moderna, personalizable y con paneles</li>
+                                    <li><span class="feature-icon">📝</span> Registro de actividades y logs</li>
+                                </ul>
+                                <div class="project-limitations" style="margin-top:0.7rem;">
+                                    <strong>Limitaciones de la versión básica:</strong>
+                                    <ul class="features-list">
+                                        <li><span class="feature-icon">🚫</span> Sin IA ni completado neural de curvas</li>
+                                        <li><span class="feature-icon">🚫</span> Sin análisis avanzado con machine learning</li>
+                                        <li><span class="feature-icon">🔒</span> Funciones premium reservadas para DLC</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://github.com/JoseMariaGarciaMarquez/pypozo" target="_blank" rel="noopener noreferrer" class="card-link project-link" aria-label="Ver código fuente de PyPozo 2.0 en GitHub">
+                            <span class="link-text">Ver Código</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </article>
+                    <!-- Proyecto anterior: VESPY -->
                     <article class="portfolio-card project-card featured" role="article" aria-labelledby="vespy-title">
                         <div class="card-background"></div>
                         <div class="project-image-container">
@@ -178,12 +224,10 @@
                             </div>
                             <h3 id="vespy-title">VESPY</h3>
                             <p>Aplicación avanzada para visualización y procesamiento de datos de Sondeo Eléctrico Vertical (VES). Diseñada especialmente para ingenieros y científicos en análisis de resistividad del subsuelo.</p>
-                            
                             <div class="project-badges card-stats">
                                 <span class="stat tech-badge python">Python</span>
                                 <span class="stat tech-badge gui">PyQt5</span>
                             </div>
-                            
                             <div class="project-features">
                                 <h4>Características Principales:</h4>
                                 <ul class="features-list">
@@ -214,13 +258,11 @@
                             </div>
                             <h3 id="hvsrlearn-title">HVSRLearn 2.0</h3>
                             <p>Aplicación revolucionaria para cálculo y análisis de la Relación Espectral Horizontal a Vertical (HVSR). Completamente rediseñada con nuevas funcionalidades y arquitectura mejorada.</p>
-                            
                             <div class="project-badges card-stats">
                                 <span class="stat tech-badge python">Python</span>
                                 <span class="stat tech-badge gui">Tkinter</span>
                                 <span class="stat tech-badge new">v2.0</span>
                             </div>
-                            
                             <div class="project-features">
                                 <h4>Novedades v2.0:</h4>
                                 <ul class="features-list">
@@ -237,39 +279,34 @@
                         </a>
                     </article>
                 </div>
-                
-                <!-- GitHub Stats Section -->
-                <div class="github-section">
-                    <div class="github-header">
-                        <h3>
-                            <span class="github-icon">🔗</span>
-                            Contribuciones Open Source
-                        </h3>
-                        <p>Comprometido con el desarrollo de herramientas abiertas para la comunidad científica</p>
-                    </div>
-                    <div class="github-stats">
-                        <div class="stat-card">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Repositorios</span>
+                <!-- TARJETA APARTE: Contribuciones Open Source -->
+                <div class="portfolio-card project-card featured" style="max-width:500px;margin:2rem auto 0 auto;">
+                    <div class="card-background"></div>
+                    <div class="card-content project-content">
+                        <div class="card-icon project-header">
+                            <span class="icon-github">🔗</span>
                         </div>
-                        <div class="stat-card">
-                            <span class="stat-number">100+</span>
-                            <span class="stat-label">Commits</span>
+                        <h3 id="opensource-title">Contribuciones Open Source</h3>
+                        <p>Comprometido con el desarrollo de herramientas abiertas para la comunidad científica. Más de 5 repositorios, 100+ commits y proyectos en Python.</p>
+                        <div class="project-badges card-stats">
+                            <span class="stat tech-badge python">Python</span>
+                            <span class="stat tech-badge opensource">Open Source</span>
+                            <span class="stat tech-badge github">GitHub</span>
                         </div>
-                        <div class="stat-card">
-                            <span class="stat-number">Python</span>
-                            <span class="stat-label">Lenguaje Principal</span>
+                        <div class="project-features">
+                            <h4>Destacados:</h4>
+                            <ul class="features-list">
+                                <li><span class="feature-icon">📦</span> 5+ Repositorios públicos</li>
+                                <li><span class="feature-icon">📝</span> 100+ Commits</li>
+                                <li><span class="feature-icon">🐍</span> Python como lenguaje principal</li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="github-links">
-                        <a href="https://github.com/JoseMariaGarciaMarquez" target="_blank" rel="noopener noreferrer" class="github-link">
-                            <span class="link-icon">👤</span>
-                            Ver Perfil Completo
+                        <a href="https://github.com/JoseMariaGarciaMarquez" target="_blank" rel="noopener noreferrer" class="card-link project-link" aria-label="Ver perfil completo en GitHub" style="margin-top:1rem;display:inline-block;">
+                            <span class="link-text">Ver Perfil Completo</span>
+                            <span class="link-arrow">→</span>
                         </a>
                     </div>
                 </div>
-            </div>
-        </section>
     </main>
     
     <footer>
