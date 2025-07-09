@@ -11,48 +11,87 @@
         }
         .patreon-band {
             width: 100vw;
-            height: 70px;
-            background: rgba(255,127,42,0.95);
+            min-height: 70px;
+            background: linear-gradient(90deg, #ff7f2a 0%, #ffb347 100%);
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            flex-direction: row;
+            align-items: center;
             overflow: hidden;
             font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 4px 24px 0 rgba(0,0,0,0.13);
+            border-radius: 18px 18px 0 0;
+            position: relative;
         }
         .patreon-label {
             font-weight: bold;
             color: #fff;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             letter-spacing: 2px;
             white-space: nowrap;
             margin-left: 32px;
-            margin-bottom: 2px;
+            margin-right: 18px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+        }
+        .patreon-label::before {
+            content: "⭐";
+            font-size: 1.2em;
+            margin-right: 0.3em;
+            filter: drop-shadow(0 1px 2px #c95a00);
+        }
+        .patreon-marquee-wrapper {
+            flex: 1 1 auto;
+            overflow: hidden;
+            position: relative;
+            min-width: 0;
+            display: flex;
+            align-items: center;
         }
         .patreon-marquee {
             display: inline-block;
             white-space: nowrap;
-            animation: marquee 35s linear infinite;
-            font-size: 1.2rem;
+            animation: marquee 32s linear infinite;
+            font-size: 1.18rem;
             color: #fff;
-            margin-left: 32px;
-        }
-        .patreon-name {
-            margin: 0 32px 0 0;
-            display: inline-block;
-            font-weight: 500;
-            letter-spacing: 1px;
+            margin-left: 0;
+            padding-bottom: 2px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.13);
+            will-change: transform;
         }
         @keyframes marquee {
-            0% { transform: translateX(100vw);}
+            0% { transform: translateX(100%);}
             100% { transform: translateX(-100%);}
+        }
+        @media (max-width: 600px) {
+            .patreon-band {
+                min-height: 48px;
+                border-radius: 10px 10px 0 0;
+            }
+            .patreon-label {
+                font-size: 1.02rem;
+                margin-left: 10px;
+                margin-right: 8px;
+            }
+            .patreon-marquee {
+                font-size: 0.98rem;
+            }
+            .patreon-name {
+                margin: 0 16px 0 0;
+                padding: 0.13em 0.6em;
+                font-size: 0.97rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="patreon-band">
         <span class="patreon-label">PATREONS:</span>
-        <div class="patreon-marquee" id="patreon-marquee">
-            <!-- Los nombres se llenan con JS -->
+        <div class="patreon-marquee-wrapper">
+            <div class="patreon-marquee" id="patreon-marquee">
+                <!-- Los nombres se llenan con JS -->
+            </div>
         </div>
     </div>
     <script>

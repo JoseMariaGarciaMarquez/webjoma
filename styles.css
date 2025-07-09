@@ -524,21 +524,28 @@ header[role="banner"] > * {
 }
 
 .nav-list {
-    display: flex;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.5rem 2rem;
     list-style: none;
     margin: 0;
     padding: 0;
+    justify-items: center;
+    align-items: center;
+    width: max-content;
 }
 
 .nav-link {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.35rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 18px;
     transition: all 0.3s ease;
     position: relative;
+    text-align: center;
 }
 
 .nav-link:hover,
