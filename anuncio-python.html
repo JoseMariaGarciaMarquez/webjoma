@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 ¡Nuevo Curso Gratuito de Python! | JOMA</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .announcement-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .announcement-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .announcement-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-section {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .course-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid #667eea;
+        }
+
+        .highlight-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-mega {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-mega:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            color: white;
+        }
+
+        .testimonial-preview {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .social-proof {
+            background: #e8f5e8;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+            border: 2px solid #27ae60;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .countdown-timer {
+            background: #ff6b6b;
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 1rem 0;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .announcement-title {
+                font-size: 2rem;
+            }
+            
+            .course-highlights {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <img src="images_web/jomac.png" alt="JOMA">
+                JOMA
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="geofisica.html">Geofísica</a></li>
+                <li><a href="coding.html">Programación</a></li>
+                <li><a href="material.html">Material</a></li>
+                <li><a href="social.html">Social</a></li>
+                <li><a href="publications.html">Publicaciones</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="calculadora.html">🧮 Calculadora</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Banner Principal del Anuncio -->
+        <div class="announcement-banner">
+            <div class="announcement-title">
+                🎉 ¡NUEVO CURSO! 🎉
+            </div>
+            <div class="announcement-subtitle">
+                Curso GRATUITO de Python para Principiantes ya disponible
+            </div>
+            <div style="font-size: 3rem; margin: 1rem 0;">🐍�✨</div>
+        </div>
+
+        <!-- Información Principal -->
+        <div class="cta-section">
+            <h2>🚀 Python desde Cero para Principiantes</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                Un curso completamente <strong>GRATUITO</strong> diseñado para personas que nunca han programado. 
+                Aprende Python desde los conceptos más básicos de manera sencilla y práctica.
+            </p>
+            
+            <!-- Botones de Acción Principales -->
+            <a href="https://github.com/JoseMariaGarciaMarquez/curso-python-principiantes" target="_blank" class="btn-mega">
+                📚 Acceder al Curso GRATIS
+            </a>
+            <a href="https://github.com/JoseMariaGarciaMarquez/curso-python-principiantes" target="_blank" class="btn-mega" style="background: linear-gradient(45deg, #2ecc71, #27ae60);">
+                📋 Ver en GitHub
+            </a>
+        </div>
+
+        <!-- Contador de Urgencia -->
+        <div class="countdown-timer">
+            ⏰ ¡ACCESO DISPONIBLE AHORA! • Curso básico perfecto para empezar a programar
+        </div>
+
+        <!-- Aspectos Destacados del Curso -->
+        <div class="course-highlights">
+            <div class="highlight-card">
+                <div class="highlight-icon">🎯</div>
+                <h3>100% Gratuito</h3>
+                <p>Sin costos ocultos, sin suscripciones. Todo el contenido disponible en GitHub.</p>
+            </div>
+            
+            <div class="highlight-card">
+                <div class="highlight-icon">👶</div>
+                <h3>Para Principiantes</h3>
+                <p>Diseñado especialmente para personas que nunca han programado.</p>
+            </div>
+            
+            <div class="highlight-card">
+                <div class="highlight-icon">💻</div>
+                <h3>Práctico y Sencillo</h3>
+                <p>Aprende paso a paso con ejemplos claros y ejercicios prácticos.</p>
+            </div>
+            
+            <div class="highlight-card">
+                <div class="highlight-icon">�</div>
+                <h3>Fundamentos Sólidos</h3>
+                <p>Base sólida para continuar con cualquier especialización en Python.</p>
+            </div>
+        </div>
+
+        <!-- Lo que Aprenderás -->
+        <div style="background: #f1f3f4; padding: 2rem; border-radius: 15px; margin: 2rem 0;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">📚 ¿Qué Aprenderás?</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h4>🐍 Introducción a Python</h4>
+                    <p>Qué es Python, instalación y configuración del entorno de desarrollo</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h4>📊 Variables y Tipos de Datos</h4>
+                    <p>Números, texto, listas y conceptos básicos fundamentales</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h4>� Estructuras de Control</h4>
+                    <p>Condicionales (if), bucles (for, while) y control de flujo</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h4>🎯 Funciones</h4>
+                    <p>Crear y usar funciones para organizar tu código</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h4>📚 Ejercicios Prácticos</h4>
+                    <p>Proyectos sencillos para practicar lo aprendido</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h4>🎓 Próximos Pasos</h4>
+                    <p>Cómo continuar tu aprendizaje después del curso básico</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial Preview -->
+        <div class="testimonial-preview">
+            <h3>💬 Lo que dicen los estudiantes:</h3>
+            <blockquote style="font-style: italic; font-size: 1.1rem; margin: 1rem 0;">
+                "Perfecto para empezar en programación. Las explicaciones son muy claras 
+                y los ejercicios te ayudan a practicar paso a paso."
+            </blockquote>
+            <p><strong>- Estudiante del curso</strong></p>
+        </div>
+
+        <!-- Prueba Social -->
+        <div class="social-proof">
+            <h3>✅ Curso Básico de Calidad</h3>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; margin: 1rem 0;">
+                <div>👶 <strong>Principiantes</strong></div>
+                <div>📚 <strong>Paso a paso</strong></div>
+                <div>🎯 <strong>Práctico</strong></div>
+                <div>🌟 <strong>100%</strong> gratuito</div>
+            </div>
+        </div>
+
+        <!-- FAQ Rápido -->
+        <div style="background: white; padding: 2rem; border-radius: 15px; margin: 2rem 0; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <h3 style="text-align: center; margin-bottom: 2rem;">❓ Preguntas Frecuentes</h3>
+            
+            <div style="text-align: left;">
+                <h4>🆓 ¿Realmente es gratis?</h4>
+                <p>Sí, completamente gratis. Todo el contenido está en GitHub sin restricciones.</p>
+                
+                <h4>⏱️ ¿Cuánto tiempo toma completarlo?</h4>
+                <p>A tu ritmo. Perfecto para dedicar unas horas por semana y aprender gradualmente.</p>
+                
+                <h4>💻 ¿Necesito experiencia previa?</h4>
+                <p>¡Para nada! Este curso está diseñado específicamente para principiantes absolutos.</p>
+                
+                <h4>🎓 ¿Incluye certificado?</h4>
+                <p>Es un curso autodidacta. El valor está en el conocimiento y proyectos que desarrollarás.</p>
+            </div>
+        </div>
+
+        <!-- Call to Action Final -->
+        <div class="cta-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+            <h2 style="color: white;">🚀 ¡Comienza a Programar HOY!</h2>
+            <p style="font-size: 1.2rem; margin: 1rem 0;">
+                Da el primer paso en el mundo de la programación con Python
+            </p>
+            
+            <div style="margin: 2rem 0;">
+                <a href="https://github.com/JoseMariaGarciaMarquez/curso-python-principiantes" target="_blank" 
+                   class="btn-mega" style="background: white; color: #667eea; margin: 0.5rem;">
+                    📚 Acceder al Curso GRATIS
+                </a>
+                <br>
+                <a href="https://github.com/JoseMariaGarciaMarquez" target="_blank" 
+                   class="btn-mega" style="background: rgba(255,255,255,0.2); margin: 0.5rem;">
+                    🌟 Seguir en GitHub
+                </a>
+            </div>
+            
+            <p style="font-size: 0.9rem; opacity: 0.8;">
+                💡 <strong>Tip:</strong> Dale ⭐ star al repositorio para no perderte las actualizaciones
+            </p>
+        </div>
+
+        <!-- Información de Contacto -->
+        <div style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 15px; margin: 2rem 0;">
+            <h3>💬 ¿Tienes Preguntas?</h3>
+            <p>Contáctame directamente para resolver cualquier duda sobre el curso:</p>
+            
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin: 1rem 0;">
+                <a href="https://www.linkedin.com/in/josé-maría-garcía-márquez-556a75199" target="_blank" 
+                   class="btn btn-primary">
+                    💼 LinkedIn
+                </a>
+                <a href="mailto:josegm@geofisa.com" class="btn btn-secondary">
+                    📧 Email
+                </a>
+                <a href="https://github.com/JoseMariaGarciaMarquez" target="_blank" class="btn btn-secondary">
+                    🐱 GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.youtube.com/@jomaing" target="_blank">📺</a>
+                <a href="https://www.instagram.com/joma_ing" target="_blank">📷</a>
+                <a href="https://twitch.tv/chemitas96" target="_blank">🟣</a>
+                <a href="https://discord.gg/ZzMU7haa" target="_blank">🎮</a>
+                <a href="https://www.linkedin.com/in/josé-maría-garcía-márquez-556a75199" target="_blank">💼</a>
+                <a href="https://github.com/JoseMariaGarciaMarquez" target="_blank">�</a>
+                <a href="https://www.reddit.com/user/Chemitatas/" target="_blank">🤖</a>
+                <a href="https://www.reddit.com/r/Geofisica/" target="_blank">🌍</a>
+            </div>
+            <p>&copy; 2024 José María García Márquez. Todos los derechos reservados.</p>
+            <p>Contacto: <a href="mailto:josegm@geofisa.com">josegm@geofisa.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Menú móvil
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

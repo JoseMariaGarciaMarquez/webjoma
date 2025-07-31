@@ -3,71 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <title>Patreons</title>
+    <link rel="icon" href="images_web/jomac.png" type="image/png">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: transparent;
+        .patreon-section {
+            display: inline-block;
+            margin-right: 32px;
+            vertical-align: middle;
         }
+        .patreon-section-label {
+            display: none;
+        }
+        .patreon-section-img {
+            width: 38px;
+            height: 38px;
+            object-fit: contain;
+            margin-bottom: 4px;
+            margin-right: 6px;
+            vertical-align: middle;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #2222;
+        }
+        /* --- LIMPIEZA Y AJUSTE DE ESTILOS --- */
         .patreon-band {
-            width: 100vw;
-            min-height: 70px;
+            width: 800px;
+            height: 100px;
             background: linear-gradient(90deg, #ff7f2a 0%, #ffb347 100%);
             display: flex;
             flex-direction: row;
-            align-items: center;
+            align-items: flex-start;
             overflow: hidden;
             font-family: 'Segoe UI', Arial, sans-serif;
             box-shadow: 0 4px 24px 0 rgba(0,0,0,0.13);
-            border-radius: 18px 18px 0 0;
+            border-radius: 18px;
             position: relative;
+            padding: 8px 18px;
+            box-sizing: border-box;
         }
-        .patreon-label {
-            font-weight: bold;
-            color: #fff;
-            font-size: 1.25rem;
-            letter-spacing: 2px;
-            white-space: nowrap;
-            margin-left: 32px;
-            margin-right: 18px;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        .patreon-marquee-vertical {
             display: flex;
-            align-items: center;
-            gap: 0.5em;
-        }
-        .patreon-label::before {
-            content: "⭐";
-            font-size: 1.2em;
-            margin-right: 0.3em;
-            filter: drop-shadow(0 1px 2px #c95a00);
-        }
-        .patreon-marquee-wrapper {
-            flex: 1 1 auto;
-            overflow: hidden;
-            position: relative;
-            min-width: 0;
-            display: flex;
-            align-items: center;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: stretch;
+            width: 100%;
+            height: 84px;
+            gap: 0;
+            padding: 0;
         }
         .patreon-marquee {
-            display: inline-block;
-            white-space: nowrap;
-            animation: marquee 32s linear infinite;
-            font-size: 1.18rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.08rem;
             color: #fff;
             margin-left: 0;
-            padding-bottom: 2px;
+            padding: 0 10px;
             text-shadow: 0 2px 8px rgba(0,0,0,0.13);
-            will-change: transform;
+            min-width: 0;
+            flex: 1 1 0;
+            height: 100%;
+            border-radius: 0;
+            transition: background 0.5s;
+            text-align: center;
+            overflow: hidden;
         }
-        @keyframes marquee {
-            0% { transform: translateX(100%);}
-            100% { transform: translateX(-100%);}
+        .patreon-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #2222;
+            border: 2px solid #ff7f2a;
+            min-width: 60px;
+            max-width: 80px;
+            height: 100%;
+        }
+        .patreon-level-label {
+            display: block;
+            font-size: 1em;
+            font-weight: 700;
+            margin-bottom: 2px;
+            letter-spacing: 1px;
+            text-shadow: 0 1px 4px #2222;
+        }
+        .marquee-level3 .patreon-level-label {
+            color: #fff;
+            font-size: 1.08em;
+            font-weight: 900;
+            text-shadow: 0 0 12px #3a8cff, 0 0 24px #00eaff;
+        }
+        .marquee-level2 .patreon-level-label {
+            color: #fff;
+            font-size: 1em;
+            font-weight: 500;
+            text-shadow: 0 0 8px #ff9800;
+        }
+        .marquee-level1 .patreon-level-label {
+            color: #222;
+            font-size: 0.98em;
+            font-weight: 400;
+            text-shadow: 0 0 2px #ffe066;
+        }
+        .marquee-gratis .patreon-level-label {
+            color: #888;
+            font-size: 0.96em;
+            font-weight: 400;
+            opacity: 0.7;
+            text-shadow: none;
+        }
+        .marquee-level3 {
+            font-size: 1.22rem !important;
+            font-weight: 900 !important;
+            box-shadow: 0 0 48px #3a8cffcc, 0 0 0 10px #fff !important;
+            border: 5px solid #1976d2 !important;
+            background: linear-gradient(90deg, #0a1a3a 0%, #3a8cff 100%) !important;
+            color: #fff !important;
+            filter: drop-shadow(0 0 48px #3a8cff) drop-shadow(0 0 16px #00eaff) !important;
+            animation: level3PulseBlue 1.2s infinite alternate, level3BorderBlue 2.5s infinite alternate !important;
+            text-align: center !important;
+            border-radius: 16px !important;
+            transition: box-shadow 0.4s, background 0.4s;
+        }
+        .marquee-level2 {
+            border-left: 2.5px solid #ff9800;
+            background: linear-gradient(90deg, #ffe0b2 0%, #ff9800 100%);
+            color: #fff;
+            font-weight: 500;
+            box-shadow: 0 2px 12px #ff980044;
+            border: 2.5px solid #ff9800;
+            border-radius: 12px;
+            transition: box-shadow 0.4s, background 0.4s;
+        }
+        .marquee-level1 {
+            border-left: 2px solid #ffe066;
+            background: linear-gradient(90deg, #fffde7 0%, #ffe066 100%);
+            color: #222;
+            font-weight: 400;
+            box-shadow: 0 1px 6px #ffe06644;
+            border: 1.5px solid #ffe066;
+            border-radius: 8px;
+            transition: box-shadow 0.4s, background 0.4s;
+        }
+        .marquee-gratis {
+            border-left: 1px solid #e0e0e0;
+            background: #fffde7;
+            color: #888;
+            font-weight: 400;
+            opacity: 0.7;
+            border-radius: 6px;
+            box-shadow: none;
+            transition: background 0.4s;
+        }
+        .patreon-name {
+            max-width: 110px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: inherit;
+        }
+        .marquee-level3 .level3-icon {
+            font-size: 2em;
+            margin-right: 0.3em;
+            vertical-align: middle;
+            animation: iconGlow 1.2s infinite alternate;
+            color: #ffd700;
+            text-shadow: 0 0 24px #ffd700, 0 0 48px #ff7f2a;
+        }
+        @keyframes level3Bg {
+            0% {background-position:0% 50%}
+            50% {background-position:100% 50%}
+            100% {background-position:0% 50%}
+        }
+        @keyframes level3Pulse {
+        }
+        @keyframes level3PulseBlue {
+            0% { box-shadow: 0 8px 32px #3a8cffcc, 0 0 0 6px #fff; }
+            100% { box-shadow: 0 16px 64px #00eaff88, 0 0 0 10px #3a8cff; }
+        }
+        @keyframes level3Border {
+        }
+        @keyframes level3BorderBlue {
+            0% { border-color: #3a8cff; }
+            100% { border-color: #00eaff; }
+        }
+        @keyframes iconGlow {
+            0% { filter: drop-shadow(0 0 4px #ffd700); }
+            100% { filter: drop-shadow(0 0 16px #ff7f2a); }
         }
         @media (max-width: 600px) {
             .patreon-band {
-                min-height: 48px;
-                border-radius: 10px 10px 0 0;
+                min-height: 32px;
+                border-radius: 8px 8px 0 0;
+                padding-top: 2px;
+                padding-bottom: 2px;
             }
             .patreon-label {
                 font-size: 1.02rem;
@@ -78,24 +209,29 @@
                 font-size: 0.98rem;
             }
             .patreon-name {
-                margin: 0 16px 0 0;
-                padding: 0.13em 0.6em;
-                font-size: 0.97rem;
+                margin: 0 10px 0 0;
+                padding: 0.09em 0.4em;
+                font-size: 0.93rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="patreon-band">
-        <span class="patreon-label">PATREONS:</span>
-        <div class="patreon-marquee-wrapper">
-            <div class="patreon-marquee" id="patreon-marquee">
-                <!-- Los nombres se llenan con JS -->
+        <!-- Eliminado el letrero de texto -->
+        <div class="patreon-marquee-vertical">
+            <div class="patreon-marquee patreon-logo" id="patreon-logo">
+                <img src="images_web/patreon.png" alt="Patreon" class="patreon-section-img" />
             </div>
+            <div class="patreon-marquee marquee-level3" id="patreon-marquee-level3"></div>
+            <div class="patreon-marquee marquee-level2" id="patreon-marquee-level2"></div>
+            <div class="patreon-marquee marquee-level1" id="patreon-marquee-level1"></div>
+            <div class="patreon-marquee marquee-gratis" id="patreon-marquee-gratis"></div>
         </div>
     </div>
     <script>
-        const patreons = [
+        // Listas de prueba por nivel
+        const patreonsGratis = [
             "Abimelet Hernández",
             "Carlos Alberto Collaguazo Torres",
             "Christhofer Omar Urquizo Quiroz",
@@ -119,8 +255,39 @@
             "Jesús Limón",
             "Erik Robinson Trincado Cabezas"
         ];
-        document.getElementById('patreon-marquee').innerHTML =
-            patreons.map(name => `<span class="patreon-name">${name}</span>`).join('');
+        // Anuncio entre líneas para los niveles 1, 2 y 3
+        const anuncioCopilot = ["Tu nombre", "Puede ir", "AQUÍ"];
+        const patreonsNivel1 = anuncioCopilot;
+        const patreonsNivel2 = anuncioCopilot;
+        const patreonsNivel3 = anuncioCopilot;
+
+        // Animación por sección
+        function cycleNames(names, elId, label, delay) {
+            let idx = 0;
+            function show() {
+                document.getElementById(elId).innerHTML = `
+                  <img src='images_web/patreon.png' alt='Patreon' class='patreon-section-img' />
+                  <span class="patreon-name">${names[idx]}</span>`;
+                idx = (idx + 1) % names.length;
+                setTimeout(show, delay);
+            }
+            show();
+        }
+        function cycleNames(names, elId, label, delay, extraHtml = false) {
+            let idx = 0;
+            function show() {
+                let labelHtml = `<span class='patreon-level-label'>${label}</span>`;
+                let nameHtml = `<span class='patreon-name${extraHtml ? " level3" : ""}'>${names[idx]}</span>`;
+                document.getElementById(elId).innerHTML = `${labelHtml}<br>${nameHtml}`;
+                idx = (idx + 1) % names.length;
+                setTimeout(show, delay);
+            }
+            show();
+        }
+        cycleNames(patreonsNivel3, 'patreon-marquee-level3', 'Nivel 3', 6000, true);
+        cycleNames(patreonsNivel2, 'patreon-marquee-level2', 'Nivel 2', 4000);
+        cycleNames(patreonsNivel1, 'patreon-marquee-level1', 'Nivel 1', 2500);
+        cycleNames(patreonsGratis, 'patreon-marquee-gratis', 'Gratis', 1200);
     </script>
 </body>
 </html>

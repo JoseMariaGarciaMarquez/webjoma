@@ -3,278 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publicaciones & Newsletter - JOMA</title>
+    <title>Publicaciones Científicas - José María García Márquez</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images_web/jomac.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images_web/jomac.png">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Publicaciones científicas, artículos de investigación y papers sobre geofísica aplicada por José María García Márquez">
+    <meta name="keywords" content="publicaciones científicas, artículos geofísica, research papers, investigación, geociencias">
+    <meta name="author" content="José María García Márquez">
 </head>
 <body>
-    <!-- Simple Header for Secondary Pages -->
-    <header class="secondary-page-header" role="banner">
-        <div class="header-container">
-            <div class="header-brand">
-                <a href="index.html" class="brand-link" aria-label="Volver al inicio">
-                    <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
-                    <div class="brand-info">
-                        <h1>JOMA</h1>
-                        <span class="brand-subtitle">Publicaciones</span>
-                    </div>
-                </a>
-            </div>
-            
-            <nav class="secondary-nav" role="navigation" aria-label="Navegación secundaria">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">🏠 Inicio</a></li>
-                    <li><a href="geofisica.html" class="nav-link">🌍 Geofísica</a></li>
-                    <li><a href="coding.html" class="nav-link">💻 Programación</a></li>
-                    <li><a href="social.html" class="nav-link">📱 Social</a></li>
-                    <li><a href="material.html" class="nav-link">📚 Material</a></li>
-                    <li><a href="publications.html" class="nav-link active">📄 Publicaciones</a></li>
-                </ul>
-            </nav>
-
-            <button class="menu-toggle" aria-label="Abrir menú móvil" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <img src="images_web/jomac.png" alt="JOMA">
+                JOMA
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="geofisica.html">Geofísica</a></li>
+                <li><a href="coding.html">Programación</a></li>
+                <li><a href="material.html">Material</a></li>
+                <li><a href="social.html">Social</a></li>
+                <li><a href="publications.html" class="active">Publicaciones</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </nav>
     </header>
-    
-    <!-- Mobile Navigation Menu -->
-    <div class="mobile-nav" id="mobileNav">
-        <div class="mobile-nav-header">
-            <div class="header-brand">
-                <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
-                <div class="brand-info">
-                    <h1>JOMA</h1>
-                    <span class="brand-subtitle">Publicaciones</span>
+
+    <section class="hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> 
+                <span>›</span> 
+                <span>Publicaciones</span>
+            </div>
+            <h1>Publicaciones y Contribuciones</h1>
+            <p class="subtitle">Divulgación científica y desarrollo de herramientas</p>
+            <p class="description">
+                Contribuciones a la divulgación científica, desarrollo de software libre para geofísica y recursos educativos. 
+                Enfocado en hacer la geofísica más accesible a través de herramientas open source y contenido educativo.
+            </p>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Proyectos de Software Destacados -->
+        <section class="section">
+            <div class="section-title">Proyectos de Software</div>
+            <div class="section-subtitle">Herramientas open source para la comunidad geofísica</div>
+            
+            <div class="grid grid-2">
+                <!-- PyPozo 2.0 -->
+                <div class="card featured">
+                    <h3>PyPozo 2.0</h3>
+                    <div class="blog-meta">
+                        <span class="meta-tag featured-tag">Proyecto Principal</span>
+                        <span class="meta-tag">Python</span>
+                        <span class="meta-tag">Open Source</span>
+                    </div>
+                    <p>Librería Python para análisis y visualización de datos de pozos de agua. Herramienta completa para procesamiento de registros geofísicos de pozos.</p>
+                    <ul class="features-list">
+                        <li>✓ Análisis de registros geofísicos</li>
+                        <li>✓ Visualización interactiva</li>
+                        <li>✓ Interpretación hidrogeológica</li>
+                        <li>✓ Documentación completa</li>
+                        <li>✓ Ejemplos de uso práctico</li>
+                    </ul>
+                    <a href="https://github.com/JoseMariaGarciaMarquez/PyPozo" target="_blank" class="btn btn-primary">� Ver en GitHub</a>
+                </div>
+
+                <!-- hvsrlearn 2.0 -->
+                <div class="card">
+                    <h3>hvsrlearn 2.0</h3>
+                    <div class="blog-meta">
+                        <span class="meta-tag">Sismología</span>
+                        <span class="meta-tag">Machine Learning</span>
+                        <span class="meta-tag">Python</span>
+                    </div>
+                    <p>Herramienta avanzada para análisis HVSR (Horizontal to Vertical Spectral Ratio) con técnicas de machine learning para interpretación automatizada.</p>
+                    <ul class="features-list">
+                        <li>✓ Procesamiento automático HVSR</li>
+                        <li>✓ Algoritmos de machine learning</li>
+                        <li>✓ Microzonificación sísmica</li>
+                        <li>✓ Análisis de ruido sísmico</li>
+                        <li>✓ Interfaz amigable</li>
+                    </ul>
+                    <a href="https://github.com/JoseMariaGarciaMarquez/hvsrlearn" target="_blank" class="btn btn-outline">� Ver Proyecto</a>
                 </div>
             </div>
-            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Cerrar menú">×</button>
-        </div>
-        <ul class="mobile-nav-links">
-            <li><a href="index.html" onclick="closeMobileNav()">🏠 Inicio</a></li>
-            <li><a href="geofisica.html" onclick="closeMobileNav()">🌍 Geofísica</a></li>
-            <li><a href="coding.html" onclick="closeMobileNav()">💻 Programación</a></li>
-            <li><a href="social.html" onclick="closeMobileNav()">📱 Social</a></li>
-            <li><a href="material.html" onclick="closeMobileNav()">📚 Material</a></li>
-            <li><a href="publications.html" onclick="closeMobileNav()" class="active">📄 Publicaciones</a></li>
-            <li><a href="blog.html" onclick="closeMobileNav()">✍️ Blog</a></li>
-        </ul>
-    </div>
-    
-    <main id="main" role="main">
-        <!-- Hero Section -->
-        <section class="page-hero publications-hero" aria-labelledby="hero-heading">
-            <div class="hero-content-wrapper">
-                <div class="hero-text-content">
-                    <h2 id="hero-heading">
-                        <span class="hero-subtitle">📚 Publicaciones</span>
-                        <span class="hero-title">Investigación y Divulgación</span>
-                    </h2>
-                    <p class="hero-description">
-                        Artículos técnicos, investigaciones y newsletter con las últimas novedades en geofísica aplicada. 
-                        Comparto conocimientos y descubrimientos para contribuir al avance de la ciencia.
-                    </p>
-                    <div class="hero-stats">
-                        <div class="stat-badge">
-                            <span class="stat-icon">📄</span>
-                            <span class="stat-text">Artículos</span>
-                        </div>
-                        <div class="stat-badge">
-                            <span class="stat-icon">📧</span>
-                            <span class="stat-text">Newsletter</span>
-                        </div>
-                        <div class="stat-badge">
-                            <span class="stat-icon">🔬</span>
-                            <span class="stat-text">Investigación</span>
+        </section>
+
+        <!-- Artículos y Divulgación -->
+        <section class="section">
+            <div class="section-title">Artículos de Divulgación</div>
+            <div class="section-subtitle">Contribuciones a blogs y plataformas educativas</div>
+            
+            <!-- 2024 -->
+            <h3 style="color: #2c3e50; margin-bottom: 1.5rem;">📅 2024</h3>
+            <div class="grid grid-1">
+                <div class="card">
+                    <div class="project-header">
+                        <div class="project-icon">📊</div>
+                        <div>
+                            <h4>FQLearn: Visualización de Datos</h4>
+                            <div class="blog-meta">
+                                <span class="meta-tag journal-tag">Open Science Labs</span>
+                                <span class="meta-tag">Divulgación</span>
+                                <span class="meta-tag">Python</span>
+                            </div>
                         </div>
                     </div>
+                    <p><strong>Plataforma:</strong> Open Science Labs Blog</p>
+                    <p><strong>Descripción:</strong> Artículo sobre visualización de datos científicos usando Python, enfocado en herramientas para análisis geofísicos y presentación de resultados de manera efectiva.</p>
+                    <a href="https://opensciencelabs.org/blog/fqlearn-visualizacion-datos/" target="_blank" class="btn btn-outline">📄 Leer Artículo</a>
                 </div>
-                <div class="hero-visual">
-                    <div class="publications-showcase">
-                        <div class="floating-elements">
-                            <div class="floating-element paper">📄</div>
-                            <div class="floating-element newsletter">📧</div>
-                            <div class="floating-element research">�</div>
-                            <div class="floating-element data">�</div>
+            </div>
+        </section>
+
+        <!-- Proyectos en Desarrollo -->
+        <section class="section">
+            <div class="section-title">Proyectos en Desarrollo</div>
+            <div class="section-subtitle">Próximas herramientas y recursos</div>
+            
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Dashboard Apps</h3>
+                    <p>Aplicaciones web interactivas para visualización y análisis de datos geofísicos en tiempo real.</p>
+                    <div class="meta-tag">En desarrollo</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">�</div>
+                    <h3>Renovación Patreon</h3>
+                    <p>Actualización de la plataforma de patrocinio con nuevos niveles y beneficios para suscriptores.</p>
+                    <div class="meta-tag">Próximamente</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">�</div>
+                    <h3>Nuevos Tutoriales</h3>
+                    <p>Series de tutoriales avanzados sobre procesamiento de datos geofísicos y Python científico.</p>
+                    <div class="meta-tag">En progreso</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plataformas de Apoyo -->
+        <section class="section">
+            <div class="section-title">Apoya el Proyecto</div>
+            <div class="section-subtitle">Contribuye al desarrollo de contenido educativo y herramientas open source</div>
+            
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="project-header">
+                        <div class="project-icon">☕</div>
+                        <div>
+                            <h4>Buy Me a Coffee</h4>
+                            <div class="blog-meta">
+                                <span class="meta-tag">Donaciones</span>
+                                <span class="meta-tag">Una vez</span>
+                            </div>
                         </div>
+                    </div>
+                    <p>Apoya el desarrollo de herramientas y contenido educativo con una contribución única. Cada donación ayuda a mantener los proyectos open source.</p>
+                    <div class="project-actions">
+                        <a href="https://buymeacoffee.com/ingjoma" target="_blank" class="btn btn-primary">☕ Donar</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="project-header">
+                        <div class="project-icon">�</div>
+                        <div>
+                            <h4>Patreon</h4>
+                            <div class="blog-meta">
+                                <span class="meta-tag">Suscripción</span>
+                                <span class="meta-tag">Beneficios</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Conviértete en patrocinador y accede a contenido exclusivo, tutoriales avanzados y participación directa en el desarrollo de nuevos proyectos.</p>
+                    <div class="project-actions">
+                        <a href="https://patreon.com/chemitas" target="_blank" class="btn btn-primary">🎯 Ser Patreon</a>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Publications Section -->
-        <section class="publications-section" id="publications" aria-labelledby="publications-heading">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="publications-heading" class="section-title">
-                        <span class="section-icon">📚</span>
-                        Publicaciones Científicas
-                    </h2>
-                    <p class="section-description">
-                        Artículos técnicos y publicaciones científicas en geofísica aplicada
-                    </p>
+
+        <!-- Estadísticas Reales -->
+        <section class="section">
+            <div class="section-title">Impacto y Alcance</div>
+            <div class="grid grid-4">
+                <div class="card text-center">
+                    <div class="card-icon">�</div>
+                    <h3>4+</h3>
+                    <p>Proyectos Open Source</p>
                 </div>
                 
-                <div class="publications-grid">
-                    <article class="publication-card">
-                        <div class="publication-preview">
-                            <iframe 
-                                src="publicaciones/articulo1.pdf" 
-                                title="Vista previa del Artículo 1"
-                                loading="lazy">
-                            </iframe>
-                        </div>
-                        <div class="publication-content">
-                            <div class="publication-category">
-                                <span class="category-badge research">Investigación</span>
-                            </div>
-                            <h3 class="publication-title">Artículo 1</h3>
-                            <p class="publication-description">
-                                Descripción del artículo 1. Investigación aplicada en geofísica y métodos de exploración.
-                            </p>
-                            <div class="publication-meta">
-                                <span class="meta-item">
-                                    <span class="meta-icon">📅</span>
-                                    <span class="meta-text">2024</span>
-                                </span>
-                                <span class="meta-item">
-                                    <span class="meta-icon">📄</span>
-                                    <span class="meta-text">PDF</span>
-                                </span>
-                            </div>
-                            <div class="publication-actions">
-                                <a href="publicaciones/articulo1.pdf" download class="btn btn-primary">
-                                    <span class="btn-icon">⬇️</span>
-                                    Descargar
-                                </a>
-                                <a href="publicaciones/articulo1.pdf" target="_blank" class="btn btn-secondary">
-                                    <span class="btn-icon">👁️</span>
-                                    Ver
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="publication-card">
-                        <div class="publication-preview">
-                            <iframe 
-                                src="publicaciones/nuevas-130425.pdf" 
-                                title="Vista previa del Newsletter"
-                                loading="lazy">
-                            </iframe>
-                        </div>
-                        <div class="publication-content">
-                            <div class="publication-category">
-                                <span class="category-badge newsletter">Newsletter</span>
-                            </div>
-                            <h3 class="publication-title">Newsletter - Nuevas Actualizaciones</h3>
-                            <p class="publication-description">
-                                Consulta las últimas novedades y actualizaciones en este boletín mensual con información técnica y proyectos.
-                            </p>
-                            <div class="publication-meta">
-                                <span class="meta-item">
-                                    <span class="meta-icon">📅</span>
-                                    <span class="meta-text">Abril 2025</span>
-                                </span>
-                                <span class="meta-item">
-                                    <span class="meta-icon">📧</span>
-                                    <span class="meta-text">Newsletter</span>
-                                </span>
-                            </div>
-                            <div class="publication-actions">
-                                <a href="publicaciones/nuevas-130425.pdf" download class="btn btn-primary">
-                                    <span class="btn-icon">⬇️</span>
-                                    Descargar
-                                </a>
-                                <a href="publicaciones/nuevas-130425.pdf" target="_blank" class="btn btn-secondary">
-                                    <span class="btn-icon">👁️</span>
-                                    Ver
-                                </a>
-                            </div>
-                        </div>
-                    </article>
+                <div class="card text-center">
+                    <div class="card-icon">�</div>
+                    <h3>50+</h3>
+                    <p>Videos Educativos</p>
                 </div>
+                
+                <div class="card text-center">
+                    <div class="card-icon">👥</div>
+                    <h3>1000+</h3>
+                    <p>Usuarios de Herramientas</p>
+                </div>
+                
+                <div class="card text-center">
+                    <div class="card-icon">�</div>
+                    <h3>1</h3>
+                    <p>Artículo de Divulgación</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enlaces y Recursos -->
+        <section class="section">
+            <div class="section-title">Recursos y Enlaces</div>
+            <div class="section-subtitle">Encuentra mis proyectos y contribuciones en diferentes plataformas</div>
+            
+            <div class="grid grid-4">
+                <a href="https://github.com/JoseMariaGarciaMarquez" target="_blank" class="card text-center">
+                    <div class="card-icon" style="background: #333;">💻</div>
+                    <h3>GitHub</h3>
+                    <p>Repositorios de código y proyectos open source</p>
+                </a>
+
+                <a href="https://opensciencelabs.org/blog/fqlearn-visualizacion-datos/" target="_blank" class="card text-center">
+                    <div class="card-icon" style="background: #ff6b35;">�</div>
+                    <h3>Open Science Labs</h3>
+                    <p>Artículo sobre visualización de datos</p>
+                </a>
+
+                <a href="https://patreon.com/chemitas" target="_blank" class="card text-center">
+                    <div class="card-icon" style="background: #ff424d;">�</div>
+                    <h3>Patreon</h3>
+                    <p>Apoyo continuo y contenido exclusivo</p>
+                </a>
+
+                <a href="https://buymeacoffee.com/ingjoma" target="_blank" class="card text-center">
+                    <div class="card-icon" style="background: #ffdd00;">☕</div>
+                    <h3>Buy Me a Coffee</h3>
+                    <p>Donaciones para apoyar el proyecto</p>
+                </a>
             </div>
         </section>
     </main>
-    
-    <!-- Footer -->
-    <footer class="site-footer" role="contentinfo">
+
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 class="footer-title">José María García Márquez</h3>
-                    <p class="footer-description">Ingeniero Geofísico especializado en exploración y análisis de datos geofísicos</p>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-subtitle">Contacto</h4>
-                    <p class="footer-contact">Email: contacto@example.com</p>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-subtitle">Sígueme</h4>
-                    <div class="footer-social">
-                        <a href="#" class="social-link" aria-label="GitHub">GitHub</a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">LinkedIn</a>
-                    </div>
-                </div>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@jomacinho" target="_blank">📺</a>
+                <a href="https://www.instagram.com/jomacinho/" target="_blank">📷</a>
+                <a href="https://www.tiktok.com/@jomacinho" target="_blank">🎵</a>
+                <a href="https://www.linkedin.com/in/josé-maría-garcía-márquez-556a75199" target="_blank">💼</a>
+                <a href="https://github.com/JoseMariaGarciaMarquez" target="_blank">💻</a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 José María García Márquez. Todos los derechos reservados.</p>
-            </div>
+            <p>&copy; 2024 José María García Márquez. Todos los derechos reservados.</p>
+            <p>Contacto: <a href="mailto:josegm@geofisa.com">josegm@geofisa.com</a></p>
         </div>
     </footer>
 
     <script>
-        // Simplified and unified mobile navigation script
-        function toggleMobileNav() {
-            const mobileNav = document.getElementById('mobileNav');
-            const menuToggle = document.querySelector('.menu-toggle');
-            const body = document.body;
-            
-            if (mobileNav.classList.contains('active')) {
-                closeMobileNav();
-            } else {
-                mobileNav.classList.add('active');
-                mobileNav.style.display = 'block';
-                body.classList.add('mobile-menu-open');
-                menuToggle.setAttribute('aria-expanded', 'true');
-            }
-        }
-
-        function closeMobileNav() {
-            const mobileNav = document.getElementById('mobileNav');
-            const menuToggle = document.querySelector('.menu-toggle');
-            const body = document.body;
-            
-            mobileNav.classList.remove('active');
-            body.classList.remove('mobile-menu-open');
-            menuToggle.setAttribute('aria-expanded', 'false');
-            
-            setTimeout(() => {
-                mobileNav.style.display = 'none';
-            }, 300);
-        }
-
-        // Initialize mobile menu
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const mobileNavClose = document.getElementById('mobileNavClose');
-            
-            if (menuToggle) {
-                menuToggle.addEventListener('click', toggleMobileNav);
-            }
-            
-            if (mobileNavClose) {
-                mobileNavClose.addEventListener('click', closeMobileNav);
-            }
-            
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', (e) => {
-                const mobileNav = document.getElementById('mobileNav');
-                if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
-                    closeMobileNav();
-                }
-            });
+        // Menú móvil
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
         });
     </script>
 </body>

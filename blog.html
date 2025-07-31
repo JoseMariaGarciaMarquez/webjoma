@@ -3,328 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Personal - JOMA</title>
+    <title>Blog Personal - José María García Márquez</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images_web/jomac.png" type="image/png">
 </head>
 <body>
-    <!-- Simple Header for Secondary Pages -->
-    <header class="secondary-page-header" role="banner">
-        <div class="header-container">
-            <div class="header-brand">
-                <a href="index.html" class="brand-link" aria-label="Volver al inicio">
-                    <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
-                    <div class="brand-info">
-                        <h1>JOMA</h1>
-                        <span class="brand-subtitle">Blog Personal</span>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <img src="images_web/jomac.png" alt="JOMA">
+                JOMA
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="geofisica.html">Geofísica</a></li>
+                <li><a href="coding.html">Programación</a></li>
+                <li><a href="material.html">Material</a></li>
+                <li><a href="social.html">Social</a></li>
+                <li><a href="publications.html">Publicaciones</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <img src="images_web/yo.png" alt="José María García Márquez" class="hero-logo">
+            <h1>Blog Personal</h1>
+            <p class="subtitle">Explorando la intersección entre geofísica, programación y ciencia de datos</p>
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> 
+                <span>›</span> 
+                <span>Blog</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="section">
+            <div class="section-title">Últimas Publicaciones</div>
+            <div class="section-subtitle">Artículos, tutoriales y reflexiones sobre tecnología y geofísica</div>
+            
+            <div class="grid grid-2">
+                <!-- Post NUEVO sobre Curso Python -->
+                <a href="anuncio-python.html" class="blog-preview-card" style="border: 3px solid #667eea; background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%); position: relative;">
+                    <div style="position: absolute; top: -1px; right: -1px; background: linear-gradient(45deg, #667eea, #764ba2); color: white; padding: 0.3rem 0.8rem; border-radius: 0 8px 0 12px; font-size: 0.7rem; font-weight: bold;">🎉 NUEVO</div>
+                    <div class="blog-meta">
+                        <span class="blog-date">📅 Enero 2025</span>
+                        <span class="blog-category">🐍 Educación</span>
                     </div>
+                    <h3 style="color: #667eea;">¡Lanzamiento del Curso Gratuito de Python!</h3>
+                    <p class="blog-excerpt">Anunciamos oficialmente nuestro curso completamente gratuito de Python para geociencias. De cero a aplicaciones avanzadas, 100% open source en GitHub con casos reales.</p>
+                    <div class="meta-tag" style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; font-weight: bold;">⭐ Curso Gratis</div>
+                </a>
+
+                <!-- Post sobre GPRPy Extra -->
+                <a href="coding.html" class="blog-preview-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">📅 Enero 2025</span>
+                        <span class="blog-category">🚀 Premium</span>
+                    </div>
+                    <h3>GPRPy Extra: Extensiones Premium para GPR</h3>
+                    <p class="blog-excerpt">Descubre las nuevas capacidades profesionales de GPRPy con módulos avanzados de migración, análisis de velocidades y herramientas de interpretación automática exclusivos para Patreon.</p>
+                    <div class="meta-tag featured-tag">Premium</div>
+                </a>
+
+                <!-- Post sobre Geolitix -->
+                <a href="blog/geolitix-python-sig.html" class="blog-preview-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">📅 12 Jun 2024</span>
+                        <span class="blog-category">� GPR</span>
+                    </div>
+                    <h3>Geolitix: Mi Experiencia con la Plataforma GPR en la Nube</h3>
+                    <p class="blog-excerpt">Mi experiencia utilizando Geolitix, una plataforma comercial en la nube para análisis de datos GPR con capacidades colaborativas avanzadas.</p>
+                    <div class="meta-tag featured-tag">Destacado</div>
+                </a>
+
+                <!-- Post sobre Open Source -->
+                <a href="blog/opensource-geofisica.html" class="blog-preview-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">📅 22 May 2024</span>
+                        <span class="blog-category">💻 Opinión</span>
+                    </div>
+                    <h3>El Futuro del Open Source en Geofísica</h3>
+                    <p class="blog-excerpt">Una reflexión sobre cómo el software libre está democratizando la geofísica y transformando la investigación científica.</p>
+                    <div class="meta-tag">Artículo</div>
+                </a>
+
+                <!-- Post sobre VESpy -->
+                <a href="blog/vespy-sondeos-electricos.html" class="blog-preview-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">📅 8 Abr 2024</span>
+                        <span class="blog-category">🔬 Geofísica</span>
+                    </div>
+                    <h3>VESpy: Revolución en el Análisis de Sondeos Eléctricos</h3>
+                    <p class="blog-excerpt">Conoce VESpy, la herramienta de código abierto que está cambiando la forma de procesar e interpretar sondeos eléctricos verticales.</p>
+                    <div class="meta-tag">Software</div>
+                </a>
+
+                <!-- Post sobre GPRPy -->
+                <a href="blog/gprpy-procesamiento-radar.html" class="blog-preview-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">📅 15 Mar 2024</span>
+                        <span class="blog-category">🔬 Geofísica</span>
+                    </div>
+                    <h3>GPRPy: Procesamiento Avanzado de Datos de Radar</h3>
+                    <p class="blog-excerpt">Explora GPRPy, una librería de Python para el procesamiento profesional de datos de Ground Penetrating Radar con herramientas avanzadas.</p>
+                    <div class="meta-tag">Tutorial</div>
                 </a>
             </div>
-            
-            <nav class="secondary-nav" role="navigation" aria-label="Navegación secundaria">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">🏠 Inicio</a></li>
-                    <li><a href="geofisica.html" class="nav-link">🌍 Geofísica</a></li>
-                    <li><a href="coding.html" class="nav-link">💻 Programación</a></li>
-                    <li><a href="social.html" class="nav-link">📱 Social</a></li>
-                    <li><a href="material.html" class="nav-link">📚 Material</a></li>
-                    <li><a href="blog.html" class="nav-link active">✍️ Blog</a></li>
-                </ul>
-            </nav>
+        </section>
 
-            <button class="menu-toggle" aria-label="Abrir menú móvil" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
-    
-    <!-- Mobile Navigation Menu -->
-    <div class="mobile-nav" id="mobileNav">
-        <div class="mobile-nav-header">
-            <div class="header-brand">
-                <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
-                <div class="brand-info">
-                    <h1>JOMA</h1>
-                    <span class="brand-subtitle">Blog Personal</span>
+        <section class="section">
+            <div class="section-title">Categorías</div>
+            <div class="grid grid-4">
+                <div class="card">
+                    <div class="card-icon">🔬</div>
+                    <h3>Geofísica</h3>
+                    <p>Artículos sobre métodos geofísicos, software especializado y aplicaciones en exploración del subsuelo.</p>
                 </div>
-            </div>
-            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Cerrar menú">×</button>
-        </div>
-        <ul class="mobile-nav-links">
-            <li><a href="index.html" onclick="closeMobileNav()">🏠 Inicio</a></li>
-            <li><a href="geofisica.html" onclick="closeMobileNav()">🌍 Geofísica</a></li>
-            <li><a href="coding.html" onclick="closeMobileNav()">💻 Programación</a></li>
-            <li><a href="social.html" onclick="closeMobileNav()">📱 Social</a></li>
-            <li><a href="material.html" onclick="closeMobileNav()">📚 Material</a></li>
-            <li><a href="publications.html" onclick="closeMobileNav()">📄 Publicaciones</a></li>
-            <li><a href="blog.html" onclick="closeMobileNav()" class="active">✍️ Blog</a></li>
-        </ul>
-    </div>
-    
-    <main id="main" role="main">
-        <!-- Hero Section -->
-        <section class="page-hero blog-hero" aria-labelledby="hero-heading">
-            <div class="hero-content-wrapper">
-                <div class="hero-text-content">
-                    <h2 id="hero-heading">
-                        <span class="hero-subtitle">✍️ Blog Personal</span>
-                        <span class="hero-title">Reflexiones y Experiencias</span>
-                    </h2>
-                    <p class="hero-description">
-                        Comparto mis pensamientos sobre tecnología, geofísica, desarrollo de software y las lecciones aprendidas 
-                        en mi camino como ingeniero geofísico. Desde experiencias técnicas hasta reflexiones profesionales.
-                    </p>
-                    <div class="hero-stats">
-                        <div class="stat-badge">
-                            <span class="stat-icon">📝</span>
-                            <span class="stat-text">Artículos</span>
-                        </div>
-                        <div class="stat-badge">
-                            <span class="stat-icon">💭</span>
-                            <span class="stat-text">Reflexiones</span>
-                        </div>
-                        <div class="stat-badge">
-                            <span class="stat-icon">🔬</span>
-                            <span class="stat-text">Ciencia</span>
-                        </div>
-                    </div>
+
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>Programación</h3>
+                    <p>Tutoriales de Python, desarrollo de software científico y mejores prácticas de programación.</p>
                 </div>
-                <div class="hero-visual">
-                    <div class="blog-showcase">
-                        <div class="floating-elements">
-                            <div class="floating-element writing">�</div>
-                            <div class="floating-element thinking">💭</div>
-                            <div class="floating-element science">🔬</div>
-                            <div class="floating-element tech">💻</div>
-                        </div>
-                    </div>
+
+                <div class="card">
+                    <div class="card-icon">🗺️</div>
+                    <h3>SIG y Mapas</h3>
+                    <p>Sistemas de información geográfica, análisis espacial y visualización de datos geoespaciales.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💭</div>
+                    <h3>Opinión</h3>
+                    <p>Reflexiones sobre tecnología, ciencia abierta y el futuro de la investigación científica.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Blog Posts Section -->
-        <section class="projects-section" aria-labelledby="posts-heading">
-            <div class="section-container">
-                <div class="section-header">
-                    <h2 id="posts-heading">Artículos Recientes</h2>
-                    <p>Reflexiones sobre tecnología, geofísica y experiencias profesionales</p>
+        <section class="section news-section">
+            <div class="section-title">Noticias y Actualizaciones</div>
+            <div class="section-subtitle">Últimas novedades sobre proyectos y desarrollos</div>
+            
+            <div class="news-item">
+                <div class="news-date">
+                    <div>JUN</div>
+                    <div>15</div>
                 </div>
+                <div class="news-content">
+                    <h4>� Desarrollo de PyPozo</h4>
+                    <p>Continuando trabajo en análisis de datos de pozos con Python.</p>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-date">
+                    <div>MAY</div>
+                    <div>30</div>
+                </div>
+                <div class="news-content">
+                    <h4>📚 Curso Python aplicado a hidrología</h4>
+                    <p>Curso impartido sobre programación Python aplicada al análisis hidrológico.</p>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-date">
+                    <div>MAY</div>
+                    <div>10</div>
+                </div>
+                <div class="news-content">
+                    <h4>📊 VESPY disponible</h4>
+                    <p>VESPY para análisis de sondeos eléctricos verticales ya disponible en GitHub.</p>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-date">
+                    <div>ABR</div>
+                    <div>25</div>
+                </div>
+                <div class="news-content">
+                    <h4>📈 Mejoras en VESPY</h4>
+                    <p>Optimizaciones en el algoritmo de inversión para sondeos eléctricos verticales.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section support-section">
+            <div class="container">
+                <div class="section-title">Apoya el Desarrollo</div>
+                <div class="section-subtitle">Tu apoyo ayuda a mantener el contenido gratuito y los proyectos de código abierto</div>
                 
-                <div class="modern-grid">
-                    <!-- Post 1: GitHub Copilot -->
-                    <article class="project-card featured" role="article" aria-labelledby="post1-title">
-                        <div class="project-image-container">
-                            <img src="blog/copiloto.png" alt="GitHub Copilot - Herramienta de asistencia para programación" class="project-image">
-                            <div class="project-overlay">
-                                <span class="project-category">🤖 Tecnología</span>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 id="post1-title">Mi experiencia con GitHub Copilot</h3>
-                                <div class="project-meta">
-                                    <span class="project-date">📅 Diciembre 2024</span>
-                                    <span class="read-time">⏱️ 5 min</span>
-                                </div>
-                            </div>
-                            <div class="project-description">
-                                <p>¿Revolución en la programación o solo un asistente más? Comparto mi experiencia después de meses de uso intensivo con esta herramienta de IA.</p>
-                            </div>
-                            <div class="project-tags">
-                                <span class="tag">GitHub</span>
-                                <span class="tag">IA</span>
-                                <span class="tag">Productividad</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#post1" class="link-primary">
-                                    <span class="link-icon">📖</span>
-                                    Leer artículo
-                                </a>
-                            </div>
-                        </div>
-                    </article>
+                <div class="grid grid-3">
+                    <div class="support-card">
+                        <h3>☕ Buy Me a Coffee</h3>
+                        <p>Apoya con un café virtual</p>
+                        <a href="https://buymeacoffee.com/ingjoma" target="_blank" class="support-btn">
+                            ☕ Invitar un Café
+                        </a>
+                    </div>
 
-                    <!-- Post 2: Geolitix -->
-                    <article class="project-card" role="article" aria-labelledby="post2-title">
-                        <div class="project-image-container">
-                            <img src="blog/geolitix.png" alt="Geolitix - Software de procesamiento geofísico" class="project-image">
-                            <div class="project-overlay">
-                                <span class="project-category">🌍 Geofísica</span>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 id="post2-title">Explorando Geolitix</h3>
-                                <div class="project-meta">
-                                    <span class="project-date">📅 Noviembre 2024</span>
-                                    <span class="read-time">⏱️ 4 min</span>
-                                </div>
-                            </div>
-                            <div class="project-description">
-                                <p>Mi experiencia con una herramienta robusta que simplifica el procesamiento e interpretación de datos geofísicos de manera sorprendente.</p>
-                            </div>
-                            <div class="project-tags">
-                                <span class="tag">Software</span>
-                                <span class="tag">Análisis</span>
-                                <span class="tag">Datos</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#post2" class="link-primary">
-                                    <span class="link-icon">📖</span>
-                                    Leer artículo
-                                </a>
-                            </div>
-                        </div>
-                    </article>
+                    <div class="support-card">
+                        <h3>🎯 Patreon</h3>
+                        <p>Conviértete en patrocinador mensual</p>
+                        <a href="https://patreon.com/chemitas" target="_blank" class="support-btn">
+                            🎯 Ser Patrocinador
+                        </a>
+                    </div>
 
-                    <!-- Post 3: GPRPy -->
-                    <article class="project-card" role="article" aria-labelledby="post3-title">
-                        <div class="project-image-container">
-                            <img src="blog/gprpy.png" alt="GPRPy - Software Python para procesamiento GPR" class="project-image">
-                            <div class="project-overlay">
-                                <span class="project-category">🐍 Python</span>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 id="post3-title">GPRPy: Procesamiento de datos GPR</h3>
-                                <div class="project-meta">
-                                    <span class="project-date">📅 Octubre 2024</span>
-                                    <span class="read-time">⏱️ 6 min</span>
-                                </div>
-                            </div>
-                            <div class="project-description">
-                                <p>Una herramienta poderosa basada en Python que me permitió procesar más de 6 kilómetros de datos GPR sin licencias costosas.</p>
-                            </div>
-                            <div class="project-tags">
-                                <span class="tag">GPR</span>
-                                <span class="tag">Python</span>
-                                <span class="tag">Open Source</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#post3" class="link-primary">
-                                    <span class="link-icon">📖</span>
-                                    Leer artículo
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Post 4: Software Libre -->
-                    <article class="project-card" role="article" aria-labelledby="post4-title">
-                        <div class="project-image-container">
-                            <img src="blog/opensource.png" alt="Software Libre - Filosofía de código abierto" class="project-image">
-                            <div class="project-overlay">
-                                <span class="project-category">💭 Filosofía</span>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 id="post4-title">La filosofía del software libre</h3>
-                                <div class="project-meta">
-                                    <span class="project-date">📅 Septiembre 2024</span>
-                                    <span class="read-time">⏱️ 7 min</span>
-                                </div>
-                            </div>
-                            <div class="project-description">
-                                <p>Un movimiento de tecnología y principios. Exploramos cómo el software libre surge como alternativa ética y colaborativa en nuestro mundo digital.</p>
-                            </div>
-                            <div class="project-tags">
-                                <span class="tag">Open Source</span>
-                                <span class="tag">Ética</span>
-                                <span class="tag">Colaboración</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#post4" class="link-primary">
-                                    <span class="link-icon">📖</span>
-                                    Leer artículo
-                                </a>
-                            </div>
-                        </div>
-                    </article>
+                    <div class="support-card">
+                        <h3>💻 GitHub Sponsors</h3>
+                        <p>Patrocina el desarrollo de software</p>
+                        <a href="https://github.com/sponsors/JoseMariaGarciaMarquez" target="_blank" class="support-btn">
+                            💻 Patrocinar en GitHub
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    
-    <!-- Footer -->
-    <footer class="site-footer" role="contentinfo">
+
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 class="footer-title">José María García Márquez</h3>
-                    <p class="footer-description">Ingeniero Geofísico especializado en exploración y análisis de datos geofísicos</p>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-subtitle">Contacto</h4>
-                    <p class="footer-contact">Email: contacto@example.com</p>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-subtitle">Sígueme</h4>
-                    <div class="footer-social">
-                        <a href="#" class="social-link" aria-label="GitHub">GitHub</a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">LinkedIn</a>
-                    </div>
-                </div>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@jomacinho" target="_blank">📺</a>
+                <a href="https://www.instagram.com/joma_ing" target="_blank">📷</a>
+                <a href="https://www.tiktok.com/@jomacinho" target="_blank">🎵</a>
+                <a href="https://www.linkedin.com/in/josé-maría-garcía-márquez-556a75199" target="_blank">💼</a>
+                <a href="https://github.com/JoseMariaGarciaMarquez" target="_blank">💻</a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 José María García Márquez. Todos los derechos reservados.</p>
-            </div>
+            <p>&copy; 2024 José María García Márquez. Todos los derechos reservados.</p>
+            <p>Contacto: <a href="mailto:josegm@geofisa.com">josegm@geofisa.com</a></p>
         </div>
     </footer>
 
     <script>
-        // Simplified and unified mobile navigation script
-        function toggleMobileNav() {
-            const mobileNav = document.getElementById('mobileNav');
-            const menuToggle = document.querySelector('.menu-toggle');
-            const body = document.body;
-            
-            if (mobileNav.classList.contains('active')) {
-                closeMobileNav();
-            } else {
-                mobileNav.classList.add('active');
-                mobileNav.style.display = 'block';
-                body.classList.add('mobile-menu-open');
-                menuToggle.setAttribute('aria-expanded', 'true');
-            }
-        }
-
-        function closeMobileNav() {
-            const mobileNav = document.getElementById('mobileNav');
-            const menuToggle = document.querySelector('.menu-toggle');
-            const body = document.body;
-            
-            mobileNav.classList.remove('active');
-            body.classList.remove('mobile-menu-open');
-            menuToggle.setAttribute('aria-expanded', 'false');
-            
-            setTimeout(() => {
-                mobileNav.style.display = 'none';
-            }, 300);
-        }
-
-        // Initialize mobile menu
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const mobileNavClose = document.getElementById('mobileNavClose');
-            
-            if (menuToggle) {
-                menuToggle.addEventListener('click', toggleMobileNav);
-            }
-            
-            if (mobileNavClose) {
-                mobileNavClose.addEventListener('click', closeMobileNav);
-            }
-            
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', (e) => {
-                const mobileNav = document.getElementById('mobileNav');
-                if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
-                    closeMobileNav();
-                }
-            });
+        // Menú móvil
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
         });
     </script>
 </body>

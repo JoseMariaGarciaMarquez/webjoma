@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPRPy - Procesamiento de Datos de Radar | José María García Márquez</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="logo">
+                <img src="../images_web/jomac.png" alt="JOMA">
+                JOMA
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../geofisica.html">Geofísica</a></li>
+                <li><a href="../coding.html">Programación</a></li>
+                <li><a href="../material.html">Material</a></li>
+                <li><a href="../social.html">Social</a></li>
+                <li><a href="../publications.html">Publicaciones</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Inicio</a> 
+                <span>›</span> 
+                <a href="../blog.html">Blog</a>
+                <span>›</span>
+                <span>GPRPy</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <article class="blog-post">
+            <header class="blog-header">
+                <h1 class="blog-title">GPRPy: Procesamiento Avanzado de Datos de Radar Terrestre</h1>
+                <div class="blog-meta">
+                    <span class="blog-date">📅 15 de Marzo 2024</span>
+                    <span class="blog-author">👤 José María García Márquez</span>
+                    <span class="blog-category">🔬 Geofísica</span>
+                </div>
+                <div class="blog-excerpt">
+                    GPRPy es una librería de Python diseñada para el procesamiento profesional de datos de Ground Penetrating Radar (GPR), ofreciendo herramientas avanzadas para la interpretación geofísica.
+                </div>
+            </header>
+
+            <div class="blog-content">
+                <img src="../blog/gprpy.png" alt="GPRPy Interface" style="width: 100%; margin: 2rem 0;">
+                
+                <h2>¿Qué es GPRPy?</h2>
+                <p>GPRPy es una librería de código abierto desarrollada en Python que permite el procesamiento, análisis y visualización de datos de Ground Penetrating Radar (GPR). Esta herramienta es esencial para geofísicos, arqueólogos e ingenieros que trabajan con estudios del subsuelo.</p>
+
+                <h2>Características Principales</h2>
+                <p>La librería incluye múltiples funcionalidades:</p>
+                <ul>
+                    <li><strong>Lectura de datos:</strong> Compatible con múltiples formatos de equipos GPR comerciales</li>
+                    <li><strong>Procesamiento de señales:</strong> Filtros, correcciones de tiempo cero, y eliminación de ruido</li>
+                    <li><strong>Visualización:</strong> Herramientas de plotting para radargramas y perfiles</li>
+                    <li><strong>Migración:</strong> Algoritmos de migración Kirchhoff para mejorar la imagen</li>
+                    <li><strong>Velocidad:</strong> Análisis de velocidad y conversión tiempo-profundidad</li>
+                </ul>
+
+                <h2>Instalación y Uso</h2>
+                <p>GPRPy se puede instalar fácilmente usando pip:</p>
+                <pre><code>pip install gprpy</code></pre>
+
+                <p>Un ejemplo básico de uso:</p>
+                <pre><code>import gprpy.gprpy as gpr
+
+# Cargar datos GPR
+data = gpr.GPRpy("mi_archivo.dt1")
+
+# Procesar datos
+data.dewow(window=7)
+data.timeZeroCorrect(method='maximum')
+data.tpowGain(power=2)
+
+# Visualizar
+data.showRadargram()</code></pre>
+
+                <h2>Aplicaciones en Geofísica</h2>
+                <p>GPRPy ha sido utilizado exitosamente en diversos proyectos:</p>
+                <ul>
+                    <li>Estudios arqueológicos para detectar estructuras enterradas</li>
+                    <li>Inspección de pavimentos y estructuras civiles</li>
+                    <li>Mapeo de utilidades subterráneas</li>
+                    <li>Estudios ambientales y de contaminación</li>
+                    <li>Investigaciones geológicas y hidrogeológicas</li>
+                </ul>
+
+                <h2>Contribución al Código Abierto</h2>
+                <p>GPRPy es un proyecto de código abierto que fomenta la colaboración científica. El desarrollo continuo de esta herramienta permite a la comunidad geofísica acceder a tecnología de punta sin las limitaciones de software propietario.</p>
+
+                <h2>Enlaces y Recursos</h2>
+                <p>Para más información sobre GPRPy:</p>
+                <ul>
+                    <li><a href="https://github.com/NSGeophysics/GPRPy" target="_blank">Repositorio en GitHub</a></li>
+                    <li><a href="https://gprpy.readthedocs.io/" target="_blank">Documentación completa</a></li>
+                    <li><a href="https://pypi.org/project/gprpy/" target="_blank">Paquete en PyPI</a></li>
+                </ul>
+            </div>
+
+            <div class="blog-navigation">
+                <a href="../blog.html" class="blog-nav-link">
+                    ← Volver al Blog
+                </a>
+                <a href="vespy-sondeos-electricos.html" class="blog-nav-link">
+                    Siguiente Post →
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.youtube.com/@jomacinho" target="_blank">📺</a>
+                <a href="https://www.instagram.com/jomacinho/" target="_blank">📷</a>
+                <a href="https://www.tiktok.com/@jomacinho" target="_blank">🎵</a>
+                <a href="https://www.linkedin.com/in/josé-maría-garcía-márquez-556a75199" target="_blank">💼</a>
+                <a href="https://github.com/JoseMariaGarciaMarquez" target="_blank">💻</a>
+            </div>
+            <p>&copy; 2024 José María García Márquez. Todos los derechos reservados.</p>
+            <p>Contacto: <a href="mailto:josegm@geofisa.com">josegm@geofisa.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Menú móvil
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

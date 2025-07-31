@@ -3,396 +3,592 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos de Geofísica - JOMA</title>
+    <title>Consultoría Geofísica - José María García Márquez</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images_web/jomac.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images_web/jomac.png">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Servicios profesionales de consultoría geofísica: GPR, resistividad eléctrica, sísmica de refracción, microtremores HVSR.">
+    <meta name="keywords" content="consultoría geofísica, GPR, resistividad eléctrica, sísmica, HVSR, geofísica aplicada">
+    <meta name="author" content="José María García Márquez">
 </head>
 <body>
-    <!-- Simple Header for Secondary Pages -->
-    <header class="secondary-page-header" role="banner">
-        <div class="header-container">
-            <div class="header-brand">
-                <a href="index.html" class="brand-link" aria-label="Volver al inicio">
-                    <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
-                    <div class="brand-info">
-                        <h1>JOMA</h1>
-                        <span class="brand-subtitle">Geofísica Aplicada</span>
-                    </div>
-                </a>
-            </div>
-            
-            <nav class="secondary-nav" role="navigation" aria-label="Navegación secundaria">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">🏠 Inicio</a></li>
-                    <li><a href="geofisica.html" class="nav-link active">🌍 Geofísica</a></li>
-                    <li><a href="coding.html" class="nav-link">💻 Programación</a></li>
-                    <li><a href="social.html" class="nav-link">📱 Social</a></li>
-                    <li><a href="material.html" class="nav-link">📚 Material</a></li>
-                </ul>
-            </nav>
-
-            <button class="menu-toggle" aria-label="Abrir menú móvil" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <img src="images_web/jomac.png" alt="JOMA">
+                JOMA
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="geofisica.html" class="active">Geofísica</a></li>
+                <li><a href="coding.html">Programación</a></li>
+                <li><a href="material.html">Material</a></li>
+                <li><a href="social.html">Social</a></li>
+                <li><a href="publications.html">Publicaciones</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="calculadora.html">🧮 Calculadora</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </nav>
     </header>
-    
-    <!-- Mobile Navigation Menu -->
-    <div class="mobile-nav" id="mobileNav">
-        <div class="mobile-nav-header">
-            <div class="header-brand">
-                <img src="images_web/jomac.png" alt="Logo JOMA" class="logo">
-                <div class="brand-info">
-                    <h1>JOMA</h1>
-                    <span class="brand-subtitle">Geofísica Aplicada</span>
-                </div>
-            </div>
-            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Cerrar menú">×</button>
-        </div>
-        <ul class="mobile-nav-links">
-            <li><a href="index.html" onclick="closeMobileNav()">🏠 Inicio</a></li>
-            <li><a href="geofisica.html" onclick="closeMobileNav()" class="active">🌍 Geofísica</a></li>
-            <li><a href="coding.html" onclick="closeMobileNav()">💻 Programación</a></li>
-            <li><a href="social.html" onclick="closeMobileNav()">📱 Social</a></li>
-            <li><a href="material.html" onclick="closeMobileNav()">📚 Material</a></li>
-            <li><a href="publications.html" onclick="closeMobileNav()">📄 Publicaciones</a></li>
-            <li><a href="blog.html" onclick="closeMobileNav()">✍️ Blog</a></li>
-        </ul>
-    </div>
-    
-    <main id="main" role="main">
-        <!-- Decorative background elements -->
-        <div class="bg-decorations">
-            <div class="decoration decoration-1"></div>
-            <div class="decoration decoration-2"></div>
-            <div class="decoration decoration-3"></div>
-        </div>
 
-        <!-- Hero Section -->
-        <section class="secondary-hero geophysics-hero" aria-labelledby="hero-heading">
-            <div class="hero-background">
-                <div class="floating-elements">
-                    <div class="floating-element" style="--delay: 0s; --duration: 6s;">⚡</div>
-                    <div class="floating-element" style="--delay: 2s; --duration: 8s;">📡</div>
-                    <div class="floating-element" style="--delay: 4s; --duration: 7s;">🌊</div>
-                    <div class="floating-element" style="--delay: 1s; --duration: 9s;">🔍</div>
+    <section class="hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> 
+                <span>›</span> 
+                <span>Geofísica</span>
+            </div>
+            <h1>Consultoría Geofísica</h1>
+            <p class="subtitle">Servicios de exploración geofísica y caracterización del subsuelo</p>
+            <p class="description">
+                Con más de 10 proyectos realizados y 1 año de experiencia en campo, ofrezco servicios de geofísica aplicada utilizando tecnología moderna y software especializado para obtener resultados precisos y confiables.
+            </p>
+            <div class="cta-buttons">
+                <a href="calculadora.html" class="btn btn-secondary">🧮 Calculadora de Proyectos</a>
+                <a href="mailto:josegm@geofisa.com" class="btn btn-secondary">📧 Contactar</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Servicios Principales -->
+        <section class="section">
+            <div class="section-title">Servicios Geofísicos</div>
+            <div class="section-subtitle">Métodos avanzados para caracterización del subsuelo</div>
+            
+            <!-- Primera fila: 3 servicios -->
+            <div class="grid grid-3">
+                <!-- GPR -->
+                <div class="card">
+                    <div class="project-header">
+                        <div class="project-icon">📡</div>
+                        <div>
+                            <h3>Ground Penetrating Radar (GPR)</h3>
+                            <div class="meta-tag">Método estándar</div>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="images_web/perfil_gpr.png" alt="Perfil GPR" loading="lazy">
+                    </div>
+                    <p>Detección de estructuras enterradas, tuberías, cables y caracterización de pavimentos usando radar de penetración terrestre.</p>
+                    <ul class="features-list">
+                        <li>✓ Detección de servicios públicos enterrados</li>
+                        <li>✓ Evaluación de espesores de pavimento</li>
+                        <li>✓ Localización de estructuras arqueológicas</li>
+                        <li>✓ Caracterización de rellenos y cavidades</li>
+                    </ul>
+                    <div class="mb-2">
+                        <strong>Precio:</strong> <span style="color: #ff6b35;">$50 - $83 MXN/metro lineal</span>
+                        <br><small style="color: #999;">💎 Descuento del 15% para patrocinadores de Patreon</small>
+                    </div>
+                </div>
+
+                <!-- SEV -->
+                <div class="card">
+                    <div class="project-header">
+                        <div class="project-icon">⚡</div>
+                        <div>
+                            <h3>SEV</h3>
+                            <div class="meta-tag">Método estándar</div>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="images_web/sev_perfo.png" alt="SEV" loading="lazy">
+                    </div>
+                    <p>Sondeos eléctricos verticales (SEV) y tomografía eléctrica (ERT) para investigación del subsuelo.</p>
+                    <ul class="features-list">
+                        <li>✓ Exploración de acuíferos</li>
+                        <li>✓ Caracterización geotécnica</li>
+                        <li>✓ Detección de contaminación</li>
+                        <li>✓ Estudios de corrosividad del suelo</li>
+                    </ul>
+                    <div class="mb-2">
+                        <strong>Precio:</strong> <span style="color: #ff6b35;">$267 - $400 MXN/medición SEV</span>
+                        <br><small style="color: #999;">💎 Descuento del 15% para patrocinadores de Patreon</small>
+                    </div>
+                </div>
+
+                <!-- Tomografía de Resistividad Eléctrica -->
+                <div class="card">
+                    <div class="project-header">
+                        <div class="project-icon">🌍</div>
+                        <div>
+                            <h3>Tomografía de Resistividad Eléctrica (TRE)</h3>
+                            <div class="meta-tag">Especialidad</div>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="proyectos/acatita-tre.png" alt="TRE Acatita" loading="lazy">
+                    </div>
+                    <p>Tomografía de resistividad eléctrica (ERT) para investigación detallada del subsuelo con alta resolución.</p>
+                    <ul class="features-list">
+                        <li>✓ Localización de acuíferos</li>
+                        <li>✓ Caracterización de fracturas</li>
+                        <li>✓ Mapeo de intrusión salina</li>
+                        <li>✓ Estudios geotécnicos profundos</li>
+                    </ul>
+                    <div class="mb-2">
+                        <strong>Precio:</strong> <span style="color: #ff6b35;">$50 - $83 MXN/metro lineal</span>
+                        <br><small style="color: #999;">💎 Descuento del 15% para patrocinadores de Patreon</small>
+                    </div>
                 </div>
             </div>
             
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h2 id="hero-heading">
-                        <span class="hero-greeting">Geofísica Aplicada</span>
-                        <span class="hero-name">Explorando el Subsuelo</span>
-                        <span class="hero-title">Ciencia & Tecnología</span>
-                    </h2>
-                    
-                    <div class="hero-description">
-                        <p class="hero-intro">
-                            Especializado en <strong>métodos geofísicos avanzados</strong> para caracterización del subsuelo, 
-                            prospección de agua subterránea y estudios arqueológicos. Cada proyecto combina rigor científico con tecnología de vanguardia.
-                        </p>
-                        
-                        <div class="hero-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">6+ km</span>
-                                <span class="stat-label">Datos GPR</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">15+</span>
-                                <span class="stat-label">Levantamientos</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">4</span>
-                                <span class="stat-label">Métodos</span>
-                            </div>
+            <!-- Segunda fila: 2 servicios -->
+            <div class="grid grid-2">
+                <div class="card featured">
+                    <div class="project-header">
+                        <div class="project-icon">📊</div>
+                        <div>
+                            <h3>Sísmica de Refracción y MASW</h3>
+                            <div class="meta-tag featured-tag">Especialidad</div>
                         </div>
                     </div>
-                    
-                    <div class="hero-cta">
-                        <a href="mailto:josegm@geofisa.com" class="cta-primary" aria-label="Contactar para consultoría geofísica">
-                            <span class="cta-text">¡Consultemos tu proyecto!</span>
-                            <span class="cta-icon">🔬</span>
-                        </a>
-                        <a href="#projects" class="cta-secondary" aria-label="Ver proyectos realizados">
-                            Ver Proyectos
-                        </a>
+                    <div class="project-image">
+                        <img src="proyectos/linea-1-inv.png" alt="Línea sísmica procesada" loading="lazy">
+                    </div>
+                    <p>Procesamiento de refracción sísmica y análisis MASW con los mismos datos para caracterización geotécnica completa.</p>
+                    <ul class="features-list">
+                        <li>✓ Caracterización de ripabilidad</li>
+                        <li>✓ Determinación del nivel freático</li>
+                        <li>✓ Análisis MASW (ondas superficiales)</li>
+                        <li>✓ Módulos dinámicos del suelo</li>
+                        <li>✓ Zonificación geotécnica</li>
+                    </ul>
+                    <div class="mb-2">
+                        <strong>Precio:</strong> <span style="color: #ff6b35;">$67 - $117 MXN/metro lineal</span>
+                        <br><small style="color: #999;">💎 Descuento del 15% para patrocinadores de Patreon</small>
                     </div>
                 </div>
-                
-                <div class="hero-visual">
-                    <div class="geophysics-showcase">
-                        <div class="tech-grid">
-                            <div class="tech-item" style="--delay: 0.5s;">
-                                <span class="tech-icon">⚡</span>
-                                <span class="tech-name">SEV</span>
-                            </div>
-                            <div class="tech-item" style="--delay: 1s;">
-                                <span class="tech-icon">📡</span>
-                                <span class="tech-name">GPR</span>
-                            </div>
-                            <div class="tech-item" style="--delay: 1.5s;">
-                                <span class="tech-icon">🗺️</span>
-                                <span class="tech-name">TRE</span>
-                            </div>
-                            <div class="tech-item" style="--delay: 2s;">
-                                <span class="tech-icon">🌊</span>
-                                <span class="tech-name">Sísmica</span>
-                            </div>
+
+                <!-- HVSR -->
+                <div class="card">
+                    <div class="project-header">
+                        <div class="project-icon">📊</div>
+                        <div>
+                            <h3>Microtremores HVSR</h3>
+                            <div class="meta-tag">Microzonificación</div>
                         </div>
                     </div>
+                    <div class="project-image">
+                        <img src="images_web/estacioA.png" alt="Estación HVSR" loading="lazy">
+                    </div>
+                    <p>Análisis de microtremores para caracterización dinámica del subsuelo y estudios de riesgo sísmico.</p>
+                    <ul class="features-list">
+                        <li>✓ Frecuencia fundamental del suelo</li>
+                        <li>✓ Amplificación sísmica local</li>
+                        <li>✓ Microzonificación sísmica</li>
+                        <li>✓ Estudios de riesgo sísmico</li>
+                    </ul>
+                    <div class="mb-2">
+                        <strong>Precio:</strong> <span style="color: #ff6b35;">$400 - $833 MXN/estación</span>
+                        <br><small style="color: #999;">💎 Descuento del 15% para patrocinadores de Patreon</small>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="hero-scroll-indicator">
-                <span class="scroll-text">Ver proyectos</span>
-                <div class="scroll-arrow"></div>
             </div>
         </section>
-        <!-- Proyectos Section -->
-        <section id="projects" aria-labelledby="projects-heading">
-            <div class="portfolio-header">
-                <h2 id="projects-heading">
-                    <span class="portfolio-title">Proyectos Destacados</span>
-                    <span class="portfolio-subtitle">Estudios geofísicos especializados</span>
-                </h2>
-                <div class="portfolio-description">
-                    <p>Cada proyecto representa un reto único resuelto con metodologías geofísicas avanzadas y tecnología de punta.</p>
+
+        <!-- Proyectos Realizados -->
+        <section class="section">
+            <div class="section-title">Proyectos Realizados</div>
+            <div class="section-subtitle">Casos de estudio y trabajos completados</div>
+            
+            <div class="grid grid-2">
+                <!-- Prospección de Agua - La Malinche -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <div class="project-icon">💧</div>
+                        <div>
+                            <h3>Prospección de Agua - La Malinche</h3>
+                            <div class="blog-meta">
+                                <span class="meta-tag featured-tag">Hidrogeología</span>
+                                <span class="meta-tag">SEV</span>
+                                <span class="meta-tag">Tlaxcala</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="proyectos/perfil-sev1-sev2-nuevo.png" alt="Perfil SEV La Malinche" loading="lazy">
+                    </div>
+                    <p>Caracterización hidrogeológica del subsuelo mediante sondeo eléctrico vertical (SEV) en La Malinche, Tlaxcala, para optimizar la ubicación de futuros pozos de agua.</p>
+                    <div class="features-list">
+                        <li>🔍 Caracterización estratigráfica completa</li>
+                        <li>💧 Identificación de zonas acuíferas</li>
+                        <li>📊 Modelado geoeléctrico avanzado</li>
+                    </div>
+                    <div class="project-actions">
+                        <a href="proyectos/tlaxcala-sev.docx.pdf" target="_blank" class="btn btn-primary">📄 Descargar Informe</a>
+                    </div>
+                </div>
+
+                <!-- Búsqueda de Agua - Acatita -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <div class="project-icon">💧</div>
+                        <div>
+                            <h3>Búsqueda de Acuífero - Acatita</h3>
+                            <div class="blog-meta">
+                                <span class="meta-tag featured-tag">Hidrogeología</span>
+                                <span class="meta-tag">TRE</span>
+                                <span class="meta-tag">Dipolo-Dipolo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="proyectos/acatita-tre.png" alt="TRE Acatita" loading="lazy">
+                    </div>
+                    <p>Exploración hidrogeológica mediante tomografía de resistividad eléctrica (TRE) con arreglo dipolo-dipolo para localización de acuíferos en Acatita.</p>
+                    <div class="features-list">
+                        <li>⚡ Arreglo dipolo-dipolo optimizado</li>
+                        <li>✗ Dos líneas perpendiculares en cruz</li>
+                        <li>🧮 Inversión pseudo-3D avanzada</li>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="btn btn-outline">🔍 Ver Resultados</a>
+                    </div>
+                </div>
+
+                <!-- Análisis LISA de resistividad -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🗺️</div>
+                        <div>
+                            <h3>Análisis LISA - TRE</h3>
+                            <div class="blog-meta">
+                                <span class="meta-tag">Innovador</span>
+                                <span class="meta-tag">TRE</span>
+                                <span class="meta-tag">Análisis Espacial</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="proyectos/lisa.png" alt="Análisis LISA de resistividad" loading="lazy">
+                    </div>
+                    <p>Implementación de análisis espacial LISA (Indicadores Locales de Asociación Espacial) para identificar patrones de resistividad en levantamientos de TRE.</p>
+                    <div class="features-list">
+                        <li>🔴 High-High: Materiales secos/rocas</li>
+                        <li>🔵 Low-Low: Zonas saturadas/arcillas</li>
+                        <li>🟡 Transiciones: Fallas y contactos</li>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="btn btn-outline">🔍 Ver Análisis</a>
+                    </div>
+                </div>
+
+                <!-- Prospección arqueológica GPR -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🏛️</div>
+                        <div>
+                            <h3>Prospección Arqueológica GPR</h3>
+                            <div class="blog-meta">
+                                <span class="meta-tag">Patrimonio</span>
+                                <span class="meta-tag">GPR</span>
+                                <span class="meta-tag">CDMX</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="proyectos/Wonderaztecs.png" alt="Prospección arqueológica GPR" loading="lazy">
+                    </div>
+                    <p>Levantamiento geofísico con GPR en República de Perú 57, Centro Histórico de CDMX, para detectar estructuras arquitectónicas antiguas y evaluar la viabilidad de construcción de bodega subterránea sin afectar patrimonio arqueológico.</p>
+                    <div class="features-list">
+                        <li>🏛️ Detección de cimientos y muros enterrados</li>
+                        <li>📍 Mapeo de zonas con restos arqueológicos</li>
+                        <li>🏗️ Planificación segura para construcción de bodega</li>
+                        <li>🛡️ Protección del patrimonio cultural</li>
+                    </div>
+                    <div class="project-actions">
+                        <a href="proyectos/reporte-peru57.pdf" target="_blank" class="btn btn-outline">📄 Descargar Informe</a>
+                    </div>
+                </div>
+
+                <!-- Localización de tuberías PEMEX -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🔧</div>
+                        <div>
+                            <h3>Localización Tuberías PEMEX</h3>
+                            <div class="blog-meta">
+                                <span class="meta-tag">Industrial</span>
+                                <span class="meta-tag">GPR</span>
+                                <span class="meta-tag">Monterrey</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="proyectos/gprmty.png" alt="GPR Monterrey PEMEX" loading="lazy">
+                    </div>
+                    <p>Localización precisa de tuberías de PEMEX en Monterrey utilizando GPR, cubriendo 6.3 km lineales en 15 levantamientos para apoyo a operaciones industriales.</p>
+                    <div class="features-list">
+                        <li>📏 15 levantamientos, 6.3 km lineales</li>
+                        <li>💻 Procesamiento con GPRPy</li>
+                        <li>🎯 Localización precisa de tuberías</li>
+                    </div>
+                    <div class="project-actions">
+                        <a href="proyectos/ESTUDIO-GEOFISICO-GPR-MONTERREY.pdf" target="_blank" class="btn btn-outline">📄 Descargar Informe</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estadísticas Reales -->
+        <section class="section">
+            <div class="section-title">Mi Experiencia</div>
+            <div class="grid grid-4">
+                <div class="card text-center">
+                    <div class="card-icon">🎯</div>
+                    <h3>10+</h3>
+                    <p>Proyectos Completados</p>
+                </div>
+                
+                <div class="card text-center">
+                    <div class="card-icon">⏱️</div>
+                    <h3>1</h3>
+                    <p>Año de Experiencia</p>
+                </div>
+                
+                <div class="card text-center">
+                    <div class="card-icon">📏</div>
+                    <h3>6.3 km</h3>
+                    <p>Levantamientos GPR</p>
+                </div>
+                
+                <div class="card text-center">
+                    <div class="card-icon">🔬</div>
+                    <h3>4</h3>
+                    <p>Métodos Aplicados</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sectores Atendidos -->
+        <section class="section">
+            <div class="section-title">Sectores de Aplicación</div>
+            <div class="section-subtitle">Experiencia en múltiples industrias y aplicaciones</div>
+            
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-icon">🏗️</div>
+                    <h3>Construcción e Infraestructura</h3>
+                    <p>Caracterización geotécnica para cimentaciones, evaluación de agregos pétreos y estudios de estabilidad.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💧</div>
+                    <h3>Recursos Hídricos</h3>
+                    <p>Exploración de acuíferos, ubicación de pozos, estudios hidrogeológicos y mapeo de contaminación.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🏛️</div>
+                    <h3>Arqueología</h3>
+                    <p>Detección no invasiva de estructuras enterradas, mapeo de sitios arqueológicos y preservación patrimonial.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌱</div>
+                    <h3>Estudios Ambientales</h3>
+                    <p>Detección de contaminación, monitoreo ambiental y caracterización de sitios contaminados.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⛽</div>
+                    <h3>Petróleo y Gas</h3>
+                    <p>Exploración de hidrocarburos, caracterización de yacimientos y estudios de riesgo ambiental.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⛏️</div>
+                    <h3>Minería</h3>
+                    <p>Exploración mineral, caracterización de depósitos y estudios de estabilidad en minas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Herramientas de Software Propias -->
+        <section class="section">
+            <div class="section-title">Software Desarrollado</div>
+            <div class="section-subtitle">Herramientas propias para análisis geofísico avanzado</div>
+            
+            <div class="grid grid-3">
+                <!-- PyPozo 2.0 -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <div class="project-icon">🛢️</div>
+                        <div>
+                            <h3>PyPozo 2.0</h3>
+                            <div class="blog-meta">
+                                <span class="meta-tag featured-tag">Profesional</span>
+                                <span class="meta-tag">Python</span>
+                                <span class="meta-tag">PyQt5</span>
+                                <span class="meta-tag">Open Source</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="images_web/pypozo.png" alt="PyPozo 2.0 Interface" loading="lazy">
+                    </div>
+                    <p>Aplicación profesional de escritorio para el análisis de pozos petroleros y de agua subterránea. Alternativa open source a WellCAD, con interfaz moderna y herramientas automáticas para el análisis petrofísico estándar.</p>
+                    <div class="features-list">
+                        <li>📂 Carga archivos LAS y visualiza múltiples curvas</li>
+                        <li>🔀 Selección, comparación y fusión de curvas</li>
+                        <li>🧮 Cálculos petrofísicos: VCL, PHIE, Sw, permeabilidad</li>
+                        <li>📈 Exportación de resultados y gráficos</li>
+                        <li>⚡ Análisis rápido y herramientas automáticas</li>
+                        <li>🖥️ Interfaz moderna y personalizable</li>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/JoseMariaGarciaMarquez/PyPozo" target="_blank" class="btn btn-primary">💻 Ver Código</a>
+                    </div>
+                </div>
+
+                <!-- VESPY -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">⚡</div>
+                        <div>
+                            <h3>VESPY</h3>
+                            <div class="blog-meta">
+                                <span class="meta-tag">Activo</span>
+                                <span class="meta-tag">Python</span>
+                                <span class="meta-tag">PyQt5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="proyectos/vespy.png" alt="VESPY Interface" loading="lazy">
+                    </div>
+                    <p>Aplicación avanzada para visualización y procesamiento de datos de Sondeo Eléctrico Vertical (VES). Diseñada especialmente para ingenieros y científicos en análisis de resistividad del subsuelo.</p>
+                    <div class="features-list">
+                        <li>📊 Carga de datos desde Excel, CSV y ODS</li>
+                        <li>🔄 Inversión de resistividad automática</li>
+                        <li>📈 Visualización gráfica avanzada</li>
+                        <li>🎛️ Interfaz intuitiva con PyQt5</li>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/JoseMariaGarciaMarquez/VESPY" target="_blank" class="btn btn-outline">💻 Ver Código</a>
+                    </div>
+                </div>
+
+                <!-- HVSRLearn 2.0 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">⛏️</div>
+                        <div>
+                            <h3>HVSRLearn 2.0</h3>
+                            <div class="blog-meta">
+                                <span class="meta-tag featured-tag">v2.0 Actualizado</span>
+                                <span class="meta-tag">Python</span>
+                                <span class="meta-tag">PyQt5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="proyectos/hvsrlearn.png" alt="HVSRLearn 2.0 Interface" loading="lazy">
+                    </div>
+                    <p>Aplicación revolucionaria para cálculo y análisis de la Relación Espectral Horizontal a Vertical (HVSR). Completamente rediseñada con nuevas funcionalidades y arquitectura mejorada.</p>
+                    <div class="features-list">
+                        <li>🔄 Arquitectura completamente rediseñada</li>
+                        <li>🎛️ Ventana dedicada de procesamiento</li>
+                        <li>📊 Carga simultánea Z/N/E</li>
+                        <li>⚡ Filtros pasa-banda mejorados</li>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/JoseMariaGarciaMarquez/HVSRLearn" target="_blank" class="btn btn-outline">💻 Ver Código</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proceso de Trabajo -->
+        <section class="section">
+            <div class="section-title">Metodología de Trabajo</div>
+            <div class="section-subtitle">Proceso estructurado para resultados óptimos</div>
+            
+            <div class="grid grid-4">
+                <div class="card text-center">
+                    <div class="card-icon">🎯</div>
+                    <h3>1. Planificación</h3>
+                    <p>Análisis de objetivos, diseño de la campaña geofísica y selección de métodos óptimos.</p>
+                </div>
+                
+                <div class="card text-center">
+                    <div class="card-icon">📊</div>
+                    <h3>2. Adquisición</h3>
+                    <p>Trabajo de campo con equipos de última generación y protocolos de calidad estrictos.</p>
+                </div>
+                
+                <div class="card text-center">
+                    <div class="card-icon">💻</div>
+                    <h3>3. Procesamiento</h3>
+                    <p>Análisis avanzado de datos usando software especializado y algoritmos propietarios.</p>
+                </div>
+                
+                <div class="card text-center">
+                    <div class="card-icon">📋</div>
+                    <h3>4. Interpretación</h3>
+                    <p>Integración de resultados, modelado geológico y recomendaciones técnicas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section class="section support-section">
+            <div class="section-title">Solicita una Cotización</div>
+            <div class="section-subtitle">Contacta para discutir tu proyecto geofísico</div>
+            
+            <div class="grid grid-2">
+                <div class="support-card">
+                    <h3>📧 Contacto Directo</h3>
+                    <p>Envía los detalles de tu proyecto para una cotización personalizada</p>
+                    <a href="mailto:josegm@geofisa.com?subject=Cotización de Servicios Geofísicos" class="support-btn">
+                        📧 Enviar Email
+                    </a>
+                </div>
+
+                <div class="support-card">
+                    <h3>📱 WhatsApp Business</h3>
+                    <p>Consulta rápida por WhatsApp para proyectos urgentes</p>
+                    <a href="https://wa.me/525512345678?text=Hola,%20necesito%20una%20cotización%20para%20servicios%20geofísicos" target="_blank" class="support-btn">
+                        📱 WhatsApp
+                    </a>
                 </div>
             </div>
             
-            <div class="projects-container">
-                <div class="portfolio-grid projects-grid">
-                    <article class="portfolio-card project-card featured" role="article" aria-labelledby="malinche-title">
-                        <div class="card-background"></div>
-                        <div class="project-image-container">
-                            <img src="proyectos/perfil-sev1-sev2-nuevo.png" alt="Perfil de SEV en La Malinche - Caracterización hidrogeológica" class="project-image">
-                            <div class="project-overlay">
-                                <span class="project-status completed">Completado</span>
-                            </div>
-                        </div>
-                        <div class="card-content project-content">
-                            <div class="card-icon project-header">
-                                <span class="icon-water">💧</span>
-                            </div>
-                            <h3 id="malinche-title">Prospección de Agua - La Malinche</h3>
-                            <p>Caracterización hidrogeológica del subsuelo mediante sondeo eléctrico vertical (SEV) en La Malinche, Tlaxcala, para optimizar la ubicación de futuros pozos de agua.</p>
-                            
-                            <div class="project-badges card-stats">
-                                <span class="stat tech-badge sev">SEV</span>
-                                <span class="stat tech-badge hydro">Hidrogeología</span>
-                            </div>
-                            
-                            <div class="project-features">
-                                <h4>Objetivos Alcanzados:</h4>
-                                <ul class="features-list">
-                                    <li><span class="feature-icon">🔍</span> Caracterización estratigráfica completa</li>
-                                    <li><span class="feature-icon">💧</span> Identificación de zonas acuíferas</li>
-                                    <li><span class="feature-icon">📊</span> Modelado geoeléctrico avanzado</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <a href="proyectos/tlaxcala-sev.docx.pdf" download class="card-link project-link" aria-label="Descargar informe técnico del proyecto Malinche">
-                            <span class="link-text">Descargar Informe</span>
-                            <span class="link-arrow">→</span>
-                        </a>
-                    </article>
-
-                    <article class="portfolio-card project-card featured" role="article" aria-labelledby="lisa-title">
-                        <div class="card-background"></div>
-                        <div class="project-image-container">
-                            <img src="proyectos/lisa.png" alt="Análisis LISA de resistividad - Clasificación espacial" class="project-image">
-                            <div class="project-overlay">
-                                <span class="project-status innovative">Innovador</span>
-                            </div>
-                        </div>
-                        <div class="card-content project-content">
-                            <div class="card-icon project-header">
-                                <span class="icon-analysis">🗺️</span>
-                            </div>
-                            <h3 id="lisa-title">Análisis LISA - TRE</h3>
-                            <p>Implementación de análisis espacial LISA (Indicadores Locales de Asociación Espacial) para identificar patrones de resistividad en levantamientos de TRE.</p>
-                            
-                            <div class="project-badges card-stats">
-                                <span class="stat tech-badge tre">TRE</span>
-                                <span class="stat tech-badge analysis">Análisis Espacial</span>
-                            </div>
-                            
-                            <div class="project-features">
-                                <h4>Clasificaciones LISA:</h4>
-                                <ul class="features-list">
-                                    <li><span class="feature-icon">🔴</span> High-High: Materiales secos/rocas</li>
-                                    <li><span class="feature-icon">🔵</span> Low-Low: Zonas saturadas/arcillas</li>
-                                    <li><span class="feature-icon">🟡</span> Transiciones: Fallas y contactos</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <a href="#" class="card-link project-link" aria-label="Ver análisis LISA completo">
-                            <span class="link-text">Ver Análisis</span>
-                            <span class="link-arrow">→</span>
-                        </a>
-                    </article>
-
-                    <article class="portfolio-card project-card featured" role="article" aria-labelledby="arqueologia-title">
-                        <div class="card-background"></div>
-                        <div class="project-image-container">
-                            <img src="proyectos/Wonderaztecs.png" alt="Prospección arqueológica GPR - Centro Histórico CDMX" class="project-image">
-                            <div class="project-overlay">
-                                <span class="project-status heritage">Patrimonio</span>
-                            </div>
-                        </div>
-                        <div class="card-content project-content">
-                            <div class="card-icon project-header">
-                                <span class="icon-archaeology">🏛️</span>
-                            </div>
-                            <h3 id="arqueologia-title">Prospección Arqueológica GPR</h3>
-                            <p>Levantamiento geofísico con GPR en República de Perú 57, Centro Histórico de CDMX, para identificar estructuras arqueológicas subterráneas.</p>
-                            
-                            <div class="project-badges card-stats">
-                                <span class="stat tech-badge gpr">GPR</span>
-                                <span class="stat tech-badge archaeology">Arqueología</span>
-                            </div>
-                            
-                            <div class="project-features">
-                                <h4>Objetivos del Estudio:</h4>
-                                <ul class="features-list">
-                                    <li><span class="feature-icon">🔍</span> Detección de estructuras arqueológicas</li>
-                                    <li><span class="feature-icon">🗺️</span> Mapeo de anomalías subterráneas</li>
-                                    <li><span class="feature-icon">🏛️</span> Preservación del patrimonio cultural</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <a href="proyectos/reporte-peru57.pdf" download class="card-link project-link" aria-label="Descargar informe de prospección arqueológica">
-                            <span class="link-text">Descargar Informe</span>
-                            <span class="link-arrow">→</span>
-                        </a>
-                    </article>
-
-                    <article class="portfolio-card project-card featured" role="article" aria-labelledby="pemex-title">
-                        <div class="card-background"></div>
-                        <div class="project-image-container">
-                            <img src="proyectos/gprmty.png" alt="Localización de tuberías PEMEX - GPR Monterrey" class="project-image">
-                            <div class="project-overlay">
-                                <span class="project-status industrial">Industrial</span>
-                            </div>
-                        </div>
-                        <div class="card-content project-content">
-                            <div class="card-icon project-header">
-                                <span class="icon-industrial">🔧</span>
-                            </div>
-                            <h3 id="pemex-title">Localización Tuberías PEMEX</h3>
-                            <p>Localización precisa de tuberías de PEMEX en Monterrey utilizando GPR, cubriendo 6.3 km lineales en 15 levantamientos para apoyo a operaciones industriales.</p>
-                            
-                            <div class="project-badges card-stats">
-                                <span class="stat tech-badge gpr">GPR</span>
-                                <span class="stat tech-badge industrial">Industrial</span>
-                            </div>
-                            
-                            <div class="project-features">
-                                <h4>Metodología Aplicada:</h4>
-                                <ul class="features-list">
-                                    <li><span class="feature-icon">📏</span> 15 levantamientos, 6.3 km lineales</li>
-                                    <li><span class="feature-icon">💻</span> Procesamiento con GPRPy</li>
-                                    <li><span class="feature-icon">🎯</span> Localización precisa de tuberías</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <a href="proyectos/ESTUDIO-GEOFISICO-GPR-MONTERREY.pdf" download class="card-link project-link" aria-label="Descargar informe del estudio GPR Monterrey">
-                            <span class="link-text">Descargar Informe</span>
-                            <span class="link-arrow">→</span>
-                        </a>
-                    </article>
-                </div>
-                
-                <!-- Methodology Section -->
-                <div class="methodology-section">
-                    <div class="methodology-header">
-                        <h3>
-                            <span class="methodology-icon">🔬</span>
-                            Metodologías Aplicadas
-                        </h3>
-                        <p>Técnicas geofísicas especializadas para cada tipo de estudio</p>
-                    </div>
-                    <div class="methodology-grid">
-                        <div class="method-card">
-                            <div class="method-icon">⚡</div>
-                            <h4>Sondeo Eléctrico Vertical (SEV)</h4>
-                            <p>Caracterización estratigráfica y detección de acuíferos mediante resistividad eléctrica</p>
-                        </div>
-                        <div class="method-card">
-                            <div class="method-icon">📡</div>
-                            <h4>Radar de Penetración (GPR)</h4>
-                            <p>Detección de alta resolución de estructuras y objetos enterrados usando ondas electromagnéticas</p>
-                        </div>
-                        <div class="method-card">
-                            <div class="method-icon">🗺️</div>
-                            <h4>Tomografía de Resistividad (TRE)</h4>
-                            <p>Imágenes 2D/3D detalladas de variaciones de resistividad del subsuelo</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="mt-4 text-center">
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">
+                    <strong>Tiempo de respuesta:</strong> 24-48 horas • <strong>Cotizaciones:</strong> Sin costo
+                </p>
             </div>
         </section>
     </main>
-    
-    <footer>
-    <footer>
-        <p>&copy; 2025 JOMA - Ingeniero Geofísico. Todos los derechos reservados.</p>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.youtube.com/@jomaing" target="_blank">📺</a>
+                <a href="https://www.instagram.com/joma_ing" target="_blank">📷</a>
+                <a href="https://twitch.tv/chemitas96" target="_blank">🟣</a>
+                <a href="https://discord.gg/ZzMU7haa" target="_blank">🎮</a>
+                <a href="https://www.linkedin.com/in/josé-maría-garcía-márquez-556a75199" target="_blank">💼</a>
+                <a href="https://github.com/JoseMariaGarciaMarquez" target="_blank">💻</a>
+                <a href="https://www.reddit.com/user/Chemitatas/" target="_blank">🤖</a>
+                <a href="https://www.reddit.com/r/Geofisica/" target="_blank">🌍</a>
+            </div>
+            <p>&copy; 2024 José María García Márquez. Todos los derechos reservados.</p>
+            <p>Contacto: <a href="mailto:josegm@geofisa.com">josegm@geofisa.com</a></p>
+        </div>
     </footer>
 
-<script>
-// Simplified and unified mobile navigation script
-function toggleMobileNav() {
-    const mobileNav = document.getElementById('mobileNav');
-    const menuToggle = document.querySelector('.menu-toggle');
-    const body = document.body;
-    
-    if (mobileNav.classList.contains('active')) {
-        closeMobileNav();
-    } else {
-        mobileNav.classList.add('active');
-        mobileNav.style.display = 'block';
-        body.classList.add('mobile-menu-open');
-        menuToggle.setAttribute('aria-expanded', 'true');
-    }
-}
-
-function closeMobileNav() {
-    const mobileNav = document.getElementById('mobileNav');
-    const menuToggle = document.querySelector('.menu-toggle');
-    const body = document.body;
-    
-    mobileNav.classList.remove('active');
-    body.classList.remove('mobile-menu-open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    
-    setTimeout(() => {
-        mobileNav.style.display = 'none';
-    }, 300);
-}
-
-// Initialize mobile menu
-document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const mobileNavClose = document.getElementById('mobileNavClose');
-    
-    if (menuToggle) {
-        menuToggle.addEventListener('click', toggleMobileNav);
-    }
-    
-    if (mobileNavClose) {
-        mobileNavClose.addEventListener('click', closeMobileNav);
-    }
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        const mobileNav = document.getElementById('mobileNav');
-        if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
-            closeMobileNav();
-        }
-    });
-});
-</script>
+    <script>
+        // Menú móvil
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

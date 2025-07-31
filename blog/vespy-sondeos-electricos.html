@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VESpy - Software para Sondeos Eléctricos | José María García Márquez</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="logo">
+                <img src="../images_web/jomac.png" alt="JOMA">
+                JOMA
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../geofisica.html">Geofísica</a></li>
+                <li><a href="../coding.html">Programación</a></li>
+                <li><a href="../material.html">Material</a></li>
+                <li><a href="../social.html">Social</a></li>
+                <li><a href="../publications.html">Publicaciones</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Inicio</a> 
+                <span>›</span> 
+                <a href="../blog.html">Blog</a>
+                <span>›</span>
+                <span>VESpy</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <article class="blog-post">
+            <header class="blog-header">
+                <h1 class="blog-title">VESpy: Revolución en el Análisis de Sondeos Eléctricos Verticales</h1>
+                <div class="blog-meta">
+                    <span class="blog-date">📅 8 de Abril 2024</span>
+                    <span class="blog-author">👤 José María García Márquez</span>
+                    <span class="blog-category">🔬 Geofísica</span>
+                </div>
+                <div class="blog-excerpt">
+                    VESpy es una herramienta avanzada de código abierto para el procesamiento e interpretación de Sondeos Eléctricos Verticales (SEV), desarrollada específicamente para simplificar el análisis geofísico.
+                </div>
+            </header>
+
+            <div class="blog-content">
+                <img src="../blog/vespy.png" alt="VESpy Interface" style="width: 100%; margin: 2rem 0;">
+                
+                <h2>Introducción a VESpy</h2>
+                <p>VESpy es una librería de Python diseñada para el procesamiento e interpretación de datos de Sondeos Eléctricos Verticales (VES por sus siglas en inglés). Esta herramienta democratiza el acceso a software geofísico profesional, permitiendo a estudiantes y profesionales realizar análisis de alta calidad sin depender de software propietario costoso.</p>
+
+                <h2>¿Qué son los Sondeos Eléctricos Verticales?</h2>
+                <p>Los SEV son una técnica geofísica que utiliza corriente eléctrica para investigar la estructura del subsuelo. Mediante la inyección de corriente y medición de diferencias de potencial, es posible determinar la resistividad de diferentes capas geológicas y construir un modelo del subsuelo.</p>
+
+                <h2>Características de VESpy</h2>
+                <p>VESpy incluye todas las herramientas necesarias para un análisis completo:</p>
+                <ul>
+                    <li><strong>Lectura de datos:</strong> Compatible con múltiples formatos de equipos comerciales</li>
+                    <li><strong>Filtrado de datos:</strong> Herramientas para identificar y eliminar datos anómalos</li>
+                    <li><strong>Inversión automática:</strong> Algoritmos de inversión para determinar la estructura de capas</li>
+                    <li><strong>Visualización:</strong> Gráficos profesionales de curvas de resistividad aparente</li>
+                    <li><strong>Modelado directo:</strong> Simulación de respuestas teóricas para validación</li>
+                    <li><strong>Exportación:</strong> Resultados en múltiples formatos para reportes</li>
+                </ul>
+
+                <h2>Instalación y Configuración</h2>
+                <p>VESpy se puede instalar fácilmente usando pip:</p>
+                <pre><code>pip install vespy</code></pre>
+
+                <p>Para usar VESpy en tus proyectos:</p>
+                <pre><code>import vespy
+
+# Cargar datos de campo
+ves = vespy.VES()
+ves.load_data("mi_sondeo.dat")
+
+# Procesar datos
+ves.smooth_data()
+ves.remove_outliers()
+
+# Realizar inversión
+model = ves.invert()
+
+# Visualizar resultados
+ves.plot_results()
+ves.plot_model(model)</code></pre>
+
+                <h2>Aplicaciones Prácticas</h2>
+                <p>VESpy ha sido utilizado exitosamente en diversos proyectos de investigación y consultoría:</p>
+                <ul>
+                    <li><strong>Hidrogeología:</strong> Localización de acuíferos y determinación de su geometría</li>
+                    <li><strong>Geotecnia:</strong> Caracterización de suelos para proyectos de construcción</li>
+                    <li><strong>Minería:</strong> Exploración de depósitos minerales y caracterización de overburden</li>
+                    <li><strong>Arqueología:</strong> Identificación de estructuras enterradas sin excavación</li>
+                    <li><strong>Estudios ambientales:</strong> Detección de contaminación y monitoreo de remediaciónn</li>
+                </ul>
+
+                <h2>Ventajas del Código Abierto</h2>
+                <p>Como proyecto de código abierto, VESpy ofrece múltiples ventajas:</p>
+                <ul>
+                    <li>Acceso gratuito para toda la comunidad científica</li>
+                    <li>Transparencia en algoritmos y metodologías</li>
+                    <li>Posibilidad de modificación y personalización</li>
+                    <li>Desarrollo colaborativo y mejora continua</li>
+                    <li>Independencia de licencias comerciales restrictivas</li>
+                </ul>
+
+                <h2>Casos de Estudio</h2>
+                <p>Un ejemplo exitoso de aplicación de VESpy fue en un proyecto de exploración hidrogeológica en el Valle de México, donde se logró identificar con precisión la profundidad del nivel freático y la geometría de acuíferos confinados, resultados que fueron validados posteriormente con perforaciones exploratorias.</p>
+
+                <h2>Futuro del Proyecto</h2>
+                <p>VESpy continúa evolucionando con nuevas características en desarrollo:</p>
+                <ul>
+                    <li>Integración con datos de otras técnicas geofísicas</li>
+                    <li>Algoritmos de inversión conjunta</li>
+                    <li>Interface gráfica de usuario más intuitiva</li>
+                    <li>Soporte para inversión 2D y 3D</li>
+                </ul>
+
+                <h2>Enlaces y Recursos</h2>
+                <p>Para explorar VESpy:</p>
+                <ul>
+                    <li><a href="https://github.com/JoseMariaGarciaMarquez/VESpy" target="_blank">Código fuente en GitHub</a></li>
+                    <li><a href="https://vespy.readthedocs.io/" target="_blank">Documentación técnica</a></li>
+                    <li><a href="https://pypi.org/project/vespy/" target="_blank">Instalación desde PyPI</a></li>
+                    <li><a href="https://zenodo.org/record/vespy" target="_blank">Citar el software</a></li>
+                </ul>
+            </div>
+
+            <div class="blog-navigation">
+                <a href="gprpy-procesamiento-radar.html" class="blog-nav-link">
+                    ← Post Anterior
+                </a>
+                <a href="opensource-geofisica.html" class="blog-nav-link">
+                    Siguiente Post →
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.youtube.com/@jomacinho" target="_blank">📺</a>
+                <a href="https://www.instagram.com/jomacinho/" target="_blank">📷</a>
+                <a href="https://www.tiktok.com/@jomacinho" target="_blank">🎵</a>
+                <a href="https://www.linkedin.com/in/josé-maría-garcía-márquez-556a75199" target="_blank">💼</a>
+                <a href="https://github.com/JoseMariaGarciaMarquez" target="_blank">💻</a>
+            </div>
+            <p>&copy; 2024 José María García Márquez. Todos los derechos reservados.</p>
+            <p>Contacto: <a href="mailto:josegm@geofisa.com">josegm@geofisa.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Menú móvil
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
