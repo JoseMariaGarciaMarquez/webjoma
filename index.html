@@ -36,7 +36,7 @@
 
     <section class="hero">
         <div class="container">
-            <img src="images_web/yo.png" alt="José María García Márquez" class="hero-logo">
+            <img src="images_web/yo.png" alt="José María García Márquez" class="hero-logo" id="gaming-easter-egg" style="cursor: pointer;" title="🎮 Click para una sorpresa...">
             <h1>José María García Márquez</h1>
             <p class="subtitle">Geofísica Aplicada & Divulgación Científica</p>
             <p class="description">
@@ -250,10 +250,120 @@
         </div>
     </footer>
 
+    <!-- Gaming Modal -->
+    <div id="gaming-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🎮 ¿Acceso Gaming Secreto?</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="gaming-preview">
+                    <div class="gaming-icon">🎮</div>
+                    <h3>JOMA Gaming</h3>
+                    <p>¿Quieres ver mi lado gamer? Aquí documento mi journey de noob a pro en AOE 2, desarrollo de videojuegos indie y mucho más contenido gaming.</p>
+                    
+                    <div class="gaming-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">1200</span>
+                            <span class="stat-label">ELO AOE 2</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Horas Gaming</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Juegos Dev</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gaming-features">
+                        <div class="feature-item">🏰 Age of Empires 2, 3, 4 & Mythology</div>
+                        <div class="feature-item">🌾 Stardew Valley & Minecraft</div>
+                        <div class="feature-item">📝 Diario de un Noob</div>
+                        <div class="feature-item">🎯 Videojuegos en desarrollo</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="enter-gaming">🎮 ¡Vamos al Gaming!</button>
+                <button class="btn btn-outline" id="stay-professional">💼 Mantener Profesional</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Menú móvil
         document.querySelector('.menu-toggle').addEventListener('click', () => {
             document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Gaming Easter Egg
+        const gamingEasterEgg = document.getElementById('gaming-easter-egg');
+        const gamingModal = document.getElementById('gaming-modal');
+        const closeModal = document.querySelector('.close');
+        const enterGaming = document.getElementById('enter-gaming');
+        const stayProfessional = document.getElementById('stay-professional');
+
+        // Contador de clicks para easter egg
+        let clickCount = 0;
+        let clickTimer = null;
+
+        gamingEasterEgg.addEventListener('click', () => {
+            clickCount++;
+            
+            // Si es el primer click, inicia el timer
+            if (clickCount === 1) {
+                clickTimer = setTimeout(() => {
+                    clickCount = 0; // Reset después de 2 segundos
+                }, 2000);
+            }
+            
+            // Si hace 3 clicks en 2 segundos, muestra el modal
+            if (clickCount >= 3) {
+                clearTimeout(clickTimer);
+                clickCount = 0;
+                gamingModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        });
+
+        // Cerrar modal
+        closeModal.addEventListener('click', () => {
+            gamingModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // Click outside modal
+        window.addEventListener('click', (e) => {
+            if (e.target === gamingModal) {
+                gamingModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Botón entrar al gaming
+        enterGaming.addEventListener('click', () => {
+            window.location.href = 'gaming.html';
+        });
+
+        // Botón mantener profesional
+        stayProfessional.addEventListener('click', () => {
+            gamingModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // Easter egg sutil - cambiar cursor al hover después del primer click
+        gamingEasterEgg.addEventListener('mouseenter', () => {
+            if (clickCount > 0) {
+                gamingEasterEgg.style.transform = 'scale(1.05)';
+                gamingEasterEgg.style.transition = 'transform 0.2s ease';
+            }
+        });
+
+        gamingEasterEgg.addEventListener('mouseleave', () => {
+            gamingEasterEgg.style.transform = 'scale(1)';
         });
     </script>
 </body>
