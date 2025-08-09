@@ -275,6 +275,8 @@ ul, ol {
     box-shadow: var(--shadow-medium);
     transition: var(--transition-medium);
     border: 1px solid rgba(139, 69, 19, 0.1);
+    overflow: hidden;
+    max-width: 100%;
 }
 
 .card:hover {
@@ -526,7 +528,7 @@ ul, ol {
 .hero {
     background: 
         linear-gradient(135deg, rgba(112, 21, 3, 0.85), rgba(49, 32, 9, 0.85)),
-        url('images_web/dibujos/principio.png');
+        url('./images_web/dibujos/principio.PNG');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1008,6 +1010,7 @@ ul, ol {
         flex-direction: column;
         gap: var(--space-sm);
         align-items: stretch;
+        width: 100%;
     }
     
     .project-link {
@@ -1018,6 +1021,12 @@ ul, ol {
         border: 1px solid var(--color-terracota);
         transition: all 0.3s ease;
         font-size: 0.9rem;
+        width: 100%;
+        box-sizing: border-box;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
     }
     
     .project-link:hover {
@@ -1043,6 +1052,22 @@ ul, ol {
     
     .hero {
         padding: var(--space-xl) 0;
+        background-attachment: scroll;
+    }
+    
+    .hero-content {
+        padding: var(--space-md);
+    }
+    
+    .hero-tagline {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: var(--space-md);
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.5;
     }
     
     .section {
@@ -1059,9 +1084,11 @@ ul, ol {
     }
     
     .project-link {
-        padding: var(--space-md);
-        font-size: 0.85rem;
+        padding: var(--space-sm);
+        font-size: 0.8rem;
+        white-space: normal;
         word-break: break-word;
+        line-height: 1.3;
     }
 }
 
