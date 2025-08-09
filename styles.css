@@ -1003,6 +1003,28 @@ ul, ol {
     .support-grid {
         grid-template-columns: 1fr;
     }
+    
+    .project-links {
+        flex-direction: column;
+        gap: var(--space-sm);
+        align-items: stretch;
+    }
+    
+    .project-link {
+        background: var(--bg-secondary);
+        padding: var(--space-sm) var(--space-md);
+        border-radius: 8px;
+        text-align: center;
+        border: 1px solid var(--color-terracota);
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+    }
+    
+    .project-link:hover {
+        background: var(--color-terracota);
+        color: var(--text-light);
+        transform: translateY(-2px);
+    }
 }
 
 @media (max-width: 480px) {
@@ -1034,6 +1056,12 @@ ul, ol {
     .theme-toggle {
         padding: 0.4rem 0.8rem;
         font-size: 0.8rem;
+    }
+    
+    .project-link {
+        padding: var(--space-md);
+        font-size: 0.85rem;
+        word-break: break-word;
     }
 }
 
