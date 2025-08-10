@@ -1,0 +1,778 @@
+/* ===================================
+   MICROFORGE - RTS TRAINING APP
+   "Forja tu micro. Pulsa, reacciona, domina."
+   =================================== */
+
+/* ===================================
+   VARIABLES Y CONFIGURACIÓN
+   =================================== */
+
+:root {
+    /* Colores MicroForge */
+    --forge-dark: #0a0a0a;
+    --forge-darker: #050505;
+    --forge-secondary: #1a1a1a;
+    --forge-tertiary: #2a2a2a;
+    
+    --forge-gold: #ffd700;
+    --forge-gold-dark: #b8860b;
+    --forge-red: #dc143c;
+    --forge-red-dark: #8b0000;
+    --forge-green: #228b22;
+    --forge-blue: #4169e1;
+    
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-dim: #999999;
+    --text-danger: #ff4444;
+    --text-success: #44ff44;
+    
+    /* Tipografía */
+    --font-medieval: 'Cinzel', serif;
+    --font-modern: 'Inter', sans-serif;
+    
+    /* Espaciado */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-xxl: 3rem;
+    
+    /* Sombras y efectos */
+    --shadow-glow-gold: 0 0 20px rgba(255, 215, 0, 0.4);
+    --shadow-glow-red: 0 0 20px rgba(220, 20, 60, 0.4);
+    --shadow-glow-green: 0 0 20px rgba(34, 139, 34, 0.4);
+    --shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.8);
+    
+    /* Transiciones */
+    --transition-fast: 0.15s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* ===================================
+   RESET Y BASE
+   =================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-modern);
+    background: var(--forge-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(220, 20, 60, 0.05) 0%, transparent 50%);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+/* ===================================
+   HEADER
+   =================================== */
+
+.forge-header {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--forge-gold);
+    padding: var(--space-md) 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.logo-icon {
+    font-size: 2rem;
+    filter: drop-shadow(0 0 10px var(--forge-gold));
+    animation: forgeGlow 3s infinite;
+}
+
+@keyframes forgeGlow {
+    0%, 100% { filter: drop-shadow(0 0 10px var(--forge-gold)); }
+    50% { filter: drop-shadow(0 0 20px var(--forge-gold)); }
+}
+
+.logo-text {
+    font-family: var(--font-medieval);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--forge-gold);
+    text-shadow: 2px 2px 4px var(--forge-dark);
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    text-align: center;
+    flex: 1;
+}
+
+.back-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--forge-gold);
+    border-radius: 8px;
+    transition: var(--transition-medium);
+}
+
+.back-link:hover {
+    background: var(--forge-gold);
+    color: var(--forge-dark);
+    box-shadow: var(--shadow-glow-gold);
+}
+
+/* ===================================
+   GAME INTERFACE
+   =================================== */
+
+.forge-main {
+    padding: var(--space-xl) 0;
+}
+
+.game-interface {
+    background: rgba(26, 26, 26, 0.9);
+    border-radius: 16px;
+    border: 2px solid var(--forge-gold);
+    margin-bottom: var(--space-xxl);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.game-header {
+    background: var(--forge-secondary);
+    border-bottom: 1px solid var(--forge-gold);
+    padding: var(--space-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.stats-panel {
+    display: flex;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--forge-gold);
+    font-family: var(--font-medieval);
+}
+
+.game-controls {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.control-btn {
+    background: var(--forge-tertiary);
+    color: var(--text-primary);
+    border: 2px solid var(--forge-gold);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-medium);
+    font-family: inherit;
+}
+
+.control-btn:hover:not(:disabled) {
+    background: var(--forge-gold);
+    color: var(--forge-dark);
+    box-shadow: var(--shadow-glow-gold);
+}
+
+.control-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.start-btn {
+    background: var(--forge-green);
+    border-color: var(--forge-green);
+}
+
+.start-btn:hover {
+    background: #32CD32;
+    border-color: #32CD32;
+    box-shadow: var(--shadow-glow-green);
+}
+
+.pause-btn {
+    background: var(--forge-red);
+    border-color: var(--forge-red);
+}
+
+.pause-btn:hover {
+    background: #FF4444;
+    border-color: #FF4444;
+    box-shadow: var(--shadow-glow-red);
+}
+
+/* ===================================
+   TRAINING ZONES
+   =================================== */
+
+.training-zones {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    min-height: 400px;
+}
+
+.zone {
+    background: var(--forge-tertiary);
+    border-radius: 12px;
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.zone-title {
+    font-family: var(--font-medieval);
+    color: var(--forge-gold);
+    margin-bottom: var(--space-md);
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.action-zone {
+    position: relative;
+    min-height: 300px;
+    background: var(--forge-darker);
+    border: 2px solid var(--forge-gold);
+    cursor: crosshair;
+    overflow: hidden;
+}
+
+.action-area {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-challenge {
+    text-align: center;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.hotkey-display {
+    text-align: center;
+}
+
+.hotkey-instruction {
+    margin-bottom: var(--space-md);
+}
+
+.hotkey {
+    display: inline-block;
+    background: var(--forge-gold);
+    color: var(--forge-dark);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-left: var(--space-sm);
+    min-width: 40px;
+    text-align: center;
+}
+
+.hotkey-feedback {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.events-list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.event-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm);
+    margin-bottom: var(--space-xs);
+    background: rgba(42, 42, 42, 0.5);
+    border-radius: 6px;
+    border-left: 3px solid var(--forge-red);
+    animation: eventSlide 0.3s ease;
+}
+
+@keyframes eventSlide {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.event-icon {
+    font-size: 1.2rem;
+}
+
+.event-text {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* ===================================
+   MODULES SELECTION
+   =================================== */
+
+.section-title {
+    font-family: var(--font-medieval);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    color: var(--forge-gold);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+}
+
+.module-card {
+    background: rgba(26, 26, 26, 0.9);
+    border-radius: 16px;
+    padding: var(--space-lg);
+    border: 2px solid var(--forge-tertiary);
+    transition: var(--transition-medium);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.module-card:hover:not(.coming-soon) {
+    border-color: var(--forge-gold);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow-gold);
+}
+
+.module-card.coming-soon {
+    opacity: 0.6;
+}
+
+.module-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+    display: block;
+}
+
+.module-title {
+    font-family: var(--font-medieval);
+    color: var(--forge-gold);
+    margin-bottom: var(--space-sm);
+    font-size: 1.3rem;
+}
+
+.module-description {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+    line-height: 1.5;
+}
+
+.module-stats {
+    margin-bottom: var(--space-md);
+}
+
+.stat {
+    background: rgba(255, 215, 0, 0.1);
+    color: var(--forge-gold);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.module-difficulty {
+    margin-bottom: var(--space-md);
+}
+
+.difficulty {
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.difficulty.easy {
+    background: var(--forge-green);
+    color: white;
+}
+
+.difficulty.medium {
+    background: var(--forge-gold);
+    color: var(--forge-dark);
+}
+
+.difficulty.hard {
+    background: var(--forge-red);
+    color: white;
+}
+
+.difficulty.expert {
+    background: linear-gradient(45deg, var(--forge-red), var(--forge-gold));
+    color: white;
+}
+
+.difficulty.future {
+    background: var(--forge-blue);
+    color: white;
+}
+
+.module-btn {
+    background: var(--forge-gold);
+    color: var(--forge-dark);
+    border: none;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-medium);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.module-btn:hover:not(:disabled) {
+    background: var(--forge-gold-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow-gold);
+}
+
+.module-btn:disabled {
+    background: var(--forge-tertiary);
+    color: var(--text-dim);
+    cursor: not-allowed;
+}
+
+/* ===================================
+   RESULTS PANEL
+   =================================== */
+
+.results-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(10px);
+}
+
+.results-panel.hidden {
+    display: none;
+}
+
+.results-content {
+    background: var(--forge-secondary);
+    border-radius: 16px;
+    border: 2px solid var(--forge-gold);
+    padding: var(--space-xxl);
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+}
+
+.results-title {
+    font-family: var(--font-medieval);
+    color: var(--forge-gold);
+    margin-bottom: var(--space-xl);
+    font-size: 2rem;
+}
+
+.results-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.result-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result-label {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    margin-bottom: var(--space-xs);
+}
+
+.result-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--forge-gold);
+    font-family: var(--font-medieval);
+}
+
+.performance-feedback {
+    background: rgba(42, 42, 42, 0.5);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    text-align: left;
+}
+
+.performance-feedback h3 {
+    color: var(--forge-gold);
+    margin-bottom: var(--space-md);
+    text-align: center;
+}
+
+.results-actions {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.share-btn {
+    background: var(--forge-blue);
+    border-color: var(--forge-blue);
+}
+
+.share-btn:hover {
+    background: #6495ED;
+    border-color: #6495ED;
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+
+.forge-footer {
+    background: var(--forge-secondary);
+    border-top: 2px solid var(--forge-gold);
+    padding: var(--space-xl) 0;
+    margin-top: var(--space-xxl);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    text-align: center;
+}
+
+.footer-left p:first-child {
+    font-family: var(--font-medieval);
+    color: var(--forge-gold);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+}
+
+.footer-left p:last-child {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    color: var(--text-dim);
+    margin-bottom: var(--space-xs);
+}
+
+.footer-link {
+    color: var(--forge-gold);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-link:hover {
+    text-shadow: 0 0 10px var(--forge-gold);
+}
+
+/* ===================================
+   GAME ELEMENTS
+   =================================== */
+
+.target {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: var(--forge-red);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    animation: targetAppear 0.3s ease;
+    border: 2px solid var(--forge-gold);
+    box-shadow: var(--shadow-glow-red);
+}
+
+@keyframes targetAppear {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.target.hit {
+    animation: targetHit 0.3s ease forwards;
+}
+
+@keyframes targetHit {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); background: var(--forge-green); }
+    100% { transform: scale(0); opacity: 0; }
+}
+
+.miss-indicator {
+    position: absolute;
+    color: var(--text-danger);
+    font-weight: 700;
+    font-size: 1.2rem;
+    animation: missFloat 1s ease forwards;
+    pointer-events: none;
+}
+
+@keyframes missFloat {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-50px); opacity: 0; }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 1024px) {
+    .training-zones {
+        grid-template-columns: 1fr;
+    }
+    
+    .game-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .stats-panel {
+        justify-content: center;
+    }
+    
+    .modules-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .results-content {
+        padding: var(--space-lg);
+    }
+    
+    .results-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .results-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--space-sm);
+    }
+    
+    .logo-text {
+        font-size: 1.4rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    .training-zones {
+        padding: var(--space-md);
+        gap: var(--space-sm);
+    }
+    
+    .zone {
+        padding: var(--space-sm);
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}

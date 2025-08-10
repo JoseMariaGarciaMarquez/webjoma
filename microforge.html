@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MicroForge - Forja tu micro. Pulsa, reacciona, domina. Entrenamiento de habilidades RTS para Age of Empires 2">
+    <title>⚔️ MicroForge | Entrenamiento RTS</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="microforge-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="forge-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">⚔️</span>
+                    <span class="logo-text">MicroForge</span>
+                </div>
+                <div class="tagline">
+                    "Forja tu micro. Pulsa, reacciona, domina."
+                </div>
+                <div class="back-nav">
+                    <a href="gaming.html" class="back-link">🐗 Volver al Gaming</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Training Area -->
+    <main class="forge-main">
+        <div class="container">
+            <!-- Game Interface -->
+            <div class="game-interface" id="gameInterface">
+                <div class="game-header">
+                    <div class="stats-panel">
+                        <div class="stat-item">
+                            <span class="stat-label">APM</span>
+                            <span class="stat-value" id="apm-value">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Precisión</span>
+                            <span class="stat-value" id="accuracy-value">100%</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Score</span>
+                            <span class="stat-value" id="score-value">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Tiempo</span>
+                            <span class="stat-value" id="timer-value">00:00</span>
+                        </div>
+                    </div>
+                    <div class="game-controls">
+                        <button class="control-btn start-btn" id="start-btn">⚡ Iniciar</button>
+                        <button class="control-btn pause-btn" id="pause-btn" disabled>⏸️ Pausa</button>
+                        <button class="control-btn reset-btn" id="reset-btn">🔄 Reset</button>
+                    </div>
+                </div>
+
+                <!-- Training Zones -->
+                <div class="training-zones">
+                    <!-- Action Zone -->
+                    <div class="zone action-zone" id="action-zone">
+                        <h3 class="zone-title">🎯 Zona de Acción</h3>
+                        <div class="action-area" id="action-area">
+                            <div class="current-challenge" id="currentChallenge">
+                                <p>Selecciona un módulo de entrenamiento para comenzar</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Command Zone -->
+                    <div class="zone command-zone" id="command-zone">
+                        <h3 class="zone-title">⌨️ Comandos</h3>
+                        <div class="hotkey-display" id="hotkey-display">
+                            <div class="hotkey-instruction">
+                                <span>Presiona:</span>
+                                <kbd class="hotkey" id="targetHotkey">-</kbd>
+                            </div>
+                            <div class="hotkey-feedback" id="hotkey-feedback"></div>
+                        </div>
+                    </div>
+
+                    <!-- Events Zone -->
+                    <div class="zone events-zone" id="events-zone">
+                        <h3 class="zone-title">🚨 Eventos</h3>
+                        <div class="events-list" id="eventsList">
+                            <div class="event-item sample">
+                                <span class="event-icon">🏠</span>
+                                <span class="event-text">Esperando eventos...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Training Modules Selection -->
+            <div class="modules-selection" id="modulesSelection">
+                <h2 class="section-title">🧪 Módulos de Entrenamiento</h2>
+                
+                <div class="modules-grid">
+                    <!-- Jabalí Hunt -->
+                    <div class="module-card" data-module="boarHunt">
+                        <div class="module-icon">🐗</div>
+                        <h3 class="module-title">Caza de Jabalíes</h3>
+                        <p class="module-description">Clic rápido en jabalíes que aparecen aleatoriamente</p>
+                        <div class="module-stats">
+                            <span class="stat">Precisión + Reacción</span>
+                        </div>
+                        <div class="module-difficulty">
+                            <span class="difficulty easy">Principiante</span>
+                        </div>
+                        <button class="module-btn" data-module="boarHunt">⚡ Entrenar</button>
+                    </div>
+
+                    <!-- Scout Micro -->
+                    <div class="module-card" data-module="scoutMicro">
+                        <div class="module-icon">🏹</div>
+                        <h3 class="module-title">Micro de Scouts</h3>
+                        <p class="module-description">Esquiva flechas y ataca en movimiento</p>
+                        <div class="module-stats">
+                            <span class="stat">Timing + Multitarea</span>
+                        </div>
+                        <div class="module-difficulty">
+                            <span class="difficulty medium">Intermedio</span>
+                        </div>
+                        <button class="module-btn" data-module="scoutMicro">⚡ Entrenar</button>
+                    </div>
+
+                    <!-- Fast Building -->
+                    <div class="module-card" data-module="hotkeyMaster">
+                        <div class="module-icon">🧱</div>
+                        <h3 class="module-title">Maestro de Hotkeys</h3>
+                        <p class="module-description">Construye estructuras con hotkeys veloces</p>
+                        <div class="module-stats">
+                            <span class="stat">Hotkey + Velocidad</span>
+                        </div>
+                        <div class="module-difficulty">
+                            <span class="difficulty medium">Intermedio</span>
+                        </div>
+                        <button class="module-btn" data-module="hotkeyMaster">⚡ Entrenar</button>
+                    </div>
+
+                    <!-- Command Mental -->
+                    <div class="module-card" data-module="multitask">
+                        <div class="module-icon">🧠</div>
+                        <h3 class="module-title">Multitarea Avanzada</h3>
+                        <p class="module-description">Memoriza y ejecuta secuencias de teclas</p>
+                        <div class="module-stats">
+                            <span class="stat">Gestión Simultánea</span>
+                        </div>
+                        <div class="module-difficulty">
+                            <span class="difficulty hard">Avanzado</span>
+                        </div>
+                        <button class="module-btn" data-module="multitask">⚡ Entrenar</button>
+                    </div>
+
+                    <!-- Multitask -->
+                    <div class="module-card" data-module="apmTest">
+                        <div class="module-icon">🔥</div>
+                        <h3 class="module-title">Test APM Extremo</h3>
+                        <p class="module-description">Reacciona a eventos múltiples simultáneos</p>
+                        <div class="module-stats">
+                            <span class="stat">APM Máximo</span>
+                        </div>
+                        <div class="module-difficulty">
+                            <span class="difficulty expert">Experto</span>
+                        </div>
+                        <button class="module-btn" data-module="apmTest">⚡ Entrenar</button>
+                    </div>
+
+                    <!-- Coming Soon -->
+                    <div class="module-card coming-soon">
+                        <div class="module-icon">🌟</div>
+                        <h3 class="module-title">Más Módulos</h3>
+                        <p class="module-description">Próximamente: Eco management, Team battles</p>
+                        <div class="module-stats">
+                            <span class="stat">En Desarrollo</span>
+                        </div>
+                        <div class="module-difficulty">
+                            <span class="difficulty future">Próximamente</span>
+                        </div>
+                        <button class="module-btn" disabled>🚀 Soon</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Panel -->
+            <div class="results-panel hidden" id="results-panel">
+                <div class="results-content">
+                    <h2 class="results-title">🏆 Resultados de Entrenamiento</h2>
+                    <div class="results-stats">
+                        <div class="result-stat">
+                            <span class="result-label">APM Final</span>
+                            <span class="result-value" id="finalAPM">0</span>
+                        </div>
+                        <div class="result-stat">
+                            <span class="result-label">Precisión</span>
+                            <span class="result-value" id="finalAccuracy">0%</span>
+                        </div>
+                        <div class="result-stat">
+                            <span class="result-label">Score Total</span>
+                            <span class="result-value" id="finalScore">0</span>
+                        </div>
+                        <div class="result-stat">
+                            <span class="result-label">Tiempo</span>
+                            <span class="result-value" id="finalTime">00:00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="performance-feedback" id="performanceFeedback">
+                        <h3>📈 Análisis de Rendimiento</h3>
+                        <div class="feedback-content" id="feedbackContent">
+                            <!-- Se genera dinámicamente -->
+                        </div>
+                    </div>
+
+                    <div class="results-actions">
+                        <button class="control-btn" onclick="resetGame()">🔄 Entrenar de Nuevo</button>
+                        <button class="control-btn" onclick="showModules()">📚 Cambiar Módulo</button>
+                        <button class="control-btn share-btn" onclick="shareResults()">📤 Compartir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="forge-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>⚔️ MicroForge - Entrenamiento RTS</p>
+                    <p>"En el campo, cada segundo cuenta. En el juego, cada clic decide."</p>
+                </div>
+                <div class="footer-right">
+                    <p>Desarrollado para la comunidad AoE 2</p>
+                    <a href="gaming.html" class="footer-link">🐗 Volver al Gaming</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="microforge-script.js"></script>
+</body>
+</html>
