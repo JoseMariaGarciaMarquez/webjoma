@@ -3,933 +3,780 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="José María García Márquez - Geofísica con propósito. Ciencia que se entiende. Datos que cuentan historias. Ingeniero Geofísico, Desarrollador y Divulgador Científico.">
-    <meta name="keywords" content="geofísica, Python, GPR, sísmica, MASW, divulgación científica, programación, educación, geofísica aplicada, procesamiento de datos">
-    <meta name="author" content="José María García Márquez">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="José María García Márquez - Geofísica con Propósito">
-    <meta property="og:description" content="Geofísica con propósito. Ciencia que se entiende. Datos que cuentan historias.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://webjoma.com">
-    <meta property="og:image" content="images_web/yo.png">
+    <title>José María García Márquez - Geofísica con Propósito</title>
+    <meta name="description" content="Ingeniero geofísico UNAM. Desarrollador Python. Divulgador científico. Geofísica que se entiende, datos que cuentan historias.">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
     <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="compact.css">
     
-    <title>José María García Márquez - Geofísica con Propósito</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images_web/jomac.png" type="image/png">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <div class="nav-container">
-                <div class="logo">
-                    <img src="images_web/jomac.png" alt="Logo José María">
-                    <span>JoMa</span>
-                </div>
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="#inicio" class="nav-link active" title="Inicio">🏠</a></li>
-                    <li><a href="#sobre-mi" class="nav-link" title="Sobre mí">👨‍💼</a></li>
-                    <li><a href="#contenido" class="nav-link" title="Contenido Multimedia">📽️</a></li>
-                    <li><a href="#proyectos" class="nav-link" title="Proyectos">📊</a></li>
-                    <li><a href="#servicios" class="nav-link" title="Servicios">🛠️</a></li>
-                    <li><a href="#educacion" class="nav-link" title="Educación">🎓</a></li>
-                    <li><a href="#apoyo" class="nav-link" title="Apóyame">💸</a></li>
-                    <li><a href="#contacto" class="nav-link" title="Contacto">📬</a></li>
-                </ul>
-                <div style="display: flex; align-items: center; gap: 1rem;">
-                    <button class="theme-toggle" id="theme-toggle">
-                        <span class="theme-toggle-icon" id="theme-icon">🌞</span>
-                        <span id="theme-text">Modo Oscuro</span>
-                    </button>
-                    <button class="menu-toggle" id="menu-toggle">☰</button>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <nav class="nav-bar">
+                <div class="nav-item active">🏠 INICIO</div>
+                <div class="nav-item">👤 PERFIL</div>
+                <div class="nav-item">📊 PROYECTOS</div>
+                <div class="nav-item">🛠️ SERVICIOS</div>
+                <div class="nav-item">🎓 EDUCACIÓN</div>
+                <div class="nav-item">� BLOG</div>
+                <div class="nav-item">�📬 CONTACTO</div>
+            </nav>
+        </header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="container">
-            <div class="hero-content animate-fade-in-up">
-                <p class="hero-tagline">Geofísica con propósito. Ciencia que se entiende. Datos que cuentan historias.</p>
-                <h1 class="hero-title">José María García Márquez</h1>
-                <h2 class="hero-subtitle">Ingeniero Geofísico & Divulgador Científico</h2>
-                <p class="hero-description">
-                    Creo en una geofísica accesible, en el poder del código para entender el subsuelo, 
-                    y en compartir el conocimiento con quien quiera aprender.
-                </p>
-                <div class="hero-cta">
-                    <a href="#proyectos" class="btn btn-primary">Ver mis proyectos</a>
-                    <a href="#contenido" class="btn btn-ghost">Explorar mi canal</a>
-                    <a href="#apoyo" class="btn btn-ghost">Apóyame</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="sobre-mi" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">👤 Mi Historia</h2>
-                <p class="section-subtitle">Cómo llegué a la geofísica, por qué divulgo, qué me mueve</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-image animate-fade-in-left">
-                    <img src="images_web/yo.png" alt="José María García Márquez en campo">
-                </div>
-                <div class="about-content animate-fade-in-right">
-                    <h3>Ingeniero Geofísico UNAM</h3>
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                        <img src="images_web/escudo_fi_color.png" alt="Facultad de Ingeniería UNAM" style="height: 60px;">
-                        <div>
-                            <strong>Facultad de Ingeniería</strong><br>
-                            <span style="color: var(--text-secondary);">Universidad Nacional Autónoma de México</span>
-                        </div>
-                    </div>
-                    <p>
-                        Soy ingeniero geofísico egresado de la Facultad de Ingeniería de la UNAM. Desde el inicio me atrapó la idea de poder "ver" lo que hay debajo de la tierra usando ondas, electricidad y matemáticas. Lo que empezó como una simple curiosidad terminó siendo una pasión: transformar datos difíciles en algo que cualquiera pueda entender.
-                    </p>
-                    <p>
-                        Creo que la geofísica no debería quedarse solo en libros y laboratorios. Mi meta es llevarla a más personas: estudiantes, profesionales o empresas que busquen respuestas concretas.
-                    </p>
-                    <p>
-                        En Python encontré una herramienta ideal para lograrlo. Me permite procesar información y crear soluciones que otros puedan usar. Cada vez que escribo código, pienso en cómo puede ayudar a que la geofísica sea más clara y accesible para todos.
-                    </p>
-                    
-                    <div class="skills-grid">
-                        <span class="tag tag-primary">Geofísica Aplicada</span>
-                        <span class="tag tag-secondary">Python</span>
-                        <span class="tag tag-primary">GPR</span>
-                        <span class="tag tag-secondary">Sísmica</span>
-                        <span class="tag tag-primary">MASW</span>
-                        <span class="tag tag-secondary">Machine Learning</span>
-                        <span class="tag tag-primary">Divulgación</span>
-                        <span class="tag tag-secondary">Educación</span>
-                    </div>
-                    
-                    <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-                        <a href="https://www.youtube.com/@jomaing" class="btn btn-primary" target="_blank">YouTube</a>
-                        <a href="https://www.twitch.tv/chemitas96" class="btn btn-secondary" target="_blank">Twitch</a>
-                        <a href="https://github.com/JoseMariaGarciaMarquez" class="btn btn-secondary" target="_blank">GitHub</a>
-                        <a href="https://www.linkedin.com/in/jos%C3%A9-mar%C3%ADa-garc%C3%ADa-m%C3%A1rquez-556a75199/" class="btn btn-secondary" target="_blank">LinkedIn</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Content Media Section -->
-    <section id="contenido" class="section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">📽️ Contenido Multimedia</h2>
-                <p class="section-subtitle">Explorando la geofísica a través de diferentes plataformas</p>
-            </div>
-            <div class="content-grid">
-                <div class="card content-card">
-                    <div class="icon icon-primary">🎥</div>
-                    <h3>YouTube</h3>
-                    <p>Videos educativos sobre geofísica, tutoriales de Python y charlas técnicas. Contenido semanal para aprender ciencia de manera visual y entretenida.</p>
-                    <div class="card-footer">
-                        <div>
-                            <strong>Categorías:</strong><br>
-                            • Explicaciones geofísicas<br>
-                            • Tutoriales de Python<br>
-                            • Charlas técnicas
-                        </div>
-                        <a href="https://www.youtube.com/@jomaing" class="btn btn-primary">Ver Canal</a>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Inicio Section -->
+            <section id="inicio" class="section active">
+                <div class="brand-header">
+                    <img src="images_web/jomac.png" alt="JoMa Logo" class="brand-logo" style="width: 120px; height: 120px;">
+                    <div class="brand-content">
+                        <h1 class="title">José María García Márquez</h1>
+                        <p class="subtitle">Geofísica con propósito. Ciencia que se entiende.</p>
+                        <p class="subtitle" style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">🚀 Apasionado del Open Source • Construyendo el futuro de la geofísica</p>
                     </div>
                 </div>
                 
-                <div class="card content-card">
-                    <div class="icon icon-secondary">🎮</div>
-                    <h3>Twitch</h3>
-                    <p>Transmisiones en vivo donde programamos herramientas geofísicas, resolvemos problemas en tiempo real y exploramos datos juntos.</p>
-                    <div class="card-footer">
-                        <div>
-                            <strong>Horarios:</strong><br>
-                            • Lunes 20:00 MX<br>
-                            • Miércoles 19:00 MX<br>
-                            • Sábados 18:00 MX
-                        </div>
-                        <a href="https://www.twitch.tv/chemitas96" class="btn btn-primary">Seguir</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="proyectos" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">📊 Proyectos</h2>
-                <p class="section-subtitle">Explorando el subsuelo con datos, código y creatividad</p>
-            </div>
-            
-            <!-- Estadísticas de Experiencia -->
-            <div class="experience-stats">
-                <div class="stat-card">
-                    <div class="stat-number">🎯 10+</div>
-                    <div class="stat-label">Proyectos Completados</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">⏱️ 1</div>
-                    <div class="stat-label">Año de Experiencia</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">📏 6.3 km</div>
-                    <div class="stat-label">Levantamientos GPR</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">🔬 4</div>
-                    <div class="stat-label">Métodos Aplicados</div>
-                </div>
-            </div>
-
-            <div class="projects-grid">
-                <!-- Prospección de Agua La Malinche -->
-                <div class="card project-card">
-                    <div class="project-image-container">
-                        <img src="proyectos/geofisica/perfil-sev1-sev2-nuevo.png" alt="Perfil SEV1-SEV2 Interpolado" class="project-main-image">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Prospección de Agua - La Malinche</h3>
-                        <p class="project-subtitle">Hidrogeología SEV Tlaxcala</p>
-                        <p>Caracterización hidrogeológica del subsuelo mediante sondeo eléctrico vertical (SEV) en La Malinche, Tlaxcala, para optimizar la ubicación de futuros pozos de agua. Incluye interpolación de 2 SEV para perfil completo.</p>
-                        <div class="project-features">
-                            🔍 Caracterización estratigráfica completa<br>
-                            💧 Identificación de zonas acuíferas<br>
-                            📊 Modelado geoeléctrico avanzado<br>
-                            📈 Interpolación SEV1-SEV2
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">SEV</span>
-                            <span class="tag">Hidrogeología</span>
-                            <span class="tag">Tlaxcala</span>
-                            <span class="tag">La Malinche</span>
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <span class="terminal-title">PERFIL_PROFESIONAL.exe</span>
+                        <div class="terminal-controls">
+                            <span class="btn-minimize">─</span>
+                            <span class="btn-maximize">□</span>
+                            <span class="btn-close">×</span>
                         </div>
                     </div>
-                    <div class="project-links">
-                        <a href="proyectos/geofisica/tlaxcala-sev.docx.pdf" class="project-link">📄 Descargar Informe</a>
+                    <div class="terminal-content">
+                        <p class="terminal-line">> Ingeniero Geofísico UNAM</p>
+                        <p class="terminal-line">> Desarrollador Python especializado</p>
+                        <p class="terminal-line">> Divulgador científico activo</p>
+                        <p class="terminal-line">> Estado: Disponible para proyectos</p>
+                        <p class="terminal-line">> <span class="cursor">█</span></p>
                     </div>
                 </div>
 
-                <!-- Búsqueda de Acuífero Acatita -->
-                <div class="card project-card">
-                    <div class="project-image-container">
-                        <img src="proyectos/geofisica/acatita-tre.png" alt="TRE Acatita Coahuila" class="project-main-image">
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Proyectos completados</div>
                     </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Búsqueda de Acuífero - Acatita</h3>
-                        <p class="project-subtitle">Hidrogeología TRE Dipolo-Dipolo - Coahuila</p>
-                        <p>Exploración hidrogeológica mediante tomografía de resistividad eléctrica (TRE) con arreglo dipolo-dipolo para localización de acuíferos en Acatita, Coahuila. Proyecto enfocado en la búsqueda de agua subterránea en zona árida.</p>
-                        <div class="project-features">
-                            ⚡ Arreglo dipolo-dipolo optimizado<br>
-                            ✗ Dos líneas perpendiculares en cruz<br>
-                            🧮 Inversión pseudo-3D avanzada<br>
-                            💧 Búsqueda de agua en zona árida
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">TRE</span>
-                            <span class="tag">Dipolo-Dipolo</span>
-                            <span class="tag">Acuíferos</span>
-                            <span class="tag">Coahuila</span>
-                        </div>
+                    <div class="stat-box">
+                        <div class="stat-number">60+</div>
+                        <div class="stat-label">Suscriptores en YouTube</div>
                     </div>
-                    <div class="project-links">
-                        <a href="proyectos/geofisica/" class="project-link">🔍 Ver Resultados</a>
+                    <div class="stat-box">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">Commits en GitHub</div>
                     </div>
                 </div>
 
-                <!-- Análisis LISA TRE -->
-                <div class="card project-card">
-                    <div class="project-image-container">
-                        <img src="proyectos/datos/lisa.png" alt="Análisis LISA TRE" class="project-main-image">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Análisis LISA - TRE</h3>
-                        <p class="project-subtitle">Innovador TRE Análisis Espacial</p>
-                        <p>Implementación de análisis espacial LISA (Indicadores Locales de Asociación Espacial) para identificar patrones de resistividad en levantamientos de TRE. Clasificación automatizada de datos TRE usando índices espaciales.</p>
-                        <div class="project-features">
-                            🔴 High-High: Materiales secos/rocas<br>
-                            🔵 Low-Low: Zonas saturadas/arcillas<br>
-                            🟡 Transiciones: Fallas y contactos<br>
-                            �️ Mapeo temático inteligente
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">LISA</span>
-                            <span class="tag">TRE</span>
-                            <span class="tag">Análisis Espacial</span>
-                            <span class="tag">Clasificación</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="proyectos/datos/" class="project-link">🔍 Ver Análisis</a>
-                    </div>
+                <div class="intro-banner">
+                    <p>"Democratizar la geofísica a través del código abierto. Mi sueño es dedicarme 100% al desarrollo de herramientas open source que revolucionen nuestra ciencia. Tu apoyo hace posible este futuro."</p>
                 </div>
 
-                <!-- Prospección Arqueológica GPR -->
-                <div class="card project-card">
-                    <div class="project-image-container">
-                        <img src="proyectos/geofisica/Wonderaztecs.png" alt="Proyecto Wonderaztecs República de Perú" class="project-main-image">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Prospección Arqueológica GPR</h3>
-                        <p class="project-subtitle">Patrimonio GPR CDMX - Proyecto Wonderaztecs</p>
-                        <p>Levantamiento geofísico con GPR en República de Perú 57, Centro Histórico de CDMX, para detectar estructuras arquitectónicas antiguas y evaluar la viabilidad de construcción de bodega subterránea sin afectar patrimonio arqueológico.</p>
-                        <div class="project-features">
-                            🏛️ Detección de cimientos y muros enterrados<br>
-                            📍 Mapeo de zonas con restos arqueológicos<br>
-                            🏗️ Planificación segura para construcción de bodega<br>
-                            🛡️ Protección del patrimonio cultural
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">GPR</span>
-                            <span class="tag">Arqueología</span>
-                            <span class="tag">Patrimonio</span>
-                            <span class="tag">CDMX</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <img src="proyectos/geofisica/insta_arqui.png" alt="Mapa Adquisición 3D" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
-                        <a href="proyectos/geofisica/reporte-peru57.pdf" class="project-link">📄 Descargar Informe</a>
+                <div class="support-section">
+                    <h3 class="support-title">Apoya mi trabajo Open Source</h3>
+                    <div class="support-buttons">
+                        <a href="#" class="support-btn coffee">☕ Buy Me a Coffee</a>
+                        <a href="https://www.patreon.com/c/chemitas" class="support-btn patreon" target="_blank">🧡 Patreon</a>
                     </div>
                 </div>
+            </section>
 
-                <!-- Localización Tuberías PEMEX -->
-                <div class="card project-card">
-                    <div class="project-image-container">
-                        <img src="proyectos/geofisica/gprmty.png" alt="GPR Monterrey PEMEX" class="project-main-image">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Localización Tuberías PEMEX</h3>
-                        <p class="project-subtitle">Industrial GPR Monterrey</p>
-                        <p>Localización precisa de tuberías de PEMEX en Monterrey utilizando GPR, cubriendo 6.3 km lineales en 15 levantamientos para apoyo a operaciones industriales. Procesamiento especializado con GPRPy para máxima precisión.</p>
-                        <div class="project-features">
-                            📏 15 levantamientos, 6.3 km lineales<br>
-                            💻 Procesamiento con GPRPy<br>
-                            🎯 Localización precisa de tuberías<br>
-                            🔧 Apoyo a operaciones industriales
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">GPR</span>
-                            <span class="tag">PEMEX</span>
-                            <span class="tag">Industrial</span>
-                            <span class="tag">GPRPy</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <img src="proyectos/geofisica/perfil_gpr.png" alt="Perfil GPR" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
-                        <a href="proyectos/geofisica/ESTUDIO-GEOFISICO-GPR-MONTERREY.pdf" class="project-link">📄 Descargar Informe</a>
-                    </div>
-                </div>
-
-                <!-- MASW Monterrey -->
-                <div class="card project-card">
-                    <div class="project-image-container">
-                        <img src="proyectos/geofisica/linea-1-inv.png" alt="MASW Línea 1 Inversión" class="project-main-image">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">MASW Monterrey</h3>
-                        <p class="project-subtitle">Mecánica de Suelos - Geotecnia</p>
-                        <p>Análisis de ondas superficiales (MASW) para caracterización geotécnica del subsuelo en Monterrey. Determinación de perfiles de velocidad de ondas de corte (Vs) para estudios de mecánica de suelos y diseño de cimentaciones.</p>
-                        <div class="project-features">
-                            📊 Perfiles de velocidad Vs<br>
-                            🏗️ Caracterización geotécnica<br>
-                            🧮 Inversión de ondas superficiales<br>
-                            🎯 Diseño de cimentaciones
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">MASW</span>
-                            <span class="tag">Geotecnia</span>
-                            <span class="tag">Monterrey</span>
-                            <span class="tag">Vs Profile</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="proyectos/geofisica/" class="project-link">🔍 Ver Resultados</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sectores de Aplicación -->
-            <div class="sectors-section">
-                <h3 class="section-subtitle">Sectores de Aplicación</h3>
-                <p style="text-align: center; margin-bottom: 2rem;">Experiencia en múltiples industrias y aplicaciones</p>
+            <!-- Perfil Section -->
+            <section id="perfil" class="section">
+                <h2 class="section-title">👤 Mi Historia Profesional</h2>
                 
-                <div class="sectors-grid">
-                    <div class="sector-card">
-                        <div class="sector-icon">🏗️</div>
-                        <h4>Construcción e Infraestructura</h4>
-                        <p>Caracterización geotécnica para cimentaciones, evaluación de agregados pétreos y estudios de estabilidad.</p>
-                    </div>
-                    <div class="sector-card">
-                        <div class="sector-icon">💧</div>
-                        <h4>Recursos Hídricos</h4>
-                        <p>Exploración de acuíferos, ubicación de pozos, estudios hidrogeológicos y mapeo de contaminación.</p>
-                    </div>
-                    <div class="sector-card">
-                        <div class="sector-icon">🏛️</div>
-                        <h4>Arqueología</h4>
-                        <p>Detección no invasiva de estructuras enterradas, mapeo de sitios arqueológicos y preservación patrimonial.</p>
-                    </div>
-                    <div class="sector-card">
-                        <div class="sector-icon">🌱</div>
-                        <h4>Estudios Ambientales</h4>
-                        <p>Detección de contaminación, monitoreo ambiental y caracterización de sitios contaminados.</p>
-                    </div>
-                    <div class="sector-card">
-                        <div class="sector-icon">⛽</div>
-                        <h4>Petróleo y Gas</h4>
-                        <p>Exploración de hidrocarburos, caracterización de yacimientos y estudios de riesgo ambiental.</p>
-                    </div>
-                    <div class="sector-card">
-                        <div class="sector-icon">⛏️</div>
-                        <h4>Minería</h4>
-                        <p>Exploración mineral, caracterización de depósitos y estudios de estabilidad en minas.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Software Desarrollado -->
-            <div class="software-section">
-                <h3 class="section-subtitle">Software Desarrollado</h3>
-                <p style="text-align: center; margin-bottom: 2rem;">Herramientas propias para análisis geofísico avanzado</p>
-                
-                <div class="software-grid">
-                    <div class="card software-card">
-                        <div class="software-image-container">
-                            <img src="proyectos/coding/pypozo.png" alt="PyPozo 2.0 Interface" class="software-main-image">
+                <div class="profile-grid">
+                    <div class="profile-card">
+                        <div class="card-header">
+                            <span class="card-icon">🎓</span>
+                            <h3>Formación Académica</h3>
                         </div>
                         <div class="card-content">
-                            <h3 class="card-title">PyPozo 2.0</h3>
-                            <p class="software-subtitle">Profesional Python PyQt5 Open Source</p>
-                            <p>Aplicación profesional de escritorio para el análisis de pozos petroleros y de agua subterránea. Alternativa open source a WellCAD, con interfaz moderna y herramientas automáticas para el análisis petrofísico estándar.</p>
-                            <div class="software-features">
-                                📂 Carga archivos LAS y visualiza múltiples curvas<br>
-                                🔀 Selección, comparación y fusión de curvas<br>
-                                🧮 Cálculos petrofísicos: VCL, PHIE, Sw, permeabilidad<br>
-                                📈 Exportación de resultados y gráficos<br>
-                                ⚡ Análisis rápido y herramientas automáticas<br>
-                                🖥️ Interfaz moderna y personalizable
+                            <div class="education-item">
+                                <strong>Ingeniero Geofísico</strong><br>
+                                <span class="institution">Facultad de Ingeniería UNAM</span><br>
+                                <span class="year">2018-2023</span>
                             </div>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/JoseMariaGarciaMarquez" class="project-link">💻 Ver Código</a>
+                            <div class="education-item">
+                                <strong>PioPetro Summer Internship</strong><br>
+                                <span class="institution">Conferencias sobre Intervención de Pozos, Aprendizaje Automático y Fracturamiento Hidráulico</span><br>
+                                <span class="year">06/2024 – 08/2024</span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="card software-card">
-                        <div class="software-image-container">
-                            <img src="proyectos/coding/vespy.png" alt="VESPY Interface" class="software-main-image">
+                    <div class="profile-card">
+                        <div class="card-header">
+                            <span class="card-icon">💻</span>
+                            <h3>Stack Tecnológico</h3>
                         </div>
                         <div class="card-content">
-                            <h3 class="card-title">VESPY</h3>
-                            <p class="software-subtitle">Activo Python PyQt5</p>
-                            <p>Aplicación avanzada para visualización y procesamiento de datos de Sondeo Eléctrico Vertical (VES). Diseñada especialmente para ingenieros y científicos en análisis de resistividad del subsuelo.</p>
-                            <div class="software-features">
-                                📊 Carga de datos desde Excel, CSV y ODS<br>
-                                🔄 Inversión de resistividad automática<br>
-                                📈 Visualización gráfica avanzada<br>
-                                🎛️ Interfaz intuitiva con PyQt5
+                            <div class="tech-category">
+                                <strong>Lenguajes:</strong>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">MATLAB</span>
+                                    <span class="tech-tag">R</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/JoseMariaGarciaMarquez" class="project-link">💻 Ver Código</a>
+                            <div class="tech-category">
+                                <strong>Librerías:</strong>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">SimPEG</span>
+                                    <span class="tech-tag">ObsPy</span>
+                                    <span class="tech-tag">PyGIMLi</span>
+                                    <span class="tech-tag">GPRPy</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <strong>Especialidades:</strong>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">GPR</span>
+                                    <span class="tech-tag">MASW</span>
+                                    <span class="tech-tag">VES</span>
+                                    <span class="tech-tag">TRE</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="card software-card">
-                        <div class="software-image-container">
-                            <img src="proyectos/coding/hvsrlearn.png" alt="HVSRLearn 2.0 Interface" class="software-main-image">
+                    <div class="profile-card">
+                        <div class="card-header">
+                            <span class="card-icon">🏆</span>
+                            <h3>Logros Destacados</h3>
                         </div>
                         <div class="card-content">
-                            <h3 class="card-title">HVSRLearn 2.0</h3>
-                            <p class="software-subtitle">v2.0 Actualizado Python PyQt5</p>
-                            <p>Aplicación revolucionaria para cálculo y análisis de la Relación Espectral Horizontal a Vertical (HVSR). Completamente rediseñada con nuevas funcionalidades y arquitectura mejorada.</p>
-                            <div class="software-features">
-                                🔄 Arquitectura completamente rediseñada<br>
-                                🎛️ Ventana dedicada de procesamiento<br>
-                                📊 Carga simultánea Z/N/E<br>
-                                ⚡ Filtros pasa-banda mejorados
-                            </div>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/JoseMariaGarciaMarquez" class="project-link">💻 Ver Código</a>
+                            <div class="achievement">✅ Desarrollo de VESpy (Python)</div>
+                            <div class="achievement">✅ 10+ proyectos de consultoría</div>
+                            <div class="achievement">✅ Canal educativo 60+ suscriptores</div>
+                            <div class="achievement">✅ Divulgación científica activa</div>
+                            <div class="achievement">✅ Desarrollo de herramientas open source</div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- Metodología de Trabajo -->
-            <div class="methodology-section">
-                <h3 class="section-subtitle">Metodología de Trabajo</h3>
-                <p style="text-align: center; margin-bottom: 2rem;">Proceso estructurado para transformar datos en información</p>
+            <!-- Proyectos Section -->
+            <section id="proyectos" class="section">
+                <h2 class="section-title">📊 Proyectos Destacados</h2>
                 
-                <div class="methodology-grid">
-                    <div class="methodology-card">
-                        <div class="methodology-number">🎯 1.</div>
-                        <h4>Planificación</h4>
-                        <p>Análisis de objetivos, diseño del flujo de procesamiento y selección de métodos óptimos.</p>
-                    </div>
-                    <div class="methodology-card">
-                        <div class="methodology-number">🔧 2.</div>
-                        <h4>Preprocesamiento</h4>
-                        <p>Limpieza, filtrado y acondicionamiento de datos brutos para optimizar el análisis posterior.</p>
-                    </div>
-                    <div class="methodology-card">
-                        <div class="methodology-number">💻 3.</div>
-                        <h4>Procesamiento</h4>
-                        <p>Transformación de datos en información útil usando algoritmos avanzados y software especializado.</p>
-                    </div>
-                    <div class="methodology-card">
-                        <div class="methodology-number">📋 4.</div>
-                        <h4>Interpretación</h4>
-                        <p>Integración de resultados, modelado geológico y recomendaciones técnicas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="servicios" class="section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">🛠️ Servicios</h2>
-                <p class="section-subtitle">Soluciones profesionales en geofísica y desarrollo científico</p>
-            </div>
-            <div class="services-grid">
-                <div class="card service-card">
-                    <div class="icon service-icon icon-primary">🌊</div>
-                    <h3>Estudios Geofísicos</h3>
-                    <p>Caracterización completa del subsuelo usando métodos sísmicos, eléctricos y electromagnéticos. Interpretación profesional con reportes técnicos detallados.</p>
-                    <ul style="text-align: left; margin: 1rem 0;">
-                        <li>• GPR para arqueología y obra civil</li>
-                        <li>• MASW para geotecnia</li>
-                        <li>• VES para hidrogeología</li>
-                        <li>• TRE para contaminación</li>
-                    </ul>
-                    <a href="#contacto" class="btn btn-primary" style="margin-top: auto;">Solicitar cotización</a>
-                </div>
-
-                <div class="card service-card">
-                    <div class="icon service-icon icon-secondary">💻</div>
-                    <h3>Desarrollo de Software</h3>
-                    <p>Herramientas científicas personalizadas en Python. Desde scripts de procesamiento hasta aplicaciones completas con interfaz gráfica.</p>
-                    <ul style="text-align: left; margin: 1rem 0;">
-                        <li>• Scripts de procesamiento</li>
-                        <li>• GUIs científicas</li>
-                        <li>• APIs de datos</li>
-                        <li>• Automatización de flujos</li>
-                    </ul>
-                    <a href="#contacto" class="btn btn-primary" style="margin-top: auto;">Solicitar desarrollo</a>
-                </div>
-
-                <div class="card service-card">
-                    <div class="icon service-icon icon-primary">📚</div>
-                    <h3>Consultoría Técnica</h3>
-                    <p>Asesoramiento especializado en proyectos geofísicos complejos. Optimización de metodologías y análisis de viabilidad técnica.</p>
-                    <ul style="text-align: left; margin: 1rem 0;">
-                        <li>• Diseño de campañas</li>
-                        <li>• Análisis de viabilidad</li>
-                        <li>• Interpretación avanzada</li>
-                        <li>• Capacitación técnica</li>
-                    </ul>
-                    <a href="#contacto" class="btn btn-primary" style="margin-top: auto;">Agendar consulta</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="educacion" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">🎓 Educación</h2>
-                <p class="section-subtitle">Aprende geofísica conmigo</p>
-            </div>
-            <div class="content-grid">
-                <div class="card">
-                    <div class="icon icon-primary">📓</div>
-                    <h3>Notebooks Interactivos</h3>
-                    <p>Jupyter notebooks con ejemplos prácticos de procesamiento geofísico. Código comentado y datasets incluidos para aprender haciendo.</p>
-                    <a href="notebooks-science/" class="btn btn-primary" style="margin-top: auto;">Explorar Notebooks</a>
-                </div>
-
-                <div class="card">
-                    <div class="icon icon-secondary">🎓</div>
-                    <h3>Cursos en GitHub</h3>
-                    <p>Repositorios educativos con cursos completos de geofísica computacional. Desde conceptos básicos hasta técnicas avanzadas.</p>
-                    <a href="https://github.com/JoseMariaGarciaMarquez" class="btn btn-primary" style="margin-top: auto;">Ver Cursos</a>
-                </div>
-
-                <div class="card">
-                    <div class="icon icon-primary">🎬</div>
-                    <h3>Tutoriales en Video</h3>
-                    <p>Contenido audiovisual paso a paso. Desde instalación de herramientas hasta implementación de algoritmos complejos.</p>
-                    <a href="https://www.youtube.com/@jomaing" class="btn btn-primary" style="margin-top: auto;">Ver Tutoriales</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">💬 Blog / Bitácora</h2>
-                <p class="section-subtitle">Reflexiones sobre geofísica, tecnología y educación</p>
-            </div>
-            <div class="projects-grid">
-                <div class="card">
-                    <div class="project-image">🤖</div>
-                    <div class="card-content">
-                        <h3 class="card-title">GitHub Copilot en Geofísica</h3>
-                        <p>Explorando cómo la inteligencia artificial está revolucionando el desarrollo de software científico y acelerando la investigación geofísica.</p>
-                        <div class="project-tags">
-                            <span class="tag">IA</span>
-                            <span class="tag">Desarrollo</span>
-                            <span class="tag">Productividad</span>
+                <div class="projects-grid">
+                    <div class="project-card featured">
+                        <div class="project-header">
+                            <span class="project-type">[GPR-INDUSTRIAL]</span>
+                            <h3>Localización PEMEX Monterrey</h3>
+                        </div>
+                        <div class="project-stats">
+                            <span class="stat">📏 6.3 km lineales</span>
+                            <span class="stat">🎯 15 levantamientos</span>
+                            <span class="stat">⚡ GPRPy processing</span>
+                        </div>
+                        <p class="project-desc">Localización precisa de tuberías industriales mediante Ground Penetrating Radar para operaciones críticas de PEMEX.</p>
+                        <div class="project-footer">
+                            <span class="project-status completed">COMPLETADO</span>
+                            <span class="project-year">2024</span>
                         </div>
                     </div>
-                    <a href="blog/copiloto.png" class="btn btn-primary">Leer más</a>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <span class="project-type">[MASW-GEOTECNIA]</span>
+                            <h3>Caracterización Monterrey</h3>
+                        </div>
+                        <div class="project-stats">
+                            <span class="stat">🏗️ Geotecnia</span>
+                            <span class="stat">📊 Perfiles Vs</span>
+                            <span class="stat">🧮 Inversión</span>
+                        </div>
+                        <p class="project-desc">Análisis MASW para caracterización geotécnica del subsuelo. Perfiles de velocidad para diseño de cimentaciones.</p>
+                        <div class="project-footer">
+                            <span class="project-status completed">COMPLETADO</span>
+                            <span class="project-year">2024</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <span class="project-type">[TRE-HIDROGEOLOGIA]</span>
+                            <h3>Acuíferos Coahuila</h3>
+                        </div>
+                        <div class="project-stats">
+                            <span class="stat">⚡ Dipolo-Dipolo</span>
+                            <span class="stat">💧 Agua subterránea</span>
+                            <span class="stat">🧮 Pseudo-3D</span>
+                        </div>
+                        <p class="project-desc">Exploración hidrogeológica con TRE para localización de acuíferos en zona árida de Acatita, Coahuila.</p>
+                        <div class="project-footer">
+                            <span class="project-status completed">COMPLETADO</span>
+                            <span class="project-year">2023</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <span class="project-type">[OPEN-SOURCE]</span>
+                            <h3>PyPozo 2.0 Development</h3>
+                        </div>
+                        <div class="project-stats">
+                            <span class="stat">🐍 Python</span>
+                            <span class="stat">🖥️ GUI</span>
+                            <span class="stat">🛢️ Petroleum</span>
+                        </div>
+                        <p class="project-desc">Aplicación GUI profesional para análisis completo de pozos petroleros. Herramienta avanzada con interfaz moderna.</p>
+                        <div class="project-footer">
+                            <a href="https://github.com/JoseMariaGarciaMarquez/pypozo" class="content-link" target="_blank">🔗 Ver en GitHub</a>
+                            <span class="project-status progress">EN DESARROLLO</span>
+                            <span class="project-year">2024</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <span class="project-type">[OPEN-SOURCE]</span>
+                            <h3>VESpy Development</h3>
+                        </div>
+                        <div class="project-stats">
+                            <span class="stat">🐍 Python</span>
+                            <span class="stat">📈 Inversión</span>
+                            <span class="stat">🌍 Open Source</span>
+                        </div>
+                        <p class="project-desc">Librería Python para procesamiento e interpretación de Sondeos Eléctricos Verticales (VES).</p>
+                        <div class="project-footer">
+                            <span class="project-status progress">EN DESARROLLO</span>
+                            <span class="project-year">2024</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card">
-                    <div class="project-image">🌍</div>
-                    <div class="card-content">
-                        <h3 class="card-title">Python SIG Geoespacial</h3>
-                        <p>Guía completa para el análisis geoespacial con Python. Desde datos vectoriales hasta análisis de rasters con GeoPandas y Rasterio.</p>
-                        <div class="project-tags">
+                <div class="projects-footer">
+                    <div class="project-summary">
+                        <p>Portfolio completo: <strong>10+ proyectos</strong> | Sectores: Industrial, Geotecnia, Hidrogeología, Arqueología</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Servicios Section -->
+            <section id="servicios" class="section">
+                <h2 class="section-title">🛠️ Servicios Profesionales</h2>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <span class="service-icon">🌊</span>
+                            <h3>Estudios Geofísicos</h3>
+                        </div>
+                        <div class="service-content">
+                            <p>Caracterización completa del subsuelo con métodos avanzados</p>
+                            <div class="service-features">
+                                <div class="feature">• GPR para arqueología y obra civil</div>
+                                <div class="feature">• MASW para geotecnia</div>
+                                <div class="feature">• VES para hidrogeología</div>
+                                <div class="feature">• TRE para contaminación</div>
+                            </div>
+                            <div class="service-price">
+                                <span class="price-label">Desde:</span>
+                                <span class="price-value">$8,000 MXN</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <span class="service-icon">💻</span>
+                            <h3>Desarrollo Python</h3>
+                        </div>
+                        <div class="service-content">
+                            <p>Soluciones de software geofísico a medida</p>
+                            <div class="service-features">
+                                <div class="feature">• Scripts de procesamiento</div>
+                                <div class="feature">• Automatización de workflows</div>
+                                <div class="feature">• Interfaces gráficas</div>
+                                <div class="feature">• APIs y web apps</div>
+                            </div>
+                            <div class="service-price">
+                                <span class="price-label">Desde:</span>
+                                <span class="price-value">$2,000 MXN</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <span class="service-icon">📚</span>
+                            <h3>Capacitación</h3>
+                        </div>
+                        <div class="service-content">
+                            <p>Cursos y workshops especializados</p>
+                            <div class="service-features">
+                                <div class="feature">• Python para geofísica</div>
+                                <div class="feature">• Métodos geofísicos</div>
+                                <div class="feature">• Procesamiento de datos</div>
+                                <div class="feature">• Workshops empresariales</div>
+                            </div>
+                            <div class="service-price">
+                                <span class="price-label">Desde:</span>
+                                <span class="price-value">$2,500 MXN</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <span class="service-icon">🔬</span>
+                            <h3>Consultoría</h3>
+                        </div>
+                        <div class="service-content">
+                            <p>Asesoría técnica especializada</p>
+                            <div class="service-features">
+                                <div class="feature">• Diseño de campañas</div>
+                                <div class="feature">• Análisis de viabilidad</div>
+                                <div class="feature">• Interpretación avanzada</div>
+                                <div class="feature">• Revisión técnica</div>
+                            </div>
+                            <div class="service-price">
+                                <span class="price-label">Desde:</span>
+                                <span class="price-value">$500 MXN/hr</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <span class="service-icon">🧮</span>
+                            <h3>Asesoría Académica</h3>
+                        </div>
+                        <div class="service-content">
+                            <p>Apoyo en materias técnicas y matemáticas</p>
+                            <div class="service-features">
+                                <div class="feature">• Cálculo diferencial e integral</div>
+                                <div class="feature">• Álgebra de matrices</div>
+                                <div class="feature">• Física general y aplicada</div>
+                                <div class="feature">• Tratamiento de señales</div>
+                            </div>
+                            <div class="service-price">
+                                <span class="price-label">Desde:</span>
+                                <span class="price-value">$100 MXN/hr</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Descuentos Especiales -->
+                <div class="intro-banner" style="margin-top: 2rem;">
+                    <p><strong>🎯 Mi visión:</strong> Quiero dedicar mi vida 100% al desarrollo open source para geofísica. Tu apoyo económico me permite crear herramientas gratuitas que beneficien a toda la comunidad científica. ¡Únete a esta misión!</p>
+                    <p style="margin-top: 1rem;"><strong>💝 Descuento especial:</strong> 15% adicional para patrocinadores de Patreon</p>
+                </div>
+
+                <div class="process-section">
+                    <h3 class="process-title">Proceso de Trabajo</h3>
+                    <div class="process-flow">
+                        <div class="process-step">
+                            <div class="step-number">01</div>
+                            <div class="step-content">
+                                <h4>Consulta inicial</h4>
+                                <p>Análisis de necesidades y objetivos</p>
+                            </div>
+                        </div>
+                        <div class="process-arrow">→</div>
+                        <div class="process-step">
+                            <div class="step-number">02</div>
+                            <div class="step-content">
+                                <h4>Propuesta técnica</h4>
+                                <p>Metodología y cotización detallada</p>
+                            </div>
+                        </div>
+                        <div class="process-arrow">→</div>
+                        <div class="process-step">
+                            <div class="step-number">03</div>
+                            <div class="step-content">
+                                <h4>Ejecución</h4>
+                                <p>Desarrollo del proyecto con seguimiento</p>
+                            </div>
+                        </div>
+                        <div class="process-arrow">→</div>
+                        <div class="process-step">
+                            <div class="step-number">04</div>
+                            <div class="step-content">
+                                <h4>Entrega</h4>
+                                <p>Resultados finales y capacitación</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Educación Section -->
+            <section id="educacion" class="section">
+                <h2 class="section-title">🎓 Educación y Divulgación</h2>
+                
+                <div class="education-stats">
+                    <div class="edu-stat">
+                        <div class="edu-number">60+</div>
+                        <div class="edu-label">Suscriptores YouTube</div>
+                    </div>
+                    <div class="edu-stat">
+                        <div class="edu-number">5+</div>
+                        <div class="edu-label">Videos educativos</div>
+                    </div>
+                    <div class="edu-stat">
+                        <div class="edu-number">2</div>
+                        <div class="edu-label">Notebooks en desarrollo</div>
+                    </div>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-card">
+                        <div class="content-header">
+                            <span class="content-icon">📺</span>
+                            <h3>Canal YouTube</h3>
+                        </div>
+                        <div class="content-body">
+                            <p>Geofísica explicada de forma simple y práctica</p>
+                            <div class="content-topics">
+                                <span class="topic">Teoría</span>
+                                <span class="topic">Python</span>
+                                <span class="topic">Casos</span>
+                                <span class="topic">Equipos</span>
+                            </div>
+                            <a href="https://www.youtube.com/@jomaing" class="content-link">🔗 @jomaing</a>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="content-header">
+                            <span class="content-icon">📓</span>
+                            <h3>Notebooks Interactivos</h3>
+                        </div>
+                        <div class="content-body">
+                            <p>Tutoriales prácticos con código Python</p>
+                            <div class="content-topics">
+                                <span class="topic">GPR</span>
+                                <span class="topic">VES</span>
+                                <span class="topic">MASW</span>
+                                <span class="topic">Visualización</span>
+                            </div>
+                            <a href="#" class="content-link">🔗 GitHub Notebooks</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-statement">
+                    <div class="mission-header">
+                        <h3>Mi Misión Educativa</h3>
+                    </div>
+                    <div class="mission-content">
+                        <p>"Democratizar el conocimiento geofísico. Crear puentes entre la teoría académica y la aplicación práctica. Formar a la próxima generación de geofísicos con herramientas modernas y mentalidad open source."</p>
+                    </div>
+                </div>
+
+                <div class="recommended-books">
+                    <h3 class="books-title">📚 Libros que Recomiendo</h3>
+                    <div class="books-grid">
+                        <div class="book-card">
+                            <div class="book-header">
+                                <span class="book-icon">💰</span>
+                                <h4>Economía Básica</h4>
+                            </div>
+                            <p class="book-author">Thomas Sowell</p>
+                            <p class="book-review">Fundamentos económicos explicados con claridad. Esencial para entender el mundo actual.</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <div class="book-header">
+                                <span class="book-icon">🚀</span>
+                                <h4>La Física del Futuro</h4>
+                            </div>
+                            <p class="book-author">Michio Kaku</p>
+                            <p class="book-review">Visión fascinante de las tecnologías que transformarán nuestro mundo. Inspiración pura.</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <div class="book-header">
+                                <span class="book-icon">🏛️</span>
+                                <h4>Eso No Está en Mi Libro de Prehistoria</h4>
+                            </div>
+                            <p class="book-author">Jaime Almansa</p>
+                            <p class="book-review">Arqueología fascinante que desafía lo que creías saber. Perfecta conexión con la geofísica.</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <div class="book-header">
+                                <span class="book-icon">⚔️</span>
+                                <h4>Cuando el Hierro era Más Caro que el Oro</h4>
+                            </div>
+                            <p class="book-author">Alessandro Giraudo</p>
+                            <p class="book-review">Historia económica fascinante. Cómo los recursos han moldeado la civilización.</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <div class="book-header">
+                                <span class="book-icon">🌍</span>
+                                <h4>Por Qué Fracasan los Países</h4>
+                            </div>
+                            <p class="book-author">Daron Acemoglu</p>
+                            <p class="book-review">Análisis profundo sobre instituciones y desarrollo. Lectura obligatoria para entender el mundo.</p>
+                        </div>
+                        
+                        <div class="book-card coming-soon">
+                            <div class="book-header">
+                                <span class="book-icon">📖</span>
+                                <h4>Más Recomendaciones</h4>
+                            </div>
+                            <p class="book-author">Próximamente...</p>
+                            <p class="book-review">Continuamente actualizando mi lista de lecturas recomendadas.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Section -->
+            <section id="blog" class="section">
+                <h2 class="section-title">📝 Blog Técnico</h2>
+                
+                <div class="blog-intro">
+                    <p>Artículos sobre geofísica aplicada, desarrollo Python, open source y divulgación científica. Comparto conocimiento técnico de forma clara y accesible.</p>
+                </div>
+
+                <div class="blog-stats">
+                    <div class="stat-box">
+                        <div class="stat-number">4+</div>
+                        <div class="stat-label">Artículos técnicos</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Tutoriales prácticos</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Open Source</div>
+                    </div>
+                </div>
+                
+                <article class="blog-entry">
+                    <div class="entry-header">
+                        <span class="entry-date">[2024-11-15]</span>
+                        <h3 class="entry-title">
+                            <a href="blog/vespy-sondeos-electricos.html">VESpy: Revolucionando los Sondeos Eléctricos</a>
+                        </h3>
+                        <div class="entry-tags">
                             <span class="tag">Python</span>
-                            <span class="tag">GIS</span>
-                            <span class="tag">Geoespacial</span>
+                            <span class="tag">VES</span>
+                            <span class="tag">Open Source</span>
                         </div>
                     </div>
-                    <a href="blog/geolitix-python-sig.html" class="btn btn-primary">Leer más</a>
-                </div>
+                    <div class="entry-content">
+                        <p>Desarrollo y funcionalidades de VESpy, mi librería Python para procesamiento e interpretación de Sondeos Eléctricos Verticales. Una herramienta que democratiza el acceso a técnicas avanzadas de geofísica.</p>
+                    </div>
+                </article>
 
-                <div class="card">
-                    <div class="project-image">📡</div>
-                    <div class="card-content">
-                        <h3 class="card-title">GPRPy: Procesamiento de Radar</h3>
-                        <p>Tutorial completo sobre el procesamiento de datos GPR usando GPRPy. Desde datos crudos hasta interpretación geológica.</p>
-                        <div class="project-tags">
+                <article class="blog-entry">
+                    <div class="entry-header">
+                        <span class="entry-date">[2024-10-28]</span>
+                        <h3 class="entry-title">
+                            <a href="blog/gprpy-procesamiento-radar.html">GPRPy: Procesamiento de Radar de Subsuelo</a>
+                        </h3>
+                        <div class="entry-tags">
                             <span class="tag">GPR</span>
-                            <span class="tag">Procesamiento</span>
+                            <span class="tag">Radar</span>
                             <span class="tag">Tutorial</span>
                         </div>
                     </div>
-                    <a href="blog/gprpy-procesamiento-radar.html" class="btn btn-primary">Leer más</a>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="blog/" class="btn btn-secondary">Ver todos los artículos</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Support Section -->
-    <section id="apoyo" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">💸 Apóyame</h2>
-                <p class="section-subtitle">El dinero recaudado me permite mejorar la calidad de los streams, crear mejor material educativo, y dedicarle mucho más tiempo a estas actividades por las cuales nadie me paga. Tu apoyo hace posible que pueda compartir ciencia sin barreras.</p>
-            </div>
-            
-            <div class="support-grid">
-                <div class="card support-card">
-                    <div class="icon icon-primary">☕</div>
-                    <h3>Buy Me a Coffee</h3>
-                    <p>¿Te ha servido mi contenido? Invítame un café para mantener la energía y seguir creando.</p>
-                    <a href="https://buymeacoffee.com/ingjoma" class="btn btn-primary" target="_blank">Invitar un café</a>
-                </div>
-
-                <div class="card support-card">
-                    <div class="icon icon-secondary">🎯</div>
-                    <h3>Patreon</h3>
-                    <p>Conviértete en patrocinador y accede a contenido exclusivo, notebooks premium y sesiones privadas.</p>
-                    <a href="#" class="btn btn-primary" target="_blank">Ser Patrocinador</a>
-                </div>
-
-                <div class="card support-card">
-                    <div class="icon icon-primary">💰</div>
-                    <h3>PayPal</h3>
-                    <p>Apoya el proyecto directamente a través de PayPal de manera rápida y segura.</p>
-                    <a href="https://paypal.me/Chemitas96?locale.x=es_XC&country.x=MX" class="btn btn-primary" target="_blank">Donar con PayPal</a>
-                </div>
-
-                <div class="card support-card">
-                    <div class="icon icon-secondary">💳</div>
-                    <h3>Transferencia México</h3>
-                    <p>Para apoyos desde México, puedes hacer una transferencia directa con CLABE Mercado Pago.</p>
-                    <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; margin: 1rem 0; font-family: var(--font-mono); font-size: 0.9rem;">
-                        <strong>CLABE:</strong> 722969020064117820
+                    <div class="entry-content">
+                        <p>Guía completa para el procesamiento de datos GPR usando GPRPy. Desde la adquisición hasta la interpretación final, con ejemplos prácticos de casos reales en Monterrey.</p>
                     </div>
-                    <button class="btn btn-secondary" onclick="navigator.clipboard.writeText('722969020064117820'); this.textContent='¡Copiado!'">Copiar CLABE</button>
+                </article>
+
+                <article class="blog-entry">
+                    <div class="entry-header">
+                        <span class="entry-date">[2024-09-20]</span>
+                        <h3 class="entry-title">
+                            <a href="blog/geolitix-python-sig.html">Geolitix: Python SIG para Geofísica</a>
+                        </h3>
+                        <div class="entry-tags">
+                            <span class="tag">GIS</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Mapas</span>
+                        </div>
+                    </div>
+                    <div class="entry-content">
+                        <p>Integración de sistemas de información geográfica con métodos geofísicos. Cómo Python puede transformar la visualización y análisis espacial de datos geofísicos.</p>
+                    </div>
+                </article>
+
+                <article class="blog-entry">
+                    <div class="entry-header">
+                        <span class="entry-date">[2024-08-15]</span>
+                        <h3 class="entry-title">
+                            <a href="blog/opensource-geofisica.html">Open Source: El Futuro de la Geofísica</a>
+                        </h3>
+                        <div class="entry-tags">
+                            <span class="tag">Open Source</span>
+                            <span class="tag">Filosofía</span>
+                            <span class="tag">Comunidad</span>
+                        </div>
+                    </div>
+                    <div class="entry-content">
+                        <p>Por qué el software libre es fundamental para el avance de la geofísica. Reflexiones sobre democratización del conocimiento, colaboración global y sostenibilidad científica.</p>
+                    </div>
+                </article>
+
+                <div class="intro-banner" style="margin-top: 2rem;">
+                    <p><strong>🎯 Mi misión:</strong> Compartir conocimiento técnico de forma clara y accesible. Cada artículo busca democratizar herramientas geofísicas avanzadas y fomentar el desarrollo open source en nuestra comunidad científica.</p>
                 </div>
-            </div>
+            </section>
 
-            <div class="support-transparency">
-                <h3>💎 Transparencia en el apoyo</h3>
-                <p>
-                    <strong>¿En qué uso los fondos?</strong><br>
-                    • 40% - Mejorar la calidad de streams (equipamiento, software, internet)<br>
-                    • 30% - Desarrollo de material educativo (investigación, preparación, recursos)<br>
-                    • 20% - Tiempo dedicado a crear contenido gratuito y herramientas open source<br>
-                    • 10% - Gastos operativos (hosting, dominios, servicios)
-                </p>
-                <p style="margin-top: 1rem;">
-                    <em>Todo este trabajo lo hago de forma voluntaria en mi tiempo libre. Tu apoyo me permite dedicarle más horas a compartir conocimiento geofísico de manera gratuita.</em>
-                </p>
-            </div>
-        </div>
-    </section>
+            <!-- Contacto Section -->
+            <section id="contacto" class="section">
+                <h2 class="section-title">📬 Conectemos</h2>
+                
+                <div class="contact-intro">
+                    <p>¿Tienes un proyecto geofísico en mente? ¿Necesitas capacitación? ¿Quieres colaborar en investigación?</p>
+                    <p class="contact-highlight">¡Hablemos y creemos algo increíble juntos!</p>
+                </div>
 
-    <!-- Contact Section -->
-    <section id="contacto" class="section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">📬 Contacto</h2>
-                <p class="section-subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
-            </div>
-            
-            <div class="contact-grid">
-                <a href="mailto:contacto@josegarcia.dev" class="btn btn-primary">📧 Email</a>
-                <a href="https://wa.me/5215512345678" class="btn btn-secondary">📱 WhatsApp</a>
-                <a href="https://www.linkedin.com/in/jos%C3%A9-mar%C3%ADa-garc%C3%ADa-m%C3%A1rquez-556a75199/" class="btn btn-secondary">💼 LinkedIn</a>
-                <a href="https://x.com/Chemitatata" class="btn btn-secondary">🐦 X (Twitter)</a>
-            </div>
-            
-            <div class="contact-info">
-                <p><strong>Tiempo de respuesta:</strong> 24-48 horas</p>
-                <p><strong>Horario de atención:</strong> Lun-Vie 9:00-18:00 (GMT-6)</p>
-                <p><strong>Disponible para:</strong> Consultorías, colaboraciones, charlas y workshops</p>
-            </div>
-        </div>
-    </section>
+                <div class="contact-methods">
+                    <div class="contact-card primary">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email Profesional</h3>
+                        <p>Para proyectos, consultoría y colaboraciones</p>
+                        <a href="mailto:josegm@geofisa.com" class="contact-btn">josegm@geofisa.com</a>
+                    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>Navegación</h3>
+                    <div class="contact-card">
+                        <div class="contact-icon">�</div>
+                        <h3>LinkedIn</h3>
+                        <p>Red profesional y oportunidades</p>
+                        <a href="https://www.linkedin.com/in/josé-maría-garcía-márquez-556a75199" class="contact-btn">LinkedIn Profile</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">☕</div>
+                        <h3>Buy Me a Coffee</h3>
+                        <p>Apoya mi trabajo open source</p>
+                        <a href="#" class="contact-btn">☕ Invítame un café</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">🧡</div>
+                        <h3>Patreon</h3>
+                        <p>Suscripción mensual para proyectos</p>
+                        <a href="https://www.patreon.com/c/chemitas" class="contact-btn" target="_blank">🧡 Chemitas</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">🎥</div>
+                        <h3>YouTube</h3>
+                        <p>Canal educativo de geofísica</p>
+                        <a href="https://www.youtube.com/@jomaing" class="contact-btn">Ver Canal</a>
+                    </div>
+                </div>
+
+                <div class="availability-info">
+                    <div class="availability-header">
+                        <h3>Disponibilidad y Tiempos</h3>
+                    </div>
+                    <div class="availability-grid">
+                        <div class="availability-item">
+                            <strong>Respuesta email:</strong> 24-48 horas
+                        </div>
+                        <div class="availability-item">
+                            <strong>Consulta inicial:</strong> Sin costo
+                        </div>
+                        <div class="availability-item">
+                            <strong>Horario atención:</strong> Lun-Vie 9:00-18:00
+                        </div>
+                        <div class="availability-item">
+                            <strong>Zona horaria:</strong> GMT-6 (México)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-footer">
+                    <h3>Sígueme en redes</h3>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/@jomaing" class="social-link">📺 YouTube</a>
+                        <a href="https://www.instagram.com/joma_ing" class="social-link">📷 Instagram</a>
+                        <a href="#" class="social-link">🐦 Twitter</a>
+                        <a href="https://github.com/JoseMariaGarciaMarquez" class="social-link">💻 GitHub</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>José María García Márquez</h3>
+                    <p>Ingeniero Geofísico • Desarrollador • Divulgador</p>
+                </div>
+                <div class="footer-links">
                     <a href="#inicio">Inicio</a>
-                    <a href="#sobre-mi">Sobre mí</a>
+                    <a href="#perfil">Perfil</a>
                     <a href="#proyectos">Proyectos</a>
                     <a href="#servicios">Servicios</a>
+                    <a href="#educacion">Educación</a>
+                    <a href="#blog">Blog</a>
                     <a href="#contacto">Contacto</a>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Contenido</h3>
-                    <a href="https://www.youtube.com/@jomaing">YouTube</a>
-                    <a href="https://www.twitch.tv/chemitas96">Twitch</a>
-                    <a href="blog/">Blog</a>
-                    <a href="notebooks-science/">Notebooks</a>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Recursos</h3>
-                    <a href="https://github.com/JoseMariaGarciaMarquez">GitHub</a>
-                    <a href="docs/">Documentación</a>
-                    <a href="publicaciones/">Publicaciones</a>
-                    <a href="proyectos/">Galería de Proyectos</a>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Legal</h3>
-                    <a href="#privacidad">Política de Privacidad</a>
-                    <a href="#terminos">Términos de Uso</a>
-                    <a href="#cookies">Política de Cookies</a>
-                </div>
             </div>
-            
-            <div class="social-links">
-                <a href="https://www.youtube.com/@jomaing" class="social-link" target="_blank" title="YouTube">🎥</a>
-                <a href="https://www.twitch.tv/chemitas96" class="social-link" target="_blank" title="Twitch">🎮</a>
-                <a href="https://github.com/JoseMariaGarciaMarquez" class="social-link" target="_blank" title="GitHub">💻</a>
-                <a href="https://www.linkedin.com/in/jos%C3%A9-mar%C3%ADa-garc%C3%ADa-m%C3%A1rquez-556a75199/" class="social-link" target="_blank" title="LinkedIn">💼</a>
-                <a href="https://buymeacoffee.com/ingjoma" class="social-link" target="_blank" title="Buy me a Coffee">☕</a>
-                <a href="gaming.html" class="social-link secret-link" title="¿Sabes microgestionar aldeanos? 🐗">⚔️</a>
-            </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2025 José María García Márquez. Hecho con ❤️ para la comunidad geofísica.</p>
-                <p>Geofísica con propósito • Ciencia que se entiende • Datos que cuentan historias</p>
+                <p>© 2025 José María García Márquez • Geofísica con propósito</p>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
-    <!-- JavaScript -->
     <script>
-        // Theme Toggle Functionality
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        const themeText = document.getElementById('theme-text');
-        const body = document.body;
-        
-        // Check for saved theme preference or default to 'light'
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        body.setAttribute('data-theme', currentTheme);
-        
-        // Update toggle button based on current theme
-        function updateThemeToggle(theme) {
-            if (theme === 'dark') {
-                themeIcon.textContent = '🌙';
-                themeText.textContent = 'Modo Claro';
-            } else {
-                themeIcon.textContent = '🌞';
-                themeText.textContent = 'Modo Oscuro';
-            }
+        // Navigation functionality
+        const navItems = document.querySelectorAll('.nav-item');
+        const sections = document.querySelectorAll('.section');
+
+        navItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                // Remove active class from all nav items and sections
+                navItems.forEach(nav => nav.classList.remove('active'));
+                sections.forEach(section => section.classList.remove('active'));
+                
+                // Add active class to clicked nav and corresponding section
+                item.classList.add('active');
+                sections[index].classList.add('active');
+            });
+        });
+
+        // Cursor blinking animation
+        const cursor = document.querySelector('.cursor');
+        if (cursor) {
+            setInterval(() => {
+                cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+            }, 800);
         }
-        
-        // Initialize toggle button
-        updateThemeToggle(currentTheme);
-        
-        // Theme toggle event listener
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = body.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            // Add rotation animation
-            themeIcon.classList.add('rotating');
-            
-            setTimeout(() => {
-                body.setAttribute('data-theme', newTheme);
-                localStorage.setItem('theme', newTheme);
-                updateThemeToggle(newTheme);
-                themeIcon.classList.remove('rotating');
-            }, 250);
-        });
 
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const navMenu = document.getElementById('nav-menu');
-        
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        // Smooth scrolling for navigation links
+        // Smooth scroll for internal links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                const targetSection = document.querySelector(this.getAttribute('href').replace('#', ''));
+                if (targetSection) {
+                    // Activate the corresponding nav item
+                    const targetIndex = Array.from(sections).indexOf(targetSection);
+                    if (targetIndex !== -1) {
+                        navItems.forEach(nav => nav.classList.remove('active'));
+                        sections.forEach(section => section.classList.remove('active'));
+                        
+                        navItems[targetIndex].classList.add('active');
+                        sections[targetIndex].classList.add('active');
+                    }
                 }
-            });
-        });
-
-        // Active navigation highlighting
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (window.scrollY >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Animate elements on scroll
-        document.addEventListener('DOMContentLoaded', () => {
-            const animateElements = document.querySelectorAll('.card, .about-content, .about-image');
-            animateElements.forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(40px)';
-                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                observer.observe(el);
-            });
-        });
-
-        // Back to top functionality
-        const backToTop = document.createElement('button');
-        backToTop.innerHTML = '↑';
-        backToTop.className = 'back-to-top';
-        backToTop.style.cssText = `
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            border: none;
-            border-radius: 50%;
-            background: var(--gradient-hero);
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 1000;
-        `;
-
-        document.body.appendChild(backToTop);
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                backToTop.style.opacity = '1';
-                backToTop.style.visibility = 'visible';
-            } else {
-                backToTop.style.opacity = '0';
-                backToTop.style.visibility = 'hidden';
-            }
-        });
-
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
             });
         });
     </script>
