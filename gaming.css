@@ -708,3 +708,98 @@ body {
     flex: 1;
     min-width: 200px;
 }
+
+/* ===================================
+   CAMPAIGN PROGRESS BAR STYLES
+   =================================== */
+
+.campaign-progress {
+    margin: var(--space-lg) 0;
+    padding: var(--space-md);
+    background: var(--bg-darker);
+    border: 1px solid var(--amber);
+    border-radius: 8px;
+    box-shadow: var(--shadow-dark);
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-sm);
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.progress-label {
+    color: var(--amber);
+    font-family: var(--font-pixel);
+    font-size: 0.7rem;
+    text-shadow: 0 0 5px var(--amber);
+}
+
+.progress-amount {
+    color: var(--text-light);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.progress-bar-container {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background: var(--bg-terminal);
+    border: 1px solid var(--gray-medium);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: var(--space-sm);
+}
+
+.progress-bar-fill {
+    position: relative;
+    height: 100%;
+    background: linear-gradient(90deg, var(--amber-dark), var(--amber), var(--gold-pixel));
+    border-radius: 10px;
+    transition: width 0.5s ease;
+    min-width: 8px; /* Para que se vea algo aunque el porcentaje sea muy pequeño */
+    box-shadow: 
+        0 0 10px rgba(255, 176, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.progress-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: progress-shine 2s infinite;
+}
+
+@keyframes progress-shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.progress-percentage {
+    position: absolute;
+    top: 50%;
+    right: var(--space-xs);
+    transform: translateY(-50%);
+    color: var(--text-terminal);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-shadow: 0 0 3px var(--bg-terminal);
+}
+
+.progress-subtitle {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+}
