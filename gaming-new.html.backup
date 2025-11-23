@@ -75,33 +75,7 @@
 
                 <div class="intro-text">
                     <p>"Bienvenido a Chemitas Dev, un estudio indie donde la creatividad se forja línea a línea de código y los sueños toman forma en pixels. Desarrollo videojuegos artesanales con alma, creando experiencias interactivas únicas que tocan el corazón. Cada proyecto es hecho a mano con dedicación y pasión."</p>
-                </div>
-
-                <!-- Streaming Schedule -->
-                <div style="background: linear-gradient(135deg, var(--bg-darker), var(--bg-dark)); border: 2px solid var(--amber); border-radius: 10px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 0 20px rgba(255, 176, 0, 0.2);">
-                    <h3 style="color: var(--amber); font-family: var(--font-pixel); margin-bottom: 1rem; text-align: center; font-size: 1.1rem;">📺 Streaming en Twitch</h3>
-                    <div style="text-align: center; margin-bottom: 1rem;">
-                        <a href="https://www.twitch.tv/chemitas96" target="_blank" style="display: inline-block; background: #9146FF; color: white; padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-family: var(--font-pixel); font-size: 0.9rem; transition: var(--transition);" onmouseover="this.style.background='#772CE8'" onmouseout="this.style.background='#9146FF'">
-                            🎮 twitch.tv/chemitas96
-                        </a>
-                    </div>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                        <div style="background: var(--bg-darker); padding: 1rem; border-radius: 8px; border: 1px solid var(--amber);">
-                            <h4 style="color: var(--amber); font-family: var(--font-mono); margin-bottom: 0.5rem; font-size: 0.95rem;">☀️ Mañanas - Desarrollo</h4>
-                            <p style="font-family: var(--font-mono); font-size: 0.9rem; margin-bottom: 0.3rem;">🕐 11:00 - 12:00</p>
-                            <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-dim);">Lunes a Viernes</p>
-                            <p style="font-family: var(--font-mono); font-size: 0.85rem; margin-top: 0.5rem;">💻 Programación de videojuegos en vivo</p>
-                        </div>
-                        <div style="background: var(--bg-darker); padding: 1rem; border-radius: 8px; border: 1px solid var(--amber);">
-                            <h4 style="color: var(--amber); font-family: var(--font-mono); margin-bottom: 0.5rem; font-size: 0.95rem;">🌙 Tardes - Gaming</h4>
-                            <p style="font-family: var(--font-mono); font-size: 0.9rem; margin-bottom: 0.3rem;">🕕 18:30 - 19:30</p>
-                            <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-dim);">Lunes a Viernes</p>
-                            <p style="font-family: var(--font-mono); font-size: 0.85rem; margin-top: 0.5rem;">🎮 Sesiones de juego casual</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="support-section">
+                </div>                <div class="support-section">
                     <h3 class="support-title">Tributos para el Café ☕ y la Máquina de Guerra 💻</h3>
                     <div class="intro-text" style="margin-bottom: 1rem; font-size: 0.9rem;">
                         <p><strong>⚔️ Campaña actual:</strong> Adquisición del Asus ROG Strix G17 (Ryzen 9-7845HX, RTX 4060, 32GB RAM) - una máquina de guerra digna de un señor programador indie. Perfecta para dominar reinos digitales Y crear videojuegos épicos.</p>
@@ -136,7 +110,7 @@
                     <div class="project-indie-card" style="background: var(--bg-darker); border: 3px solid var(--amber); border-radius: 10px; padding: 1.2rem; margin-bottom: 2rem; box-shadow: 0 0 20px rgba(255, 176, 0, 0.3);">
                         <h4 class="project-name" style="color: var(--amber); font-family: var(--font-pixel); margin-bottom: 0.5rem; font-size: 1.1rem;">🌽 ELOTE - Juego de Lotería</h4>
                         <div style="display: flex; align-items: flex-start; gap: 1.2rem; flex-wrap: wrap;">
-                            <img src="image_gaming/elelote.png" alt="ELOTE Lotería" style="width: 120px; height: 120px; object-fit: cover; border-radius: 8px; border: 2px solid var(--amber); background: var(--bg-dark);" onerror="this.style.display='none'">
+                            <img src="image_gaming/elote.png" alt="ELOTE Lotería" style="width: 120px; height: 120px; object-fit: cover; border-radius: 8px; border: 2px solid var(--amber); background: var(--bg-dark);" onerror="this.style.display='none'">
                             <div style="flex: 1; min-width: 220px;">
                                 <p style="font-family: var(--font-mono); font-size: 0.95rem; margin-bottom: 0.7rem; color: var(--amber); font-weight: bold;">🎯 PROYECTO PRINCIPAL - Mi juego estrella</p>
                                 <p style="font-family: var(--font-mono); font-size: 0.95rem; margin-bottom: 0.7rem;">Juego de lotería mexicana con assets pixel art hechos a mano de manera artesanal en Godot. Una experiencia auténtica y nostálgica del clásico juego familiar.</p>
@@ -339,7 +313,7 @@
                     <div class="project-indie-card" style="background: var(--bg-darker); border: 3px solid var(--amber); border-radius: 10px; padding: 1.2rem; margin-bottom: 2rem; box-shadow: 0 0 20px rgba(255, 176, 0, 0.3);">
                         <h4 class="project-name" style="color: var(--amber); font-family: var(--font-pixel); margin-bottom: 0.5rem; font-size: 1.1rem;">🌽 ELOTE - Juego de Lotería</h4>
                         <div style="display: flex; align-items: flex-start; gap: 1.2rem; flex-wrap: wrap;">
-                            <img src="image_gaming/elelote.png" alt="ELOTE Lotería" style="width: 120px; height: 120px; object-fit: cover; border-radius: 8px; border: 2px solid var(--amber); background: var(--bg-dark);" onerror="this.style.display='none'">
+                            <img src="image_gaming/elote.png" alt="ELOTE Lotería" style="width: 120px; height: 120px; object-fit: cover; border-radius: 8px; border: 2px solid var(--amber); background: var(--bg-dark);" onerror="this.style.display='none'">
                             <div style="flex: 1; min-width: 220px;">
                                 <p style="font-family: var(--font-mono); font-size: 0.95rem; margin-bottom: 0.7rem; color: var(--amber); font-weight: bold;">🎯 PROYECTO PRINCIPAL - Mi juego estrella</p>
                                 <p style="font-family: var(--font-mono); font-size: 0.95rem; margin-bottom: 0.7rem;">Juego de lotería mexicana con assets pixel art hechos a mano de manera artesanal en Godot. Una experiencia auténtica y nostálgica del clásico juego familiar.</p>
