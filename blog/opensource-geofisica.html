@@ -4,41 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Source en Geofísica | José María García Márquez</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../compact.css"><link rel="icon" href="../images_web/jomac.png" type="image/png">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav container">
-            <a href="../index.html" class="logo">
-                <img src="../images_web/jomac.png" alt="JOMA">
-                JOMA
-            </a>
-            <ul class="nav-links">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../geofisica.html">Geofísica</a></li>
-                <li><a href="../coding.html">Programación</a></li>
-                <li><a href="../material.html">Material</a></li>
-                <li><a href="../social.html">Social</a></li>
-                <li><a href="../publications.html">Publicaciones</a></li>
-                <li><a href="../blog.html" class="active">Blog</a></li>
-            </ul>
-            <button class="menu-toggle">☰</button>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <div class="breadcrumb">
-                <a href="../index.html">Inicio</a> 
-                <span>›</span> 
-                <a href="../blog.html">Blog</a>
-                <span>›</span>
-                <span>Open Source</span>
+    <div style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
+        <!-- Simple Header -->
+        <header style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; border-bottom: 2px solid var(--gold-main); margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <img src="../images_web/jomac.png" alt="JOMA" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--gold-main);">
+                <div>
+                    <h1 style="font-family: var(--font-pixel); font-size: 1rem; color: var(--gold-main); margin: 0; letter-spacing: 2px;">📝 BLOG TÉCNICO</h1>
+                    <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim); margin: 0.25rem 0 0 0;">José María García Márquez</p>
+                </div>
             </div>
-        </div>
-    </section>
+            <a href="../index.html" style="font-family: var(--font-mono); color: var(--gold-main); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--gold-main); transition: var(--transition); display: inline-block;" onmouseover="this.style.background='var(--gold-main)'; this.style.color='var(--bg-darker)';" onmouseout="this.style.background='transparent'; this.style.color='var(--gold-main)';">← Volver al Inicio</a>
+        </header>
 
-    <main class="container">
+        <main>
         <article class="blog-post">
             <header class="blog-header">
                 <h1 class="blog-title">El Futuro del Open Source en Geofísica: Democratizando la Ciencia</h1>
@@ -250,21 +232,13 @@
         <div class="container">
             <div class="social-links">
                 <a href="https://www.youtube.com/@jomacinho" target="_blank">📺</a>
-                <a href="https://www.instagram.com/jomacinho/" target="_blank">📷</a>
-                <a href="https://www.tiktok.com/@jomacinho" target="_blank">🎵</a>
-                <a href="https://www.linkedin.com/in/josé-maría-garcía-márquez-556a75199" target="_blank">💼</a>
-                <a href="https://github.com/JoseMariaGarciaMarquez" target="_blank">💻</a>
+                <a href="https://www.instagram.com/joma_ing" target="_blank" style="color: var(--gold-main); margin: 0 0.5rem; text-decoration: none; transition: var(--transition);" onmouseover="this.style.color='var(--text-terminal)'" onmouseout="this.style.color='var(--gold-main)';">📷</a>
+                <a href="https://www.linkedin.com/in/josé-maría-garcía-márquez-556a75199" target="_blank" style="color: var(--gold-main); margin: 0 0.5rem; text-decoration: none; transition: var(--transition);" onmouseover="this.style.color='var(--text-terminal)'" onmouseout="this.style.color='var(--gold-main)';">💼</a>
+                <a href="https://github.com/JoseMariaGarciaMarquez" target="_blank" style="color: var(--gold-main); margin: 0 0.5rem; text-decoration: none; transition: var(--transition);" onmouseover="this.style.color='var(--text-terminal)'" onmouseout="this.style.color='var(--gold-main)';">💻</a>
             </div>
-            <p>&copy; 2024 José María García Márquez. Todos los derechos reservados.</p>
-            <p>Contacto: <a href="mailto:josemariagarciamarquez2.72@gmail.com?subject=CONSULTA">Gmail</a> (Subject: CONSULTA)</p>
-        </div>
-    </footer>
-
-    <script>
-        // Menú móvil
-        document.querySelector('.menu-toggle').addEventListener('click', () => {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
-    </script>
+            <p style="font-family: var(--font-mono); color: var(--text-dim); font-size: 0.85rem; margin: 0.5rem 0;">&copy; 2025 José María García Márquez • Geofísica con propósito</p>
+            <p style="font-family: var(--font-mono); color: var(--text-dim); font-size: 0.8rem;">Contacto: <a href="mailto:josemariagarciamarquez2.72@gmail.com?subject=CONSULTA" style="color: var(--gold-main); text-decoration: none;">Gmail</a> (Subject: CONSULTA)</p>
+        </footer>
+    </div>
 </body>
 </html>
