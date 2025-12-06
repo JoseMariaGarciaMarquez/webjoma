@@ -14,23 +14,23 @@
 }
 
 :root {
-    /* Colors - Greek Ancient Theme */
+    /* Colors - Greek Stone Carving Theme */
     --bg-dark: #1a2332;
     --bg-darker: #0f1823;
     --bg-terminal: #000000;
-    --amber: #d4af37;
-    --amber-dark: #b8941f;
+    --amber: #8b8680;
+    --amber-dark: #6b6560;
     --brick-red: #8b4513;
-    --gold-pixel: #ffd700;
+    --gold-pixel: #a8a49a;
     --gray-light: #87CEEB;
     --gray-medium: #4682B4;
-    --text-light: #f5f5dc;
-    --text-dim: #a9a9a9;
-    --text-terminal: #d4af37;
+    --text-light: #d4cfc4;
+    --text-dim: #9a9589;
+    --text-terminal: #b5aea0;
     --accent-blue: #4169E1;
     --greek-blue: #0077BE;
-    --marble-white: #f5f5dc;
-    --olympic-gold: #d4af37;
+    --marble-white: #e8e4dc;
+    --stone-chisel: #8b8680;
     
     /* Fonts */
     --font-pixel: 'Press Start 2P', monospace;
