@@ -14,20 +14,23 @@
 }
 
 :root {
-    /* Colors */
-    --bg-dark: #1a1a1a;
-    --bg-darker: #0d0d0d;
+    /* Colors - Greek Ancient Theme */
+    --bg-dark: #1a2332;
+    --bg-darker: #0f1823;
     --bg-terminal: #000000;
-    --amber: #ffb000;
-    --amber-dark: #cc8800;
-    --brick-red: #cc4125;
+    --amber: #d4af37;
+    --amber-dark: #b8941f;
+    --brick-red: #8b4513;
     --gold-pixel: #ffd700;
-    --gray-light: #666666;
-    --gray-medium: #404040;
-    --text-light: #e0e0e0;
-    --text-dim: #999999;
-    --text-terminal: #00ff00;
-    --accent-blue: #0099ff;
+    --gray-light: #87CEEB;
+    --gray-medium: #4682B4;
+    --text-light: #f5f5dc;
+    --text-dim: #a9a9a9;
+    --text-terminal: #d4af37;
+    --accent-blue: #4169E1;
+    --greek-blue: #0077BE;
+    --marble-white: #f5f5dc;
+    --olympic-gold: #d4af37;
     
     /* Fonts */
     --font-pixel: 'Press Start 2P', monospace;
