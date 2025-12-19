@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TERRAF - Sistema de Prospección Mineral en Desarrollo | José María García Márquez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../compact.css">
+    <link rel="icon" href="../images_web/jomac.png" type="image/png">
+</head>
+<body>
+    <div class="container" style="max-width: 900px; margin: 0 auto;">
+        <!-- Simple Header -->
+        <header style="padding: 2rem 1rem; border-bottom: 2px solid var(--gold-main); margin-bottom: 2rem; background: linear-gradient(135deg, var(--bg-darker), var(--bg-dark));">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+                <div style="display: flex; align-items: center; gap: 0.8rem;">
+                    <img src="../images_web/jomac.png" alt="JOMA" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--gold-main);">
+                    <div>
+                        <h1 style="font-family: var(--font-pixel); font-size: 1rem; color: var(--gold-main); margin: 0;">📝 BLOG TÉCNICO</h1>
+                        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim); margin: 0;">José María García Márquez</p>
+                    </div>
+                </div>
+                <a href="../index.html" style="font-family: var(--font-mono); color: var(--text-terminal); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--gold-main); border-radius: 4px; transition: var(--transition); font-size: 0.85rem;" onmouseover="this.style.background='var(--gold-main)'; this.style.color='var(--bg-dark)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-terminal)'">← Volver al Inicio</a>
+            </div>
+        </header>
+
+        <main>
+        <article class="blog-post">
+            <header class="blog-header">
+                <h1 class="blog-title">TERRAF: El Inicio de un Sistema Integrado de Prospección Mineral</h1>
+                <div class="blog-meta">
+                    <span class="blog-date">📅 18 de Diciembre 2024</span>
+                    <span class="blog-author">👤 José María García Márquez</span>
+                    <span class="blog-category">🛰️ Teledetección • 🧲 Geofísica</span>
+                </div>
+                <div class="blog-excerpt">
+                    TERRAF es mi proyecto más ambicioso: una plataforma Python para exploración mineral que combina teledetección satelital y métodos geofísicos. Aquí te cuento su visión completa y su estado actual (versión v0.00000001).
+                </div>
+            </header>
+
+            <div class="blog-content">
+                <div style="background: var(--gold-main); padding: 1rem; border-radius: 8px; margin: 2rem 0; text-align: center;">
+                    <p style="font-family: var(--font-pixel); font-size: 0.8rem; color: var(--bg-darker); margin-bottom: 0.5rem;">🚀 ¡PRUEBA LA VERSIÓN BETA!</p>
+                    <a href="https://terraf.streamlit.app/" target="_blank" style="display: inline-block; background: var(--bg-darker); color: var(--gold-main); padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; font-family: var(--font-mono); font-weight: bold; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Abrir TERRAF →</a>
+                </div>
+
+                <h2>🎯 La Visión Completa de TERRAF</h2>
+                <p>TERRAF nació de una necesidad real: crear una herramienta completa y accesible para la exploración mineral que integre tanto métodos de teledetección como geofísicos. Mi objetivo es que cualquier geólogo, geofísico o estudiante pueda realizar análisis avanzados sin necesidad de software costoso o estaciones de trabajo potentes.</p>
+
+                <h3>El Sistema Completo (Roadmap)</h3>
+                <p>Cuando TERRAF esté completamente desarrollado, será una plataforma integral que incluirá:</p>
+
+                <h4>📡 Módulo de Teledetección (Parcialmente Funcional)</h4>
+                <ul>
+                    <li><strong>Procesamiento satelital:</strong> Landsat 8/9, Sentinel-2, ASTER</li>
+                    <li><strong>Índices espectrales:</strong> CMR, GOSSAN, óxidos de hierro, alteraciones hidrotermales</li>
+                    <li><strong>Google Earth Engine API:</strong> Acceso a décadas de imágenes satelitales</li>
+                    <li><strong>Análisis temporal:</strong> Detección de cambios y monitoreo</li>
+                    <li><strong>Machine Learning:</strong> Clasificación supervisada de litologías y alteraciones</li>
+                </ul>
+
+                <h4>🧲 Módulo Geofísico (En Desarrollo)</h4>
+                <ul>
+                    <li><strong>Magnetometría:</strong> Deconvolución de Euler, reducción al polo, campo total</li>
+                    <li><strong>Gravimetría:</strong> Anomalías de Bouguer, correcciones topográficas</li>
+                    <li><strong>Inversión 3D:</strong> Modelado de susceptibilidad magnética y densidad</li>
+                    <li><strong>Interpretación integrada:</strong> Superposición de métodos geofísicos con teledetección</li>
+                </ul>
+
+                <h4>🗺️ Módulo de Integración (Planificado)</h4>
+                <ul>
+                    <li><strong>Mapas de prospectividad:</strong> Combinación de múltiples capas de evidencia</li>
+                    <li><strong>Análisis multicriterio:</strong> Pesos y lógica difusa</li>
+                    <li><strong>Modelado 3D:</strong> Visualización de estructuras geológicas</li>
+                    <li><strong>Exportación de reportes:</strong> Generación automática de documentos técnicos</li>
+                </ul>
+
+                <h2>🚧 Estado Actual: v0.00000001</h2>
+                <p>Como todo proyecto ambicioso, TERRAF está en sus primeras etapas. La versión actual es apenas funcional, pero ya demuestra el potencial del sistema.</p>
+
+                <h3>✅ Lo que Ya Funciona</h3>
+                
+                <h4>Procesamiento de Imágenes Satelitales</h4>
+                <p>El módulo de teledetección está operativo y permite:</p>
+                <ul>
+                    <li><strong>Carga de imágenes:</strong> Landsat 8/9 y Sentinel-2 mediante Google Earth Engine</li>
+                    <li><strong>Selección de áreas:</strong> Dibuja tu zona de interés en un mapa interactivo</li>
+                    <li><strong>Filtrado temporal:</strong> Elige rangos de fechas para análisis específicos</li>
+                    <li><strong>Correcciones atmosféricas:</strong> Aplicación automática de máscaras de nubes</li>
+                </ul>
+
+                <h4>Cálculo de Índices Espectrales</h4>
+                <p>Esta es la funcionalidad estrella de la versión actual:</p>
+                
+                <div style="background: var(--bg-darker); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border-left: 4px solid var(--gold-main);">
+                    <h5 style="color: var(--gold-main); margin-bottom: 1rem;">🎨 Índices Disponibles:</h5>
+                    
+                    <p><strong>CMR (Color Mineral Ratio):</strong></p>
+                    <p style="font-family: var(--font-mono); font-size: 0.85rem; background: var(--bg-dark); padding: 0.8rem; border-radius: 4px; margin: 0.5rem 0;">CMR = (SWIR1 / SWIR2) × (Red / Blue)</p>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Ideal para detectar minerales de alteración hidrotermal como sericita, alunita y caolinita.</p>
+
+                    <p style="margin-top: 1rem;"><strong>Índice GOSSAN:</strong></p>
+                    <p style="font-family: var(--font-mono); font-size: 0.85rem; background: var(--bg-dark); padding: 0.8rem; border-radius: 4px; margin: 0.5rem 0;">GOSSAN = (SWIR1 / SWIR2) × (NIR / Red)</p>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Diseñado para identificar zonas de oxidación y gossans (sombreros de hierro), indicadores clásicos de yacimientos metálicos.</p>
+
+                    <p style="margin-top: 1rem;"><strong>Óxidos de Hierro:</strong></p>
+                    <p style="font-family: var(--font-mono); font-size: 0.85rem; background: var(--bg-dark); padding: 0.8rem; border-radius: 4px; margin: 0.5rem 0;">Fe-Oxide = Red / Blue</p>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Ratio simple pero efectivo para mapear zonas con alta concentración de óxidos de hierro (hematita, goethita).</p>
+
+                    <p style="margin-top: 1rem;"><strong>Arcillas y OH-:</strong></p>
+                    <p style="font-family: var(--font-mono); font-size: 0.85rem; background: var(--bg-dark); padding: 0.8rem; border-radius: 4px; margin: 0.5rem 0;">Clay-OH = SWIR1 / SWIR2</p>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Detecta minerales con grupos OH- como arcillas, epidota y clorita, comunes en zonas de alteración.</p>
+                </div>
+
+                <h4>Visualización Interactiva</h4>
+                <p>Los resultados se muestran en mapas interactivos con Folium donde puedes:</p>
+                <ul>
+                    <li>Cambiar entre capas base (satélite, terreno, OpenStreetMap)</li>
+                    <li>Superponer diferentes índices espectrales</li>
+                    <li>Ajustar transparencia y escala de colores</li>
+                    <li>Exportar resultados en formato GeoTIFF</li>
+                </ul>
+
+                <h3>🔴 Lo que Aún No Funciona</h3>
+                <p>Es importante ser transparente sobre las limitaciones actuales:</p>
+                <ul>
+                    <li><strong>Métodos geofísicos:</strong> Toda la parte de magnetometría, gravimetría e inversión está pendiente</li>
+                    <li><strong>Machine Learning:</strong> Los algoritmos de clasificación automática no están implementados</li>
+                    <li><strong>Análisis temporal:</strong> Solo se procesan imágenes individuales, no series temporales</li>
+                    <li><strong>Modelado 3D:</strong> La visualización tridimensional es un desarrollo futuro</li>
+                    <li><strong>Validación de campo:</strong> Falta integrar datos de verificación in situ</li>
+                    <li><strong>Performance:</strong> El procesamiento puede ser lento con áreas muy grandes</li>
+                </ul>
+
+                <h2>🛠️ Stack Tecnológico</h2>
+                
+                <h3>Backend</h3>
+                <ul>
+                    <li><strong>Python 3.10+:</strong> Lenguaje principal del proyecto</li>
+                    <li><strong>Google Earth Engine API:</strong> Procesamiento satelital en la nube</li>
+                    <li><strong>NumPy & SciPy:</strong> Cálculos numéricos y científicos</li>
+                    <li><strong>Pandas & GeoPandas:</strong> Manejo de datos tabulares y geoespaciales</li>
+                    <li><strong>Rasterio & GDAL:</strong> Procesamiento de imágenes raster</li>
+                </ul>
+
+                <h3>Frontend</h3>
+                <ul>
+                    <li><strong>Streamlit:</strong> Interface web interactiva sin necesidad de JavaScript</li>
+                    <li><strong>Folium:</strong> Mapas interactivos basados en Leaflet.js</li>
+                    <li><strong>Plotly:</strong> Gráficos y visualizaciones avanzadas</li>
+                </ul>
+
+                <h2>💡 ¿Por Qué TERRAF?</h2>
+                
+                <h3>Democratización del Conocimiento</h3>
+                <p>El software comercial de exploración mineral es prohibitivamente caro para estudiantes, pequeñas empresas y profesionales independientes. TERRAF busca nivelar el campo de juego.</p>
+
+                <h3>Código Abierto</h3>
+                <p>Mi intención es liberar TERRAF como software open source una vez que alcance un nivel de madurez adecuado. La ciencia debe ser reproducible y accesible.</p>
+
+                <h3>Educación</h3>
+                <p>Más allá de ser una herramienta, TERRAF es un recurso educativo. El código está comentado y documentado para que otros puedan aprender de él.</p>
+
+                <h2>🚀 Próximos Pasos</h2>
+                
+                <h3>Corto Plazo (Q1 2025)</h3>
+                <ul>
+                    <li>Mejorar la interfaz de usuario y UX</li>
+                    <li>Implementar más índices espectrales (ASTER TIR, SWIR avanzados)</li>
+                    <li>Optimizar el rendimiento para áreas grandes</li>
+                    <li>Añadir exportación de reportes PDF</li>
+                    <li>Sistema de caching para acelerar consultas repetidas</li>
+                </ul>
+
+                <h3>Mediano Plazo (Q2-Q3 2025)</h3>
+                <ul>
+                    <li>Implementar módulo de magnetometría básica</li>
+                    <li>Deconvolución de Euler para localización de fuentes</li>
+                    <li>Integración con datos gravimétricos</li>
+                    <li>Primeras versiones de machine learning para clasificación</li>
+                </ul>
+
+                <h3>Largo Plazo (2026)</h3>
+                <ul>
+                    <li>Inversión geofísica 3D completa</li>
+                    <li>Mapas de prospectividad con análisis multicriterio</li>
+                    <li>Modelado geológico tridimensional</li>
+                    <li>API para integración con otros sistemas</li>
+                    <li>Publicación oficial como proyecto open source</li>
+                </ul>
+
+                <h2>🤝 ¿Cómo Puedes Ayudar?</h2>
+                
+                <h3>Úsalo y Reporta Bugs</h3>
+                <p>La mejor manera de mejorar TERRAF es que lo uses en casos reales. Si encuentras errores, comportamientos inesperados o tienes sugerencias, ¡házmelo saber!</p>
+
+                <h3>Comparte tus Casos de Uso</h3>
+                <p>Me encantaría saber en qué proyectos estás usando TERRAF. Tus aplicaciones reales me ayudan a priorizar qué features desarrollar primero.</p>
+
+                <h3>Apoya el Desarrollo</h3>
+                <p>Crear software toma tiempo y recursos. Si TERRAF te resulta útil, considera apoyar su desarrollo:</p>
+                <div style="text-align: center; margin: 1.5rem 0;">
+                    <a href="https://buymeacoffee.com/ingjoma" style="display: inline-block; background: var(--gold-main); color: var(--bg-darker); padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; margin: 0.5rem; font-weight: bold;" target="_blank">☕ Buy Me a Coffee</a>
+                    <a href="https://www.patreon.com/c/chemitas" style="display: inline-block; background: var(--brown-medium); color: var(--text-terminal); padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; margin: 0.5rem; font-weight: bold;" target="_blank">🧡 Patreon</a>
+                </div>
+
+                <h2>🎓 Recursos de Aprendizaje</h2>
+                <p>Si quieres entender mejor los conceptos detrás de TERRAF, te recomiendo:</p>
+                <ul>
+                    <li><strong>Teledetección:</strong> "Remote Sensing and Image Interpretation" - Lillesand & Kiefer</li>
+                    <li><strong>Geofísica:</strong> "Introduction to Applied Geophysics" - Burger, Sheehan & Jones</li>
+                    <li><strong>Google Earth Engine:</strong> Documentación oficial y tutoriales en earthengine.google.com</li>
+                    <li><strong>Prospección mineral:</strong> "Ore Deposit Geology" - John Ridley</li>
+                </ul>
+
+                <h2>🔗 Links Importantes</h2>
+                <div style="background: var(--bg-darker); padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 0.8rem 0;"><a href="https://terraf.streamlit.app/" target="_blank" style="color: var(--gold-main); text-decoration: none; font-family: var(--font-mono);">🚀 Prueba TERRAF (versión beta)</a></li>
+                        <li style="margin: 0.8rem 0;"><a href="../index.html#proyectos" style="color: var(--gold-main); text-decoration: none; font-family: var(--font-mono);">📊 Más información del proyecto</a></li>
+                        <li style="margin: 0.8rem 0;"><a href="index.html" style="color: var(--gold-main); text-decoration: none; font-family: var(--font-mono);">📚 Otros artículos del blog</a></li>
+                    </ul>
+                </div>
+
+                <h2>📝 Reflexiones Finales</h2>
+                <p>TERRAF representa mi visión de cómo debería ser el software científico: accesible, transparente y enfocado en resolver problemas reales. Estoy consciente de que la versión actual es muy básica, casi un MVP (Minimum Viable Product), pero cada gran proyecto comienza con un primer paso.</p>
+
+                <p>El camino será largo, pero estoy comprometido a desarrollar TERRAF hasta convertirlo en una herramienta verdaderamente útil para la comunidad de exploración mineral. Tu paciencia, feedback y apoyo son fundamentales en este viaje.</p>
+
+                <div style="background: linear-gradient(135deg, var(--gold-main), var(--gold-dark)); color: var(--bg-darker); padding: 1.5rem; border-radius: 8px; margin: 2rem 0; text-align: center;">
+                    <p style="font-family: var(--font-pixel); font-size: 1rem; margin: 0; color: var(--bg-darker);">¿Tienes preguntas, sugerencias o encontraste un bug?</p>
+                    <p style="font-family: var(--font-mono); font-size: 0.9rem; margin: 1rem 0 0 0; color: var(--bg-darker);">Contáctame: <a href="mailto:tu@email.com" style="color: var(--bg-darker); text-decoration: underline;">joma@example.com</a></p>
+                </div>
+            </div>
+        </article>
+        </main>
+
+        <!-- Footer -->
+        <footer style="padding: 2rem 1rem; border-top: 2px solid var(--gold-main); margin-top: 3rem; text-align: center; color: var(--text-dim);">
+            <p style="font-family: var(--font-mono); font-size: 0.85rem;">© 2024 José María García Márquez • <a href="../index.html" style="color: var(--gold-main); text-decoration: none;">Inicio</a> • <a href="index.html" style="color: var(--gold-main); text-decoration: none;">Blog</a></p>
+        </footer>
+    </div>
+</body>
+</html>
