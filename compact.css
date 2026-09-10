@@ -1,6 +1,6 @@
 /* ===================================
-   JOMA PROFESIONAL - GAMING STYLE
-   Geofísica con propósito. Estilo gaming.
+   JOMA PROFESIONAL - PIZARRA & ESMERALDA
+   Geofísica con propósito. Look geología/GIS.
    =================================== */
 
 /* ===================================
@@ -14,19 +14,19 @@
 }
 
 :root {
-    /* Colors - Gaming Style con Arena Theme */
-    --bg-dark: #3e2723;
-    --bg-darker: #2e1a16;
-    --bg-terminal: #1a0e0a;
-    --arena-light: #f5f1e8;
-    --arena-cream: #f0ead6;
-    --gold-main: #d4af37;
-    --gold-dark: #b8941f;
-    --brown-medium: #8d6e63;
-    --brown-light: #a1887f;
-    --text-light: #f5f1e8;
-    --text-dim: #a1887f;
-    --text-terminal: #d4af37;
+    /* Colors - Pizarra & Esmeralda (Geología/GIS) */
+    --bg-dark: #181b20;
+    --bg-darker: #101318;
+    --bg-terminal: #0a0c0f;
+    --arena-light: #e5e7eb;
+    --arena-cream: #d1d5db;
+    --gold-main: #34d399;
+    --gold-dark: #10b981;
+    --brown-medium: #4b5563;
+    --brown-light: #6b7280;
+    --text-light: #e5e7eb;
+    --text-dim: #9ca3af;
+    --text-terminal: #34d399;
     
     /* Fonts */
     --font-pixel: 'Press Start 2P', monospace;
@@ -40,7 +40,7 @@
     --space-xl: 3rem;
     
     /* Effects */
-    --shadow-retro: 0 0 10px rgba(212, 175, 55, 0.3);
+    --shadow-retro: 0 0 10px rgba(52, 211, 153, 0.3);
     --shadow-dark: 0 4px 8px rgba(0, 0, 0, 0.5);
     --transition: 0.2s ease;
 }
@@ -473,6 +473,72 @@ body {
 .project-year {
     font-size: 0.7rem;
     color: var(--text-dim);
+}
+
+/* Proyectos: cuerpo unificado (imagen + info) */
+.project-body {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: var(--space-sm);
+}
+
+.project-img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--gold-main);
+    background: var(--bg-dark);
+    flex-shrink: 0;
+}
+
+.project-info {
+    flex: 1;
+    min-width: 220px;
+}
+
+.project-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+}
+
+.project-link {
+    display: inline-block;
+    font-family: var(--font-pixel);
+    font-size: 0.6rem;
+    color: var(--gold-main);
+    text-decoration: none;
+    border: 1px solid var(--gold-main);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.project-link:hover {
+    background: var(--gold-main);
+    color: var(--bg-dark);
+}
+
+.project-link.gold {
+    background: var(--gold-main);
+    color: var(--bg-darker);
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+}
+
+.project-link.gold:hover {
+    background: var(--text-terminal);
+}
+
+.project-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
 }
 
 /* ===================================
